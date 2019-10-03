@@ -46,6 +46,7 @@ master.menu.provider.favourite-link = Enlace favorito
 
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
+master.menu.anonymous.second-favourite-link = Segundo enlace favorito
 
 # master.menu.user-account ####################################################
 
