@@ -31,6 +31,7 @@ master.menu.sign-out = Salir
 master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.favourite-link-3 = Tercer enlace favorito
+master.menu.anonymous.favuorite-link-2 = Favoutite link Juan
 
 # master.menu.administrator ###################################################
 
@@ -47,7 +48,6 @@ master.menu.provider.favourite-link = Enlace favorito
 
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
-master.menu.anonymous.second-favourite-link = Segundo enlace favorito
 
 # master.menu.user-account ####################################################
 
