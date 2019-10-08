@@ -30,6 +30,7 @@ master.menu.sign-out = Sign out
 
 master.menu.anonymous = Anonymous
 master.menu.anonymous.favourite-link = Favourite link
+master.menu.anonymous.favorite-link-2 = Favourite link 2
 
 # master.menu.administrator ###################################################
 
@@ -41,6 +42,7 @@ master.menu.administrator.shutdown = Shut down
 
 master.menu.provider = Provider
 master.menu.provider.favourite-link = Favourite link
+
 
 # master.menu.consumer ##########################################################
 
