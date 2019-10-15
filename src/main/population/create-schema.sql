@@ -27,6 +27,7 @@
         `nif` varchar(255),
         `surname` varchar(255),
         `type` varchar(255),
+        `bulletin_Name` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 

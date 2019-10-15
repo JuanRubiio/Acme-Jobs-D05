@@ -25,3 +25,5 @@ anonymous.bulletin.list.label.type = Tipo
 
 anonymous.bulletin.form.label.body = Noticia
 anonymous.bulletin.form.label.bulletinName = Nombre del boletin
+anonymous.bulletin.list.label.bulletinName = Nombre del boletin
+anonymous.bulletin.list.label.body = Noticia
