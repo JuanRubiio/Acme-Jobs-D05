@@ -1,0 +1,16 @@
+anonymous.bulletin.form.label.name = Name:
+anonymous.bulletin.form.label.surname = Surname:
+anonymous.bulletin.form.label.dni = NIF:
+anonymous.bulletin.form.label.type = Type:
+anonymous.bulletin.form.label.body = Body:
+anonymous.bulletin.form.button.create = Create
+anonymous.bulletin.form.button.return = Return
+
+
+anonymous.bulletin.list.title = Bulletin List
+anonymous.bulletin.list.label.name = Name
+anonymous.bulletin.list.label.surname = Surname
+anonymous.bulletin.list.label.dni = NIF
+anonymous.bulletin.list.label.type = Type
+anonymous.bulletin.list.label.bulletinName = Bulletin Name
+anonymous.bulletin.list.label.body =  Body

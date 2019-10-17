@@ -1,0 +1,14 @@
+anonymous.bulletin.form.label.name = Nombre:
+anonymous.bulletin.form.label.surname = Apellido:
+anonymous.bulletin.form.label.dni = DNI:
+anonymous.bulletin.form.label.type = Tipo:
+anonymous.bulletin.form.label.body = Cuerpo:
+anonymous.bulletin.form.button.create = Crear
+anonymous.bulletin.form.button.return = Atrás
+
+anonymous.bulletin.list.label.name = Nombre
+anonymous.bulletin.list.label.surname = Apellido
+anonymous.bulletin.list.label.dni = DNI
+anonymous.bulletin.list.label.type = Tipo
+anonymous.bulletin.list.label.bulletinName = Nombre del boletin
+anonymous.bulletin.list.label.body = Cuerpo:
