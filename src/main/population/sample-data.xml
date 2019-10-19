@@ -17,4 +17,16 @@
 
 	<import resource="conversion-service.xml" />
 
+	<bean name="bulletin1" class="acme.entities.bulletin.Bulletin">
+		<property name="name" value="Juan" />
+		<property name="surname" value="Jimenez" />
+		<property name="type" value="MANAGER" />
+		<property name="nif" value="15456336Z" />
+		<property name="body" value="Este es el primer boletin de prueba" />
+		<property name="bulletinName" value="Jimenez Bulletin" />
+		
+	</bean>
+	
+
+
 </beans>
