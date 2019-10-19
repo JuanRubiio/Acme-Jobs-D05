@@ -2,7 +2,7 @@
 
 	"build":{
 		"type": "maven",
-		"goal": "clean compile packege"
+		"goal": "clean compile package"
 	
 	},
 	
