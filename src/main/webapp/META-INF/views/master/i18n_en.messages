@@ -32,6 +32,8 @@ master.menu.anonymous = Anonymous
 master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.favourite-link-2 = Favoutite link Juan
 master.menu.anonymous.favourite-link-3 = Favourite link Carlos
+master.menu.anonymous.bulletin.list = Bulletin List
+master.menu.anonymous.bulletin.create = Create Bulletin 
 
 # master.menu.administrator ###################################################
 

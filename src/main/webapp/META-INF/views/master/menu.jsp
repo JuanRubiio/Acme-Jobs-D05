@@ -19,9 +19,12 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="https://stackoverflow.com/"/>
             <acme:menu-suboption code="master.menu.anonymous.favourite-link-2" action="http://www.marca.com/"/>
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link-3" action="http://www.marca.com/"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link-3" action="http://www.as.com/"/>
+			<acme:menu-suboption code="master.menu.anonymous.bulletin.list" action="/anonymous/bulletin/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.bulletin.create" action="/anonymous/bulletin/create"/>
+			
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
