@@ -29,11 +29,11 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
-master.menu.anonymous.favourite-link = Enlace favorito
+master.menu.anonymous.favourite-link = Enlace favorito Augusto
 master.menu.anonymous.favourite-link-3 = Enlace favorito Carlos
 master.menu.anonymous.favuorite-link-2 = Enlace favorito Juan
-master.menu.anonymous.bulletin.list = Lista de Boletines
-master.menu.anonymous.bulletin.create = Crear Boletines
+master.menu.anonymous.jimenezbulletin.list = Lista de Boletines de Juan
+master.menu.anonymous.jimenezbulletin.create = Crear Boletines de Juan
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
