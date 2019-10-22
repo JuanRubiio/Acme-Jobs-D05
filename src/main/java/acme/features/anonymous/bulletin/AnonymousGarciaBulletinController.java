@@ -18,22 +18,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.bulletins.Bulletin;
+import acme.entities.bulletins.GarciaBulletin;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Anonymous;
 
 @Controller
-@RequestMapping("/anonymous/bulletin/")
-public class AnonymousBulletinController extends AbstractController<Anonymous, Bulletin> {
+@RequestMapping("/anonymous/garcia-bulletin/")
+public class AnonymousGarciaBulletinController extends AbstractController<Anonymous, GarciaBulletin> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AnonymousBulletinListService	listService;
+	private AnonymousGarciaBulletinListService		listService;
 
 	@Autowired
-	private AnonymousBulletinCreateService	createService;
+	private AnonymousGarciaBulletinCreateService	createService;
 
 
 	// Constructors -----------------------------------------------------------

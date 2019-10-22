@@ -33,8 +33,8 @@ master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.favourite-link-3 = Third favourite link
 master.menu.anonymous.list = List Shouts
 master.menu.anonymous.create = Create Shout
-master.menu.anonymous.list2 = List Bulletins
-master.menu.anonymous.create2 = Create Bulletin
+master.menu.anonymous.list2 = List GarciaBulletins
+master.menu.anonymous.create2 = Create GarciaBulletin
 
 # master.menu.administrator ###################################################
 

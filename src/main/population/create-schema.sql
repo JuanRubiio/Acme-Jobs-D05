@@ -20,7 +20,16 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `bulletin` (
+    create table `consumer` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `company` varchar(255),
+        `sector` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `garcia_bulletin` (
        `id` integer not null,
         `version` integer not null,
         `body` varchar(255),
@@ -32,30 +41,12 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `consumer` (
-       `id` integer not null,
-        `version` integer not null,
-        `user_account_id` integer,
-        `company` varchar(255),
-        `sector` varchar(255),
-        primary key (`id`)
-    ) engine=InnoDB;
-
     create table `provider` (
        `id` integer not null,
         `version` integer not null,
         `user_account_id` integer,
         `company` varchar(255),
         `sector` varchar(255),
-        primary key (`id`)
-    ) engine=InnoDB;
-
-    create table `shout` (
-       `id` integer not null,
-        `version` integer not null,
-        `author` varchar(255),
-        `moment` datetime(6),
-        `text` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 

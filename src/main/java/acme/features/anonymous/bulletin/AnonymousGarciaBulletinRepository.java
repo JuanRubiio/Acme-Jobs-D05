@@ -17,22 +17,22 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import acme.entities.bulletins.Bulletin;
+import acme.entities.bulletins.GarciaBulletin;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AnonymousBulletinRepository extends AbstractRepository {
+public interface AnonymousGarciaBulletinRepository extends AbstractRepository {
 
-	@Query("select b from Bulletin b")
-	Collection<Bulletin> findMany();
+	@Query("select b from GarciaBulletin b")
+	Collection<GarciaBulletin> findMany();
 
-	@Query("select b from Bulletin b where b.name= ?1")
-	Collection<Bulletin> findByName(String name);
+	@Query("select b from GarciaBulletin b where b.name= ?1")
+	Collection<GarciaBulletin> findByName(String name);
 
-	@Query("select b from Bulletin b where b.surname= ?1")
-	Collection<Bulletin> findBySurname(String surname);
+	@Query("select b from GarciaBulletin b where b.surname= ?1")
+	Collection<GarciaBulletin> findBySurname(String surname);
 
-	@Query("select b from Bulletin b where b.dni= ?1")
-	Collection<Bulletin> findByDni(String dni);
+	@Query("select b from GarciaBulletin b where b.dni= ?1")
+	Collection<GarciaBulletin> findByDni(String dni);
 
 }

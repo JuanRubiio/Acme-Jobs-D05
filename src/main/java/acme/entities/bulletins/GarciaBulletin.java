@@ -11,9 +11,9 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Bulletin extends DomainEntity {
+public class GarciaBulletin extends DomainEntity {
 
-	private static final long	serialVersionUID	= 15L;
+	private static final long	serialVersionUID	= 20L;
 
 	@NotBlank
 	private String				name;

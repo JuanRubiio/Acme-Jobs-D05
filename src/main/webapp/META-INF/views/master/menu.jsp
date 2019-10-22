@@ -23,8 +23,8 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-3" action="http://www.marca.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.list" action="/anonymous/shout/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.create" action="/anonymous/shout/create"/>
-			<acme:menu-suboption code="master.menu.anonymous.list2" action="/anonymous/bulletin/list"/>
-			<acme:menu-suboption code="master.menu.anonymous.create2" action="/anonymous/bulletin/create"/>
+			<acme:menu-suboption code="master.menu.anonymous.list2" action="/anonymous/garcia-bulletin/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.create2" action="/anonymous/garcia-bulletin/create"/>
 			
 		</acme:menu-option>
 
