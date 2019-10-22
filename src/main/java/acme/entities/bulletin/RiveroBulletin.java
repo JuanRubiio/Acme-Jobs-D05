@@ -11,12 +11,12 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Bulletin extends DomainEntity {
+public class RiveroBulletin extends DomainEntity {
 
 	/**
 	 *
 	 */
-	private static final long	serialVersionUID	= -2215447280369682048L;
+	private static final long	serialVersionUID	= 1L;
 
 	@NotBlank
 	private String				name;

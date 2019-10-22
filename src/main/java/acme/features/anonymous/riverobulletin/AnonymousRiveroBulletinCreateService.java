@@ -1,12 +1,12 @@
 
-package acme.features.anonymous.bulletin;
+package acme.features.anonymous.riverobulletin;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.bulletin.Bulletin;
+import acme.entities.bulletin.RiveroBulletin;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -14,21 +14,21 @@ import acme.framework.entities.Anonymous;
 import acme.framework.services.AbstractCreateService;
 
 @Service
-public class AnonymousBulletinCreateService implements AbstractCreateService<Anonymous, Bulletin> {
+public class AnonymousRiveroBulletinCreateService implements AbstractCreateService<Anonymous, RiveroBulletin> {
 
 	@Autowired
-	AnonymousBulletinRepository repository;
+	AnonymousRiveroBulletinRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Bulletin> request) {
+	public boolean authorise(final Request<RiveroBulletin> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public void bind(final Request<Bulletin> request, final Bulletin entity, final Errors errors) {
+	public void bind(final Request<RiveroBulletin> request, final RiveroBulletin entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -38,7 +38,7 @@ public class AnonymousBulletinCreateService implements AbstractCreateService<Ano
 	}
 
 	@Override
-	public void unbind(final Request<Bulletin> request, final Bulletin entity, final Model model) {
+	public void unbind(final Request<RiveroBulletin> request, final RiveroBulletin entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -47,18 +47,18 @@ public class AnonymousBulletinCreateService implements AbstractCreateService<Ano
 	}
 
 	@Override
-	public Bulletin instantiate(final Request<Bulletin> request) {
+	public RiveroBulletin instantiate(final Request<RiveroBulletin> request) {
 		assert request != null;
 
-		Bulletin result;
+		RiveroBulletin result;
 
-		result = new Bulletin();
+		result = new RiveroBulletin();
 
 		return result;
 	}
 
 	@Override
-	public void validate(final Request<Bulletin> request, final Bulletin entity, final Errors errors) {
+	public void validate(final Request<RiveroBulletin> request, final RiveroBulletin entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -66,15 +66,15 @@ public class AnonymousBulletinCreateService implements AbstractCreateService<Ano
 	}
 
 	@Override
-	public void create(final Request<Bulletin> request, final Bulletin entity) {
+	public void create(final Request<RiveroBulletin> request, final RiveroBulletin entity) {
 		assert request != null;
 		assert entity != null;
 
-		Collection<Bulletin> bulletinSurname = this.repository.findBySurname(entity.getSurname());
+		Collection<RiveroBulletin> bulletinSurname = this.repository.findBySurname(entity.getSurname());
 		if (bulletinSurname == null || bulletinSurname.isEmpty()) {
 			entity.setBulletinName(entity.getSurname() + " Bulletin");
 		} else {
-			Collection<Bulletin> bulletinName = this.repository.findByName(entity.getName());
+			Collection<RiveroBulletin> bulletinName = this.repository.findByName(entity.getName());
 
 			if (bulletinName == null || bulletinName.isEmpty()) {
 				entity.setBulletinName(entity.getName() + " Bulletin");

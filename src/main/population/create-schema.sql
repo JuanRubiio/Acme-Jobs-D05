@@ -20,7 +20,7 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `bulletin` (
+    create table `rivero-bulletin` (
        `id` integer not null,
         `version` integer not null,
         `body` varchar(255),
