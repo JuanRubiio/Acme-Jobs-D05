@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.anonymous.bulletin;
+package acme.features.anonymous.garciabulletin;
 
 import java.util.Collection;
 

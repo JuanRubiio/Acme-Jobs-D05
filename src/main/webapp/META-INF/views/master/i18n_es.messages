@@ -34,8 +34,8 @@ master.menu.anonymous.favourite-link-3 = Enlace favorito Carlos
 master.menu.anonymous.favuorite-link-2 = Enlace favorito Juan
 master.menu.anonymous.jimenezbulletin.list = Lista de Boletines de Juan
 master.menu.anonymous.jimenezbulletin.create = Crear Boletines de Juan
-master.menu.anonymous.list2 = Listar GarciaBoletines
-master.menu.anonymous.create2 = Crear GarciaBoletin
+master.menu.anonymous.list2 = Listar Boletines de Carlos
+master.menu.anonymous.create2 = Crear Boletines de Carlos
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador

@@ -1,5 +1,5 @@
 
-package acme.features.anonymous.bulletin;
+package acme.features.anonymous.garciabulletin;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
