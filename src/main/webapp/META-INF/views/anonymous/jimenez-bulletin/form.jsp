@@ -16,19 +16,20 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:form-textbox code="anonymous.bulletin.form.label.name" path="name"/>
-	<acme:form-textbox code="anonymous.bulletin.form.label.surname" path="surname"/>
-	<acme:form-textbox code="anonymous.bulletin.form.label.nif" path="nif" />
-	<acme:form-select code="anonymous.bulletin.form.label.type" path="type">
+	<acme:form-textbox code="anonymous.jimenezbulletin.list.label.bulletinName" path="bulletinName"/>
+	<acme:form-textbox code="anonymous.jimenezbulletin.form.label.name" path="name"/>
+	<acme:form-textbox code="anonymous.jimenezbulletin.form.label.surname" path="surname"/>
+	<acme:form-textbox code="anonymous.jimenezbulletin.form.label.nif" path="nif" />
+	<acme:form-select code="anonymous.jimenezbulletin.form.label.type" path="type">
 			<acme:form-option code="Manager" value="MANAGER" selected="true"/>
 			<acme:form-option code="Analyst" value="ANALYST"/>
 			<acme:form-option code="Developed" value="DEVELOPED"/>		
 	</acme:form-select>		
-	<acme:form-textarea code="anonymous.bulletin.form.label.body" path="body" />
+	<acme:form-textarea code="anonymous.jimenezbulletin.form.label.body" path="body" />
 	
 
-	<acme:form-submit code="anonymous.bulletin.form.button.create" action="/anonymous/bulletin/create"/>
+	<acme:form-submit code="anonymous.jimenezbulletin.form.button.create" action="/anonymous/jimenez-bulletin/create"/>
 
 		
-  	<acme:form-return code="anonymous.bulletin.form.button.return"/>
+  	<acme:form-return code="anonymous.jimenezbulletin.form.button.return"/>
 </acme:form>

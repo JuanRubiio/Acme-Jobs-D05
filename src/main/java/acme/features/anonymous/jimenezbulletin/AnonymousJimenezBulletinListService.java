@@ -1,33 +1,33 @@
 
-package acme.features.anonymous.bulletin;
+package acme.features.anonymous.jimenezbulletin;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.bulletin.Bulletin;
+import acme.entities.bulletin.JimenezBulletin;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Anonymous;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AnonymousBulletinListService implements AbstractListService<Anonymous, Bulletin> {
+public class AnonymousJimenezBulletinListService implements AbstractListService<Anonymous, JimenezBulletin> {
 
 	@Autowired
-	AnonymousBulletinRepository repository;
+	AnonymousJimenezBulletinRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Bulletin> request) {
+	public boolean authorise(final Request<JimenezBulletin> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public void unbind(final Request<Bulletin> request, final Bulletin entity, final Model model) {
+	public void unbind(final Request<JimenezBulletin> request, final JimenezBulletin entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -37,11 +37,11 @@ public class AnonymousBulletinListService implements AbstractListService<Anonymo
 	}
 
 	@Override
-	public Collection<Bulletin> findMany(final Request<Bulletin> request) {
+	public Collection<JimenezBulletin> findMany(final Request<JimenezBulletin> request) {
 		assert request != null;
-		Collection<Bulletin> result;
+		Collection<JimenezBulletin> result;
 
-		result = this.repository.findAllBulletin();
+		result = this.repository.findAllJimenezBulletin();
 
 		return result;
 	}

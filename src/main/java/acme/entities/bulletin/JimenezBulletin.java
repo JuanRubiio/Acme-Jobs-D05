@@ -11,7 +11,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Bulletin extends DomainEntity {
+public class JimenezBulletin extends DomainEntity {
 
 	/**
 	 *

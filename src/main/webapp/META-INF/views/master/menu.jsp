@@ -22,8 +22,8 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="https://stackoverflow.com/"/>
             <acme:menu-suboption code="master.menu.anonymous.favourite-link-2" action="http://www.marca.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-3" action="http://www.as.com/"/>
-			<acme:menu-suboption code="master.menu.anonymous.bulletin.list" action="/anonymous/bulletin/list"/>
-			<acme:menu-suboption code="master.menu.anonymous.bulletin.create" action="/anonymous/bulletin/create"/>
+			<acme:menu-suboption code="master.menu.anonymous.jimenezbulletin.list" action="/anonymous/jimenez-bulletin/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.jimenezbulletin.create" action="/anonymous/jimenez-bulletin/create"/>
 			
 		</acme:menu-option>
 
