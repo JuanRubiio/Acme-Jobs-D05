@@ -17,11 +17,11 @@
 
 	<import resource="conversion-service.xml" />
 
-	<bean name="bulletin2" class="acme.entities.bulletin.RiveroBulletin">
-		<property name="name" value="Augusto" />
-		<property name="surname" value="Rivero" />
-		<property name="type" value="DEVELOPED" />
-		<property name="nif" value="49167727Y" />
+	<bean name="bulletin1" class="acme.entities.bulletin.JimenezBulletin">
+		<property name="name" value="Juan" />
+		<property name="surname" value="Jimenez" />
+		<property name="type" value="MANAGER" />
+		<property name="nif" value="15456336Z" />
 		<property name="body" value="Este es el primer boletin de prueba" />
 		<property name="bulletinName" value="Rivero Bulletin" />
 		

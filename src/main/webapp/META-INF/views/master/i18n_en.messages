@@ -32,8 +32,12 @@ master.menu.anonymous = Anonymous
 master.menu.anonymous.favourite-link = Favourite link Augusto
 master.menu.anonymous.favourite-link-2 = Favoutite link Juan
 master.menu.anonymous.favourite-link-3 = Favourite link Carlos
-master.menu.anonymous.rivero-bulletin.list = Bulletin List
-master.menu.anonymous.rivero-bulletin.create = Create Bulletin 
+master.menu.anonymous.jimenezbulletin.list = Juan Bulletin List
+master.menu.anonymous.jimenezbulletin.create = Juan Create Bulletin 
+master.menu.anonymous.list2 = Carlos Bulletin List
+master.menu.anonymous.create2 = Carlos Create Bulletin
+master.menu.anonymous.rivero-bulletin.list = Augusto Bulletin List
+master.menu.anonymous.rivero-bulletin.create = Augusto Create Bulletin 
 
 # master.menu.administrator ###################################################
 

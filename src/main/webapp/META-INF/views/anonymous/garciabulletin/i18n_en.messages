@@ -1,0 +1,17 @@
+anonymous.garciabulletin.form.label.bulletinName = Bulletin Name:
+anonymous.garciabulletin.form.label.name = Author Name:
+anonymous.garciabulletin.form.label.surname = Author Surname:
+anonymous.garciabulletin.form.label.dni = NIF:
+anonymous.garciabulletin.form.label.type = Type:
+anonymous.garciabulletin.form.label.body = Body:
+anonymous.garciabulletin.form.button.create = Create
+anonymous.garciabulletin.form.button.return = Return
+
+
+anonymous.garciabulletin.list.title = Bulletin List
+anonymous.garciabulletin.list.label.name = Name
+anonymous.garciabulletin.list.label.surname = Surname
+anonymous.garciabulletin.list.label.dni = NIF
+anonymous.garciabulletin.list.label.type = Type
+anonymous.garciabulletin.list.label.bulletinName = Bulletin Name
+anonymous.garciabulletin.list.label.body =  Body
