@@ -1,0 +1,25 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+anonymous.riverobulletin.form.label.name = Nombre del autor:
+anonymous.riverobulletin.form.label.surname = Apellido del autor:
+anonymous.riverobulletin.form.label.type = Tipo:
+anonymous.riverobulletin.form.label.nif = NIF:
+
+anonymous.riverobulletin.form.button.create = Crear
+anonymous.riverobulletin.form.button.return = Volver
+
+anonymous.riverobulletin.list.title = Lista de boletines
+anonymous.riverobulletin.list.label.name = Nombre
+anonymous.riverobulletin.list.label.type = Tipo
+anonymous.riverobulletin.form.label.body = Noticia
+anonymous.riverobulletin.form.label.bulletinName = Nombre del boletin
+anonymous.riverobulletin.list.label.bulletinName = Nombre del boletin
+anonymous.riverobulletin.list.label.body = Noticia

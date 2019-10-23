@@ -1,5 +1,5 @@
 
-package acme.entities.bulletins;
+package acme.entities.bulletin;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
@@ -11,12 +11,12 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class JimenezBulletin extends DomainEntity {
+public class RiveroBulletin extends DomainEntity {
 
 	/**
 	 *
 	 */
-	private static final long	serialVersionUID	= -2215447280369682048L;
+	private static final long	serialVersionUID	= 1L;
 
 	@NotBlank
 	private String				name;
