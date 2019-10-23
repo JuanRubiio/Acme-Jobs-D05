@@ -23,7 +23,7 @@
 		<property name="type" value="MANAGER" />
 		<property name="nif" value="15456336Z" />
 		<property name="body" value="Este es el primer boletin de prueba" />
-		<property name="bulletinName" value="Jimenez Bulletin" />
+		<property name="bulletinName" value="Rivero Bulletin" />
 		
 	</bean>
 	

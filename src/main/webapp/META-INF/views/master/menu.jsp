@@ -26,6 +26,8 @@
 			<acme:menu-suboption code="master.menu.anonymous.jimenezbulletin.create" action="/anonymous/jimenez-bulletin/create"/>
 			<acme:menu-suboption code="master.menu.anonymous.list2" action="/anonymous/garcia-bulletin/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.create2" action="/anonymous/garcia-bulletin/create"/>
+			<acme:menu-suboption code="master.menu.anonymous.rivero-bulletin.list" action="/anonymous/rivero-bulletin/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.rivero-bulletin.create" action="/anonymous/rivero-bulletin/create"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">

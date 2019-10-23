@@ -17,9 +17,9 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="anonymous.jimenezbulletin.list.label.bulletinName" path="bulletinName" width="30%"/>
-	<acme:list-column code="anonymous.jimenezbulletin.list.label.type" path="type" width="20%"/>		
-	<acme:list-column code="anonymous.jimenezbulletin.list.label.body" path="body" width="50%"/>		
+	<acme:list-column code="anonymous.riverobulletin.list.label.bulletinName" path="bulletinName" width="30%"/>
+	<acme:list-column code="anonymous.riverobulletin.list.label.type" path="type" width="20%"/>		
+	<acme:list-column code="anonymous.riverobulletin.list.label.body" path="body" width="50%"/>		
 </acme:list>
 
 
