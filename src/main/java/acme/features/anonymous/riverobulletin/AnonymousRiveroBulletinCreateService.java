@@ -1,8 +1,6 @@
 
 package acme.features.anonymous.riverobulletin;
 
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -43,7 +41,7 @@ public class AnonymousRiveroBulletinCreateService implements AbstractCreateServi
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "name", "surname", "nif", "type", "body");
+		request.unbind(entity, model, "name", "surname", "nif", "type", "body", "bulletinName");
 	}
 
 	@Override
@@ -70,21 +68,6 @@ public class AnonymousRiveroBulletinCreateService implements AbstractCreateServi
 		assert request != null;
 		assert entity != null;
 
-		Collection<RiveroBulletin> bulletinSurname = this.repository.findBySurname(entity.getSurname());
-		if (bulletinSurname == null || bulletinSurname.isEmpty()) {
-			entity.setBulletinName(entity.getSurname() + " Bulletin");
-		} else {
-			Collection<RiveroBulletin> bulletinName = this.repository.findByName(entity.getName());
-
-			if (bulletinName == null || bulletinName.isEmpty()) {
-				entity.setBulletinName(entity.getName() + " Bulletin");
-
-			} else {
-
-				entity.setBulletinName(entity.getNif() + " Bulletin");
-
-			}
-		}
 		this.repository.save(entity);
 
 	}

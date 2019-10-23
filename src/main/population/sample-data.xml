@@ -17,7 +17,7 @@
 
 	<import resource="conversion-service.xml" />
 
-	<bean name="bulletin1" class="acme.entities.bulletin.RiveroBulletin">
+	<bean name="bulletin2" class="acme.entities.bulletin.RiveroBulletin">
 		<property name="name" value="Augusto" />
 		<property name="surname" value="Rivero" />
 		<property name="type" value="DEVELOPED" />
