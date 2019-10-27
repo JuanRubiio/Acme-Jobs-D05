@@ -26,6 +26,6 @@
 		<spring:message code="${code}" arguments="${arguments}"/>
 	</jstl:when>
 	<jstl:otherwise>
-		<spring:message var="message" scope="request" code="${code}" arguments="${arguments}"/>		
+		<spring:message var="${message}" scope="request" code="${code}" arguments="${arguments}"/>		
 	</jstl:otherwise>
 </jstl:choose>

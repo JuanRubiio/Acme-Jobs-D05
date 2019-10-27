@@ -30,8 +30,10 @@ import acme.framework.helpers.StringHelper;
 import acme.framework.utilities.DatabaseExporter;
 import acme.framework.utilities.DatabaseInquirer;
 import acme.framework.utilities.DatabasePopulator;
+import lombok.extern.java.Log;
 
 @SpringBootApplication(scanBasePackages = "acme")
+@Log
 public class Launcher extends SpringBootServletInitializer {
 
 	// Entry point ------------------------------------------------------------
@@ -55,14 +57,17 @@ public class Launcher extends SpringBootServletInitializer {
 		Object attribute;
 		ApplicationContext context;
 
+		ProfileHelper.setProfiles("deployment");
+
 		super.onStartup(servletContext);
 
 		attribute = servletContext.getAttribute(WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE);
 		assert attribute instanceof ApplicationContext;
 		context = (ApplicationContext) attribute;
 
-		ProfileHelper.setProfiles("default");
 		FactoryHelper.initialise(context);
+
+		Launcher.log.info("The application is running (Deployment mode)");
 	}
 
 	@Override
@@ -143,7 +148,7 @@ public class Launcher extends SpringBootServletInitializer {
 
 		switch (command) {
 		case "--run":
-			System.out.printf("The application is running...%n");
+			System.out.printf("The application is running (Development)...%n");
 			break;
 		case "--database:export":
 			databaseExporter.run();

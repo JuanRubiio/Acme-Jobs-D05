@@ -16,7 +16,7 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
  
 <%@attribute name="code" required="true" type="java.lang.String"%>
-<%@attribute name="action" required="false" type="java.lang.Boolean"%>
+<%@attribute name="action" required="false" type="java.lang.String"%>
 
 <jstl:choose>
 	<jstl:when test="${action == null}">
