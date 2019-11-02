@@ -1,4 +1,4 @@
-# i18n_es.messages
+# i18n_en.messages
 #
 # Copyright (c) 2019 Rafael Corchuelo.
 #
@@ -8,13 +8,13 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-
-authentication.offer.title = Titulo
-authentication.offer.moment = Fecha Creación
-
-authentication.offer.deadline = Fecha límite
-authentication.offer.maxPrice = Precio máximo
-authentication.offer.minPrice = Precio mínimo
-authentication.offer.text = Texto
-authentication.offer.create = Crear
-authentication.offer.return = Volver
+anonymous.companyrecord.name = Name
+anonymous.companyrecord.sector = Sector
+anonymous.companyrecord.ceoName = CEO
+anonymous.companyrecord.webSite = Web site
+anonymous.companyrecord.phone = Phone
+anonymous.companyrecord.email = Email
+anonymous.companyrecord.return = Back
+anonymous.companyrecord.incorporated = Incorporated
+anonymous.companyrecord.stars = Stars
+anonymous.companyrecord.description = Description

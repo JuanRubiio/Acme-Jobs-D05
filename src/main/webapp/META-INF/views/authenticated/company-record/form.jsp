@@ -16,16 +16,19 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form readonly="true">
-	<acme:form-textbox code="authentication.offer.title" path="title"/>
-	<acme:form-moment code="authentication.offer.moment" path="moment"/>
-	<acme:form-moment code="authentication.offer.deadline" path="deadline"/>
-	<acme:form-money code="authentication.offer.maxPrice" path="maxPrice"/>
-	<acme:form-money code="authentication.offer.minPrice" path="minPrice"/>
-	<acme:form-textarea code="authentication.offer.text" path="text" />
+	<acme:form-textbox code="authenticated.companyrecord.name" path="name"/>
+	<acme:form-textbox code="authenticated.companyrecord.sector" path="sector"/>
+	<acme:form-textbox code="authenticated.companyrecord.ceoName" path="ceoName"/>
+	<acme:form-textbox code="authenticated.companyrecord.webSite" path="webSite"/>
+	<acme:form-textbox code="authenticated.companyrecord.phone" path="phone"/>
+	<acme:form-textbox code="authenticated.companyrecord.email" path="email"/>
+	<acme:form-textbox code="authenticated.companyrecord.incorporated" path="incorporated"/>
+	<acme:form-textbox code="authenticated.companyrecord.stars" path="stars"/>
+	<acme:form-textarea code="authenticated.companyrecord.description" path="description"/>
 	
 
 <%-- 	<acme:form-submit code="authentication.offer.create" action="/authenticated/offer/create"/>
-
-		 --%>
+ --%>
+		
   	<acme:form-return code="authentication.offer.return"/>
 </acme:form>

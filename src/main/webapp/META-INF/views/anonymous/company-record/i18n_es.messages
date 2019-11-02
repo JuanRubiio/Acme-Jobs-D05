@@ -9,12 +9,13 @@
 # they accept any liabilities with respect to them.
 
 
-authentication.offer.title = Titulo
-authentication.offer.moment = Fecha Creación
-
-authentication.offer.deadline = Fecha límite
-authentication.offer.maxPrice = Precio máximo
-authentication.offer.minPrice = Precio mínimo
-authentication.offer.text = Texto
-authentication.offer.create = Crear
-authentication.offer.return = Volver
+anonymous.companyrecord.name = Nombre
+anonymous.companyrecord.sector = Sector
+anonymous.companyrecord.ceoName = CEO
+anonymous.companyrecord.webSite = Sitio web
+anonymous.companyrecord.phone = Telefono
+anonymous.companyrecord.email = email
+anonymous.companyrecord.return = Volver
+anonymous.companyrecord.incorporated = Incorporado
+anonymous.companyrecord.stars = Estrellas
+anonymous.companyrecord.description = Descripcion

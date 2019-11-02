@@ -1,8 +1,6 @@
 
 package acme.features.authenticated.offer;
 
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,10 +8,10 @@ import acme.entities.offer.Offer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
-import acme.framework.services.AbstractListService;
+import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuthenticatedOfferListService implements AbstractListService<Authenticated, Offer> {
+public class AuthenticatedOfferShowService implements AbstractShowService<Authenticated, Offer> {
 
 	@Autowired
 	private AuthenticatedOfferRepository repository;
@@ -37,12 +35,14 @@ public class AuthenticatedOfferListService implements AbstractListService<Authen
 	}
 
 	@Override
-	public Collection<Offer> findMany(final Request<Offer> request) {
+	public Offer findOne(final Request<Offer> request) {
 		assert request != null;
-		Collection<Offer> result;
 
-		result = this.repository.findOffersActive();
+		Offer result;
+		int id;
 
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOneById(id);
 		return result;
 	}
 

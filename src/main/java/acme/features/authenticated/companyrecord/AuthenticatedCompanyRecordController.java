@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.offer;
+package acme.features.authenticated.companyrecord;
 
 import javax.annotation.PostConstruct;
 
@@ -7,20 +7,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.offer.Offer;
+import acme.entities.companyrecord.CompanyRecord;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/authenticated/offer/")
-public class AuthenticatedOfferController extends AbstractController<Authenticated, Offer> {
+@RequestMapping("/authenticated/company-record/")
+public class AuthenticatedCompanyRecordController extends AbstractController<Authenticated, CompanyRecord> {
 
 	@Autowired
-	private AuthenticatedOfferShowService	showService;
+	private AuthenticatedCompanyRecordShowService	showService;
 
 	@Autowired
-	private AuthenticatedOfferListService	listService;
+	private AuthenticatedCompanyRecordListService	listService;
 
 
 	@PostConstruct

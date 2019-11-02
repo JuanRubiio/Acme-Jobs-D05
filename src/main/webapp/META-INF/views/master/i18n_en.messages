@@ -39,6 +39,11 @@ master.menu.anonymous.create2 = Carlos Create Bulletin
 master.menu.anonymous.rivero-bulletin.list = Augusto Bulletin List
 master.menu.anonymous.rivero-bulletin.create = Augusto Create Bulletin 
 
+
+master.menu.offer.list = Active offers list 
+master.menu.companyrecord.list = Company Record List
+master.menu.companyrecord = Company Records
+master.menu.offer = Offers
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator

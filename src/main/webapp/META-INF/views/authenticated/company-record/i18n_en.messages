@@ -8,11 +8,13 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authentication.offer.title = Title
-authentication.offer.deadline = Deadline
-authentication.offer.moment = Creation Date
-authentication.offer.maxPrice = Max price
-authentication.offer.minPrice = Min price
-authentication.offer.text = Text
-authentication.offer.create = Create
-authentication.offer.return = Return
+authenticated.companyrecord.name = Name
+authenticated.companyrecord.sector = Sector
+authenticated.companyrecord.ceoName = CEO
+authenticated.companyrecord.webSite = Web site
+authenticated.companyrecord.phone = Phone
+authenticated.companyrecord.email = Email
+authenticated.companyrecord.return = Back
+authenticated.companyrecord.incorporated = Incorporated
+authenticated.companyrecord.stars = Stars
+authenticated.companyrecord.description = Description

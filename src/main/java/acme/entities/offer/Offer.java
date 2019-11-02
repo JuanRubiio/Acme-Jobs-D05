@@ -3,9 +3,11 @@ package acme.entities.offer;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.Valid;
 import javax.validation.constraints.Future;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -42,11 +44,14 @@ public class Offer extends DomainEntity {
 	private String				text;
 
 	@NotNull
+	@Valid
 	private Money				maxPrice;
 
 	@NotNull
+	@Valid
 	private Money				minPrice;
 
+	@Column(unique = true)
 	@NotBlank
 	@Pattern(regexp = "^[Oa-zA-Z]{5}-\\d{5}$")
 	private String				ticker;
