@@ -18,4 +18,7 @@ public interface AnonymousCompanyRecordRepository extends AbstractRepository {
 	@Query("select o from CompanyRecord o where o.id = ?1")
 	CompanyRecord findOneById(int id);
 
+	@Query("select ua from CompanyRecord ua where ua.stars = 5")
+	Collection<CompanyRecord> findAllTopCompanyRecords();
+
 }

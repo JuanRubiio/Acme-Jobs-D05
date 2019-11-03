@@ -41,7 +41,8 @@ master.menu.anonymous.rivero-bulletin.create = Augusto Create Bulletin
 
 
 master.menu.offer.list = Active offers list 
-master.menu.companyrecord.list = Company Record List
+master.menu.companyrecord.list = Company list
+master.menu.companyrecord.list.top = Top company list
 master.menu.companyrecord = Company Records
 master.menu.offer = Offers
 # master.menu.administrator ###################################################

@@ -40,7 +40,8 @@ master.menu.anonymous.rivero-bulletin.list = Lista de Boletines
 master.menu.anonymous.rivero-bulletin.create = Crear Boletines
 
 master.menu.offer.list = Listado de ofertas activas
-master.menu.companyrecord.list = Listado de registros de compañias
+master.menu.companyrecord.list = Listado de compañias
+master.menu.companyrecord.list.top = Listado de compañias top
 master.menu.companyrecord = Registro de compañias
 master.menu.offer = Ofertas
 

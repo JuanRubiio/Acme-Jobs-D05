@@ -31,6 +31,8 @@
 		</acme:menu-option>
 		<acme:menu-option code="master.menu.companyrecord" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.companyrecord.list" action="/anonymous/company-record/list"/>
+			<acme:menu-suboption code="master.menu.companyrecord.list.top" action="/anonymous/company-record/list-top"/>
+			
 		</acme:menu-option>
 
 

@@ -2,6 +2,7 @@
 package acme.entities.companyrecord;
 
 import javax.persistence.Entity;
+import javax.persistence.Transient;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -54,5 +55,17 @@ public class CompanyRecord extends DomainEntity {
 	@NotNull
 	@Range(min = 0, max = 5)
 	private int					stars;
+
+
+	@Transient
+	public String fullName() {
+		StringBuilder res = new StringBuilder();
+
+		res.append(this.name);
+		res.append(", ");
+		res.append(this.incorporated);
+
+		return res.toString();
+	}
 
 }
