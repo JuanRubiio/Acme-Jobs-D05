@@ -20,6 +20,7 @@
 	<acme:list-column code="authentication.offer.title" path="title" width="10%"/>
 	<acme:list-column code="authentication.offer.moment" path="moment" width="10%"/>	
 	<acme:list-column code="authentication.offer.deadline" path="deadline" width="10%" />	
+	<acme:list-column code="authentication.offer.reward" path="reward" width="10%"/>	
 	<acme:list-column code="authentication.offer.maxPrice" path="maxPrice" width="10%"/>	
 	<acme:list-column code="authentication.offer.minPrice" path="minPrice" width="10%"/>	
 	<acme:list-column code="authentication.offer.text" path="text" width="50%"/>		

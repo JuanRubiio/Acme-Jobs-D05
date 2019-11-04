@@ -49,6 +49,10 @@ public class Offer extends DomainEntity {
 
 	@NotNull
 	@Valid
+	private Money				reward;
+
+	@NotNull
+	@Valid
 	private Money				minPrice;
 
 	@Column(unique = true)

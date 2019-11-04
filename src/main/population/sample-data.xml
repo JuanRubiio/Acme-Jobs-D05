@@ -35,6 +35,9 @@
 		<property name="maxPrice">
 			<ref bean="money4"/>
 		</property>
+		<property name="reward">
+			<ref bean="money6"/>
+		</property>
 		<property name="minPrice">
 			<ref bean="money3"/>
 		</property>		
@@ -47,6 +50,9 @@
 		<property name="text" value="Esto es el texto de la oferta" />
 		<property name="maxPrice">
 			<ref bean="money3"/>
+		</property>
+		<property name="reward">
+			<ref bean="money8"/>
 		</property>
 		<property name="minPrice">
 			<ref bean="money2"/>
@@ -62,6 +68,9 @@
 		<property name="maxPrice">
 			<ref bean="money2"/>
 		</property>
+			<property name="reward">
+			<ref bean="money7"/>
+		</property>
 		<property name="minPrice">
 			<ref bean="money1"/>
 		</property>		
@@ -76,18 +85,42 @@
 		<property name="maxPrice">
 			<ref bean="money5"/>
 		</property>
+		<property name="reward">
+			<ref bean="money9"/>
+		</property>
 		<property name="minPrice">
 			<ref bean="money4"/>
 		</property>		
 		<property name="ticker" value="Osfev-54893" />
 	</bean>
-	<bean name="offer6" class="acme.entities.offer.Offer">
-		<property name="title" value="Oferta 6" />
-		<property name="moment" value="2019/05/17 00:00"/>
-		<property name="deadline" value="2019/11/03 00:00" />
+	
+	<bean name="offer5" class="acme.entities.offer.Offer">
+		<property name="title" value="Oferta 5" />
+		<property name="moment" value="2019/03/17 00:00"/>
+		<property name="deadline" value="2023/01/07 00:00" />
 		<property name="text" value="Esto es el texto de la oferta" />
 		<property name="maxPrice">
 			<ref bean="money5"/>
+		</property>
+		<property name="reward">
+			<ref bean="money6"/>
+		</property>
+		<property name="minPrice">
+			<ref bean="money3"/>
+		</property>		
+		<property name="ticker" value="OsTew-51893" />
+	</bean>
+	
+	<bean name="offer6" class="acme.entities.offer.Offer">
+		<property name="title" value="Oferta 6" />
+		<property name="moment" value="2019/05/17 00:00"/>
+		<property name="deadline" value="2019/11/05 00:00" />
+		<property name="text" value="Esto es el texto de la oferta" />
+		<property name="maxPrice">
+			<ref bean="money5"/>
+		</property>
+		<property name="reward">
+			<ref bean="money9"/>
 		</property>
 		<property name="minPrice">
 			<ref bean="money4"/>
@@ -115,21 +148,23 @@
 		<property name="amount" value="500.25" />
 		<property name="currency" value="€" />
 	</bean>
-	
-	
-	<bean name="offer5" class="acme.entities.offer.Offer">
-		<property name="title" value="Oferta 5" />
-		<property name="moment" value="2019/03/17 00:00"/>
-		<property name="deadline" value="2023/01/07 00:00" />
-		<property name="text" value="Esto es el texto de la oferta" />
-		<property name="maxPrice">
-			<ref bean="money5"/>
-		</property>
-		<property name="minPrice">
-			<ref bean="money3"/>
-		</property>		
-		<property name="ticker" value="OsTew-51893" />
+	<bean name="money6" class="acme.framework.datatypes.Money">
+		<property name="amount" value="350.25" />
+		<property name="currency" value="€" />
 	</bean>
+	<bean name="money7" class="acme.framework.datatypes.Money">
+		<property name="amount" value="150.25" />
+		<property name="currency" value="€" />
+	</bean>
+	<bean name="money8" class="acme.framework.datatypes.Money">
+		<property name="amount" value="250.25" />
+		<property name="currency" value="€" />
+	</bean>
+	<bean name="money9" class="acme.framework.datatypes.Money">
+		<property name="amount" value="450.25" />
+		<property name="currency" value="€" />
+	</bean>
+
 	
 	<bean name="companyRecord1" class="acme.entities.companyrecord.CompanyRecord">
 		<property name="name" value="Company record 1" />

@@ -13,6 +13,7 @@ authentication.offer.deadline = Deadline
 authentication.offer.moment = Creation Date
 authentication.offer.maxPrice = Max price
 authentication.offer.minPrice = Min price
+authentication.offer.reward = Reward
 authentication.offer.text = Text
 authentication.offer.create = Create
 authentication.offer.return = Return

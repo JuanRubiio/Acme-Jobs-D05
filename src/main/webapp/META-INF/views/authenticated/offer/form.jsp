@@ -19,6 +19,7 @@
 	<acme:form-textbox code="authentication.offer.title" path="title"/>
 	<acme:form-moment code="authentication.offer.moment" path="moment"/>
 	<acme:form-moment code="authentication.offer.deadline" path="deadline"/>
+	<acme:form-money code="authentication.offer.reward" path="reward"/>
 	<acme:form-money code="authentication.offer.maxPrice" path="maxPrice"/>
 	<acme:form-money code="authentication.offer.minPrice" path="minPrice"/>
 	<acme:form-textarea code="authentication.offer.text" path="text" />

@@ -77,6 +77,8 @@
         `min_price_amount` double precision,
         `min_price_currency` varchar(255),
         `moment` datetime(6),
+        `reward_amount` double precision,
+        `reward_currency` varchar(255),
         `text` varchar(255),
         `ticker` varchar(255),
         `title` varchar(255),
