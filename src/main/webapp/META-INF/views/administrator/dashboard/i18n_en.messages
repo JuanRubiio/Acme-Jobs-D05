@@ -1,2 +1,12 @@
 administrator.dashboard = Dashboard
 administrator.totalNumberCompanyRecords = Total number company records
+administrator.totalNumberAnnonuncements = Total number announcements
+administrator.totalNumberInvestorRecords = Total number investor records
+administrator.minRewardActiveRequest = Min reward active request
+administrator.maxRewardActiveRequest = Max reward active request
+administrator.avgRewardActiveRequest = Avg reward active request
+administrator.desvRewardActiveRequest = Standard deviation reward active request
+administrator.minRewardActiveOffer = Min reward active offer
+administrator.maxRewardActiveOffer =  Max reward active offer
+administrator.avgRewardActiveOffer =  Avg reward active offer
+administrator.desvRewardActiveOffer = Standard deviation reward active offer

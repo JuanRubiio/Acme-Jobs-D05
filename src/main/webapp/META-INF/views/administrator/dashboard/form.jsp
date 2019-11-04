@@ -4,5 +4,16 @@
 
 <acme:form readonly="true"> 
 	<acme:form-textbox code="administrator.totalNumberCompanyRecords" path="totalNumberCompanyRecords"/>
+	<acme:form-textbox code="administrator.totalNumberAnnonuncements" path="totalNumberAnnonuncements"/>
+	<acme:form-textbox code="administrator.totalNumberInvestorRecords" path="totalNumberInvestorRecords"/>
+	<acme:form-textbox code="administrator.minRewardActiveRequest" path="minRewardActiveRequest"/>
+	<acme:form-textbox code="administrator.maxRewardActiveRequest" path="maxRewardActiveRequest"/>
+	<acme:form-textbox code="administrator.avgRewardActiveRequest" path="avgRewardActiveRequest"/>
+	<acme:form-textbox code="administrator.desvRewardActiveRequest" path="desvRewardActiveRequest"/>
+	<acme:form-textbox code="administrator.minRewardActiveOffer" path="minRewardActiveOffer"/>
+	<acme:form-textbox code="administrator.maxRewardActiveOffer" path="maxRewardActiveOffer"/>
+	<acme:form-textbox code="administrator.avgRewardActiveOffer" path="avgRewardActiveOffer"/>
+	<acme:form-textbox code="administrator.desvRewardActiveOffer" path="desvRewardActiveOffer"/>
+
 	<acme:form-return code="administrator.announcement.form.button.return"/>
 </acme:form>

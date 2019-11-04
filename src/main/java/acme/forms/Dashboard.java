@@ -16,5 +16,15 @@ public class Dashboard implements Serializable {
 	private static final long	serialVersionUID	= -2329799461280661125L;
 
 	Integer						totalNumberCompanyRecords;
+	Integer						totalNumberAnnonuncements;
+	Integer						totalNumberInvestorRecords;
+	Double						minRewardActiveRequest;
+	Double						maxRewardActiveRequest;
+	Double						avgRewardActiveRequest;
+	Double						desvRewardActiveRequest;
+	Double						minRewardActiveOffer;
+	Double						maxRewardActiveOffer;
+	Double						avgRewardActiveOffer;
+	Double						desvRewardActiveOffer;
 
 }
