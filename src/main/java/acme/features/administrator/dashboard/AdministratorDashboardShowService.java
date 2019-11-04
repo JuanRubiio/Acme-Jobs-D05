@@ -30,7 +30,8 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "totalNumberCompanyRecords");
+		request.unbind(entity, model, "totalNumberCompanyRecords", "totalNumberAnnonuncements", "totalNumberInvestorRecords", "minRewardActiveRequest", "maxRewardActiveRequest", "avgRewardActiveRequest", "desvRewardActiveRequest", "minRewardActiveOffer",
+			"maxRewardActiveOffer", "avgRewardActiveOffer", "desvRewardActiveOffer");
 
 	}
 
@@ -40,15 +41,19 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		Dashboard res = new Dashboard();
 
 		Integer totalNumberCompanyRecords = this.repository.getTotalNumberCompanyRecords();
-
+		Integer totalNumberAnnouncements = this.repository.getTotalNumberAnnouncements();
+		Double minRewardActiveOffer = this.repository.getMinRewardActiveOffer();
+		Double maxRewardActiveOffer = this.repository.getMaxRewardActiveOffer();
+		Double avgRewardActiveOffer = this.repository.getAvgRewardActiveOffer();
+		Double desvRewardActiveOffer = this.repository.getAvgRewardActiveOffer();
 		res.setTotalNumberCompanyRecords(totalNumberCompanyRecords);
+		res.setTotalNumberAnnonuncements(totalNumberAnnouncements);
+		res.setMinRewardActiveOffer(minRewardActiveOffer);
+		res.setMaxRewardActiveOffer(maxRewardActiveOffer);
+		res.setAvgRewardActiveOffer(avgRewardActiveOffer);
+		res.setDesvRewardActiveOffer(desvRewardActiveOffer);
 
 		return res;
-	}
-
-	private void instantiateDashboard() {
-		Dashboard res = new Dashboard();
-
 	}
 
 }
