@@ -12,7 +12,7 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AnonymousInvestorRecordRepository extends AbstractRepository {
 
-	@Query("select ir from InvestorRecord r")
+	@Query("select ir from InvestorRecord ir")
 	Collection<InvestorRecord> findAllInvestorRecords();
 
 	@Query("select ir from InvestorRecord ir where ir.id = ?1")

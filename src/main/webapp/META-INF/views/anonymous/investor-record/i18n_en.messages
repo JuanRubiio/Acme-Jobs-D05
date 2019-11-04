@@ -8,11 +8,10 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.request.title = Title
-authenticated.request.deadline = Deadline 
-authenticated.request.moment = Creation Date 
-authenticated.request.reward = Reward
-authenticated.request.text = Text
+authenticated.investorRecord.nameInvestor = Name Investor 
+authenticated.investorRecord.sector = Sector
+authenticated.investorRecord.investingStatement = Investing Statement 
+authenticated.investorRecord.stars = Stars
 
-authenticated.request.create = Create
-authenticated.request.return = Return
+authenticated.investorRecord.create = Create
+authenticated.investorRecord.return = Return

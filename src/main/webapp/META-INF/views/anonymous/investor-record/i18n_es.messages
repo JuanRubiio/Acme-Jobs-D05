@@ -8,10 +8,10 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.investorRecord.nameInvestor = Nombre Inversora: 
-authenticated.investorRecord.sector = Sector: 
-authenticated.investorRecord.investingStatement = Declaración: 
-authenticated.investorRecord.stars = Estrellas: 
+authenticated.investorRecord.nameInvestor = Nombre Inversora
+authenticated.investorRecord.sector = Sector
+authenticated.investorRecord.investingStatement = Declaración 
+authenticated.investorRecord.stars = Estrellas
 
 authenticated.investorRecord.create = Crear una inversora
 authenticated.investorRecord.return = Volver

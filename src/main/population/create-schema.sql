@@ -40,32 +40,6 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-
-
-  create table `request` (
-       `id` integer not null,
-        `version` integer not null,
-        `deadline` datetime(6),
-        `moment` datetime(6),
-        `reward_amount` double precision,
-        `reward_currency` varchar(255),
-        `text` varchar(255),
-        `ticker` varchar(255),
-        `title` varchar(255),
-        primary key (`id`)
-    ) engine=InnoDB;
-    
-     create table `investorRecord` (
-       `id` integer not null,
-        `version` integer not null,
-        `nameInvestor` varchar(255),
-        `sector` varchar(255),
-        `investingStatement` varchar(255),
-        `stars` integer not null,
-        primary key (`id`)
-    ) engine=InnoDB;
-    
-   
     create table `company_record` (
        `id` integer not null,
         `version` integer not null,
@@ -102,6 +76,16 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `investor_record` (
+       `id` integer not null,
+        `version` integer not null,
+        `investing_statement` datetime(6),
+        `name_investor` varchar(255),
+        `sector` varchar(255),
+        `stars` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `jimenez_bulletin` (
        `id` integer not null,
         `version` integer not null,
@@ -131,14 +115,25 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-
-
     create table `provider` (
        `id` integer not null,
         `version` integer not null,
         `user_account_id` integer,
         `company` varchar(255),
         `sector` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `request` (
+       `id` integer not null,
+        `version` integer not null,
+        `deadline` datetime(6),
+        `moment` datetime(6),
+        `reward_amount` double precision,
+        `reward_currency` varchar(255),
+        `text` varchar(255),
+        `ticker` varchar(255),
+        `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -174,6 +169,9 @@
 
     alter table `offer` 
        add constraint UK_iex7e8fs0fh89yxpcnm1orjkm unique (`ticker`);
+
+    alter table `request` 
+       add constraint UK_9mxq3powq8tqctclj0fbi2nih unique (`ticker`);
 
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);

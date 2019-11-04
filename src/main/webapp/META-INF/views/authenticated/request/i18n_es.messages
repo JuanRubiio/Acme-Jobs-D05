@@ -8,11 +8,11 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.request.title = Título: 
-authenticated.request.deadline = Fecha Fin:
-authenticated.request.moment = Fecha Creación: 
-authenticated.request.reward = Recompensa: 
-authenticated.request.text = Descripción: 
+authenticated.request.title = Título
+authenticated.request.deadline = Fecha Fin
+authenticated.request.moment = Fecha Creación 
+authenticated.request.reward = Recompensa
+authenticated.request.text = Descripción 
 
 authenticated.request.create = Crear Request
 authenticated.request.return = Volver

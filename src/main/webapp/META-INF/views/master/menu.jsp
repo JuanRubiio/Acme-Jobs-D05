@@ -30,13 +30,15 @@
 			<acme:menu-suboption code="master.menu.anonymous.rivero-bulletin.create" action="/anonymous/rivero-bulletin/create"/>
 			<acme:menu-suboption code="master.menu.anonymous.announcement.list" action="/anonymous/announcement/list"/>
 		</acme:menu-option>
-		<acme:menu-option code="master.menu.companyrecord" access="isAnonymous()">
+		<acme:menu-option code="master.menu.companyrecord" access="isAnonymous()">	
 			<acme:menu-suboption code="master.menu.companyrecord.list" action="/anonymous/company-record/list"/>
 			<acme:menu-suboption code="master.menu.companyrecord.list.top" action="/anonymous/company-record/list-top"/>
 			
 		</acme:menu-option>
-
-
+		<acme:menu-option code="master.menu.investorrecord" access="isAnonymous()">
+			<acme:menu-suboption code="master.menu.investorrecord.list" action="/anonymous/investor-record/list"/>
+		</acme:menu-option>
+			
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-suboption code="master.menu.administrator.announcement.list" action="/administrator/announcement/list"/>
@@ -63,6 +65,14 @@
 		<acme:menu-option code="master.menu.offer" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.offer.list" action="/authenticated/offer/list"/>
 		</acme:menu-option>
+		<acme:menu-option code="master.menu.request" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.request.list" action="/authenticated/request/list"/>
+		</acme:menu-option>
+			
+		<acme:menu-option code="master.menu.investorrecord" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.investorrecord.list" action="/authenticated/investor-record/list"/>
+		</acme:menu-option>
+			
 			
 	</acme:menu-left>
 

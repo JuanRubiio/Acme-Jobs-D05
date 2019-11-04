@@ -58,14 +58,14 @@
 		<property name="ticker" value="Rudpk-12701" />
 	</bean>
 	
-	<bean name="investerRecord1" class="acme.entities.investerRecord.InvesterRecord">
+	<bean name="investorRecord1" class="acme.entities.investorRecord.InvestorRecord">
 		<property name="nameInvestor" value="Investor Record 1" />
 		<property name="investingStatement" value="2019/02/17 00:00"/>
 		<property name="sector" value="Esto es el sector de la Investor Record" />
 		<property name="stars" value="3" />
 	</bean>
 	
-	<bean name="investerRecord2" class="acme.entities.investerRecord.InvesterRecord">
+	<bean name="investorRecord2" class="acme.entities.investorRecord.InvestorRecord">
 		<property name="nameInvestor" value="Investor Record 2" />
 		<property name="investingStatement" value="2019/02/17 00:00"/>
 		<property name="sector" value="Esto es el sector de la Investor Record" />
