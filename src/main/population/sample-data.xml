@@ -16,8 +16,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<import resource="conversion-service.xml" />
-	
-	<bean name="bulletin1" class="acme.entities.bulletins.JimenezBulletin">
+		<bean name="bulletin1" class="acme.entities.bulletin.JimenezBulletin">
 		<property name="name" value="Juan" />
 		<property name="surname" value="Jimenez" />
 		<property name="type" value="MANAGER" />
@@ -27,6 +26,8 @@
 		
 	</bean>
 	
+
+
 	<bean name="offer1" class="acme.entities.offer.Offer">
 		<property name="title" value="Oferta 1" />
 		<property name="moment" value="2019/02/17 00:00"/>
@@ -203,4 +204,45 @@
 	</bean>
 
 
+
+	<!-- Announcements -->
+	
+	<bean id="announcement01" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Sample announcement 01"/>
+		<property name="moment" value="2019/06/25 10:20"/>
+		<property name="link" value="https://www.nba.com"/>
+		<property name="description" value="Esto es un anuncio sobre la NBA"/>
+	</bean>
+	
+	<bean id="announcement02" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Sample announcement 02"/>
+		<property name="moment" value="2019/10/22 16:10"/>
+		<property name="link" value="https://www.as.com"/>
+		<property name="description" value="Esto es un anuncio deportivo"/>
+	</bean>
+	
+	<bean id="announcement03" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Sample announcement 03"/>
+		<property name="moment" value="2019/10/2 13:00"/>
+		<property name="link"><null/></property>
+		<property name="description" value="Esto es un anuncio"/>
+	</bean>
+
+	<!-- Revisar las fechas para futuro -->
+	<bean id="challenge01" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Reto 1"/>
+		<property name="deadline" value="2019/12/15 10:10"/>
+		<property name="description" value="Texto aqui"/>
+		<property name="reward" value="Silver"/>
+	</bean>
+	
+	<bean id="challenge02" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Reto 2"/>
+		<property name="deadline" value="2019/11/5 19:01"/>
+		<property name="description" value="Texto 2 aqui"/>
+		<property name="reward" value="Gold"/>
+	</bean>
+
+
 </beans>
+

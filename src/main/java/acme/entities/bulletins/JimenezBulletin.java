@@ -13,9 +13,6 @@ import lombok.Setter;
 @Setter
 public class JimenezBulletin extends DomainEntity {
 
-	/**
-	 *
-	 */
 	private static final long	serialVersionUID	= -2215447280369682048L;
 
 	@NotBlank

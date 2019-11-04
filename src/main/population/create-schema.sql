@@ -6,6 +6,16 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `announcement` (
+       `id` integer not null,
+        `version` integer not null,
+        `description` varchar(255),
+        `link` varchar(255),
+        `moment` datetime(6),
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `anonymous` (
        `id` integer not null,
         `version` integer not null,
@@ -19,6 +29,40 @@
         `user_account_id` integer,
         primary key (`id`)
     ) engine=InnoDB;
+
+    
+    create table `challenge` (
+       `id` integer not null,
+        `version` integer not null,
+        `deadline` datetime(6),
+        `description` varchar(255),
+        `reward` varchar(255),
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+
+    create table `consumer` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `company` varchar(255),
+        `sector` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `garcia_bulletin` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `bulletin_name` varchar(255),
+        `dni` varchar(255),
+        `name` varchar(255),
+        `surname` varchar(255),
+        `type` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
 
     create table `company_record` (
        `id` integer not null,
@@ -44,17 +88,6 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `garcia_bulletin` (
-       `id` integer not null,
-        `version` integer not null,
-        `body` varchar(255),
-        `bulletin_name` varchar(255),
-        `dni` varchar(255),
-        `name` varchar(255),
-        `surname` varchar(255),
-        `type` varchar(255),
-        primary key (`id`)
-    ) engine=InnoDB;
 
     create table `jimenez_bulletin` (
        `id` integer not null,
@@ -67,6 +100,7 @@
         `type` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
+
 
     create table `offer` (
        `id` integer not null,

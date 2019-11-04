@@ -28,6 +28,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.create2" action="/anonymous/garcia-bulletin/create"/>
 			<acme:menu-suboption code="master.menu.anonymous.rivero-bulletin.list" action="/anonymous/rivero-bulletin/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.rivero-bulletin.create" action="/anonymous/rivero-bulletin/create"/>
+			<acme:menu-suboption code="master.menu.anonymous.announcement.list" action="/anonymous/announcement/list"/>
 		</acme:menu-option>
 		<acme:menu-option code="master.menu.companyrecord" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.companyrecord.list" action="/anonymous/company-record/list"/>
@@ -38,16 +39,21 @@
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
+			<acme:menu-suboption code="master.menu.administrator.announcement.list" action="/administrator/announcement/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
-			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.provider.favourite-link" action="https://www.amazon.es/"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
-			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="https://www.amazon.es/"/>
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.challenge" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.challenge.list" action="/authenticated/challenge/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.companyrecord" access="isAuthenticated()">

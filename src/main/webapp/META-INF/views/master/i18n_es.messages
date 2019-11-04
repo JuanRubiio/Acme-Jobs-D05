@@ -29,6 +29,8 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
+master.menu.anonymous.favourite-link-3 = Enlace favorito Carlos
+master.menu.anonymous.favuorite-link-2 = Enlace favorito Juan
 master.menu.anonymous.favourite-link = Enlace favorito Augusto
 master.menu.anonymous.favourite-link-3 = Enlace favorito Carlos
 master.menu.anonymous.favuorite-link-2 = Enlace favorito Juan
@@ -39,15 +41,16 @@ master.menu.anonymous.create2 = Crear Boletines de Carlos
 master.menu.anonymous.rivero-bulletin.list = Lista de Boletines
 master.menu.anonymous.rivero-bulletin.create = Crear Boletines
 
-master.menu.offer.list = Listado de ofertas activas
 master.menu.companyrecord.list = Listado de compañias
+master.menu.offer.list = Listado de ofertas activas
 master.menu.companyrecord.list.top = Listado de compañias top
 master.menu.companyrecord = Registro de compañias
 master.menu.offer = Ofertas
-
+master.menu.anonymous.announcement.list = Listar Anuncios
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
+master.menu.administrator.announcement.list = Listar Anuncios
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
 
@@ -60,6 +63,11 @@ master.menu.provider.favourite-link = Enlace favorito
 
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
+
+# master.menu.challenge ##########################################################
+
+master.menu.challenge = Desafios
+master.menu.challenge.list = Listar Desafio
 
 # master.menu.user-account ####################################################
 
