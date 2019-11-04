@@ -35,11 +35,15 @@
 
     drop table if exists `garcia_bulletin`;
 
+    drop table if exists `investor_record`;
+
     drop table if exists `jimenez_bulletin`;
 
     drop table if exists `offer`;
 
     drop table if exists `provider`;
+
+    drop table if exists `request`;
 
     drop table if exists `rivero_bulletin`;
 

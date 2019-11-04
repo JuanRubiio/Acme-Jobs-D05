@@ -15,20 +15,20 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("Select Count(ua) from Announcement ua")
 	Integer getTotalNumberAnnouncements();
 
-	//	@Query("Select Count(ua) from InvestorRecord ua")
-	//	Integer getTotalNumberInvestorRecords();
+	@Query("Select Count(ua) from InvestorRecord ua")
+	Integer getTotalNumberInvestorRecords();
 
-	//	@Query("")
-	//	Double getMinRewardActiveRequest();
-	//
-	//	@Query("")
-	//	Double getMaxRewardActiveRequest();
-	//
-	//	@Query("")
-	//	Double getAvgRewardActiveRequest();
-	//
-	//	@Query("")
-	//	Double getDesvRewardActiveRequest();
+	@Query("select min(o.reward.amount) from Request o where current_date() between o.moment and o.deadline")
+	Double getMinRewardActiveRequest();
+
+	@Query("select max(o.reward.amount) from Request o where current_date() between o.moment and o.deadline")
+	Double getMaxRewardActiveRequest();
+
+	@Query("select avg(o.reward.amount) from Request o where current_date() between o.moment and o.deadline ")
+	Double getAvgRewardActiveRequest();
+
+	@Query("select stddev(o.reward.amount) from Request o where current_date() between o.moment and o.deadline")
+	Double getDesvRewardActiveRequest();
 
 	@Query("select min(o.reward.amount) from Offer o where current_date() between o.moment and o.deadline")
 	Double getMinRewardActiveOffer();
