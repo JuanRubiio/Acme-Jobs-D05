@@ -1,59 +1,8 @@
-<h2>
-	<acme:message code="administrator.dashboard.form.title.charts"/>
-</h2>
+<%@page language="java" %>
+<%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="acme" tagdir="/WEB-INF/tags" %>
 
-<div>
-	<canvas id="canvas"></canvas>
-</div>
-
-<script type="text/javascript">
-	$(document).ready(function)(){
-		var data = {
-			labels : [	
-				"Sector1" , "Sector2", "Sector3"
-			],
-			datasets : [
-				{
-					data : [
-						<jstl:out value="${NumberCompaniesSector1}"
-						<jstl:out value="${NumberCompaniesSector2}"
-						<jstl:out value="${NumberCompaniesSector3}"
-					]
-					
-				}
-			]
-		
-		};
-		var options={
-			scales: {
-				yAxes:[
-					{
-						ticks:{
-							suggestedMin: 0.0,
-							suggestedMax: 10.0
-							
-						}
-					}
-				]
-				
-			},
-			legend:{
-				display: false
-			}
-	};
-	
-	var canvas, context;
-	
-	canvas = document.getElementedById("canvas");
-	context = canvas.getContext("2d");
-	new Chart(context, {
-		type:"bar",
-		data: data,
-		options: options
-	});
-	
-	
-	});
-
-
-</script>
+<acme:form readonly="true"> 
+	<acme:form-textbox code="administrator.totalNumberCompanyRecords" path="totalNumberCompanyRecords"/>
+	<acme:form-return code="administrator.announcement.form.button.return"/>
+</acme:form>
