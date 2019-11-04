@@ -40,6 +40,32 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+
+
+  create table `request` (
+       `id` integer not null,
+        `version` integer not null,
+        `deadline` datetime(6),
+        `moment` datetime(6),
+        `reward_amount` double precision,
+        `reward_currency` varchar(255),
+        `text` varchar(255),
+        `ticker` varchar(255),
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+    
+     create table `investorRecord` (
+       `id` integer not null,
+        `version` integer not null,
+        `nameInvestor` varchar(255),
+        `sector` varchar(255),
+        `investingStatement` varchar(255),
+        `stars` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+    
+   
     create table `company_record` (
        `id` integer not null,
         `version` integer not null,
@@ -104,6 +130,8 @@
         `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
+
+
 
     create table `provider` (
        `id` integer not null,
