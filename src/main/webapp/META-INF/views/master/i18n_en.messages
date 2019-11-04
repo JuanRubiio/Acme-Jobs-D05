@@ -53,7 +53,7 @@ master.menu.administrator = Administrator
 master.menu.administrator.announcement.list = Announcement List
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.shutdown = Shut down
-
+master.menu.administrator.dashboard = Dashboard
 # master.menu.provider ########################################################
 
 master.menu.provider = Provider
