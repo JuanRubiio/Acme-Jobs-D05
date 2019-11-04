@@ -30,16 +30,14 @@ master.menu.sign-out = Salir
 
 master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link-3 = Enlace favorito Carlos
-master.menu.anonymous.favuorite-link-2 = Enlace favorito Juan
+master.menu.anonymous.favourite-link-2 = Enlace favorito Juan
 master.menu.anonymous.favourite-link = Enlace favorito Augusto
-master.menu.anonymous.favourite-link-3 = Enlace favorito Carlos
-master.menu.anonymous.favuorite-link-2 = Enlace favorito Juan
 master.menu.anonymous.jimenezbulletin.list = Lista de Boletines de Juan
 master.menu.anonymous.jimenezbulletin.create = Crear Boletines de Juan
 master.menu.anonymous.list2 = Listar Boletines de Carlos
 master.menu.anonymous.create2 = Crear Boletines de Carlos
-master.menu.anonymous.rivero-bulletin.list = Lista de Boletines
-master.menu.anonymous.rivero-bulletin.create = Crear Boletines
+master.menu.anonymous.rivero-bulletin.list = Lista de Boletines de Augusto
+master.menu.anonymous.rivero-bulletin.create = Crear Boletines de Carlos
 
 master.menu.companyrecord.list = Listado de compañias
 master.menu.offer.list = Listado de ofertas activas
