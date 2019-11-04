@@ -22,6 +22,7 @@
 		<put-attribute name="body" type="template" value="../anonymous/jimenez-bulletin/list.jsp" />
 	</definition>
 	
+			
 	<definition name="anonymous/jimenez-bulletin/form" extends="master">
 		<put-attribute name="body" type="template" value="../anonymous/jimenez-bulletin/form.jsp" />
 	</definition>

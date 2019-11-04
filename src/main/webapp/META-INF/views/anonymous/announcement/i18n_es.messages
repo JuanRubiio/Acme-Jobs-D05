@@ -1,0 +1,11 @@
+anonymous.announcement.form.label.title = Titulo:
+anonymous.announcement.form.label.moment = Momento:
+anonymous.announcement.form.label.link = Link:
+anonymous.announcement.form.label.description = Descripcion:
+anonymous.announcement.form.button.return = Volver
+
+
+anonymous.announcement.list.label.title = Titulo
+anonymous.announcement.list.label.moment = Fecha
+anonymous.announcement.list.label.link = Link
+anonymous.announcement.list.label.description = Descripcion

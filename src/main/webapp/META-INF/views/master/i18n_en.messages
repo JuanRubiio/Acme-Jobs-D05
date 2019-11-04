@@ -29,19 +29,28 @@ master.menu.sign-out = Sign out
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anonymous
-master.menu.anonymous.favourite-link = Favourite link Augusto
 master.menu.anonymous.favourite-link-2 = Favoutite link Juan
 master.menu.anonymous.favourite-link-3 = Favourite link Carlos
+master.menu.anonymous.favourite-link = Favourite link Augusto
 master.menu.anonymous.jimenezbulletin.list = Juan Bulletin List
 master.menu.anonymous.jimenezbulletin.create = Juan Create Bulletin 
 master.menu.anonymous.list2 = Carlos Bulletin List
 master.menu.anonymous.create2 = Carlos Create Bulletin
 master.menu.anonymous.rivero-bulletin.list = Augusto Bulletin List
 master.menu.anonymous.rivero-bulletin.create = Augusto Create Bulletin 
+master.menu.anonymous.announcement.list = Announcement List
 
+
+
+master.menu.offer.list = Active offers list 
+master.menu.companyrecord.list = Company list
+master.menu.companyrecord.list.top = Top company list
+master.menu.companyrecord = Company Records
+master.menu.offer = Offers
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
+master.menu.administrator.announcement.list = Announcement List
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.shutdown = Shut down
 
@@ -55,6 +64,11 @@ master.menu.provider.favourite-link = Favourite link
 
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
+
+# master.menu.challenge ##########################################################
+
+master.menu.challenge = Challenges
+master.menu.challenge.list = Challenge List
 
 # master.menu.user-account ####################################################
 

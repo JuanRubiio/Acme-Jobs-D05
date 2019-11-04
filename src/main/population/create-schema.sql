@@ -6,6 +6,16 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `announcement` (
+       `id` integer not null,
+        `version` integer not null,
+        `description` varchar(255),
+        `link` varchar(255),
+        `moment` datetime(6),
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `anonymous` (
        `id` integer not null,
         `version` integer not null,
@@ -20,13 +30,47 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `rivero_bulletin` (
+    create table `challenge` (
+       `id` integer not null,
+        `version` integer not null,
+        `deadline` datetime(6),
+        `description` varchar(255),
+        `reward` varchar(255),
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `company_record` (
+       `id` integer not null,
+        `version` integer not null,
+        `ceo_name` varchar(255),
+        `description` varchar(255),
+        `email` varchar(255),
+        `incorporated` varchar(255),
+        `name` varchar(255),
+        `phone` varchar(255),
+        `sector` varchar(255),
+        `stars` integer not null,
+        `web_site` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `consumer` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `company` varchar(255),
+        `sector` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `garcia_bulletin` (
        `id` integer not null,
         `version` integer not null,
         `body` varchar(255),
         `bulletin_name` varchar(255),
+        `dni` varchar(255),
         `name` varchar(255),
-        `nif` varchar(255),
         `surname` varchar(255),
         `type` varchar(255),
         primary key (`id`)
@@ -44,15 +88,20 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `garcia_bulletin` (
+    create table `offer` (
        `id` integer not null,
         `version` integer not null,
-        `body` varchar(255),
-        `bulletin_name` varchar(255),
-        `dni` varchar(255),
-        `name` varchar(255),
-        `surname` varchar(255),
-        `type` varchar(255),
+        `deadline` datetime(6),
+        `max_price_amount` double precision,
+        `max_price_currency` varchar(255),
+        `min_price_amount` double precision,
+        `min_price_currency` varchar(255),
+        `moment` datetime(6),
+        `reward_amount` double precision,
+        `reward_currency` varchar(255),
+        `text` varchar(255),
+        `ticker` varchar(255),
+        `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -62,6 +111,18 @@
         `user_account_id` integer,
         `company` varchar(255),
         `sector` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `rivero_bulletin` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `bulletin_name` varchar(255),
+        `name` varchar(255),
+        `nif` varchar(255),
+        `surname` varchar(255),
+        `type` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -82,6 +143,9 @@
     ) engine=InnoDB;
 
     insert into `hibernate_sequence` values ( 1 );
+
+    alter table `offer` 
+       add constraint UK_iex7e8fs0fh89yxpcnm1orjkm unique (`ticker`);
 
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);

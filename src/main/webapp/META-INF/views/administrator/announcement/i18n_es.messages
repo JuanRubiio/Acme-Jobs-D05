@@ -1,0 +1,10 @@
+administrator.announcement.form.label.title = Titulo:
+administrator.announcement.form.label.link = Link:
+administrator.announcement.form.label.description = Descripcion:
+administrator.announcement.form.button.return = Volver
+
+
+administrator.announcement.list.label.title = Titulo
+administrator.announcement.list.label.moment = Fecha
+administrator.announcement.list.label.link = Link
+administrator.announcement.list.label.description = Descripcion

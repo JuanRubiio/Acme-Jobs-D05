@@ -16,7 +16,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<import resource="conversion-service.xml" />
-		<bean name="bulletin1" class="acme.entities.bulletin.JimenezBulletin">
+		<bean name="bulletin1" class="acme.entities.bulletins.JimenezBulletin">
 		<property name="name" value="Juan" />
 		<property name="surname" value="Jimenez" />
 		<property name="type" value="MANAGER" />
@@ -27,4 +27,222 @@
 	</bean>
 	
 
+
+	<bean name="offer1" class="acme.entities.offer.Offer">
+		<property name="title" value="Oferta 1" />
+		<property name="moment" value="2019/02/17 00:00"/>
+		<property name="deadline" value="2020/02/17 00:00" />
+		<property name="text" value="Esto es el texto de la oferta" />
+		<property name="maxPrice">
+			<ref bean="money4"/>
+		</property>
+		<property name="reward">
+			<ref bean="money6"/>
+		</property>
+		<property name="minPrice">
+			<ref bean="money3"/>
+		</property>		
+		<property name="ticker" value="Osftw-51893" />
+	</bean>
+		<bean name="offer2" class="acme.entities.offer.Offer">
+		<property name="title" value="Oferta 2" />
+		<property name="moment" value="2019/09/17 00:00"/>
+		<property name="deadline" value="2020/04/17 00:00" />
+		<property name="text" value="Esto es el texto de la oferta" />
+		<property name="maxPrice">
+			<ref bean="money3"/>
+		</property>
+		<property name="reward">
+			<ref bean="money8"/>
+		</property>
+		<property name="minPrice">
+			<ref bean="money2"/>
+		</property>		
+		<property name="ticker" value="Otfew-54803" />
+	</bean>
+	
+		<bean name="offer3" class="acme.entities.offer.Offer">
+		<property name="title" value="Oferta 3" />
+		<property name="moment" value="2019/10/17 00:00"/>
+		<property name="deadline" value="2020/02/12 00:00" />
+		<property name="text" value="Esto es el texto de la oferta" />
+		<property name="maxPrice">
+			<ref bean="money2"/>
+		</property>
+			<property name="reward">
+			<ref bean="money7"/>
+		</property>
+		<property name="minPrice">
+			<ref bean="money1"/>
+		</property>		
+		<property name="ticker" value="OsfFG-54733" />
+	</bean>
+	
+		<bean name="offer4" class="acme.entities.offer.Offer">
+		<property name="title" value="Oferta 4" />
+		<property name="moment" value="2019/05/17 00:00"/>
+		<property name="deadline" value="2021/01/19 00:00" />
+		<property name="text" value="Esto es el texto de la oferta" />
+		<property name="maxPrice">
+			<ref bean="money5"/>
+		</property>
+		<property name="reward">
+			<ref bean="money9"/>
+		</property>
+		<property name="minPrice">
+			<ref bean="money4"/>
+		</property>		
+		<property name="ticker" value="Osfev-54893" />
+	</bean>
+	
+	<bean name="offer5" class="acme.entities.offer.Offer">
+		<property name="title" value="Oferta 5" />
+		<property name="moment" value="2019/03/17 00:00"/>
+		<property name="deadline" value="2023/01/07 00:00" />
+		<property name="text" value="Esto es el texto de la oferta" />
+		<property name="maxPrice">
+			<ref bean="money5"/>
+		</property>
+		<property name="reward">
+			<ref bean="money6"/>
+		</property>
+		<property name="minPrice">
+			<ref bean="money3"/>
+		</property>		
+		<property name="ticker" value="OsTew-51893" />
+	</bean>
+	
+	<bean name="offer6" class="acme.entities.offer.Offer">
+		<property name="title" value="Oferta 6" />
+		<property name="moment" value="2019/05/17 00:00"/>
+		<property name="deadline" value="2019/11/05 00:00" />
+		<property name="text" value="Esto es el texto de la oferta" />
+		<property name="maxPrice">
+			<ref bean="money5"/>
+		</property>
+		<property name="reward">
+			<ref bean="money9"/>
+		</property>
+		<property name="minPrice">
+			<ref bean="money4"/>
+		</property>		
+		<property name="ticker" value="Osfev-54895" />
+	</bean>
+	
+	<bean name="money1" class="acme.framework.datatypes.Money">
+		<property name="amount" value="100.25" />
+		<property name="currency" value="€" />
+	</bean>
+	<bean name="money2" class="acme.framework.datatypes.Money">
+		<property name="amount" value="200.25" />
+		<property name="currency" value="€" />
+	</bean>
+	<bean name="money3" class="acme.framework.datatypes.Money">
+		<property name="amount" value="300.25" />
+		<property name="currency" value="€" />
+	</bean>
+	<bean name="money4" class="acme.framework.datatypes.Money">
+		<property name="amount" value="400.25" />
+		<property name="currency" value="€" />
+	</bean>
+	<bean name="money5" class="acme.framework.datatypes.Money">
+		<property name="amount" value="500.25" />
+		<property name="currency" value="€" />
+	</bean>
+	<bean name="money6" class="acme.framework.datatypes.Money">
+		<property name="amount" value="350.25" />
+		<property name="currency" value="€" />
+	</bean>
+	<bean name="money7" class="acme.framework.datatypes.Money">
+		<property name="amount" value="150.25" />
+		<property name="currency" value="€" />
+	</bean>
+	<bean name="money8" class="acme.framework.datatypes.Money">
+		<property name="amount" value="250.25" />
+		<property name="currency" value="€" />
+	</bean>
+	<bean name="money9" class="acme.framework.datatypes.Money">
+		<property name="amount" value="450.25" />
+		<property name="currency" value="€" />
+	</bean>
+
+	
+	<bean name="companyRecord1" class="acme.entities.companyrecord.CompanyRecord">
+		<property name="name" value="Company record 1" />
+		<property name="sector" value="Privado"/>
+		<property name="ceoName" value="Fritz Hoderlein" />
+		<property name="description" value="Esto es una descripcion" />
+		<property name="webSite" value="https://www.everis.com/global/en" />
+		<property name="phone" value="+034 (5648) 2654861" />
+		<property name="email" value="jj@everis.com" />
+		<property name="incorporated" value="Inc." />
+		<property name="stars" value="5" />		
+	</bean>
+
+	<bean name="companyRecord2" class="acme.entities.companyrecord.CompanyRecord">
+		<property name="name" value="Company record 2" />
+		<property name="sector" value="Publico"/>
+		<property name="ceoName" value="Fritz Hoderl" />
+		<property name="description" value="Esto es una descripcion" />
+		<property name="webSite" value="https://www.everis.com/global/en" />
+		<property name="phone" value="(5648)2652461" />
+		<property name="email" value="jj@everis.com" />
+		<property name="incorporated" value="Inc." />
+		<property name="stars" value="2" />		
+	</bean>
+
+	<bean name="companyRecord3" class="acme.entities.companyrecord.CompanyRecord">
+		<property name="name" value="Company record 3" />
+		<property name="sector" value="Privado"/>
+		<property name="ceoName" value="Fritz Hoderin" />
+		<property name="description" value="Esto es una descripcion" />
+		<property name="webSite" value="https://www.everis.com/global/en" />
+		<property name="phone" value="21148616" />
+		<property name="email" value="j2233ddj@everis.com" />
+		<property name="incorporated" value="LLC" />
+		<property name="stars" value="4" />		
+	</bean>
+
+
+
+	<!-- Announcements -->
+	
+	<bean id="announcement01" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Sample announcement 01"/>
+		<property name="moment" value="2019/06/25 10:20"/>
+		<property name="link" value="https://www.nba.com"/>
+		<property name="description" value="Esto es un anuncio sobre la NBA"/>
+	</bean>
+	
+	<bean id="announcement02" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Sample announcement 02"/>
+		<property name="moment" value="2019/10/22 16:10"/>
+		<property name="link" value="https://www.as.com"/>
+		<property name="description" value="Esto es un anuncio deportivo"/>
+	</bean>
+	
+	<bean id="announcement03" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Sample announcement 03"/>
+		<property name="moment" value="2019/10/2 13:00"/>
+		<property name="link"><null/></property>
+		<property name="description" value="Esto es un anuncio"/>
+	</bean>
+
+	<!-- Revisar las fechas para futuro -->
+	<bean id="challenge01" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Reto 1"/>
+		<property name="deadline" value="2019/12/15 10:10"/>
+		<property name="description" value="Texto aqui"/>
+		<property name="reward" value="Silver"/>
+	</bean>
+	
+	<bean id="challenge02" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Reto 2"/>
+		<property name="deadline" value="2019/11/5 19:01"/>
+		<property name="description" value="Texto 2 aqui"/>
+		<property name="reward" value="Gold"/>
+	</bean>
+
+
 </beans>
+
