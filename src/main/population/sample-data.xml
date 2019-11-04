@@ -25,6 +25,51 @@
 		<property name="bulletinName" value="Rivero Bulletin" />
 		
 	</bean>
+	<bean name="request1" class="acme.entities.request.Request">
+		<property name="title" value="Solicitud 1" />
+		<property name="moment" value="2019/02/17 00:00"/>
+		<property name="deadline" value="2020/02/17 00:00" />
+		<property name="text" value="Esto es el texto de la solicitud" />
+		<property name="reward">
+			<ref bean="money6"/>
+		</property>
+		<property name="ticker" value="Radek-12881" />
+	</bean>
 	
+	<bean name="request2" class="acme.entities.request.Request">
+		<property name="title" value="Solicitud 2" />
+		<property name="moment" value="2019/02/17 00:00"/>
+		<property name="deadline" value="2020/02/17 00:00" />
+		<property name="text" value="Esto es el texto de la solicitud" />
+		<property name="reward">
+			<ref bean="money6"/>
+		</property>
+		<property name="ticker" value="Radyk-12852" />
+	</bean>
+	
+	<bean name="request3" class="acme.entities.request.Request">
+		<property name="title" value="Solicitud 3" />
+		<property name="moment" value="2019/02/17 00:00"/>
+		<property name="deadline" value="2020/02/17 00:00" />
+		<property name="text" value="Esto es el texto de la solicitud" />
+		<property name="reward">
+			<ref bean="money6"/>
+		</property>
+		<property name="ticker" value="Rudpk-12701" />
+	</bean>
+	
+	<bean name="investerRecord1" class="acme.entities.investerRecord.InvesterRecord">
+		<property name="nameInvestor" value="Investor Record 1" />
+		<property name="investingStatement" value="2019/02/17 00:00"/>
+		<property name="sector" value="Esto es el sector de la Investor Record" />
+		<property name="stars" value="3" />
+	</bean>
+	
+	<bean name="investerRecord2" class="acme.entities.investerRecord.InvesterRecord">
+		<property name="nameInvestor" value="Investor Record 2" />
+		<property name="investingStatement" value="2019/02/17 00:00"/>
+		<property name="sector" value="Esto es el sector de la Investor Record" />
+		<property name="stars" value="4" />
+	</bean>
 
 </beans>

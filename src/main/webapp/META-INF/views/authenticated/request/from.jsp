@@ -7,7 +7,7 @@
 	<acme:form-textbox code="authentication.request.title" path="title"/>
 	<acme:form-moment code="authentication.request.moment" path="moment"/>
 	<acme:form-moment code="authentication.request.deadline" path="deadline"/>
-	<acme:form-money code="authentication.request.descripcion" path="descripcion"/>
+	<acme:form-money code="authentication.request.text" path="text"/>
 	<acme:form-money code="authentication.request.reward" path="reward"/>
 
 <%-- 	<acme:form-submit code="authentication.request.create" action="/authenticated/request/create"/>

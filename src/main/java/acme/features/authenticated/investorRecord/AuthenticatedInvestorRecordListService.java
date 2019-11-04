@@ -4,6 +4,7 @@ package acme.features.authenticated.investorRecord;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import acme.entities.investorRecord.InvestorRecord;
 import acme.framework.components.Model;
@@ -11,6 +12,7 @@ import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
 
+@Service
 public class AuthenticatedInvestorRecordListService implements AbstractListService<Authenticated, InvestorRecord> {
 
 	// Internal state ---------------------------------------------------------

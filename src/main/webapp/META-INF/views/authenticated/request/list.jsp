@@ -22,6 +22,6 @@
 	<acme:list-column code="authentication.request.moment" path="moment" width="10%"/>	
 	<acme:list-column code="authentication.request.deadline" path="deadline" width="10%" />	
 	<acme:list-column code="authentication.request.reward" path="reward" width="10%"/>	
-	<acme:list-column code="authentication.request.descripcion" path="descripcion" width="50%"/>	
+	<acme:list-column code="authentication.request.text" path="text" width="50%"/>	
 		
 </acme:list>

@@ -41,7 +41,7 @@ public class Request extends DomainEntity {
 	private Date				deadline;
 
 	@NotBlank
-	private String				descripcion;
+	private String				text;
 
 	@NotNull
 	@Valid

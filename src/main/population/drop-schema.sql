@@ -24,6 +24,10 @@
     drop table if exists `anonymous`;
 
     drop table if exists `authenticated`;
+    
+    drop table if exists `request`;
+    
+    drop table if exists `investorRecord`;
 
     drop table if exists `rivero_bulletin`;
 
