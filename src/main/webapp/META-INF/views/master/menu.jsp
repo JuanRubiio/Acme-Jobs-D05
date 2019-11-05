@@ -37,6 +37,8 @@
 		</acme:menu-option>
 		<acme:menu-option code="master.menu.investorrecord" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.investorrecord.list" action="/anonymous/investor-record/list"/>
+			<acme:menu-suboption code="master.menu.investorrecord.list.top" action="/anonymous/investor-record/list-top"/>
+			
 		</acme:menu-option>
 			
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">

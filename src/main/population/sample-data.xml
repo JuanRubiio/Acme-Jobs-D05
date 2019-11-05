@@ -72,6 +72,13 @@
 		<property name="stars" value="4" />
 	</bean>
 
+	<bean name="investorRecord3" class="acme.entities.investorRecord.InvestorRecord">
+		<property name="nameInvestor" value="Investor Record 3" />
+		<property name="investingStatement" value="2019/02/17 00:00"/>
+		<property name="sector" value="Esto es el sector de la Investor Record" />
+		<property name="stars" value="5" />
+	</bean>
+
 
 	<bean name="offer1" class="acme.entities.offer.Offer">
 		<property name="title" value="Oferta 1" />
@@ -160,7 +167,7 @@
 	<bean name="offer6" class="acme.entities.offer.Offer">
 		<property name="title" value="Oferta 6" />
 		<property name="moment" value="2019/05/17 00:00"/>
-		<property name="deadline" value="2019/11/05 00:00" />
+		<property name="deadline" value="2019/11/08 00:00" />
 		<property name="text" value="Esto es el texto de la oferta" />
 		<property name="maxPrice">
 			<ref bean="money5"/>

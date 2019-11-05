@@ -72,6 +72,7 @@ master.menu.challenge.list = Challenge List
 
 master.menu.investorrecord = Investor record
 master.menu.investorrecord.list = Investor record list
+master.menu.investorrecord.list.top = Investor record top list
 master.menu.request = Request
 master.menu.request.list = Request lists
 

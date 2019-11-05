@@ -68,6 +68,7 @@ master.menu.challenge = Desafios
 master.menu.challenge.list = Listar Desafio
 master.menu.investorrecord = Registro de Inversores
 master.menu.investorrecord.list = Lista de registro inversores
+master.menu.investorrecord.list.top = Listado de inversores top
 master.menu.request = Peticiones
 master.menu.request.list = Lista de peticiones
 # master.menu.user-account ####################################################
