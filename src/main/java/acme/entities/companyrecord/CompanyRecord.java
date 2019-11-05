@@ -8,6 +8,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
+import org.apache.commons.lang3.StringUtils;
 import org.hibernate.validator.constraints.Range;
 import org.hibernate.validator.constraints.URL;
 
@@ -49,8 +50,7 @@ public class CompanyRecord extends DomainEntity {
 	@Email
 	private String				email;
 
-	@NotBlank
-	private String				incorporated;
+	private Boolean				incorporated;
 
 	@NotNull
 	@Range(min = 0, max = 5)
@@ -58,14 +58,12 @@ public class CompanyRecord extends DomainEntity {
 
 
 	@Transient
-	public String fullName() {
-		StringBuilder res = new StringBuilder();
-
-		res.append(this.name);
-		res.append(", ");
-		res.append(this.incorporated);
-
-		return res.toString();
+	public Boolean getIncorporated() {
+		Boolean res = false;
+		if (StringUtils.isNotBlank(this.name) && this.name.contains(".Inc")) {
+			res = true;
+		}
+		return res;
 	}
 
 }
