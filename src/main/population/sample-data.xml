@@ -290,11 +290,33 @@
 	
 	<bean id="challenge02" class="acme.entities.challenges.Challenge">
 		<property name="title" value="Reto 2"/>
-		<property name="deadline" value="2019/11/5 19:01"/>
+		<property name="deadline" value="2019/11/7 19:01"/>
 		<property name="description" value="Texto 2 aqui"/>
 		<property name="reward" value="Gold"/>
 	</bean>
 
+	<!-- Banners -->
+
+	<bean id="banner01" class="acme.entities.banners.Banner">
+		<property name="picture" value="Titulo1"/>
+		<property name="slogan" value="la gallina que entra por la que sale"/>
+		<property name="target" value="https://www.imagen1.com"/>
+	</bean> 
+
+	<bean id="banner02" class="acme.entities.banners.CommercialBanner">
+		<property name="picture" value="Titulo2"/>
+		<property name="slogan" value="Paga el banner"/>
+		<property name="target" value="https://www.imagen2.com"/>
+		<property name="creditCard" value="379354508162306"/>
+	</bean> 
+	
+	<bean id="banner03" class="acme.entities.banners.NonCommercialBanner">
+		<property name="picture" value="Titulo3"/>
+		<property name="slogan" value="Slogan no comercial"/>
+		<property name="target" value="https://www.imagen3.com"/>
+		<property name="jingle" value="Jingle Bells, jingle bells, Jingle all the way!"/>
+	</bean> 
+	
 
 </beans>
 
