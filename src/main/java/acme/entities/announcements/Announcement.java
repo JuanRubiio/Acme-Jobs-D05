@@ -29,6 +29,7 @@ public class Announcement extends DomainEntity {
 	@Past
 	private Date				moment;
 
+	@NotBlank
 	@URL
 	private String				link;
 
