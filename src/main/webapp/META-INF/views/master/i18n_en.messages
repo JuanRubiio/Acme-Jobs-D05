@@ -54,6 +54,7 @@ master.menu.administrator.announcement.list = Announcement List
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.shutdown = Shut down
 master.menu.administrator.dashboard = Dashboard
+master.menu.administrator.chart = Chart
 # master.menu.provider ########################################################
 
 master.menu.provider = Provider
