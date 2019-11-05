@@ -39,15 +39,16 @@ master.menu.anonymous.create2 = Crear Boletines de Carlos
 master.menu.anonymous.rivero-bulletin.list = Lista de Boletines de Augusto
 master.menu.anonymous.rivero-bulletin.create = Crear Boletines de Carlos
 
-master.menu.companyrecord.list = Listado de compañias
-master.menu.offer.list = Listado de ofertas activas
-master.menu.companyrecord.list.top = Listado de compañias top
-master.menu.companyrecord = Registro de compañias
+master.menu.companyrecord.list = Listado De Compañias
+master.menu.offer.list = Listado de Ofertas Activas
+master.menu.companyrecord.list.top = Listado De Compañias Top
+master.menu.companyrecord = Registro De Compañias
 master.menu.offer = Ofertas
 master.menu.anonymous.announcement.list = Listar Anuncios
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
+master.menu.announcement = Anuncios
 master.menu.administrator.announcement.list = Listar Anuncios
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
@@ -67,8 +68,8 @@ master.menu.consumer.favourite-link = Enlace favorito
 
 master.menu.challenge = Desafios
 master.menu.challenge.list = Listar Desafio
-master.menu.investorrecord = Registro de Inversores
-master.menu.investorrecord.list = Lista de registro inversores
+master.menu.investorrecord = Registro De Inversores
+master.menu.investorrecord.list = Listado De Registro Inversores
 master.menu.investorrecord.list.top = Listado de inversores top
 master.menu.request = Peticiones
 master.menu.request.list = Lista de peticiones

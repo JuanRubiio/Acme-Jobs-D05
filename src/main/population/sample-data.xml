@@ -220,14 +220,14 @@
 
 	
 	<bean name="companyRecord1" class="acme.entities.companyrecord.CompanyRecord">
-		<property name="name" value="Company record 1" />
+		<property name="name" value="Company .Inc" />
 		<property name="sector" value="Privado"/>
 		<property name="ceoName" value="Fritz Hoderlein" />
 		<property name="description" value="Esto es una descripcion" />
 		<property name="webSite" value="https://www.everis.com/global/en" />
 		<property name="phone" value="+034 (5648) 2654861" />
 		<property name="email" value="jj@everis.com" />
-		<property name="incorporated" value="Inc." />
+		<property name="incorporated"><null/></property>
 		<property name="stars" value="5" />		
 	</bean>
 
@@ -239,7 +239,7 @@
 		<property name="webSite" value="https://www.everis.com/global/en" />
 		<property name="phone" value="(5648)2652461" />
 		<property name="email" value="jj@everis.com" />
-		<property name="incorporated" value="Inc." />
+		<property name="incorporated"><null/></property>
 		<property name="stars" value="2" />		
 	</bean>
 
@@ -251,7 +251,7 @@
 		<property name="webSite" value="https://www.everis.com/global/en" />
 		<property name="phone" value="21148616" />
 		<property name="email" value="j2233ddj@everis.com" />
-		<property name="incorporated" value="LLC" />
+		<property name="incorporated"><null/></property>
 		<property name="stars" value="4" />		
 	</bean>
 
