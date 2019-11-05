@@ -30,6 +30,15 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `banner` (
+       `id` integer not null,
+        `version` integer not null,
+        `picture` varchar(255),
+        `slogan` varchar(255),
+        `target` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `challenge` (
        `id` integer not null,
         `version` integer not null,
@@ -37,6 +46,16 @@
         `description` varchar(255),
         `reward` varchar(255),
         `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `commercial_banner` (
+       `id` integer not null,
+        `version` integer not null,
+        `picture` varchar(255),
+        `slogan` varchar(255),
+        `target` varchar(255),
+        `credit_card` tinyblob,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -61,6 +80,18 @@
         `user_account_id` integer,
         `company` varchar(255),
         `sector` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `credit_card` (
+       `id` integer not null,
+        `version` integer not null,
+        `cvv` varchar(255),
+        `brand_name` varchar(255),
+        `expired_month` integer,
+        `expired_year` integer,
+        `holder_name` varchar(255),
+        `number` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -95,6 +126,16 @@
         `nif` varchar(255),
         `surname` varchar(255),
         `type` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `non_commercial_banner` (
+       `id` integer not null,
+        `version` integer not null,
+        `picture` varchar(255),
+        `slogan` varchar(255),
+        `target` varchar(255),
+        `jingle` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
