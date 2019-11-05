@@ -37,8 +37,6 @@
 
     drop table if exists `consumer`;
 
-    drop table if exists `credit_card`;
-
     drop table if exists `garcia_bulletin`;
 
     drop table if exists `investor_record`;

@@ -55,7 +55,7 @@
         `picture` varchar(255),
         `slogan` varchar(255),
         `target` varchar(255),
-        `credit_card` tinyblob,
+        `credit_card` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -80,18 +80,6 @@
         `user_account_id` integer,
         `company` varchar(255),
         `sector` varchar(255),
-        primary key (`id`)
-    ) engine=InnoDB;
-
-    create table `credit_card` (
-       `id` integer not null,
-        `version` integer not null,
-        `cvv` varchar(255),
-        `brand_name` varchar(255),
-        `expired_month` integer,
-        `expired_year` integer,
-        `holder_name` varchar(255),
-        `number` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
