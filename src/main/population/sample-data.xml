@@ -61,21 +61,21 @@
 	<bean name="investorRecord1" class="acme.entities.investorRecord.InvestorRecord">
 		<property name="nameInvestor" value="Investor Record 1" />
 		<property name="investingStatement" value="2019/02/17 00:00"/>
-		<property name="sector" value="Público" />
+		<property name="sector" value="Esto es el sector de la Investor Record" />
 		<property name="stars" value="3" />
 	</bean>
 	
 	<bean name="investorRecord2" class="acme.entities.investorRecord.InvestorRecord">
 		<property name="nameInvestor" value="Investor Record 2" />
 		<property name="investingStatement" value="2019/02/17 00:00"/>
-		<property name="sector" value="Privado" />
+		<property name="sector" value="Esto es el sector de la Investor Record" />
 		<property name="stars" value="4" />
 	</bean>
 
 	<bean name="investorRecord3" class="acme.entities.investorRecord.InvestorRecord">
 		<property name="nameInvestor" value="Investor Record 3" />
 		<property name="investingStatement" value="2019/02/17 00:00"/>
-		<property name="sector" value="Público" />
+		<property name="sector" value="Esto es el sector de la Investor Record" />
 		<property name="stars" value="5" />
 	</bean>
 
@@ -167,7 +167,7 @@
 	<bean name="offer6" class="acme.entities.offer.Offer">
 		<property name="title" value="Oferta 6" />
 		<property name="moment" value="2019/05/17 00:00"/>
-		<property name="deadline" value="2019/12/25 00:00" />
+		<property name="deadline" value="2019/11/08 00:00" />
 		<property name="text" value="Esto es el texto de la oferta" />
 		<property name="maxPrice">
 			<ref bean="money5"/>
@@ -217,8 +217,31 @@
 		<property name="amount" value="450.25" />
 		<property name="currency" value="€" />
 	</bean>
+	<bean name="money10" class="acme.framework.datatypes.Money">
+		<property name="amount" value="100.00" />
+		<property name="currency" value="€" />
+	</bean>
+	<bean name="money11" class="acme.framework.datatypes.Money">
+		<property name="amount" value="300.00" />
+		<property name="currency" value="€" />
+	</bean>
+	<bean name="money12" class="acme.framework.datatypes.Money">
+		<property name="amount" value="800.00" />
+		<property name="currency" value="€" />
+	</bean>
+	<bean name="money13" class="acme.framework.datatypes.Money">
+		<property name="amount" value="150.00" />
+		<property name="currency" value="€" />
+	</bean>
+	<bean name="money14" class="acme.framework.datatypes.Money">
+		<property name="amount" value="350.00" />
+		<property name="currency" value="€" />
+	</bean>
+	<bean name="money15" class="acme.framework.datatypes.Money">
+		<property name="amount" value="850.00" />
+		<property name="currency" value="€" />
+	</bean>
 
-	
 	<bean name="companyRecord1" class="acme.entities.companyrecord.CompanyRecord">
 		<property name="name" value="Company .Inc" />
 		<property name="sector" value="Privado"/>
@@ -233,7 +256,7 @@
 
 	<bean name="companyRecord2" class="acme.entities.companyrecord.CompanyRecord">
 		<property name="name" value="Company record 2" />
-		<property name="sector" value="Público"/>
+		<property name="sector" value="Publico"/>
 		<property name="ceoName" value="Fritz Hoderl" />
 		<property name="description" value="Esto es una descripcion" />
 		<property name="webSite" value="https://www.everis.com/global/en" />
@@ -285,14 +308,36 @@
 		<property name="title" value="Reto 1"/>
 		<property name="deadline" value="2019/12/15 10:10"/>
 		<property name="description" value="Texto aqui"/>
-		<property name="reward" value="Silver"/>
+		<property name="goalBronze" value="Level C"/>
+		<property name="rewardBronze">
+			<ref bean="money10"/>
+		</property>
+		<property name="goalSilver" value="Level B"/>
+		<property name="rewardSilver">
+			<ref bean="money11"/>
+		</property>
+		<property name="goalGold" value="Level A"/>
+		<property name="rewardGold">
+			<ref bean="money12"/>
+		</property>
 	</bean>
 	
 	<bean id="challenge02" class="acme.entities.challenges.Challenge">
 		<property name="title" value="Reto 2"/>
-		<property name="deadline" value="2019/12/5 19:01"/>
+		<property name="deadline" value="2019/11/7 19:01"/>
 		<property name="description" value="Texto 2 aqui"/>
-		<property name="reward" value="Gold"/>
+		<property name="goalBronze" value="Level C"/>
+		<property name="rewardBronze">
+			<ref bean="money13"/>
+		</property>
+		<property name="goalSilver" value="Level B"/>
+		<property name="rewardSilver">
+			<ref bean="money14"/>
+		</property>
+		<property name="goalGold" value="Level A"/>
+		<property name="rewardGold">
+			<ref bean="money15"/>
+		</property>
 	</bean>
 
 	<!-- Banners -->
