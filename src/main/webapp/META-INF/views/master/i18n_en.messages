@@ -42,14 +42,15 @@ master.menu.anonymous.announcement.list = Announcement List
 
 
 
-master.menu.offer.list = Active offers list 
-master.menu.companyrecord.list = Company list
-master.menu.companyrecord.list.top = Top company list
-master.menu.companyrecord = Company Records
+master.menu.offer.list = Active Offers List 
+master.menu.companyrecord.list = Company List
+master.menu.companyrecord.list.top = Company Top List
+master.menu.companyrecord = Company Record
 master.menu.offer = Offers
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
+master.menu.announcement = Announcement
 master.menu.administrator.announcement.list = Announcement List
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.shutdown = Shut down
@@ -71,11 +72,11 @@ master.menu.consumer.favourite-link = Favourite link
 master.menu.challenge = Challenges
 master.menu.challenge.list = Challenge List
 
-master.menu.investorrecord = Investor record
-master.menu.investorrecord.list = Investor record list
-master.menu.investorrecord.list.top = Investor record top list
+master.menu.investorrecord = Investor Record
+master.menu.investorrecord.list = Investor Record List
+master.menu.investorrecord.list.top = Investor Record Top List
 master.menu.request = Request
-master.menu.request.list = Request lists
+master.menu.request.list = Request List
 
 # master.menu.user-account ####################################################
 
@@ -100,10 +101,10 @@ master.footer.label.spanish = Spanish
 
 # master.company ##############################################################
 
-master.company.title = La compañía
+master.company.title = The Company
 master.company.text = \
-	Starter Project, Inc. is a fictitious fictitious company that provides a \
-	starter project for the students of the Design and Testing subject of the \
+	Acme Jobs, Inc. is a fictitious fictitious company that provides a \
+	Acme Jobs for the students of the Design and Testing subject of the \
 	Software Engineering Curriculum of the University of Sevilla.
 master.company.name = Acme Jobs, Inc.
 master.company.address = Number Street, City, State, Country
