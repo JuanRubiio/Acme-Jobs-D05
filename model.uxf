@@ -436,9 +436,9 @@ Banner
  + wedSite: String {NotBlank, URL}
  + phone: String {NotBlank, Pattern(regexp = "^(\\+?\\d{3})?\\s?(\\(\\d{4}\\))?\\s?\\d{6,10}$")}
  + email: String {NotBlank, Email}
- + incorporated: String {NotBlank}
+ + incorporated: Boolean {Transient}
  + stars: Int {NotNull, Range(min = 0, max = 5)}
- + /fullName: String {Transient}</panel_attributes>
+ </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
