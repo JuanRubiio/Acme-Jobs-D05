@@ -339,6 +339,21 @@
 			<ref bean="money15"/>
 		</property>
 	</bean>
+	
+	<bean id="customisation-parameters-en" class="acme.entities.customisationParameters.CustomisationParameters">
+		
+		<property name="spamThreshold" value="1.00"/>  
+		<property name="spamWords" value="sex, hard core, viagra, cialis, nigeria, you´ve won, million dollar"/>
+  
+	</bean>
+	
+	<bean id="customisation-parameters-es" class="acme.entities.customisationParameters.CustomisationParameters">
+		
+		<property name="spamThreshold" value="1.00"/>  
+		<property name="spamWords" value="sexo, duro, viagra, cialis, ha ganado, millón de dolares"/>
+  
+	</bean>
+
 
 	<!-- Banners -->
 
