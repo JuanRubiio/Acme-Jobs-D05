@@ -19,17 +19,13 @@ public class AdministratorCustomisationParametersController extends AbstractCont
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AdministratorCustomisationParametersShowService	showService;
-
-	@Autowired
-	private AdministratorCustomisationParametersListService	listService;
+	private AdministratorCustomisationParametersListService listService;
 
 
 	// Constructors -----------------------------------------------------------
 
 	@PostConstruct
 	private void initialise() {
-		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 	}
 
