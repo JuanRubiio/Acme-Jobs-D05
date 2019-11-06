@@ -21,7 +21,10 @@ public class CustomisationParameters extends DomainEntity {
 	private static final long	serialVersionUID	= 1L;
 
 	@NotBlank
-	private String				spamWords;
+	private String				spamWordsEn;
+
+	@NotBlank
+	private String				spamWordsEs;
 
 	@Range(min = 0, max = 100)
 	private Double				spamThreshold;

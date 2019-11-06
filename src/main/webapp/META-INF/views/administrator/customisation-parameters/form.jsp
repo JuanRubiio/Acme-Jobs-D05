@@ -17,10 +17,10 @@
 
 <acme:form readonly="true">
 
-
-	<acme:form-textbox code="administrator.customisationParameters.form.label.spamWords" path="spamWords"/>
 	<acme:form-textbox code="administrator.customisationParameters.form.label.spamThreshold" path="spamThreshold" />
+	<acme:form-textbox code="administrator.customisationParameters.form.label.spamWordsEn" path="spamWordsEn"/>
+	<acme:form-textbox code="administrator.customisationParameters.form.label.spamWordsEs" path="spamWordsEs"/>
 
-		
+
   	<acme:form-return code="administrator.customisationParameters.form.button.return"/>
 </acme:form>
