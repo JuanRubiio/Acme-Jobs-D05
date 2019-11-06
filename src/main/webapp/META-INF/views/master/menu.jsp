@@ -64,6 +64,10 @@
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="https://www.amazon.es/"/>
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.announcement" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.announcement.list" action="/authenticated/announcement/list"/>
+		</acme:menu-option>
+		
 		<acme:menu-option code="master.menu.challenge" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.challenge.list" action="/authenticated/challenge/list"/>
 		</acme:menu-option>
