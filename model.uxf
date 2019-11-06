@@ -531,4 +531,19 @@ Banner
  + bulletinName: String {NotBlank}</panel_attributes>
     <additional_attributes/>
   </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>28</x>
+      <y>623</y>
+      <w>210</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>CustomisationParameters
+--
+ + spamWordsEn: String {NotBlank}
+ + spamWordsEs: String {NotBlank}
+ + spamThreshold: Double {min=0, max=100}</panel_attributes>
+    <additional_attributes/>
+  </element>
 </diagram>

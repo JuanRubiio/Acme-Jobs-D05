@@ -51,7 +51,7 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 		</acme:menu-option>
-				<acme:menu-option code="master.menu.announcement" access="hasRole('Administrator')">
+		<acme:menu-option code="master.menu.announcement" access="hasRole('Administrator')">
 				<acme:menu-suboption code="master.menu.administrator.announcement.list" action="/administrator/announcement/list"/>
 		</acme:menu-option>
 		
@@ -64,7 +64,7 @@
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="https://www.amazon.es/"/>
 		</acme:menu-option>
 		
-		<acme:menu-option code="master.menu.announcement" access="isAuthenticated()">
+		<acme:menu-option code="master.menu.announcement" access="isAuthenticated() && !hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.announcement.list" action="/authenticated/announcement/list"/>
 		</acme:menu-option>
 		
