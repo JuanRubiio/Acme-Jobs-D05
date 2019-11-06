@@ -37,6 +37,8 @@
 
     drop table if exists `consumer`;
 
+    drop table if exists `customisation_parameters`;
+
     drop table if exists `garcia_bulletin`;
 
     drop table if exists `investor_record`;

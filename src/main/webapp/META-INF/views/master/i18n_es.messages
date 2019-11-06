@@ -52,6 +52,7 @@ master.menu.announcement = Anuncios
 master.menu.administrator.announcement.list = Listar Anuncios
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
+master.menu.administrator.customisationparameters = Parámetros de customización
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.chart = Gráficas
 # master.menu.provider ########################################################

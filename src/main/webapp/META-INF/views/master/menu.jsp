@@ -48,6 +48,7 @@
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show"/>
 			<acme:menu-suboption code="master.menu.administrator.chart" action="/administrator/chart/show"/>
+			<acme:menu-suboption code="master.menu.administrator.customisationparameters" action="/administrator/customisation-parameters/show"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 		</acme:menu-option>
