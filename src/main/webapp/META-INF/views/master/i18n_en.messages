@@ -47,11 +47,15 @@ master.menu.companyrecord.list = Company List
 master.menu.companyrecord.list.top = Company Top List
 master.menu.companyrecord = Company Record
 master.menu.offer = Offers
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
 master.menu.announcement = Announcement
 master.menu.administrator.announcement.list = Announcement List
+master.menu.administrator.announcement.create = Announcement Create
+master.menu.administrator.challenge.list = Challenge List
+master.menu.administrator.challenge.create = Challenge Create
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.shutdown = Shut down
 master.menu.administrator.dashboard = Dashboard

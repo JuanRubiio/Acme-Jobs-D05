@@ -54,8 +54,12 @@
 		</acme:menu-option>
 		<acme:menu-option code="master.menu.announcement" access="hasRole('Administrator')">
 				<acme:menu-suboption code="master.menu.administrator.announcement.list" action="/administrator/announcement/list"/>
+				<acme:menu-suboption code="master.menu.administrator.announcement.create" action="/administrator/announcement/create"/>
 		</acme:menu-option>
-		
+		<acme:menu-option code="master.menu.challenge" access="hasRole('Administrator')">
+			<acme:menu-suboption code="master.menu.administrator.challenge.list" action="/administrator/challenge/list"/>
+			<acme:menu-suboption code="master.menu.administrator.challenge.create" action="/administrator/challenge/create"/>
+		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
 			<acme:menu-suboption code="master.menu.provider.favourite-link" action="https://www.amazon.es/"/>
@@ -69,7 +73,7 @@
 			<acme:menu-suboption code="master.menu.announcement.list" action="/authenticated/announcement/list"/>
 		</acme:menu-option>
 		
-		<acme:menu-option code="master.menu.challenge" access="isAuthenticated()">
+		<acme:menu-option code="master.menu.challenge" access="isAuthenticated() && !hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.challenge.list" action="/authenticated/challenge/list"/>
 		</acme:menu-option>
 		
