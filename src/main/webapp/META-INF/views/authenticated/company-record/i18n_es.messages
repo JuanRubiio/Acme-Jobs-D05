@@ -19,3 +19,9 @@ authenticated.companyrecord.return = Volver
 authenticated.companyrecord.incorporated = Incorporado
 authenticated.companyrecord.stars = Estrellas
 authenticated.companyrecord.description = Descripcion
+
+authenticated.companyrecord.form.button.create = Crear
+authenticated.companyrecord.form.button.update = Actualizar
+authenticated.companyrecord.form.button.delete = Borrar
+
+authenticated.companyrecord.form.button.return = Volver

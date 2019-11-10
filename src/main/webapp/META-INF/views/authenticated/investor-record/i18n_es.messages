@@ -13,6 +13,9 @@ authenticated.investorRecord.sector = Sector
 authenticated.investorRecord.investingStatement = Declaración 
 authenticated.investorRecord.stars = Estrellas
 
-authenticated.investorRecord.create = Crear una inversora
-authenticated.investorRecord.return = Volver
+authenticated.investorRecord.form.button.create = Crear
+authenticated.investorRecord.form.button.delete = Borrar
+authenticated.investorRecord.form.button.update = Actualizar
+
+authenticated.investorRecord.form.button.return = Volver
 

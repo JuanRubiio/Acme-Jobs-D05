@@ -8,10 +8,13 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.investorRecord.nameInvestor = Name Investor
-authenticated.investorRecord.sector = Sector
-authenticated.investorRecord.investingStatement = Investing Statement
-authenticated.investorRecord.stars = Stars
+authenticated.investorRecord.form.label.nameInvestor = Name Investor
+authenticated.investorRecord.form.label.sector = Sector
+authenticated.investorRecord.form.label.investingStatement = Investing Statement
+authenticated.investorRecord.form.label.stars = Stars
 
-authenticated.investorRecord.create = Create
-authenticated.investorRecord.return = Return
+authenticated.investorRecord.form.button.create = Create
+authenticated.investorRecord.form.button.delete = Delete
+authenticated.investorRecord.form.button.update = Update
+
+authenticated.investorRecord.form.button.return = Return

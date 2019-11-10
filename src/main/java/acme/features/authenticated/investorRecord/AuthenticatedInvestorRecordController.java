@@ -24,6 +24,15 @@ public class AuthenticatedInvestorRecordController extends AbstractController<Au
 	@Autowired
 	private AuthenticatedInvestorRecordShowService	showService;
 
+	@Autowired
+	private AuthenticatedInvestorRecordListService	createService;
+
+	@Autowired
+	private AuthenticatedInvestorRecordListService	updateService;
+
+	@Autowired
+	private AuthenticatedInvestorRecordListService	deleteService;
+
 	// Constructors -----------------------------------------------------------
 
 
@@ -31,6 +40,9 @@ public class AuthenticatedInvestorRecordController extends AbstractController<Au
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
 	}
 
 }
