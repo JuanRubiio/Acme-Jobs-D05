@@ -1,0 +1,23 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+authentication.offer.title = Title
+authentication.offer.ticker = Ticker
+authentication.offer.deadline = Deadline
+authentication.offer.moment = Creation Date
+authentication.offer.maxPrice = Max price
+authentication.offer.minPrice = Min price
+authentication.offer.reward = Reward
+authentication.offer.text = Text
+authentication.offer.create = Create
+authentication.offer.return = Return
+authenticated.consumer.form.button.update = Update
+authenticated.consumer.form.button.delete = Delete
+authenticated.consumer.form.button.create = Create

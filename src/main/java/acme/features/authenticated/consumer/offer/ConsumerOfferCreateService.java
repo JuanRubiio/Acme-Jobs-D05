@@ -3,9 +3,8 @@ package acme.features.authenticated.consumer.offer;
 
 import java.util.Date;
 
-import javax.xml.ws.ServiceMode;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import acme.entities.offer.Offer;
 import acme.entities.roles.Consumer;
@@ -14,7 +13,7 @@ import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.services.AbstractCreateService;
 
-@ServiceMode
+@Service
 public class ConsumerOfferCreateService implements AbstractCreateService<Consumer, Offer> {
 
 	@Autowired
@@ -43,7 +42,7 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "deadline", "text", "maxPrice", "reward", "minPrice", "ticker");
+		request.unbind(entity, model, "title", "deadline", "text", "maxPrice", "reward", "minPrice", "ticker", "moment");
 
 	}
 

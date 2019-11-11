@@ -372,6 +372,39 @@
 		<property name="jingle" value="Jingle Bells, jingle bells, Jingle all the way!"/>
 	</bean> 
 	
+	
+		
+	<bean name="consumerUserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="consumer" />
+		<property name="password" value="consumer" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Juan" />
+				<property name="surname" value="Jimenez" />
+				<property name="email" value="john.doe@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="consumerConsumer" />
+				<ref bean="consumerAuthenticated" />
+			</list>
+		</property>
+	</bean>
+	
+		
+	<bean name="consumerConsumer" class="acme.entities.roles.Consumer">
+		<property name="company" value="acme" />
+		<property name="sector" value="acme" />	
+		<property name="userAccount" ref="consumerUserAccount" />
+	</bean>
+	
+	<bean name="consumerAuthenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="consumerUserAccount" />
+	</bean>
+	
+	
 
 </beans>
 

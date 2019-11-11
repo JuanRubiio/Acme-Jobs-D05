@@ -1,9 +1,8 @@
 
 package acme.features.administrator.companyrecord;
 
-import javax.xml.ws.ServiceMode;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import acme.entities.companyrecord.CompanyRecord;
 import acme.framework.components.Errors;
@@ -12,7 +11,7 @@ import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractCreateService;
 
-@ServiceMode
+@Service
 public class AdministratorCompanyRecordCreateService implements AbstractCreateService<Administrator, CompanyRecord> {
 
 	@Autowired
@@ -41,7 +40,7 @@ public class AdministratorCompanyRecordCreateService implements AbstractCreateSe
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "name", "sector", "ceoName", "description", "webSite", "phone", "email", "incorporated", "stars");
+		request.unbind(entity, model, "name", "sector", "ceoName", "description", "webSite", "phone", "email", "stars");
 
 	}
 

@@ -18,28 +18,28 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("Select Count(ua) from InvestorRecord ua")
 	Integer getTotalNumberInvestorRecords();
 
-	@Query("select min(o.reward.amount) from Request o where current_date() between o.moment and o.deadline")
+	@Query("select min(o.reward.amount) from Request o where o.deadline > now()")
 	Double getMinRewardActiveRequest();
 
-	@Query("select max(o.reward.amount) from Request o where current_date() between o.moment and o.deadline")
+	@Query("select max(o.reward.amount) from Request o where o.deadline > now()")
 	Double getMaxRewardActiveRequest();
 
-	@Query("select avg(o.reward.amount) from Request o where current_date() between o.moment and o.deadline ")
+	@Query("select avg(o.reward.amount) from Request o where o.deadline > now()")
 	Double getAvgRewardActiveRequest();
 
-	@Query("select stddev(o.reward.amount) from Request o where current_date() between o.moment and o.deadline")
+	@Query("select stddev(o.reward.amount) from Request o where o.deadline > now()")
 	Double getDesvRewardActiveRequest();
 
-	@Query("select min(o.reward.amount) from Offer o where current_date() between o.moment and o.deadline")
+	@Query("select min(o.reward.amount) from Offer o where o.deadline > now()")
 	Double getMinRewardActiveOffer();
 
-	@Query("select max(o.reward.amount) from Offer o where current_date() between o.moment and o.deadline ")
+	@Query("select max(o.reward.amount) from Offer o where o.deadline > now()")
 	Double getMaxRewardActiveOffer();
 
-	@Query("select avg(o.reward.amount) from Offer o where current_date() between o.moment and o.deadline ")
+	@Query("select avg(o.reward.amount) from Offer o where o.deadline > now()")
 	Double getAvgRewardActiveOffer();
 
-	@Query("select stddev(o.reward.amount) from Offer o where current_date() between o.moment and o.deadline ")
+	@Query("select stddev(o.reward.amount) from Offer o where o.deadline > now()")
 	Double getDesvRewardActiveOffer();
 
 }

@@ -13,14 +13,12 @@ import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 
 @Controller
-@RequestMapping("/authenticated/consumer/offer/")
+@RequestMapping("/consumer/offer/")
 public class ConsumerOfferController extends AbstractController<Consumer, Offer> {
 
 	@Autowired
 	private ConsumerOfferCreateService createService;
 
-
-	@Autowired
 
 	@PostConstruct
 	private void initialise() {
