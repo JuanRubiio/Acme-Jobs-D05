@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.offer;
+package acme.features.authenticated.consumer.offer;
 
 import java.util.Date;
 
@@ -8,17 +8,17 @@ import javax.xml.ws.ServiceMode;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.entities.offer.Offer;
+import acme.entities.roles.Consumer;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractCreateService;
 
 @ServiceMode
-public class AuthenticatedOfferCreateService implements AbstractCreateService<Authenticated, Offer> {
+public class ConsumerOfferCreateService implements AbstractCreateService<Consumer, Offer> {
 
 	@Autowired
-	private AuthenticatedOfferRepository repository;
+	private ConsumerOfferRepository repository;
 
 
 	@Override
