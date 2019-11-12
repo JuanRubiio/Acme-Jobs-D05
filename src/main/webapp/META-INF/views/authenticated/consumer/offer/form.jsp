@@ -26,7 +26,7 @@
 	<acme:form-money code="authentication.offer.maxPrice" path="maxPrice"/>
 	<acme:form-money code="authentication.offer.minPrice" path="minPrice"/>
 	<acme:form-textarea code="authentication.offer.text" path="text" />
-	
+	<acme:form-checkbox code="authentication.offer.confirmation" path="confirmation"/>
 
 	<acme:form-submit test="${command == 'create'}" code="authenticated.consumer.form.button.create" action="/consumer/offer/create"/>
   	<acme:form-return code="authentication.offer.return"/>

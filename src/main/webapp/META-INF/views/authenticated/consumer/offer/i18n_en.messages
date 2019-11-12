@@ -23,3 +23,6 @@ authenticated.consumer.form.button.delete = Delete
 authenticated.consumer.form.button.create = Create
 authenticated.consumer.duplicatedtiker = This ticker is already taken
 authenticated.consumer.deadlinepast = Deadline cant be past
+authentication.offer.confirmation = Creation confirmation
+
+authentication.offer.isconfirmation = You must mark the confirmation check

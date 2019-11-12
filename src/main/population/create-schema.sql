@@ -147,6 +147,7 @@
     create table `offer` (
        `id` integer not null,
         `version` integer not null,
+        `confirmation` bit,
         `deadline` datetime(6),
         `max_price_amount` double precision,
         `max_price_currency` varchar(255),

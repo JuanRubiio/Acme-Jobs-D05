@@ -95,6 +95,8 @@
 			<ref bean="money3"/>
 		</property>		
 		<property name="ticker" value="Osftw-51893" />
+		<property name="confirmation" value="true" />
+		
 	</bean>
 		<bean name="offer2" class="acme.entities.offer.Offer">
 		<property name="title" value="Oferta 2" />
@@ -111,6 +113,8 @@
 			<ref bean="money2"/>
 		</property>		
 		<property name="ticker" value="Otfew-54803" />
+		<property name="confirmation" value="true" />
+		
 	</bean>
 	
 		<bean name="offer3" class="acme.entities.offer.Offer">
@@ -128,6 +132,8 @@
 			<ref bean="money1"/>
 		</property>		
 		<property name="ticker" value="OsfFG-54733" />
+		<property name="confirmation" value="true" />
+		
 	</bean>
 	
 		<bean name="offer4" class="acme.entities.offer.Offer">
@@ -145,6 +151,8 @@
 			<ref bean="money4"/>
 		</property>		
 		<property name="ticker" value="Osfev-54893" />
+		<property name="confirmation" value="true" />
+		
 	</bean>
 	
 	<bean name="offer5" class="acme.entities.offer.Offer">
@@ -162,6 +170,8 @@
 			<ref bean="money3"/>
 		</property>		
 		<property name="ticker" value="OsTew-51893" />
+		<property name="confirmation" value="true" />
+		
 	</bean>
 	
 	<bean name="offer6" class="acme.entities.offer.Offer">
@@ -179,6 +189,8 @@
 			<ref bean="money4"/>
 		</property>		
 		<property name="ticker" value="Osfev-54895" />
+		<property name="confirmation" value="true" />
+		
 	</bean>
 	
 	<bean name="money1" class="acme.framework.datatypes.Money">

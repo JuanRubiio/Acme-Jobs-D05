@@ -24,3 +24,6 @@ authenticated.consumer.form.button.delete = Borrar
 authenticated.consumer.form.button.create = Crear
 authenticated.consumer.duplicatedtiker = Este ticker ya está en uso
 authenticated.consumer.deadlinepast = La fecha límite no puede ser pasada
+
+authentication.offer.confirmation = Confirmación de creación
+authentication.offer.isconfirmation = Debes marcar el check de confirmación

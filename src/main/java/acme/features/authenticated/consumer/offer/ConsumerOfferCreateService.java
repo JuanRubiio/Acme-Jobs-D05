@@ -42,7 +42,7 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "deadline", "text", "maxPrice", "reward", "minPrice", "ticker", "moment");
+		request.unbind(entity, model, "title", "deadline", "text", "maxPrice", "reward", "minPrice", "ticker", "moment", "confirmation");
 
 	}
 
@@ -60,7 +60,7 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		boolean isDuplicated, isFuture = false;
+		boolean isDuplicated, isConfirmed, isFuture = false;
 
 		isDuplicated = this.repository.findByTicker(entity.getTicker()) != null;
 		errors.state(request, !isDuplicated, "ticker", "authenticated.consumer.duplicatedtiker");
@@ -72,7 +72,16 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 				isFuture = true;
 			}
 		}
+
 		errors.state(request, isFuture, "deadline", "authenticated.consumer.deadlinepast");
+
+		if (entity.getConfirmation() == false) {
+			isConfirmed = false;
+		} else {
+			isConfirmed = true;
+		}
+
+		errors.state(request, isConfirmed, "confirmation", "authentication.offer.isconfirmation");
 
 	}
 
