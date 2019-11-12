@@ -22,3 +22,5 @@ authentication.offer.return = Volver
 authenticated.consumer.form.button.update = Actualizar
 authenticated.consumer.form.button.delete = Borrar
 authenticated.consumer.form.button.create = Crear
+authenticated.consumer.duplicatedtiker = Este ticker ya está en uso
+authenticated.consumer.deadlinepast = La fecha límite no puede ser pasada

@@ -21,3 +21,5 @@ authentication.offer.return = Return
 authenticated.consumer.form.button.update = Update
 authenticated.consumer.form.button.delete = Delete
 authenticated.consumer.form.button.create = Create
+authenticated.consumer.duplicatedtiker = This ticker is already taken
+authenticated.consumer.deadlinepast = Deadline cant be past

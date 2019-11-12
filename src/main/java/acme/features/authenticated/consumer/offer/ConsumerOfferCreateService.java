@@ -60,6 +60,20 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		boolean isDuplicated, isFuture = false;
+
+		isDuplicated = this.repository.findByTicker(entity.getTicker()) != null;
+		errors.state(request, !isDuplicated, "ticker", "authenticated.consumer.duplicatedtiker");
+
+		if (entity.getDeadline() != null) {
+			if (entity.getDeadline().before(new Date())) {
+				isFuture = false;
+			} else {
+				isFuture = true;
+			}
+		}
+		errors.state(request, isFuture, "deadline", "authenticated.consumer.deadlinepast");
+
 	}
 
 	@Override

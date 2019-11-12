@@ -58,6 +58,7 @@ public class AdministratorCompanyRecordCreateService implements AbstractCreateSe
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
 	}
 
 	@Override
