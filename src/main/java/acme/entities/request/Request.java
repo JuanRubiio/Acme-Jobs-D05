@@ -31,7 +31,6 @@ public class Request extends DomainEntity {
 	@NotBlank
 	private String				title;
 
-	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				moment;
 
@@ -51,4 +50,7 @@ public class Request extends DomainEntity {
 	@NotBlank
 	@Pattern(regexp = "^[Ra-zA-Z]{5}-\\d{5}$")
 	private String				ticker;
+
+	@NotNull
+	private Boolean				confirmation		= false;
 }

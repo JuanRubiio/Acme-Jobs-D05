@@ -1,19 +1,21 @@
 
-package acme.features.authenticated.investorRecord;
+package acme.features.administrator.investorrecord;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import acme.entities.investorRecord.InvestorRecord;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
-import acme.framework.services.AbstractDeleteService;
+import acme.framework.services.AbstractUpdateService;
 
-public class AuthenticatedInvestorRecordDeleteService implements AbstractDeleteService<Administrator, InvestorRecord> {
+@Service
+public class AdministratorInvestorRecordUpdateService implements AbstractUpdateService<Administrator, InvestorRecord> {
 
 	@Autowired
-	AuthenticatedInvestorRecordRepository repository;
+	private AdministratorInvestorRecordRepository repository;
 
 
 	@Override
@@ -63,12 +65,12 @@ public class AuthenticatedInvestorRecordDeleteService implements AbstractDeleteS
 	}
 
 	@Override
-	public void delete(final Request<InvestorRecord> request, final InvestorRecord entity) {
+	public void update(final Request<InvestorRecord> request, final InvestorRecord entity) {
 
 		assert request != null;
 		assert entity != null;
 
-		this.repository.delete(entity);
+		this.repository.save(entity);
 	}
 
 }

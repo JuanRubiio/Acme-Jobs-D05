@@ -1,5 +1,5 @@
 
-package acme.features.anonymous.investorRecord;
+package acme.features.anonymous.investorrecord;
 
 import java.util.Collection;
 

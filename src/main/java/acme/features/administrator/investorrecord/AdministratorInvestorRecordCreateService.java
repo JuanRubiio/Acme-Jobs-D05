@@ -1,7 +1,10 @@
 
-package acme.features.authenticated.investorRecord;
+package acme.features.administrator.investorrecord;
+
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import acme.entities.investorRecord.InvestorRecord;
 import acme.framework.components.Errors;
@@ -10,10 +13,12 @@ import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractCreateService;
 
-public class AuthenticatedInvestorRecordCreateService implements AbstractCreateService<Administrator, InvestorRecord> {
+@Service
+public class AdministratorInvestorRecordCreateService implements AbstractCreateService<Administrator, InvestorRecord> {
 
 	@Autowired
-	AuthenticatedInvestorRecordRepository repository;
+	private AdministratorInvestorRecordRepository repository;
+	//TODO: VALIDACION DE LA FECHA NO PASADA
 
 
 	@Override
@@ -56,6 +61,18 @@ public class AuthenticatedInvestorRecordCreateService implements AbstractCreateS
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		boolean isFuture = false;
+
+		if (entity.getInvestingStatement() != null) {
+			if (entity.getInvestingStatement().before(new Date())) {
+				isFuture = false;
+			} else {
+				isFuture = true;
+			}
+		}
+
+		errors.state(request, isFuture, "investingStatement", "administrator.create.investingstatementpast");
 
 	}
 

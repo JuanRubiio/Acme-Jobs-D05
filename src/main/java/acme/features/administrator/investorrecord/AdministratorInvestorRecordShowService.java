@@ -1,7 +1,5 @@
 
-package acme.features.authenticated.investorRecord;
-
-import java.util.Collection;
+package acme.features.administrator.investorrecord;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,16 +7,14 @@ import org.springframework.stereotype.Service;
 import acme.entities.investorRecord.InvestorRecord;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
-import acme.framework.services.AbstractListService;
+import acme.framework.entities.Administrator;
+import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuthenticatedInvestorRecordListService implements AbstractListService<Authenticated, InvestorRecord> {
-
-	// Internal state ---------------------------------------------------------
+public class AdministratorInvestorRecordShowService implements AbstractShowService<Administrator, InvestorRecord> {
 
 	@Autowired
-	AuthenticatedInvestorRecordRepository repository;
+	private AdministratorInvestorRecordRepository repository;
 
 
 	@Override
@@ -39,12 +35,14 @@ public class AuthenticatedInvestorRecordListService implements AbstractListServi
 	}
 
 	@Override
-	public Collection<InvestorRecord> findMany(final Request<InvestorRecord> request) {
+	public InvestorRecord findOne(final Request<InvestorRecord> request) {
 		assert request != null;
-		Collection<InvestorRecord> result;
 
-		result = this.repository.findAllInvestorRecords();
+		InvestorRecord result;
+		int id;
 
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOneById(id);
 		return result;
 	}
 

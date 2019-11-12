@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.investorRecord;
+package acme.features.administrator.investorrecord;
 
 import java.util.Collection;
 
@@ -10,7 +10,7 @@ import acme.entities.investorRecord.InvestorRecord;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AuthenticatedInvestorRecordRepository extends AbstractRepository {
+public interface AdministratorInvestorRecordRepository extends AbstractRepository {
 
 	@Query("select ua from InvestorRecord ua")
 	Collection<InvestorRecord> findAllInvestorRecords();
