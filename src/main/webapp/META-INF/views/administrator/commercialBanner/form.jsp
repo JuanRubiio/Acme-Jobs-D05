@@ -5,7 +5,7 @@
 <acme:form> 
 	<acme:form-textbox code="administrator.commercialBanner.form.label.picture" path="picture"/>
 	<acme:form-textbox code="administrator.commercialBanner.form.label.slogan" path="slogan"/>
-	<acme:form-textbox code="administrator.commercialBanner.form.label.target" path="target"/>
+	<acme:form-url code="administrator.commercialBanner.form.label.target" path="target"/>
 	<acme:form-textbox code="administrator.commercialBanner.form.label.creditCard" path="creditCard"/>
 	<acme:form-textbox code="administrator.commercialBanner.form.label.monthExpired" path="monthExpired"/>
 	<acme:form-textbox code="administrator.commercialBanner.form.label.yearExpired" path="yearExpired"/>

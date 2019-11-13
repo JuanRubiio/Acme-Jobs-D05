@@ -43,7 +43,7 @@ public class AdministratorAnnouncementUpdateService implements AbstractUpdateSer
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "link", "description");
+		request.unbind(entity, model, "title", "link", "description", "link");
 	}
 
 	@Override

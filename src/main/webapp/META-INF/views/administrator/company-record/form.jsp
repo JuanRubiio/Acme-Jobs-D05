@@ -26,7 +26,7 @@
 	<acme:form-textbox code="authenticated.companyrecord.phone" path="phone" placeholder="+999 (9999) 999999"/>
 	<acme:form-textbox code="authenticated.companyrecord.email" path="email"/>
 		<jstl:if test="${command != 'create' }">
-	<acme:form-textbox code="authenticated.companyrecord.incorporated" path="incorporated" readonly="true"/>
+	<acme:form-checkbox code="authenticated.companyrecord.incorporated" path="incorporated" readonly="true"/>
 	</jstl:if>
 	<acme:form-textbox code="authenticated.companyrecord.stars" path="stars"/>
 	<acme:form-textarea code="authenticated.companyrecord.description" path="description"/>

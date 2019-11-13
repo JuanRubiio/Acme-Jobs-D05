@@ -22,7 +22,7 @@
 	<acme:form-textbox code="anonymous.companyrecord.webSite" path="webSite"/>
 	<acme:form-textbox code="anonymous.companyrecord.phone" path="phone"/>
 	<acme:form-textbox code="anonymous.companyrecord.email" path="email"/>
-	<acme:form-textbox code="anonymous.companyrecord.incorporated" path="incorporated"/>
+	<acme:form-checkbox code="authenticated.companyrecord.incorporated" path="incorporated"/>
 	<acme:form-textbox code="anonymous.companyrecord.stars" path="stars"/>
 	<acme:form-textarea code="anonymous.companyrecord.description" path="description"/>
 	
