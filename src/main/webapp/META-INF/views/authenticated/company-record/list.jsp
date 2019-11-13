@@ -23,7 +23,6 @@
 	<acme:list-column code="authenticated.companyrecord.webSite" path="webSite" width="10%"/>	
 	<acme:list-column code="authenticated.companyrecord.phone" path="phone" width="10%"/>
 	<acme:list-column code="authenticated.companyrecord.email" path="email" width="10%"/>	
-	<acme:list-column code="authenticated.companyrecord.incorporated" path="incorporated" width="10%"/>		
 	<acme:list-column code="authenticated.companyrecord.stars" path="stars" width="10%"/>		
 	<acme:list-column code="authenticated.companyrecord.description" path="description" width="20%"/>	
 	

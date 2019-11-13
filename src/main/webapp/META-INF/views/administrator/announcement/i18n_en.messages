@@ -1,11 +1,15 @@
 administrator.announcement.form.label.title = Title:
+administrator.announcement.form.label.moment = Create Moment:
 administrator.announcement.form.label.link = Link:
 administrator.announcement.form.label.description = Description:
+administrator.announcement.form.button.update = Update
+administrator.announcement.form.button.delete = Delete
+administrator.announcement.form.button.create = Create
 administrator.announcement.form.button.return = Return
 
 
 administrator.announcement.list.label.title = Title
-administrator.announcement.list.label.moment = Moment
+administrator.announcement.list.label.moment = Create Moment
 administrator.announcement.list.label.link = Link
 administrator.announcement.list.label.description = Description
 

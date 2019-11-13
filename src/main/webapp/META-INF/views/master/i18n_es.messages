@@ -39,9 +39,9 @@ master.menu.anonymous.create2 = Crear Boletines de Carlos
 master.menu.anonymous.rivero-bulletin.list = Lista de Boletines de Augusto
 master.menu.anonymous.rivero-bulletin.create = Crear Boletines de Carlos
 
-master.menu.companyrecord.list = Listado De Compañias
+master.menu.companyrecord.list = Listado De Compañías
 master.menu.offer.list = Listado de Ofertas Activas
-master.menu.companyrecord.list.top = Listado De Compañias Top
+master.menu.companyrecord.list.top = Listado De Compañías Top
 master.menu.companyrecord = Registro De Compañias
 master.menu.offer = Ofertas
 master.menu.anonymous.announcement.list = Listar Anuncios
@@ -50,11 +50,21 @@ master.menu.anonymous.announcement.list = Listar Anuncios
 master.menu.administrator = Administrador
 master.menu.announcement = Anuncios
 master.menu.administrator.announcement.list = Listar Anuncios
+master.menu.administrator.announcement.create = Crear Anuncio
+master.menu.administrator.challenge.list = Listar Desafio
+master.menu.administrator.challenge.create = Crear Desafio
+master.menu.Banner = Banner 
+master.menu.administrator.commercialBanner.list = Listar Banners Comerciales
+master.menu.administrator.commercialBanner.create = Crear Banner Comercial
+master.menu.administrator.noncommercialBanner.list = Listar Banners No Comerciales
+master.menu.administrator.noncommercialBanner.create = Crear Banner No Comercial
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.customisationparameters = Parámetros de customización
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.chart = Gráficas
+master.menu.companyrecord.create = Crear Registro de Compañía
+
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor
@@ -64,11 +74,12 @@ master.menu.provider.favourite-link = Enlace favorito
 
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
+master.menu.consumer.offer.create = Crear oferta
 
 # master.menu.challenge ##########################################################
 
 master.menu.announcement.list = Listar Anuncios
-master.menu.challenge = Desafios
+master.menu.challenge = Desafíos
 master.menu.challenge.list = Listar Desafio
 master.menu.investorrecord = Registro De Inversores
 master.menu.investorrecord.list = Listado De Registro Inversores

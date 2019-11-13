@@ -95,6 +95,8 @@
 			<ref bean="money3"/>
 		</property>		
 		<property name="ticker" value="Osftw-51893" />
+		<property name="confirmation" value="true" />
+		
 	</bean>
 		<bean name="offer2" class="acme.entities.offer.Offer">
 		<property name="title" value="Oferta 2" />
@@ -111,6 +113,8 @@
 			<ref bean="money2"/>
 		</property>		
 		<property name="ticker" value="Otfew-54803" />
+		<property name="confirmation" value="true" />
+		
 	</bean>
 	
 		<bean name="offer3" class="acme.entities.offer.Offer">
@@ -128,6 +132,8 @@
 			<ref bean="money1"/>
 		</property>		
 		<property name="ticker" value="OsfFG-54733" />
+		<property name="confirmation" value="true" />
+		
 	</bean>
 	
 		<bean name="offer4" class="acme.entities.offer.Offer">
@@ -145,6 +151,8 @@
 			<ref bean="money4"/>
 		</property>		
 		<property name="ticker" value="Osfev-54893" />
+		<property name="confirmation" value="true" />
+		
 	</bean>
 	
 	<bean name="offer5" class="acme.entities.offer.Offer">
@@ -162,6 +170,8 @@
 			<ref bean="money3"/>
 		</property>		
 		<property name="ticker" value="OsTew-51893" />
+		<property name="confirmation" value="true" />
+		
 	</bean>
 	
 	<bean name="offer6" class="acme.entities.offer.Offer">
@@ -179,6 +189,8 @@
 			<ref bean="money4"/>
 		</property>		
 		<property name="ticker" value="Osfev-54895" />
+		<property name="confirmation" value="true" />
+		
 	</bean>
 	
 	<bean name="money1" class="acme.framework.datatypes.Money">
@@ -291,7 +303,7 @@
 	
 	<bean id="announcement02" class="acme.entities.announcements.Announcement">
 		<property name="title" value="Sample announcement 02"/>
-		<property name="moment" value="2019/10/22 16:10"/>
+		<property name="moment" value="2020/10/22 16:10"/>
 		<property name="link" value="https://www.as.com"/>
 		<property name="description" value="Esto es un anuncio deportivo"/>
 	</bean>
@@ -306,7 +318,7 @@
 	<!-- Revisar las fechas para futuro -->
 	<bean id="challenge01" class="acme.entities.challenges.Challenge">
 		<property name="title" value="Reto 1"/>
-		<property name="deadline" value="2019/12/15 10:10"/>
+		<property name="deadline" value="2020/10/15 10:10"/>
 		<property name="description" value="Texto aqui"/>
 		<property name="goalBronze" value="Level C"/>
 		<property name="rewardBronze">
@@ -324,7 +336,7 @@
 	
 	<bean id="challenge02" class="acme.entities.challenges.Challenge">
 		<property name="title" value="Reto 2"/>
-		<property name="deadline" value="2019/11/7 19:01"/>
+		<property name="deadline" value="2020/5/7 19:01"/>
 		<property name="description" value="Texto 2 aqui"/>
 		<property name="goalBronze" value="Level C"/>
 		<property name="rewardBronze">
@@ -363,6 +375,9 @@
 		<property name="slogan" value="Paga el banner"/>
 		<property name="target" value="https://www.imagen2.com"/>
 		<property name="creditCard" value="379354508162306"/>
+		<property name="monthExpired" value="02"/>
+		<property name="yearExpired" value="2020"/>
+		<property name="CVV" value="456"/>
 	</bean> 
 	
 	<bean id="banner03" class="acme.entities.banners.NonCommercialBanner">
@@ -371,6 +386,39 @@
 		<property name="target" value="https://www.imagen3.com"/>
 		<property name="jingle" value="Jingle Bells, jingle bells, Jingle all the way!"/>
 	</bean> 
+	
+	
+		
+	<bean name="consumerUserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="consumer" />
+		<property name="password" value="consumer" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Juan" />
+				<property name="surname" value="Jimenez" />
+				<property name="email" value="john.doe@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="consumerConsumer" />
+				<ref bean="consumerAuthenticated" />
+			</list>
+		</property>
+	</bean>
+	
+		
+	<bean name="consumerConsumer" class="acme.entities.roles.Consumer">
+		<property name="company" value="acme" />
+		<property name="sector" value="acme" />	
+		<property name="userAccount" ref="consumerUserAccount" />
+	</bean>
+	
+	<bean name="consumerAuthenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="consumerUserAccount" />
+	</bean>
+	
 	
 
 </beans>
