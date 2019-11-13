@@ -61,6 +61,13 @@
 			<acme:menu-suboption code="master.menu.administrator.challenge.create" action="/administrator/challenge/create"/>
 		</acme:menu-option>
 
+		<acme:menu-option code="master.menu.Banner" access="hasRole('Administrator')">
+			<acme:menu-suboption code="master.menu.administrator.commercialBanner.list" action="/administrator/commercial-banner/list"/>
+			<acme:menu-suboption code="master.menu.administrator.commercialBanner.create" action="/administrator/commercial-banner/create"/>
+			<acme:menu-suboption code="master.menu.administrator.noncommercialBanner.list" action="/administrator/non-commercial-banner/list"/>
+			<acme:menu-suboption code="master.menu.administrator.noncommercialBanner.create" action="/administrator/non-commercial-banner/create"/>
+		</acme:menu-option>
+
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
 			<acme:menu-suboption code="master.menu.provider.favourite-link" action="https://www.amazon.es/"/>
 		</acme:menu-option>

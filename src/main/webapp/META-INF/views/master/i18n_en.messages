@@ -56,6 +56,13 @@ master.menu.administrator.announcement.list = Announcement List
 master.menu.administrator.announcement.create = Announcement Create
 master.menu.administrator.challenge.list = Challenge List
 master.menu.administrator.challenge.create = Challenge Create
+
+master.menu.Banner = Banner
+master.menu.administrator.commercialBanner.list = CommercialBanner List
+master.menu.administrator.commercialBanner.create = CommercialBanner Create
+master.menu.administrator.noncommercialBanner.list = NonCommercialBanner List
+master.menu.administrator.noncommercialBanner.create = NonCommercialBanner Create
+
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.shutdown = Shut down
 master.menu.administrator.dashboard = Dashboard

@@ -363,6 +363,9 @@
 		<property name="slogan" value="Paga el banner"/>
 		<property name="target" value="https://www.imagen2.com"/>
 		<property name="creditCard" value="379354508162306"/>
+		<property name="monthExpired" value="02"/>
+		<property name="yearExpired" value="2020"/>
+		<property name="CVV" value="456"/>
 	</bean> 
 	
 	<bean id="banner03" class="acme.entities.banners.NonCommercialBanner">

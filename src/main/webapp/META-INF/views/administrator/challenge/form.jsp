@@ -7,11 +7,11 @@
 	<acme:form-moment code="administrator.challenge.form.label.deadline" path="deadline"/>
 	<acme:form-textarea code="administrator.challenge.form.label.description" path="description"/>
 	<acme:form-textbox code="administrator.challenge.form.label.goalBronze" path="goalBronze"/>
-	<acme:form-textbox code="administrator.challenge.form.label.rewardBronze" path="rewardBronze"/>
+	<acme:form-money code="administrator.challenge.form.label.rewardBronze" path="rewardBronze"/>
 	<acme:form-textbox code="administrator.challenge.form.label.goalSilver" path="goalSilver"/>
-	<acme:form-textbox code="administrator.challenge.form.label.rewardSilver" path="rewardSilver"/>
+	<acme:form-money code="administrator.challenge.form.label.rewardSilver" path="rewardSilver"/>
 	<acme:form-textbox code="administrator.challenge.form.label.goalGold" path="goalGold"/>
-	<acme:form-textbox code="administrator.challenge.form.label.rewardGold" path="rewardGold"/>
+	<acme:form-money code="administrator.challenge.form.label.rewardGold" path="rewardGold"/>
 	
 	<acme:form-submit test="${command == 'show'}" code="administrator.challenge.form.button.update" action="/administrator/challenge/update"/>
 	<acme:form-submit test="${command == 'show'}" code="administrator.challenge.form.button.delete" action="/administrator/challenge/delete"/>
