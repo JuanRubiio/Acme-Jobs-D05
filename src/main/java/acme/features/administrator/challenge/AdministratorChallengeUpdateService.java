@@ -1,6 +1,8 @@
 
 package acme.features.administrator.challenge;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -61,6 +63,18 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		boolean isFuture = false;
+
+		if (entity.getDeadline() != null) {
+			if (entity.getDeadline().before(new Date())) {
+				isFuture = false;
+			} else {
+				isFuture = true;
+			}
+		}
+
+		errors.state(request, isFuture, "deadline", "Deadline must be a date in future ");
 
 	}
 
