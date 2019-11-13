@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.administrator.announcement;
+package acme.features.administrator.commercialBanner;
 
 import javax.annotation.PostConstruct;
 
@@ -18,31 +18,31 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.announcements.Announcement;
+import acme.entities.banners.CommercialBanner;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Administrator;
 
 @Controller
-@RequestMapping("/administrator/announcement/")
-public class AdministratorAnnouncementController extends AbstractController<Administrator, Announcement> {
+@RequestMapping("/administrator/commercial-banner/")
+public class AdministratorCommercialBannerController extends AbstractController<Administrator, CommercialBanner> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AdministratorAnnouncementListService	listService;
+	private AdministratorCommercialBannerListService	listService;
 
 	@Autowired
-	private AdministratorAnnouncementShowService	showService;
+	private AdministratorCommercialBannerShowService	showService;
 
 	@Autowired
-	private AdministratorAnnouncementCreateService	createService;
+	private AdministratorCommercialBannerCreateService	createService;
 
 	@Autowired
-	private AdministratorAnnouncementUpdateService	updateService;
+	private AdministratorCommercialBannerUpdateService	updateService;
 
 	@Autowired
-	private AdministratorAnnouncementDeleteService	deleteService;
+	private AdministratorCommercialBannerDeleteService	deleteService;
 
 
 	// Constructors -----------------------------------------------------------

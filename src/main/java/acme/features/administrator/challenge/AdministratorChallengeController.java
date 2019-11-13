@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.administrator.announcement;
+package acme.features.administrator.challenge;
 
 import javax.annotation.PostConstruct;
 
@@ -18,31 +18,31 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.announcements.Announcement;
+import acme.entities.challenges.Challenge;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Administrator;
 
 @Controller
-@RequestMapping("/administrator/announcement/")
-public class AdministratorAnnouncementController extends AbstractController<Administrator, Announcement> {
+@RequestMapping("/administrator/challenge/")
+public class AdministratorChallengeController extends AbstractController<Administrator, Challenge> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AdministratorAnnouncementListService	listService;
+	private AdministratorChallengeListService	listService;
 
 	@Autowired
-	private AdministratorAnnouncementShowService	showService;
+	private AdministratorChallengeShowService	showService;
 
 	@Autowired
-	private AdministratorAnnouncementCreateService	createService;
+	private AdministratorChallengeCreateService	createService;
 
 	@Autowired
-	private AdministratorAnnouncementUpdateService	updateService;
+	private AdministratorChallengeUpdateService	updateService;
 
 	@Autowired
-	private AdministratorAnnouncementDeleteService	deleteService;
+	private AdministratorChallengeDeleteService	deleteService;
 
 
 	// Constructors -----------------------------------------------------------

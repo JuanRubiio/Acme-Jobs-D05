@@ -7,7 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Past;
 
 import org.hibernate.validator.constraints.URL;
 
@@ -26,7 +25,6 @@ public class Announcement extends DomainEntity {
 	private String				title;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@Past
 	private Date				moment;
 
 	@URL

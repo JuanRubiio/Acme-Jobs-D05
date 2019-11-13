@@ -1,0 +1,19 @@
+administrator.commercialBanner.form.label.picture = Picture:
+administrator.commercialBanner.form.label.slogan = Slogan:
+administrator.commercialBanner.form.label.target = URL:
+administrator.commercialBanner.form.label.creditCard = CreditCard:
+administrator.commercialBanner.form.label.monthExpired = MonthExpired:
+administrator.commercialBanner.form.label.yearExpired = YearExpired:
+administrator.commercialBanner.form.label.CVV = CVV:
+administrator.commercialBanner.form.button.update = Update
+administrator.commercialBanner.form.button.delete = Delete
+administrator.commercialBanner.form.button.create = Create
+administrator.commercialBanner.form.button.return = Return
+
+
+
+administrator.commercialBanner.list.label.slogan = Slogan
+administrator.commercialBanner.list.label.creditCard = CreditCard
+administrator.commercialBanner.list.label.monthExpired = MonthExpired
+administrator.commercialBanner.list.label.yearExpired = YearExpired
+

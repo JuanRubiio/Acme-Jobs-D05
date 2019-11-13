@@ -63,7 +63,10 @@
         `picture` varchar(255),
         `slogan` varchar(255),
         `target` varchar(255),
+        `cvv` integer not null,
         `credit_card` varchar(255),
+        `month_expired` integer not null,
+        `year_expired` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
