@@ -324,7 +324,7 @@ Banner
     <panel_attributes>Announcement
 --
  + title: String {NotBlank}
- + moment: Date {Past, TemporalType.TIMESTAMP}
+ + moment: Date {TemporalType.TIMESTAMP}
  + link: String {URL}
  + description: String {NotBlank}</panel_attributes>
     <additional_attributes/>
@@ -332,33 +332,35 @@ Banner
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>469</x>
+      <x>504</x>
       <y>420</y>
-      <w>154</w>
-      <h>105</h>
+      <w>119</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>200.0;10.0;10.0;130.0</additional_attributes>
+    <additional_attributes>150.0;10.0;10.0;70.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>336</x>
-      <y>511</y>
-      <w>259</w>
-      <h>35</h>
+      <x>315</x>
+      <y>469</y>
+      <w>308</w>
+      <h>91</h>
     </coordinates>
     <panel_attributes>CommercialBanner
 --
  + creditCard: String {CreditCardNumber, NotBlank}
- </panel_attributes>
+ + monthExpired : int {Range(min = 1, max = 12), NotNull}
+ + yearExpired: int {Min(2019), NotNull}
+ + CVV: int {Range(min = 0, max = 999), NotNull}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>623</x>
-      <y>511</y>
+      <x>630</x>
+      <y>469</y>
       <w>119</w>
       <h>35</h>
     </coordinates>
@@ -374,11 +376,11 @@ Banner
     <coordinates>
       <x>609</x>
       <y>420</y>
-      <w>56</w>
-      <h>105</h>
+      <w>63</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;60.0;130.0</additional_attributes>
+    <additional_attributes>10.0;10.0;70.0;70.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -409,7 +411,7 @@ Banner
     <panel_attributes>Challenge
 --
  + title: String {NotBlank}
- + deadLine: Date {TemporalType.TIMESTAMP, Future}
+ + deadLine: Date {TemporalType.TIMESTAMP, NotNull}
  + description: String {NotBlank}
  + goalBronze: String {NotBlank}
  + rewardBronze: Money {NotNull, Valid}
