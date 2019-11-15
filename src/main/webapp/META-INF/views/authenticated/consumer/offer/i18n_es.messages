@@ -9,7 +9,7 @@
 # they accept any liabilities with respect to them.
 
 
-authentication.offer.title = Titulo
+authentication.offer.title = Título
 authentication.offer.moment = Fecha Creación
 authentication.offer.ticker = Ticker
 authentication.offer.deadline = Fecha límite
@@ -27,3 +27,5 @@ authenticated.consumer.deadlinepast = La fecha límite no puede ser pasada
 
 authentication.offer.confirmation = Confirmación de creación
 authentication.offer.isconfirmation = Debes marcar el check de confirmación
+authentication.offer.correctRewardMax = La recompensa no puede ser mayor que el precio máximo
+authentication.offer.correctRewardMin = La recompensa no puede ser menor que el percio mínimo
