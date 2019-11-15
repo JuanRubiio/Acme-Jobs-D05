@@ -26,3 +26,5 @@ authenticated.consumer.deadlinepast = Deadline cant be past
 authentication.offer.confirmation = Creation confirmation
 
 authentication.offer.isconfirmation = You must mark the confirmation check
+authentication.offer.correctRewardMax = The reward cannot be greater than the maximum price
+authentication.offer.correctRewardMin = The reward cannot be less than the minumun price

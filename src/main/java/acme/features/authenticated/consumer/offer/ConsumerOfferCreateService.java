@@ -61,6 +61,8 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert entity != null;
 		assert errors != null;
 		boolean isDuplicated, isConfirmed, isFuture = false;
+		boolean correctRewardMin = false;
+		boolean correctRewardMax = false;
 
 		isDuplicated = this.repository.findByTicker(entity.getTicker()) != null;
 		errors.state(request, !isDuplicated, "ticker", "authenticated.consumer.duplicatedtiker");
@@ -71,9 +73,9 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 			} else {
 				isFuture = true;
 			}
-		}
+			errors.state(request, isFuture, "deadline", "authenticated.consumer.deadlinepast");
 
-		errors.state(request, isFuture, "deadline", "authenticated.consumer.deadlinepast");
+		}
 
 		if (entity.getConfirmation() == false) {
 			isConfirmed = false;
@@ -83,6 +85,20 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 
 		errors.state(request, isConfirmed, "confirmation", "authentication.offer.isconfirmation");
 
+		if (entity.getMaxPrice() != null && entity.getMaxPrice().getAmount() != null) {
+			if (entity.getMaxPrice().getAmount() < entity.getReward().getAmount()) {
+				correctRewardMax = true;
+			}
+
+			errors.state(request, !correctRewardMax, "reward", "authentication.offer.correctRewardMax");
+		}
+		if (entity.getMinPrice() != null && entity.getMinPrice().getAmount() != null) {
+			if (entity.getMinPrice().getAmount() > entity.getReward().getAmount()) {
+				correctRewardMin = true;
+			}
+
+			errors.state(request, !correctRewardMin, "reward", "authentication.offer.correctRewardMin");
+		}
 	}
 
 	@Override
