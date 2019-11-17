@@ -80,7 +80,7 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 			isConfirmed = true;
 		}
 
-		errors.state(request, isConfirmed, "confirmation", "authentication.request.isconfirmation");
+		errors.state(request, isConfirmed, "confirmation", "authenticated.request.isconfirmation");
 
 	}
 
