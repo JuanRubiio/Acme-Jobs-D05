@@ -73,6 +73,7 @@ master.menu.companyrecord.create = Create Company Record
 
 master.menu.provider = Provider
 master.menu.provider.favourite-link = Favourite link
+master.menu.provider.request.create = Create request 
 
 
 # master.menu.consumer ##########################################################
@@ -91,6 +92,7 @@ master.menu.challenge.list = Challenge List
 master.menu.investorrecord = Investor Record
 master.menu.investorrecord.list = Investor Record List
 master.menu.investorrecord.list.top = Investor Record Top List
+master.menu.investorrecord.create = Create Investor Record
 master.menu.request = Request
 master.menu.request.list = Request List
 

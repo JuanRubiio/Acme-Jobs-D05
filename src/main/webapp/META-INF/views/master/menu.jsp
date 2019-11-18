@@ -74,6 +74,7 @@
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
 			<acme:menu-suboption code="master.menu.provider.favourite-link" action="https://www.amazon.es/"/>
+			<acme:menu-suboption code="master.menu.provider.request.create" action="/provider/request/create"/> 
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
@@ -99,9 +100,16 @@
 			<acme:menu-suboption code="master.menu.request.list" action="/authenticated/request/list"/>
 		</acme:menu-option>
 			
-		<acme:menu-option code="master.menu.investorrecord" access="isAuthenticated()">
+		<acme:menu-option code="master.menu.investorrecord" access="isAuthenticated() && !hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.investorrecord.list" action="/authenticated/investor-record/list"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.investorrecord" access="hasRole('Administrator')">
+			<acme:menu-suboption code="master.menu.investorrecord.create" action="/administrator/investor-record/create"/>
+			<acme:menu-suboption code="master.menu.investorrecord.list" action="/administrator/investor-record/list"/>
+		</acme:menu-option>
+		
+	
 			
 			
 	</acme:menu-left>

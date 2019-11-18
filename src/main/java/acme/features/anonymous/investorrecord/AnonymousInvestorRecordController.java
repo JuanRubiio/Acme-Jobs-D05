@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.investorRecord;
+package acme.features.anonymous.investorrecord;
 
 import javax.annotation.PostConstruct;
 
@@ -7,22 +7,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import acme.components.CustomCommand;
 import acme.entities.investorRecord.InvestorRecord;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
-import acme.framework.entities.Authenticated;
+import acme.framework.entities.Anonymous;
 
 @Controller
-@RequestMapping("/authenticated/investor-record/")
-public class AuthenticatedInvestorRecordController extends AbstractController<Authenticated, InvestorRecord> {
+@RequestMapping("/anonymous/investor-record/")
+public class AnonymousInvestorRecordController extends AbstractController<Anonymous, InvestorRecord> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AuthenticatedInvestorRecordListService	listService;
+	private AnonymousInvestorRecordListService		listService;
 
 	@Autowired
-	private AuthenticatedInvestorRecordShowService	showService;
+	private AnonymousInvestorRecordShowService		showService;
+
+	@Autowired
+	private AnonymousInvestorRecordListTopService	listTopService;
 
 	// Constructors -----------------------------------------------------------
 
@@ -31,6 +35,9 @@ public class AuthenticatedInvestorRecordController extends AbstractController<Au
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
+
+		super.addCustomCommand(CustomCommand.LIST_TOP, BasicCommand.LIST, this.listTopService);
+
 	}
 
 }

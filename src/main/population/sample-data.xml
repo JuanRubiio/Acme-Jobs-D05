@@ -28,6 +28,7 @@
 	<bean name="request1" class="acme.entities.request.Request">
 		<property name="title" value="Solicitud 1" />
 		<property name="moment" value="2019/02/17 00:00"/>
+		<property name="confirmation" value="true" /> 
 		<property name="deadline" value="2020/02/17 00:00" />
 		<property name="text" value="Esto es el texto de la solicitud" />
 		<property name="reward">
@@ -39,6 +40,7 @@
 	<bean name="request2" class="acme.entities.request.Request">
 		<property name="title" value="Solicitud 2" />
 		<property name="moment" value="2019/02/17 00:00"/>
+		<property name="confirmation" value="true" /> 
 		<property name="deadline" value="2020/02/17 00:00" />
 		<property name="text" value="Esto es el texto de la solicitud" />
 		<property name="reward">
@@ -50,6 +52,7 @@
 	<bean name="request3" class="acme.entities.request.Request">
 		<property name="title" value="Solicitud 3" />
 		<property name="moment" value="2019/02/17 00:00"/>
+		<property name="confirmation" value="true" /> 
 		<property name="deadline" value="2020/02/17 00:00" />
 		<property name="text" value="Esto es el texto de la solicitud" />
 		<property name="reward">
@@ -420,6 +423,35 @@
 	</bean>
 	
 	
+	<bean name="providerUserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="provider" />
+		<property name="password" value="provider" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Augusto" />
+				<property name="surname" value="Rivero" />
+				<property name="email" value="john.doe@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="providerProvider" />
+				<ref bean="providerAuthenticated" />
+			</list>
+		</property>
+	</bean>
+	
+		
+	<bean name="providerProvider" class="acme.entities.roles.Provider">
+		<property name="company" value="acme" />
+		<property name="sector" value="acme" />	
+		<property name="userAccount" ref="providerUserAccount" />
+	</bean>
+	
+	<bean name="providerAuthenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="providerUserAccount" />
+	</bean>
 
 </beans>
 

@@ -177,6 +177,7 @@
     create table `request` (
        `id` integer not null,
         `version` integer not null,
+        `confirmation` bit,
         `deadline` datetime(6),
         `moment` datetime(6),
         `reward_amount` double precision,

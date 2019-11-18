@@ -69,6 +69,7 @@ master.menu.companyrecord.create = Crear Registro de Compañía
 
 master.menu.provider = Proveedor
 master.menu.provider.favourite-link = Enlace favorito
+master.menu.provider.request.create = Crear petición 
 
 # master.menu.consumer ##########################################################
 
@@ -84,6 +85,7 @@ master.menu.challenge.list = Listar Desafio
 master.menu.investorrecord = Registro De Inversores
 master.menu.investorrecord.list = Listado De Registro Inversores
 master.menu.investorrecord.list.top = Listado de inversores top
+master.menu.investorrecord.create = Crear Investor Record
 master.menu.request = Peticiones
 master.menu.request.list = Lista de peticiones
 # master.menu.user-account ####################################################

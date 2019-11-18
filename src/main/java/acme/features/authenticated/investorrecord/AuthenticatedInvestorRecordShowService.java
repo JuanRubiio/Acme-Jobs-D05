@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.investorRecord;
+package acme.features.authenticated.investorrecord;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

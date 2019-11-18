@@ -26,6 +26,7 @@ public class InvestorRecord extends DomainEntity {
 	@NotBlank
 	private String				nameInvestor;
 
+	//TODO: Select para sector: publico y privado
 	@NotNull
 	private String				sector;
 
