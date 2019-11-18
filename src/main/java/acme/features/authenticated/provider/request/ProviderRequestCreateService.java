@@ -59,7 +59,7 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		boolean isDuplicated, isConfirmed, isFuture = false;
+		boolean isDuplicated, isConfirmed = false, isFuture = false;
 
 		isDuplicated = this.repository.findByTicker(entity.getTicker()) != null;
 		errors.state(request, !isDuplicated, "ticker", "authenticated.provider.duplicatedtiker");
@@ -74,10 +74,12 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 
 		errors.state(request, isFuture, "deadline", "authenticated.provider.deadlinepast");
 
-		if (entity.getConfirmation() == false) {
-			isConfirmed = false;
-		} else {
-			isConfirmed = true;
+		if (entity.getConfirmation() != null) {
+			if (entity.getConfirmation() == false) {
+				isConfirmed = false;
+			} else {
+				isConfirmed = true;
+			}
 		}
 
 		errors.state(request, isConfirmed, "confirmation", "authenticated.request.isconfirmation");
