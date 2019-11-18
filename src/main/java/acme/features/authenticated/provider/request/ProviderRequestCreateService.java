@@ -32,7 +32,7 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors);
+		request.bind(entity, errors, "moment");
 
 	}
 
@@ -88,6 +88,9 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 
 	@Override
 	public void create(final acme.framework.components.Request<Request> request, final Request entity) {
+		Date moment;
+		moment = new Date(System.currentTimeMillis() - 1);
+		entity.setMoment(moment);
 		this.repository.save(entity);
 
 	}
