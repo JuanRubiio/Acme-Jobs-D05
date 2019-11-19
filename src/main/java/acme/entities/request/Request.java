@@ -5,6 +5,8 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Index;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
@@ -20,6 +22,9 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@Table(indexes = {
+	@Index(columnList = "ticker"), @Index(columnList = "deadline")
+})
 public class Request extends DomainEntity {
 
 	/**
@@ -30,7 +35,6 @@ public class Request extends DomainEntity {
 	@NotBlank
 	private String				title;
 
-	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				moment;
 
@@ -49,4 +53,7 @@ public class Request extends DomainEntity {
 	@NotBlank
 	@Pattern(regexp = "^[Ra-zA-Z]{5}-\\d{5}$")
 	private String				ticker;
+
+	@NotNull
+	private Boolean				confirmation		= false;
 }

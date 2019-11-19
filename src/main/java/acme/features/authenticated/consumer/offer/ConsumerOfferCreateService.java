@@ -85,14 +85,14 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 
 		errors.state(request, isConfirmed, "confirmation", "authentication.offer.isconfirmation");
 
-		if (entity.getMaxPrice() != null && entity.getMaxPrice().getAmount() != null) {
+		if (entity.getMaxPrice() != null && entity.getMaxPrice().getAmount() != null && entity.getReward() != null && entity.getReward().getAmount() != null) {
 			if (entity.getMaxPrice().getAmount() < entity.getReward().getAmount()) {
 				correctRewardMax = true;
 			}
 
 			errors.state(request, !correctRewardMax, "reward", "authentication.offer.correctRewardMax");
 		}
-		if (entity.getMinPrice() != null && entity.getMinPrice().getAmount() != null) {
+		if (entity.getMinPrice() != null && entity.getMinPrice().getAmount() != null && entity.getReward() != null && entity.getReward().getAmount() != null) {
 			if (entity.getMinPrice().getAmount() > entity.getReward().getAmount()) {
 				correctRewardMin = true;
 			}

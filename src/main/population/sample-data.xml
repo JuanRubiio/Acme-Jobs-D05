@@ -28,6 +28,7 @@
 	<bean name="request1" class="acme.entities.request.Request">
 		<property name="title" value="Solicitud 1" />
 		<property name="moment" value="2019/02/17 00:00"/>
+		<property name="confirmation" value="true" /> 
 		<property name="deadline" value="2020/02/17 00:00" />
 		<property name="text" value="Esto es el texto de la solicitud" />
 		<property name="reward">
@@ -39,6 +40,7 @@
 	<bean name="request2" class="acme.entities.request.Request">
 		<property name="title" value="Solicitud 2" />
 		<property name="moment" value="2019/02/17 00:00"/>
+		<property name="confirmation" value="true" /> 
 		<property name="deadline" value="2020/02/17 00:00" />
 		<property name="text" value="Esto es el texto de la solicitud" />
 		<property name="reward">
@@ -49,7 +51,8 @@
 	
 	<bean name="request3" class="acme.entities.request.Request">
 		<property name="title" value="Solicitud 3" />
-		<property name="moment" value="2019/02/17 00:00"/>
+		<property name="moment" value="2021/02/17 00:00"/>
+		<property name="confirmation" value="true" /> 
 		<property name="deadline" value="2020/02/17 00:00" />
 		<property name="text" value="Esto es el texto de la solicitud" />
 		<property name="reward">
@@ -74,16 +77,16 @@
 
 	<bean name="investorRecord3" class="acme.entities.investorRecord.InvestorRecord">
 		<property name="nameInvestor" value="Investor Record 3" />
-		<property name="investingStatement" value="2019/02/17 00:00"/>
+		<property name="investingStatement" value="2021/02/17 00:00"/>
 		<property name="sector" value="Público" />
 		<property name="stars" value="5" />
 	</bean>
 
-
+  
 	<bean name="offer1" class="acme.entities.offer.Offer">
 		<property name="title" value="Oferta 1" />
 		<property name="moment" value="2019/02/17 00:00"/>
-		<property name="deadline" value="2020/02/17 00:00" />
+		<property name="deadline" value="2021/02/17 00:00" />
 		<property name="text" value="Esto es el texto de la oferta" />
 		<property name="maxPrice">
 			<ref bean="money4"/>
@@ -101,7 +104,7 @@
 		<bean name="offer2" class="acme.entities.offer.Offer">
 		<property name="title" value="Oferta 2" />
 		<property name="moment" value="2019/09/17 00:00"/>
-		<property name="deadline" value="2020/04/17 00:00" />
+		<property name="deadline" value="2021/04/17 00:00" />
 		<property name="text" value="Esto es el texto de la oferta" />
 		<property name="maxPrice">
 			<ref bean="money3"/>
@@ -120,7 +123,7 @@
 		<bean name="offer3" class="acme.entities.offer.Offer">
 		<property name="title" value="Oferta 3" />
 		<property name="moment" value="2019/10/17 00:00"/>
-		<property name="deadline" value="2020/02/12 00:00" />
+		<property name="deadline" value="2021/02/12 00:00" />
 		<property name="text" value="Esto es el texto de la oferta" />
 		<property name="maxPrice">
 			<ref bean="money2"/>
@@ -177,7 +180,7 @@
 	<bean name="offer6" class="acme.entities.offer.Offer">
 		<property name="title" value="Oferta 6" />
 		<property name="moment" value="2019/05/17 00:00"/>
-		<property name="deadline" value="2019/12/08 00:00" />
+		<property name="deadline" value="2021/12/08 00:00" />
 		<property name="text" value="Esto es el texto de la oferta" />
 		<property name="maxPrice">
 			<ref bean="money5"/>
@@ -192,7 +195,7 @@
 		<property name="confirmation" value="true" />
 		
 	</bean>
-	
+
 	<bean name="money1" class="acme.framework.datatypes.Money">
 		<property name="amount" value="100.25" />
 		<property name="currency" value="€" />
@@ -315,10 +318,9 @@
 		<property name="description" value="Esto es un anuncio"/>
 	</bean>
 
-	<!-- Revisar las fechas para futuro -->
 	<bean id="challenge01" class="acme.entities.challenges.Challenge">
 		<property name="title" value="Reto 1"/>
-		<property name="deadline" value="2020/10/15 10:10"/>
+		<property name="deadline" value="2021/10/15 10:10"/>
 		<property name="description" value="Texto aqui"/>
 		<property name="goalBronze" value="Level C"/>
 		<property name="rewardBronze">
@@ -336,7 +338,7 @@
 	
 	<bean id="challenge02" class="acme.entities.challenges.Challenge">
 		<property name="title" value="Reto 2"/>
-		<property name="deadline" value="2020/5/7 19:01"/>
+		<property name="deadline" value="2021/5/7 19:01"/>
 		<property name="description" value="Texto 2 aqui"/>
 		<property name="goalBronze" value="Level C"/>
 		<property name="rewardBronze">
@@ -420,6 +422,35 @@
 	</bean>
 	
 	
+	<bean name="providerUserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="provider" />
+		<property name="password" value="provider" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Augusto" />
+				<property name="surname" value="Rivero" />
+				<property name="email" value="john.doe@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="providerProvider" />
+				<ref bean="providerAuthenticated" />
+			</list>
+		</property>
+	</bean>
+	
+		
+	<bean name="providerProvider" class="acme.entities.roles.Provider">
+		<property name="company" value="acme" />
+		<property name="sector" value="acme" />	
+		<property name="userAccount" ref="providerUserAccount" />
+	</bean>
+	
+	<bean name="providerAuthenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="providerUserAccount" />
+	</bean>
 
 </beans>
 
