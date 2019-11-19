@@ -17,10 +17,7 @@
 
 <acme:form>
 	<acme:form-textbox code="authenticated.companyrecord.name" path="name"/>
-	<acme:form-select code="authenticated.companyrecord.sector" path="sector">
-			<acme:form-option code="Público" value="Público" selected="true"/>
-			<acme:form-option code="Privado" value="Privado"/>
-	</acme:form-select>		
+	<acme:form-textbox code="authenticated.companyrecord.sector" path="sector"/>
 	<acme:form-textbox code="authenticated.companyrecord.ceoName" path="ceoName"/>
 	<acme:form-url code="authenticated.companyrecord.webSite" path="webSite"/>
 	<acme:form-textbox code="authenticated.companyrecord.phone" path="phone" placeholder="+999 (9999) 999999"/>

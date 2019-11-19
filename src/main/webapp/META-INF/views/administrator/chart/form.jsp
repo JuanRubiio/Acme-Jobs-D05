@@ -23,12 +23,17 @@
 		
 	
 		var data = {
-				labels : ["Público", "Privado"],
+				labels : [
+					<jstl:forEach var="t" items="${totalCompanySector}">
+						"${t}",
+					</jstl:forEach>
+				],
 				datasets : [
 					{
 						data: [
-							<jstl:out value="${totalNumberCompanySectorPublic}"/>,
-							<jstl:out value="${totalNumberCompanySectorPrivate}"/>,
+							<jstl:forEach var="t" items="${totalNumberCompanySector}">
+							"${t}",
+							</jstl:forEach>
 						]
 					}
 				]
@@ -39,7 +44,7 @@
 						{
 							ticks : {
 								suggestedMin : 0,
-								suggestedMax : 10
+								suggestedMax : 20
 							}
 						}
 					]
@@ -65,12 +70,17 @@
 		$(document).ready(function(){
 			
 			var data = {
-					labels : ["Público", "Privado"],
+					labels : [	
+						<jstl:forEach var="t" items="${totalInvestorSector}">
+						"${t}",
+						</jstl:forEach>
+						],
 					datasets : [
 						{
 							data: [
-								<jstl:out value="${totalNumberInvestorSectorPublic}"/>,
-								<jstl:out value="${totalNumberInvestorSectorPrivate}"/>,
+								<jstl:forEach var="t" items="${totalNumberInvestorSector}">
+								"${t}",
+								</jstl:forEach>
 							]
 						}
 					]
@@ -81,7 +91,7 @@
 							{
 								ticks : {
 									suggestedMin : 0,
-									suggestedMax : 10
+									suggestedMax : 20
 								}
 							}
 						]

@@ -5,9 +5,9 @@
 
 <acme:form readonly="true">
 	<acme:form-textbox code="authenticated.investorrecord.nameInvestor" path="nameInvestor"/>
-	<acme:form-moment code="authenticated.investorrecord.sector" path="sector"/>
+	<acme:form-textbox code="authenticated.investorrecord.sector" path="sector"/>
 	<acme:form-moment code="authenticated.investorrecord.investingStatement" path="investingStatement"/>
-	<acme:form-money code="authenticated.investorrecord.stars" path="stars"/>
+	<acme:form-textbox code="authenticated.investorrecord.stars" path="stars"/>
 
 <%-- 	<acme:form-submit code="authentication.investorrecord.create" action="/authenticated/investorrecord/create"/>
 		 --%>
