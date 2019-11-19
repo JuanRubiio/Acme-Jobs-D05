@@ -38,16 +38,14 @@ master.menu.anonymous.list2 = Carlos Bulletin List
 master.menu.anonymous.create2 = Carlos Create Bulletin
 master.menu.anonymous.rivero-bulletin.list = Augusto Bulletin List
 master.menu.anonymous.rivero-bulletin.create = Augusto Create Bulletin 
+
 master.menu.anonymous.announcement.list = Announcement List
+master.menu.anonymous.investorrecord.list = Investor Record List
+master.menu.anonymous.investorrecord.list.top = Investor Record Top List
+master.menu.anonymous.companyrecord.list = Company List
+master.menu.anonymous.companyrecord.list.top = Company Top List
 
-
-
-master.menu.offer.list = Active Offers List 
-master.menu.companyrecord.list = Company List
-master.menu.companyrecord.list.top = Company Top List
-master.menu.companyrecord = Company Record
-master.menu.offer = Offers
-
+ 
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
@@ -56,45 +54,43 @@ master.menu.administrator.announcement.list = Announcement List
 master.menu.administrator.announcement.create = Announcement Create
 master.menu.administrator.challenge.list = Challenge List
 master.menu.administrator.challenge.create = Challenge Create
-
-master.menu.Banner = Banner
+master.menu.administrator.companyrecord.create = Create Company Record
+master.menu.administrator.companyrecord.list = List Company Record
 master.menu.administrator.commercialBanner.list = CommercialBanner List
 master.menu.administrator.commercialBanner.create = CommercialBanner Create
 master.menu.administrator.noncommercialBanner.list = NonCommercialBanner List
 master.menu.administrator.noncommercialBanner.create = NonCommercialBanner Create
+master.menu.administrator.investorrecord.create = Create Investor Record
+master.menu.administrator.investorrecord.list = List Investor Record
 
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.shutdown = Shut down
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.customisationparameters = Customisation Parameters
 master.menu.administrator.chart = Chart
-master.menu.companyrecord.create = Create Company Record
+
 # master.menu.provider ########################################################
 
 master.menu.provider = Provider
 master.menu.provider.favourite-link = Favourite link
 master.menu.provider.request.create = Create request 
-
+master.menu.provider.request.list = List Request
 
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
-master.menu.consumer.offer.create = Create offer
+master.menu.consumer.offer.create = Create Offer
+master.menu.consumer.offer.list = Active Offers List
 
-# master.menu ##########################################################
+# master.menu.authenticated ##########################################################
 
+master.menu.authenticated = Authenticated
+master.menu.authenticated.announcement.list = List Announcement
+master.menu.authenticated.challenge.list = List Challenge
+master.menu.authenticated.investorrecord.list = List Investor Record
 
-master.menu.announcement.list = Announcement List
-master.menu.challenge = Challenges
-master.menu.challenge.list = Challenge List
-
-master.menu.investorrecord = Investor Record
-master.menu.investorrecord.list = Investor Record List
-master.menu.investorrecord.list.top = Investor Record Top List
-master.menu.investorrecord.create = Create Investor Record
-master.menu.request = Request
-master.menu.request.list = Request List
+master.menu.authenticated.companyrecord.list = List Company Record
 
 # master.menu.user-account ####################################################
 
