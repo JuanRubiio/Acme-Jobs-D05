@@ -7,10 +7,7 @@
 
 	<acme:form-textbox code="administrator.investorrecord.nameInvestor" path="nameInvestor"/>
 	
-	<acme:form-select code="administrator.investorrecord.sector" path="sector">
-			<acme:form-option code="Público" value="Público" selected="true"/>
-			<acme:form-option code="Privado" value="Privado"/>
-	</acme:form-select>	
+	<acme:form-textbox code="administrator.investorrecord.sector" path="sector"/>
 	
 	<acme:form-moment code="administrator.investorrecord.investingStatement" path="investingStatement" />
 	
