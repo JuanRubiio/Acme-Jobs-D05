@@ -82,7 +82,7 @@
 		<property name="stars" value="5" />
 	</bean>
 
-
+  
 	<bean name="offer1" class="acme.entities.offer.Offer">
 		<property name="title" value="Oferta 1" />
 		<property name="moment" value="2019/02/17 00:00"/>
@@ -195,7 +195,7 @@
 		<property name="confirmation" value="true" />
 		
 	</bean>
-	
+
 	<bean name="money1" class="acme.framework.datatypes.Money">
 		<property name="amount" value="100.25" />
 		<property name="currency" value="€" />
