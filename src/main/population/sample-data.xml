@@ -549,6 +549,19 @@
 		<property name="employer" ref="employerEmployer"/>
 	</bean> 
 
+	<bean id="duty1" class="acme.entities.duty.Duty">
+		<property name="title" value="titulo de duty1"/>
+		<property name="percentage" value="23.25"/>		
+		<property name="description" value="Esta es la descripcion del duty1"/>
+		<property name="job" ref="job1"/>
+	</bean> 
+	<bean id="duty2" class="acme.entities.duty.Duty">
+		<property name="title" value="titulo de duty2"/>
+		<property name="percentage" value="10.25"/>		
+		<property name="description" value="Esta es la descripcion del duty2"/>
+		<property name="job" ref="job2"/>
+	</bean> 
+
 
 
 

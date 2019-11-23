@@ -15,6 +15,10 @@
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
 
+    alter table `duty` 
+       drop 
+       foreign key `FKs2uoxh4i5ya8ptyefae60iao1`;
+
     alter table `employer` 
        drop 
        foreign key FK_na4dfobmeuxkwf6p75abmb2tr;
@@ -46,6 +50,8 @@
     drop table if exists `consumer`;
 
     drop table if exists `customisation_parameters`;
+
+    drop table if exists `duty`;
 
     drop table if exists `employer`;
 

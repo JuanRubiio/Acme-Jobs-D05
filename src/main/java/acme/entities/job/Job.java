@@ -64,13 +64,13 @@ public class Job extends DomainEntity {
 
 	private Boolean				active;
 
-	//Relationships----------------------------
-
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
 	private Employer			employer;
 
+
+	//Relationships----------------------------
 
 	@Transient
 	public Boolean getActive() {
