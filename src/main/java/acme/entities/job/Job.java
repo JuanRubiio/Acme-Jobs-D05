@@ -76,7 +76,7 @@ public class Job extends DomainEntity {
 	public Boolean getActive() {
 		Boolean result = false;
 		Date d = new Date();
-		if (this.deadline.before(d) && "published".equals(this.status)) {
+		if (this.deadline.after(d) && "published".equals(this.status)) {
 			result = true;
 		}
 		return result;

@@ -74,7 +74,7 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.employer" access="hasRole('Employer') && hasRole('Provider')"> 
-			<acme:menu-suboption code="master.menu.authenticated.employer.provider.list" action="/employer/provider/job/list-mine"/>
+			<acme:menu-suboption code="master.menu.authenticated.employer.provider.list" action="/employer/job/list-mine"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">

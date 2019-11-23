@@ -6,19 +6,11 @@
 			
 <tiles-definitions>
 
-	<definition name="authenticated/job/list-active" extends="master">
+	<definition name="authenticated/job/list" extends="master">
 		<put-attribute name="body" type="template" value="../authenticated/job/list.jsp" />
 	</definition>
 	
 	<definition name="authenticated/job/form" extends="master">
-		<put-attribute name="body" type="template" value="../authenticated/job/form.jsp" />
-	</definition>
-	
-	<definition name="employer/provider/job/list-mine" extends="master">
-		<put-attribute name="body" type="template" value="../authenticated/job/list.jsp" />
-	</definition>
-	
-	<definition name="employer/provider/job/form" extends="master">
 		<put-attribute name="body" type="template" value="../authenticated/job/form.jsp" />
 	</definition>
 </tiles-definitions>			
