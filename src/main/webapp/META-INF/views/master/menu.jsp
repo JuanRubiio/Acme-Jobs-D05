@@ -73,6 +73,9 @@
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="https://www.amazon.es/"/>
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.employer" access="hasRole('Employer') && hasRole('Provider')"> 
+			<acme:menu-suboption code="master.menu.authenticated.employer.provider.list" action="/employer/provider/job/list-mine"/>
+		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.authenticated.announcement.list" action="/authenticated/announcement/list" access="!hasRole('Administrator')"/>
@@ -81,6 +84,8 @@
 			<acme:menu-suboption code="master.menu.provider.request.list" action="/authenticated/request/list"/>
 			<acme:menu-suboption code="master.menu.consumer.offer.list" action="/authenticated/offer/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.challenge.list" action="/authenticated/challenge/list" access="!hasRole('Administrator')"/>
+			<acme:menu-suboption code="master.menu.authenticated.job.list.active" action="/authenticated/job/list-active"/>
+			
 		</acme:menu-option>
 		
 			

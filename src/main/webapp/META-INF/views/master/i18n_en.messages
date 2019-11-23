@@ -45,6 +45,9 @@ master.menu.anonymous.investorrecord.list.top = Investor Record Top List
 master.menu.anonymous.companyrecord.list = Company Record List
 master.menu.anonymous.companyrecord.list.top = Company Record Top List
 
+master.menu.authenticated.job.list.active = Active Jobs
+master.menu.employer = Employer
+master.menu.authenticated.employer.provider.list = Jobs List
  
 # master.menu.administrator ###################################################
 
