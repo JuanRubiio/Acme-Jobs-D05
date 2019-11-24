@@ -254,6 +254,7 @@
     insert into `hibernate_sequence` values ( 1 );
 create index IDXnr284tes3x8hnd3h716tmb3fr on `challenge` (`deadline`);
 create index IDXfdmpnr8o4phmk81sqsano16r on `job` (`deadline`);
+create index IDX28ur9xm72oo1df9g14xhnh8h3 on `job` (`status`);
 
     alter table `job` 
        add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);
