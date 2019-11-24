@@ -468,8 +468,8 @@
 			<list>
 				<ref bean="employerEmployer" />
 				<ref bean="employerAuthenticated" />
-<!-- 				<ref bean="employerProvider" />
- -->			</list>
+ 				<ref bean="employerProvider" />
+ 			</list>
 		</property>
 	</bean>
 	
@@ -478,18 +478,64 @@
 		<property name="company" value="acme" />
 		<property name="sector" value="acme" />	
 		<property name="userAccount" ref="employerUserAccount" />
+		<property name="jobs">
+			<list>
+				<ref bean="job1" />
+				<ref bean="job2" />
+ 			</list>
+		</property>
 	</bean>
 	
 	<bean name="employerAuthenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="employerUserAccount" />
 	</bean>
 
-<!-- 	<bean name="employerProvider" class="acme.entities.roles.Provider">
+ 	<bean name="employerProvider" class="acme.entities.roles.Provider">
 		<property name="company" value="acme" />
 		<property name="sector" value="acme" />	
 		<property name="userAccount" ref="employerUserAccount" />
 	</bean>
- -->
+	
+	
+		<bean name="employerUserAccount2" class="acme.framework.entities.UserAccount">
+		<property name="username" value="employer2" />
+		<property name="password" value="employer2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Juan" />
+				<property name="surname" value="Jimenez" />
+				<property name="email" value="john.doe@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="employerEmployer2" />
+				<ref bean="employerAuthenticated2" />
+ 			</list>
+		</property>
+	</bean>
+	
+		
+	<bean name="employerEmployer2" class="acme.entities.roles.Employer">
+		<property name="company" value="acme" />
+		<property name="sector" value="acme" />	
+		<property name="userAccount" ref="employerUserAccount2" />
+		<property name="jobs">
+			<list>
+				<ref bean="job3" />
+				<ref bean="job4" />
+ 				<ref bean="job5" />
+ 			</list>
+		</property>
+	</bean>
+	
+	<bean name="employerAuthenticated2" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="employerUserAccount2" />
+	</bean>
+	
+	
+ 
 	<bean id="job1" class="acme.entities.job.Job">
 		<property name="reference" value="EMP1-JOB1"/>
 		<property name="status" value="draft"/>
@@ -522,7 +568,7 @@
 		<property name="link" value="https://www.everis.com/global/en"/>
 		<property name="description" value="Esta es la descripcion del job3"/>
 		<property name="active"><null/></property>
-		<property name="employer" ref="employerEmployer"/>
+		<property name="employer" ref="employerEmployer2"/>
 	</bean> 
 
 	<bean id="job4" class="acme.entities.job.Job">
@@ -534,19 +580,19 @@
 		<property name="link" value="https://www.everis.com/global/en"/>
 		<property name="description" value="Esta es la descripcion del job4"/>
 		<property name="active"><null/></property>
-		<property name="employer" ref="employerEmployer"/>
+		<property name="employer" ref="employerEmployer2"/>
 	</bean> 
 
 	<bean id="job5" class="acme.entities.job.Job">
 		<property name="reference" value="EMP1-JOB5"/>
-		<property name="status" value="published"/>
+		<property name="status" value="draft"/>
 		<property name="title" value="titulo de job5"/>
 		<property name="deadline" value="2021/03/11 00:00" />
 		<property name="salary" value="500.25 €"/>		
 		<property name="link" value="https://www.everis.com/global/en"/>
 		<property name="description" value="Esta es la descripcion del job5"/>
 		<property name="active"><null/></property>
-		<property name="employer" ref="employerEmployer"/>
+		<property name="employer" ref="employerEmployer2"/>
 	</bean> 
 
 	<bean id="duty1" class="acme.entities.duty.Duty">
@@ -561,7 +607,12 @@
 		<property name="description" value="Esta es la descripcion del duty2"/>
 		<property name="job" ref="job2"/>
 	</bean> 
-
+	<bean id="duty3" class="acme.entities.duty.Duty">
+		<property name="title" value="titulo de duty3"/>
+		<property name="percentage" value="50.25"/>		
+		<property name="description" value="Esta es la descripcion del duty3"/>
+		<property name="job" ref="job3"/>
+	</bean> 
 
 
 

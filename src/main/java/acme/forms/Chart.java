@@ -20,5 +20,6 @@ public class Chart implements Serializable {
 	private List<String>		totalCompanySector;
 	private List<Integer>		totalNumberInvestorSector;
 	private List<String>		totalInvestorSector;
-
+	private List<Integer>		totalNumberJobStatus;
+	private List<String>		totalJobStatus;
 }

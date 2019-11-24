@@ -31,7 +31,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert model != null;
 
 		request.unbind(entity, model, "totalNumberCompanyRecords", "totalNumberAnnonuncements", "totalNumberInvestorRecords", "minRewardActiveRequest", "maxRewardActiveRequest", "avgRewardActiveRequest", "desvRewardActiveRequest", "minRewardActiveOffer",
-			"maxRewardActiveOffer", "avgRewardActiveOffer", "desvRewardActiveOffer");
+			"maxRewardActiveOffer", "avgRewardActiveOffer", "desvRewardActiveOffer", "avgNumberJobOEmployer");
 
 	}
 
@@ -51,6 +51,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		Double maxRewardActiveRequest = this.repository.getMaxRewardActiveRequest();
 		Double avgRewardActiveRequest = this.repository.getAvgRewardActiveRequest();
 		Double desvRewardActiveRequest = this.repository.getAvgRewardActiveRequest();
+		Double avgNumberJobOEmployer = this.repository.getavgNumberJobOEmployer();
 
 		res.setTotalNumberCompanyRecords(totalNumberCompanyRecords);
 		res.setTotalNumberAnnonuncements(totalNumberAnnouncements);
@@ -63,6 +64,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		res.setMaxRewardActiveRequest(maxRewardActiveRequest);
 		res.setAvgRewardActiveRequest(avgRewardActiveRequest);
 		res.setDesvRewardActiveRequest(desvRewardActiveRequest);
+		res.setAvgNumberJobOEmployer(avgNumberJobOEmployer);
 
 		return res;
 	}

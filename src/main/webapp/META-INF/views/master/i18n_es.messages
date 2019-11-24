@@ -47,7 +47,7 @@ master.menu.anonymous.companyrecord.list.top = Listar Compañías Top
 
  master.menu.authenticated.job.list.active = Trabajos Activos
  master.menu.employer = Empleado
- master.menu.authenticated.employer.provider.list = Lista de Trabajos
+ master.menu.authenticated.employer.provider.list = Lista de Trabajos propios
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
