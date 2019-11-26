@@ -23,7 +23,6 @@
 	<acme:list-column code="anonymous.companyrecord.webSite" path="webSite" width="10%"/>	
 	<acme:list-column code="anonymous.companyrecord.phone" path="phone" width="10%"/>
 	<acme:list-column code="anonymous.companyrecord.email" path="email" width="10%"/>	
-	<acme:list-column code="anonymous.companyrecord.incorporated" path="incorporated" width="10%"/>		
 	<acme:list-column code="anonymous.companyrecord.stars" path="stars" width="10%"/>		
 	<acme:list-column code="anonymous.companyrecord.description" path="description" width="20%"/>	
 	

@@ -22,11 +22,6 @@
 		<put-attribute name="body" type="template" value="../anonymous/investor-record/list.jsp" />
 	</definition>
 	
-	<definition name="anonymous/investor-record/list-top" extends="master">		
-		<put-attribute name="body" type="template" value="../anonymous/investor-record/list.jsp" />
-	</definition>
-	
-	
 	<definition name="anonymous/investor-record/form" extends="master">
 		<put-attribute name="body" type="template" value="../anonymous/investor-record/form.jsp" />
 	</definition>

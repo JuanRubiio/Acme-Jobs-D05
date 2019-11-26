@@ -5,10 +5,11 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Index;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
-import javax.validation.constraints.Future;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -21,6 +22,9 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@Table(indexes = {
+	@Index(columnList = "ticker"), @Index(columnList = "deadline")
+})
 public class Offer extends DomainEntity {
 
 	/**
@@ -31,13 +35,11 @@ public class Offer extends DomainEntity {
 	@NotBlank
 	private String				title;
 
-	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				moment;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	@Future
 	private Date				deadline;
 
 	@NotBlank
@@ -59,5 +61,8 @@ public class Offer extends DomainEntity {
 	@NotBlank
 	@Pattern(regexp = "^[Oa-zA-Z]{5}-\\d{5}$")
 	private String				ticker;
+
+	@NotNull
+	private Boolean				confirmation		= false;
 
 }

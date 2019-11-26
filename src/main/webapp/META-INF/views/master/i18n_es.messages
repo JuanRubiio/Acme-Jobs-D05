@@ -29,54 +29,69 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
-master.menu.anonymous.favourite-link-3 = Enlace favorito Carlos
-master.menu.anonymous.favourite-link-2 = Enlace favorito Juan
-master.menu.anonymous.favourite-link = Enlace favorito Augusto
-master.menu.anonymous.jimenezbulletin.list = Lista de Boletines de Juan
-master.menu.anonymous.jimenezbulletin.create = Crear Boletines de Juan
-master.menu.anonymous.list2 = Listar Boletines de Carlos
-master.menu.anonymous.create2 = Crear Boletines de Carlos
-master.menu.anonymous.rivero-bulletin.list = Lista de Boletines de Augusto
-master.menu.anonymous.rivero-bulletin.create = Crear Boletines de Carlos
+master.menu.anonymous.favourite-link-2 = Link Favorito de Juan
+master.menu.anonymous.favourite-link-3 = Link Favorito de Carlos
+master.menu.anonymous.favourite-link = Link Favorito de Augusto
+master.menu.anonymous.jimenezbulletin.list = Listar Juan Bulletin 
+master.menu.anonymous.jimenezbulletin.create = Crear Juan Bulletin 
+master.menu.anonymous.list2 = Listar Carlos Bulletin
+master.menu.anonymous.create2 = Crear Carlos Bulletin 
+master.menu.anonymous.rivero-bulletin.list = Crear Augusto Bulletin 
+master.menu.anonymous.rivero-bulletin.create = Crear Augusto Bulletin  
 
-master.menu.companyrecord.list = Listado De Compañias
-master.menu.offer.list = Listado de Ofertas Activas
-master.menu.companyrecord.list.top = Listado De Compañias Top
-master.menu.companyrecord = Registro De Compañias
-master.menu.offer = Ofertas
 master.menu.anonymous.announcement.list = Listar Anuncios
+master.menu.anonymous.investorrecord.list = Listar Record Inversores
+master.menu.anonymous.investorrecord.list.top = Listar Top Record Inversores
+master.menu.anonymous.companyrecord.list = Listar Compañías
+master.menu.anonymous.companyrecord.list.top = Listar Compañías Top
+
+ master.menu.authenticated.job.list.active = Trabajos Activos
+ master.menu.employer = Empleado
+ master.menu.authenticated.employer.provider.list = Lista de Trabajos propios
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
-master.menu.announcement = Anuncios
 master.menu.administrator.announcement.list = Listar Anuncios
-master.menu.administrator.user-accounts = Cuentas de usuario
-master.menu.administrator.shutdown = Parar el sistema
-master.menu.administrator.customisationparameters = Parámetros de customización
+master.menu.administrator.announcement.create = Crear Anuncio
+master.menu.administrator.challenge.list = Listar Desafíos
+master.menu.administrator.challenge.create = Crear Desafío
+master.menu.administrator.companyrecord.create = Crear Compañía Record
+master.menu.administrator.companyrecord.list = Listar Compañías Records
+master.menu.administrator.commercialBanner.list = Listar Banners Comerciales
+master.menu.administrator.commercialBanner.create = Crear Banner Comercial
+master.menu.administrator.noncommercialBanner.list = Listar Banners No Comerciales
+master.menu.administrator.noncommercialBanner.create = Crear Banner No Comercial
+master.menu.administrator.investorrecord.create = Crear Inversor Record
+master.menu.administrator.investorrecord.list = Listar Inversores Records
+
+master.menu.administrator.user-accounts = Cuenta Usuarios
+master.menu.administrator.shutdown = Apagar
 master.menu.administrator.dashboard = Dashboard
-master.menu.administrator.chart = Gráficas
+master.menu.administrator.customisationparameters = Parámetros personalizados
+master.menu.administrator.chart = Chart
+
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
-master.menu.provider.request.create = Crear petición 
+master.menu.provider.favourite-link = Link Favorito
+master.menu.provider.request.create = Crear Solicitud 
+master.menu.provider.request.list = Listar Solicitudes
 
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumidor
-master.menu.consumer.favourite-link = Enlace favorito
+master.menu.consumer.favourite-link = Link Favorito
+master.menu.consumer.offer.create = Crear Oferta
+master.menu.consumer.offer.list = Listar Ofertas Activas
 
-# master.menu.challenge ##########################################################
+# master.menu.authenticated ##########################################################
 
-master.menu.announcement.list = Listar Anuncios
-master.menu.challenge = Desafios
-master.menu.challenge.list = Listar Desafio
-master.menu.investorrecord = Registro De Inversores
-master.menu.investorrecord.list = Listado De Registro Inversores
-master.menu.investorrecord.list.top = Listado de inversores top
-master.menu.investorrecord.create = Crear Investor Record
-master.menu.request = Peticiones
-master.menu.request.list = Lista de peticiones
+master.menu.authenticated = Autenticado
+master.menu.authenticated.announcement.list = Listar anuncios
+master.menu.authenticated.challenge.list = Listar Desafíos
+master.menu.authenticated.investorrecord.list = Listar Investores Records
+
+master.menu.authenticated.companyrecord.list = Listar Compañías Records
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta

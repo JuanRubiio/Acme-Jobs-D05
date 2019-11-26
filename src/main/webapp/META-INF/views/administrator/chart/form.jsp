@@ -17,18 +17,30 @@
  <div >
 	<canvas id="canvas2" style="height: 370px; width: 100%;"></canvas>
 </div> 
+<h3>
+	 <acme:message code="administrator.chart.totalNumberJobStatus"/>
+</h3>
+</br>
+ <div >
+	<canvas id="canvas3" style="height: 370px; width: 100%;"></canvas>
+</div> 
 <acme:form-return code="administrator.announcement.form.button.return"/>
 <script type="text/javascript">
 	$(document).ready(function(){
 		
 	
 		var data = {
-				labels : ["Público", "Privado"],
+				labels : [
+					<jstl:forEach var="t" items="${totalCompanySector}">
+						"${t}",
+					</jstl:forEach>
+				],
 				datasets : [
 					{
 						data: [
-							<jstl:out value="${totalNumberCompanySectorPublic}"/>,
-							<jstl:out value="${totalNumberCompanySectorPrivate}"/>,
+							<jstl:forEach var="t" items="${totalNumberCompanySector}">
+							"${t}",
+							</jstl:forEach>
 						]
 					}
 				]
@@ -39,7 +51,7 @@
 						{
 							ticks : {
 								suggestedMin : 0,
-								suggestedMax : 10
+								suggestedMax : 20
 							}
 						}
 					]
@@ -65,12 +77,17 @@
 		$(document).ready(function(){
 			
 			var data = {
-					labels : ["Público", "Privado"],
+					labels : [	
+						<jstl:forEach var="t" items="${totalInvestorSector}">
+						"${t}",
+						</jstl:forEach>
+						],
 					datasets : [
 						{
 							data: [
-								<jstl:out value="${totalNumberInvestorSectorPublic}"/>,
-								<jstl:out value="${totalNumberInvestorSectorPrivate}"/>,
+								<jstl:forEach var="t" items="${totalNumberInvestorSector}">
+								"${t}",
+								</jstl:forEach>
 							]
 						}
 					]
@@ -81,7 +98,7 @@
 							{
 								ticks : {
 									suggestedMin : 0,
-									suggestedMax : 10
+									suggestedMax : 20
 								}
 							}
 						]
@@ -95,6 +112,54 @@
 			var canvas, context;
 			
 			canvas = document.getElementById("canvas2");
+			context = canvas.getContext("2d");
+			new Chart(context, {
+				type:"bar",
+				data: data,
+				options: options
+			});
+			
+			
+			}); 
+
+		$(document).ready(function(){
+			
+			var data = {
+					labels : [	
+						<jstl:forEach var="t" items="${totalJobStatus}">
+						"${t}",
+						</jstl:forEach>
+						],
+					datasets : [
+						{
+							data: [
+								<jstl:forEach var="t" items="${totalNumberJobStatus}">
+								"${t}",
+								</jstl:forEach>
+							]
+						}
+					]
+			};
+			var options = {
+					scales : {
+						yAxes : [
+							{
+								ticks : {
+									suggestedMin : 0,
+									suggestedMax : 20
+								}
+							}
+						]
+					},
+					legend : {
+						display : false
+					}
+					
+					
+			};
+			var canvas, context;
+			
+			canvas = document.getElementById("canvas3");
 			context = canvas.getContext("2d");
 			new Chart(context, {
 				type:"bar",

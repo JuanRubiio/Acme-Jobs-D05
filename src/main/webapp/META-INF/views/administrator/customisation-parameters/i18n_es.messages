@@ -13,3 +13,4 @@ administrator.customisationParameters.form.button.return = Volver
 administrator.customisationParameters.form.label.spamWordsEn = Palabras spam ingles
 administrator.customisationParameters.form.label.spamWordsEs = Palabras spam español
 administrator.customisationParameters.form.label.spamThreshold = Umbral de Spam
+administrator.customisationparameters.update = Actualizar

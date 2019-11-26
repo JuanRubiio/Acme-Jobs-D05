@@ -22,22 +22,10 @@ public class AuthenticatedCompanyRecordController extends AbstractController<Aut
 	@Autowired
 	private AuthenticatedCompanyRecordListService	listService;
 
-	@Autowired
-	private AuthenticatedCompanyRecordListService	createService;
-
-	@Autowired
-	private AuthenticatedCompanyRecordListService	updateService;
-
-	@Autowired
-	private AuthenticatedCompanyRecordListService	deleteService;
-
 
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
-		super.addBasicCommand(BasicCommand.CREATE, this.createService);
-		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
-		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
 	}
 }

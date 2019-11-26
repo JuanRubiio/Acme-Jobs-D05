@@ -22,10 +22,6 @@
 		<put-attribute name="body" type="template" value="../anonymous/company-record/list.jsp" />
 	</definition>
 	
-	<definition name="anonymous/company-record/list-top" extends="master">		
-		<put-attribute name="body" type="template" value="../anonymous/company-record/list.jsp" />
-	</definition>
-	
 	
 	<definition name="anonymous/company-record/form" extends="master">
 		<put-attribute name="body" type="template" value="../anonymous/company-record/form.jsp" />

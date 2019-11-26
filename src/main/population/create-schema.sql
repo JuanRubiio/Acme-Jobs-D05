@@ -63,7 +63,10 @@
         `picture` varchar(255),
         `slogan` varchar(255),
         `target` varchar(255),
+        `cvv` integer not null,
         `credit_card` varchar(255),
+        `month_expired` integer not null,
+        `year_expired` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -97,6 +100,25 @@
         `spam_threshold` double precision,
         `spam_words_en` varchar(255),
         `spam_words_es` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `duty` (
+       `id` integer not null,
+        `version` integer not null,
+        `description` varchar(255),
+        `percentage` double precision,
+        `title` varchar(255),
+        `job_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `employer` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `company` varchar(255),
+        `sector` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -134,6 +156,22 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `job` (
+       `id` integer not null,
+        `version` integer not null,
+        `active` bit,
+        `deadline` datetime(6),
+        `description` varchar(255),
+        `link` varchar(255),
+        `reference` varchar(255),
+        `salary_amount` double precision,
+        `salary_currency` varchar(255),
+        `status` varchar(255),
+        `title` varchar(255),
+        `employer_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `non_commercial_banner` (
        `id` integer not null,
         `version` integer not null,
@@ -147,6 +185,7 @@
     create table `offer` (
        `id` integer not null,
         `version` integer not null,
+        `confirmation` bit,
         `deadline` datetime(6),
         `max_price_amount` double precision,
         `max_price_currency` varchar(255),
@@ -213,9 +252,19 @@
     ) engine=InnoDB;
 
     insert into `hibernate_sequence` values ( 1 );
+create index IDXnr284tes3x8hnd3h716tmb3fr on `challenge` (`deadline`);
+create index IDXfdmpnr8o4phmk81sqsano16r on `job` (`deadline`);
+create index IDX28ur9xm72oo1df9g14xhnh8h3 on `job` (`status`);
+
+    alter table `job` 
+       add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);
+create index IDXcp4664f36sgqsd0ihmirt0w0 on `offer` (`ticker`);
+create index IDXq2o9psuqfuqmq59f0sq57x9uf on `offer` (`deadline`);
 
     alter table `offer` 
        add constraint UK_iex7e8fs0fh89yxpcnm1orjkm unique (`ticker`);
+create index IDXh9syauj4iixf18uts83saik5d on `request` (`ticker`);
+create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
 
     alter table `request` 
        add constraint UK_9mxq3powq8tqctclj0fbi2nih unique (`ticker`);
@@ -242,6 +291,21 @@
        add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `duty` 
+       add constraint `FKs2uoxh4i5ya8ptyefae60iao1` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
+
+    alter table `employer` 
+       add constraint FK_na4dfobmeuxkwf6p75abmb2tr 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
+    alter table `job` 
+       add constraint `FK3rxjf8uh6fh2u990pe8i2at0e` 
+       foreign key (`employer_id`) 
+       references `employer` (`id`);
 
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 

@@ -1,0 +1,31 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+authentication.offer.title = Título
+authentication.offer.moment = Fecha Creación
+authentication.offer.ticker = Ticker
+authentication.offer.deadline = Fecha límite
+authentication.offer.maxPrice = Precio máximo
+authentication.offer.minPrice = Precio mínimo
+authentication.offer.reward = Recompensa
+authentication.offer.text = Texto
+authentication.offer.create = Crear
+authentication.offer.return = Volver
+authenticated.consumer.form.button.update = Actualizar
+authenticated.consumer.form.button.delete = Borrar
+authenticated.consumer.form.button.create = Crear
+authenticated.consumer.duplicatedtiker = Este ticker ya está en uso
+authenticated.consumer.deadlinepast = La fecha límite no puede ser pasada
+
+authentication.offer.confirmation = Confirmación de creación
+authentication.offer.isconfirmation = Debes marcar el check de confirmación
+authentication.offer.correctRewardMax = La recompensa no puede ser mayor que el precio máximo
+authentication.offer.correctRewardMin = La recompensa no puede ser menor que el percio mínimo

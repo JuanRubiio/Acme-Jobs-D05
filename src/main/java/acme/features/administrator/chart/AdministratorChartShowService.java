@@ -1,7 +1,6 @@
 
 package acme.features.administrator.chart;
 
-import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,36 +32,27 @@ public class AdministratorChartShowService implements AbstractShowService<Admini
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "totalNumberCompanySectorPublic", "totalNumberCompanySectorPrivate", "totalNumberInvestorSectorPublic", "totalNumberInvestorSectorPrivate");
+		request.unbind(entity, model, "totalNumberCompanySector", "totalCompanySector", "totalNumberInvestorSector", "totalInvestorSector", "totalNumberJobStatus", "totalJobStatus");
 
 	}
 
 	@Override
 	public Chart findOne(final Request<Chart> request) {
 		Chart res = new Chart();
-		Integer[] totalNumberCompanySector = this.repository.getTotalNumberCompaniesSector();
-		Integer[] totalNumberInvestorSector = this.repository.getTotalNumberInvestorSector();
+		List<Integer> totalNumberCompanySector = this.repository.getTotalNumberCompaniesSector();
+		List<Integer> totalNumberInvestorSector = this.repository.getTotalNumberInvestorSector();
+		List<Integer> totalNumberJobStatus = this.repository.getTotalNumberJobStatus();
 
-		List<Integer> totalNumberCompanySector_c = Arrays.asList(totalNumberCompanySector);
-		List<Integer> totalNumberInvestorSector_c = Arrays.asList(totalNumberInvestorSector);
+		List<String> totalJobStatus = this.repository.getTotalJobStatus();
+		List<String> totalCompanySector = this.repository.getTotalCompaniesSector();
+		List<String> totalInvestorSector = this.repository.getTotalInvestorSector();
 
-		if (!totalNumberCompanySector_c.isEmpty()) {
-			res.setTotalNumberCompanySectorPublic(totalNumberCompanySector_c.get(1));
-			res.setTotalNumberCompanySectorPrivate(totalNumberCompanySector_c.get(0));
-
-		} else {
-			res.setTotalNumberCompanySectorPublic(0);
-			res.setTotalNumberCompanySectorPrivate(0);
-		}
-
-		if (!totalNumberInvestorSector_c.isEmpty()) {
-			res.setTotalNumberInvestorSectorPublic(totalNumberInvestorSector_c.get(1));
-			res.setTotalNumberInvestorSectorPrivate(totalNumberInvestorSector_c.get(0));
-
-		} else {
-			res.setTotalNumberInvestorSectorPublic(0);
-			res.setTotalNumberInvestorSectorPrivate(0);
-		}
+		res.setTotalCompanySector(totalCompanySector);
+		res.setTotalInvestorSector(totalInvestorSector);
+		res.setTotalNumberCompanySector(totalNumberCompanySector);
+		res.setTotalNumberInvestorSector(totalNumberInvestorSector);
+		res.setTotalJobStatus(totalJobStatus);
+		res.setTotalNumberJobStatus(totalNumberJobStatus);
 
 		return res;
 	}
