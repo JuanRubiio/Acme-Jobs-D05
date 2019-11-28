@@ -42,7 +42,7 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select stddev(o.reward.amount) from Offer o where o.deadline > now()")
 	Double getDesvRewardActiveOffer();
 
-	@Query("select avg(ua.jobs.size) from Employer ua")
+	@Query("select avg(select count(j) from Job j where j.employer.id = ua.id) from Employer ua")
 	Double getavgNumberJobOEmployer();
 
 }

@@ -44,7 +44,7 @@ public class EmployerJobShowService implements AbstractShowService<Employer, Job
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "deadline", "reference", "status", "salary", "link", "description", "active");
+		request.unbind(entity, model, "title", "deadline", "reference", "status", "salary", "link", "descriptor.description", "active", "descriptor.duties");
 
 	}
 
@@ -57,6 +57,7 @@ public class EmployerJobShowService implements AbstractShowService<Employer, Job
 
 		jobId = request.getModel().getInteger("id");
 		job = this.repository.findJobById(jobId);
+		job.getDescriptor().getDuties().size();
 		return job;
 	}
 
