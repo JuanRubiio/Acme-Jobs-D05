@@ -17,11 +17,7 @@
 	<acme:form-textarea code="authenticated.employer.job.form.label.description" path="descriptor.description"/>
 	
 	<acme:form-checkbox code="authenticated.employer.job.form.label.active" path="active"/>
-		<jstl:forEach var="t" items="${descriptor.duties}">
-			<acme:form-textarea code="authenticated.employer.job.form.label.title" path="t.title"/>
-			<acme:form-textarea code="authenticated.employer.job.form.label.description" path="t.description"/>
-			<acme:form-textarea code="authenticated.employer.job.form.label.percentage" path="t.percentage"/>	
-		</jstl:forEach> 
+		
 
 <acme:form-return code="authenticated.employer.job.form.button.return"/>
 </acme:form>
