@@ -8,7 +8,7 @@
 	<acme:list-column code="authenticated.employer.job.form.label.reference" path="reference" width="25%"/>
 	<acme:list-column code="authenticated.employer.job.form.label.title" path="title" width="25%"/>
 	<acme:list-column code="authenticated.employer.job.form.label.deadline" path="deadline" width="25%"/>
-	<acme:list-column code="authenticated.employer.job.form.label.description" path="descriptor.description" width="25%"/>
+	<acme:list-column code="authenticated.employer.job.form.label.description" path="description" width="25%"/>
 </acme:list>
 
 

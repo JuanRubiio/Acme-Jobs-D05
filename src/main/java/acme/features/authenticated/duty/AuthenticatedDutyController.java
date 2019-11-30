@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.provider.employer.job;
+package acme.features.authenticated.duty;
 
 import javax.annotation.PostConstruct;
 
@@ -7,29 +7,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.components.CustomCommand;
-import acme.entities.job.Job;
-import acme.entities.roles.Employer;
+import acme.entities.duty.Duty;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
+import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/employer/job/")
-public class EmployerJobController extends AbstractController<Employer, Job> {
+@RequestMapping("/authenticated/duty/")
+public class AuthenticatedDutyController extends AbstractController<Authenticated, Duty> {
 
 	@Autowired
-	private EmployerJobListMineService	mineService;
+	private AuthenticatedDutyListService	listService;
 
 	@Autowired
-	private EmployerJobShowService		showService;
+	private AuthenticatedDutyShowService	showService;
 
 
 	@PostConstruct
 	private void initialise() {
+		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
-
-		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.mineService);
-
 	}
-
 }

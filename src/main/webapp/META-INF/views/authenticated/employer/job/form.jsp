@@ -13,18 +13,14 @@
 	<acme:form-moment code="authenticated.employer.job.form.label.deadline" path="deadline"/>
 	<acme:form-url code="authenticated.employer.job.form.label.link" path="link"/>
 	<acme:form-money code="authenticated.employer.job.form.label.salary" path="salary"/>
-	<acme:form-textarea code="authenticated.employer.job.form.label.description" path="descriptor.description"/>
+	<acme:form-textarea code="authenticated.employer.job.form.label.description" path="description"/>
 	<acme:form-checkbox code="authenticated.employer.job.form.label.active" path="active"/>
 	
-		<jstl:forEach var="t" items="descriptor.duties">
-			<acme:form-textbox code="authenticated.employer.job.form.label.title" path="t.title"/>
-			<acme:form-textbox code="authenticated.employer.job.form.label.description" path="t.description"/>
-			<acme:form-textbox code="authenticated.employer.job.form.label.percentage" path="t.percentage"/>
-		
-		</jstl:forEach> 
-	
+	<acme:form-hidden path="id"/>
 
 <acme:form-return code="authenticated.employer.job.form.button.return"/>
+<acme:form-submit code="authenticated.employer.job.form.label.active.duty" action="/employer/duty/list?id=${id}" method="get"/>
+
 </acme:form>
 
  
