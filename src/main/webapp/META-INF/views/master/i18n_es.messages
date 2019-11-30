@@ -84,6 +84,11 @@ master.menu.consumer.favourite-link = Link Favorito
 master.menu.consumer.offer.create = Crear Oferta
 master.menu.consumer.offer.list = Listar Ofertas Activas
 
+# master.menu.worker ##########################################################
+
+master.menu.worker = Trabajador
+master.menu.worker.application.list = Mis Aplicaciones
+
 # master.menu.authenticated ##########################################################
 
 master.menu.authenticated = Autenticado
