@@ -478,12 +478,6 @@
 		<property name="company" value="acme" />
 		<property name="sector" value="acme" />	
 		<property name="userAccount" ref="employerUserAccount" />
-		<property name="jobs">
-			<list>
-				<ref bean="job1" />
-				<ref bean="job2" />
- 			</list>
-		</property>
 	</bean>
 	
 	<bean name="employerAuthenticated" class="acme.framework.entities.Authenticated">
@@ -521,13 +515,6 @@
 		<property name="company" value="acme" />
 		<property name="sector" value="acme" />	
 		<property name="userAccount" ref="employerUserAccount2" />
-		<property name="jobs">
-			<list>
-				<ref bean="job3" />
-				<ref bean="job4" />
- 				<ref bean="job5" />
- 			</list>
-		</property>
 	</bean>
 	
 	<bean name="employerAuthenticated2" class="acme.framework.entities.Authenticated">
@@ -543,9 +530,9 @@
 		<property name="deadline" value="2021/04/17 00:00" />
 		<property name="salary" value="100.25 €"/>	
 		<property name="link" value="https://www.everis.com/global/en"/>
-		<property name="description" value="Esta es la descripcion del job1"/>
 		<property name="active"><null/></property>
 		<property name="employer" ref="employerEmployer"/>	
+		<property name="description" value="descripcion 1"/>	
 	</bean> 
 
 	<bean id="job2" class="acme.entities.job.Job">
@@ -555,9 +542,9 @@
 		<property name="deadline" value="2021/05/11 00:00" />
 		<property name="salary" value="200.25 €"/>		
 		<property name="link" value="https://www.everis.com/global/en"/>
-		<property name="description" value="Esta es la descripcion del job2"/>
 		<property name="active"><null/></property>		
 		<property name="employer" ref="employerEmployer"/>
+		<property name="description" value="descripcion 2"/>	
 	</bean> 
 	<bean id="job3" class="acme.entities.job.Job">
 		<property name="reference" value="EMP1-JOB3"/>
@@ -566,9 +553,9 @@
 		<property name="deadline" value="2021/05/12 00:00" />
 		<property name="salary" value="300.25 €"/>		
 		<property name="link" value="https://www.everis.com/global/en"/>
-		<property name="description" value="Esta es la descripcion del job3"/>
 		<property name="active"><null/></property>
 		<property name="employer" ref="employerEmployer2"/>
+		<property name="description" value="descripcion 3"/>	
 	</bean> 
 
 	<bean id="job4" class="acme.entities.job.Job">
@@ -578,9 +565,10 @@
 		<property name="deadline" value="2021/01/12 00:00" />
 		<property name="salary" value="400.25 €"/>		
 		<property name="link" value="https://www.everis.com/global/en"/>
-		<property name="description" value="Esta es la descripcion del job4"/>
 		<property name="active"><null/></property>
-		<property name="employer" ref="employerEmployer2"/>
+		<property name="employer" ref="employerEmployer2"/>		
+		<property name="description" value="descripcion 4"/>	
+		
 	</bean> 
 
 	<bean id="job5" class="acme.entities.job.Job">
@@ -590,28 +578,42 @@
 		<property name="deadline" value="2021/03/11 00:00" />
 		<property name="salary" value="500.25 €"/>		
 		<property name="link" value="https://www.everis.com/global/en"/>
-		<property name="description" value="Esta es la descripcion del job5"/>
 		<property name="active"><null/></property>
-		<property name="employer" ref="employerEmployer2"/>
+		<property name="employer" ref="employerEmployer2"/>		
+		<property name="description" value="descripcion 5"/>	
+		
 	</bean> 
+
 
 	<bean id="duty1" class="acme.entities.duty.Duty">
 		<property name="title" value="titulo de duty1"/>
 		<property name="percentage" value="23.25"/>		
 		<property name="description" value="Esta es la descripcion del duty1"/>
-		<property name="job" ref="job1"/>
+		<property name="job" ref="job1"/>	
 	</bean> 
 	<bean id="duty2" class="acme.entities.duty.Duty">
 		<property name="title" value="titulo de duty2"/>
 		<property name="percentage" value="10.25"/>		
 		<property name="description" value="Esta es la descripcion del duty2"/>
-		<property name="job" ref="job2"/>
+		<property name="job" ref="job1"/>	
 	</bean> 
 	<bean id="duty3" class="acme.entities.duty.Duty">
 		<property name="title" value="titulo de duty3"/>
 		<property name="percentage" value="50.25"/>		
 		<property name="description" value="Esta es la descripcion del duty3"/>
-		<property name="job" ref="job3"/>
+		<property name="job" ref="job1"/>	
+	</bean> 
+	<bean id="duty4" class="acme.entities.duty.Duty">
+		<property name="title" value="titulo de duty4"/>
+		<property name="percentage" value="30.25"/>		
+		<property name="description" value="Esta es la descripcion del duty4"/>
+		<property name="job" ref="job2"/>	
+	</bean> 
+	<bean id="duty5" class="acme.entities.duty.Duty">
+		<property name="title" value="titulo de duty5"/>
+		<property name="percentage" value="20.25"/>		
+		<property name="description" value="Esta es la descripcion del duty5"/>
+		<property name="job" ref="job2"/>	
 	</bean> 
 
 

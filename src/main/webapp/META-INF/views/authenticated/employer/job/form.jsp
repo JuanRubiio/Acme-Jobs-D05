@@ -11,13 +11,16 @@
 		<acme:form-option code="Published" value="published" />
 	</acme:form-select>
 	<acme:form-moment code="authenticated.employer.job.form.label.deadline" path="deadline"/>
-	<acme:form-textarea code="authenticated.employer.job.form.label.description" path="description"/>
 	<acme:form-url code="authenticated.employer.job.form.label.link" path="link"/>
 	<acme:form-money code="authenticated.employer.job.form.label.salary" path="salary"/>
+	<acme:form-textarea code="authenticated.employer.job.form.label.description" path="description"/>
 	<acme:form-checkbox code="authenticated.employer.job.form.label.active" path="active"/>
 	
+	<acme:form-hidden path="id"/>
 
 <acme:form-return code="authenticated.employer.job.form.button.return"/>
+<acme:form-submit code="authenticated.employer.job.form.label.active.duty" action="/employer/duty/list?id=${id}" method="get"/>
+
 </acme:form>
 
  

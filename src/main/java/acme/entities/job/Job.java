@@ -59,10 +59,10 @@ public class Job extends DomainEntity {
 	@URL
 	private String				link;
 
+	private Boolean				active;
+
 	@NotBlank
 	private String				description;
-
-	private Boolean				active;
 
 	@NotNull
 	@Valid
