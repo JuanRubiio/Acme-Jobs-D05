@@ -20,6 +20,7 @@
 
 <acme:form-return code="authenticated.employer.job.form.button.return"/>
 <acme:form-submit code="authenticated.employer.job.form.label.active.duty" action="/employer/duty/list?id=${id}" method="get"/>
+<acme:form-submit code="authenticated.employer.job.form.label.application" action="/employer/application/list?id=${id}" method="get"/>
 
 </acme:form>
 

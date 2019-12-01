@@ -8,3 +8,4 @@ authenticated.employer.job.form.label.salary = Salary
 authenticated.employer.job.form.label.active = Active
 authenticated.employer.job.form.button.return = Return
 authenticated.employer.job.form.label.active.duty = Duties
+authenticated.employer.job.form.label.application = Applications

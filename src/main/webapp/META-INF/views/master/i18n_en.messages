@@ -44,10 +44,6 @@ master.menu.anonymous.investorrecord.list = Investor Record List
 master.menu.anonymous.investorrecord.list.top = Investor Record Top List
 master.menu.anonymous.companyrecord.list = Company Record List
 master.menu.anonymous.companyrecord.list.top = Company Record Top List
-
-master.menu.authenticated.job.list.active = Active Jobs
-master.menu.employer = Employer
-master.menu.authenticated.employer.provider.list = Mine Jobs List
  
 # master.menu.administrator ###################################################
 
@@ -92,6 +88,11 @@ master.menu.worker = Worker
 master.menu.worker.application.list = My Applications List
 
 
+# master.menu.employer ##########################################################
+
+master.menu.employer = Employer
+master.menu.employer.provider.list = Mine Jobs List
+
 # master.menu.authenticated ##########################################################
 
 master.menu.authenticated = Authenticated
@@ -99,6 +100,7 @@ master.menu.authenticated.announcement.list = Announcement List
 master.menu.authenticated.challenge.list =  Active Challenge List
 master.menu.authenticated.investorrecord.list = Investor Record List
 master.menu.authenticated.companyrecord.list = Company Record List
+master.menu.authenticated.job.list.active = Active Jobs
 
 # master.menu.user-account ####################################################
 

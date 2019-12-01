@@ -1,0 +1,16 @@
+authenticated.employer.application.form.label.referenceNumber = Referencia Numérica
+authenticated.employer.application.form.label.moment = Fecha
+authenticated.employer.application.form.label.status = Estado
+authenticated.employer.application.form.label.statement = Declaración
+authenticated.employer.application.form.label.skills = Habilidades
+authenticated.employer.application.form.label.qualifications = Calificaciones
+authenticated.employer.application.form.label.worker = Trabajador
+authenticated.employer.application.form.button.return = Volver
+
+authenticated.employer.application.list.label.referenceNumber = Referencia Numérica
+authenticated.employer.application.list.label.moment = Fecha
+authenticated.employer.application.list.label.status = Estado
+authenticated.employer.application.list.label.qualifications = Calificaciones
+authenticated.employer.application.list.button.return = Volver
+
+

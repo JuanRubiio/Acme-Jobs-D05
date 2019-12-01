@@ -24,7 +24,7 @@ import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedApplicationListService implements AbstractListService<Authenticated, Application> {
+public class AuthenticatedApplicationListJobService implements AbstractListService<Authenticated, Application> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -54,7 +54,13 @@ public class AuthenticatedApplicationListService implements AbstractListService<
 		assert request != null;
 
 		Collection<Application> result;
-		result = this.repository.findAllApplications();
+		int id;
+
+		String[] aux = request.getServletRequest().getQueryString().trim().split("=");
+		request.getServletRequest().getQueryString();
+		id = Integer.parseInt(aux[1]);
+
+		result = this.repository.findAllApplicationToThisJob(id);
 
 		return result;
 	}

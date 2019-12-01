@@ -45,9 +45,7 @@ master.menu.anonymous.investorrecord.list.top = Listar Top Record Inversores
 master.menu.anonymous.companyrecord.list = Listar Compañías
 master.menu.anonymous.companyrecord.list.top = Listar Compañías Top
 
- master.menu.authenticated.job.list.active = Trabajos Activos
- master.menu.employer = Empleado
- master.menu.authenticated.employer.provider.list = Lista de Trabajos propios
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
@@ -89,13 +87,18 @@ master.menu.consumer.offer.list = Listar Ofertas Activas
 master.menu.worker = Trabajador
 master.menu.worker.application.list = Mis Aplicaciones
 
+# master.menu.employer ##########################################################
+ 
+ master.menu.employer = Empleado
+ master.menu.employer.provider.list = Lista de Trabajos propios
+
 # master.menu.authenticated ##########################################################
 
 master.menu.authenticated = Autenticado
 master.menu.authenticated.announcement.list = Listar anuncios
 master.menu.authenticated.challenge.list = Listar Desafíos
 master.menu.authenticated.investorrecord.list = Listar Investores Records
-
+master.menu.authenticated.job.list.active = Trabajos Activos
 master.menu.authenticated.companyrecord.list = Listar Compañías Records
 # master.menu.user-account ####################################################
 
