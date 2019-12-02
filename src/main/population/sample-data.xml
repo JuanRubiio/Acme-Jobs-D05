@@ -616,9 +616,68 @@
 		<property name="job" ref="job2"/>	
 	</bean> 
 
+<!-- CARLOS -->
+	
+ 	<bean name="workerUserAccount" class="acme.framework.entities.UserAccount">
+			<property name="username" value="worker123" />
+			<property name="password" value="worker123" />
+			<property name="enabled" value="true" />
+			<property name="identity">
+				<bean class="acme.datatypes.UserIdentity">
+					<property name="name" value="Carlos" />
+					<property name="surname" value="Garcia" />
+					<property name="email" value="garcia@acme.com" />
+				</bean>
+			</property>
+			<property name="roles">
+				<list>
+					<ref bean="workerWorker" />
+					<ref bean="workerAuthenticated" />
+				</list>
+			</property>
+		</bean>
+
+	<bean name="workerWorker" class="acme.entities.roles.Worker">
+		<property name="qualificationsRecord" value="acme" />
+		<property name="skillsRecord" value="acme" />	
+		<property name="userAccount" ref="workerUserAccount" />
+		
+	</bean>
+	
+	<bean name="workerAuthenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="workerUserAccount" />
+	</bean>
 
 
-
+	 <bean id="application1" class="acme.entities.applications.Application">
+		<property name="referenceNumber" value="qwerty12"/>
+		<property name="moment" value="2011/01/12 00:00"/>
+		<property name="status" value="Pending"/>
+		<property name="statement" value="hello"/>
+		<property name="skills" value="ninguna"/>
+		<property name="qualifications" value="7.5"/>
+		<property name="worker" ref="workerWorker"/>
+	</bean>
+	
+	 <bean id="application2" class="acme.entities.applications.Application">
+		<property name="referenceNumber" value="123456"/>
+		<property name="moment" value="2018/05/12 10:00"/>
+		<property name="status" value="Accepted"/>
+		<property name="statement" value="i am good worker"/>
+		<property name="skills" value="secretary"/>
+		<property name="qualifications" value="8.75"/>
+		<property name="worker" ref="workerWorker"/>
+	</bean>
+	
+	 <bean id="application3" class="acme.entities.applications.Application">
+		<property name="referenceNumber" value="974hf3da"/>
+		<property name="moment" value="2017/11/20 09:50"/>
+		<property name="status" value="Rejected"/>
+		<property name="statement" value="-_-"/>
+		<property name="skills" value="nothing"/>
+		<property name="qualifications" value="2.5"/>
+		<property name="worker" ref="workerWorker"/>
+	</bean>
 
 </beans>
 

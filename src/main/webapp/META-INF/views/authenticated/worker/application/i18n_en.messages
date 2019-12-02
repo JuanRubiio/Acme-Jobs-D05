@@ -1,0 +1,15 @@
+authenticated.application.form.label.referenceNumber = Reference Number
+authenticated.application.form.label.moment = Moment
+authenticated.application.form.label.status = Status
+authenticated.application.form.label.statement = Statement
+authenticated.application.form.label.skills = Skills
+authenticated.application.form.label.qualifications = Qualifications
+authenticated.application.form.label.worker = Worker
+authenticated.application.form.button.return = Return
+
+
+
+authenticated.application.list.label.referenceNumber = Reference Number
+authenticated.application.list.label.moment = Moment
+authenticated.application.list.label.status = Status
+authenticated.application.list.label.qualifications = Qualifications
