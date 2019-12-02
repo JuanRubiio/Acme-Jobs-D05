@@ -93,6 +93,7 @@ master.menu.authenticated.announcement.list = Announcement List
 master.menu.authenticated.challenge.list =  Active Challenge List
 master.menu.authenticated.investorrecord.list = Investor Record List
 master.menu.authenticated.companyrecord.list = Company Record List
+master.menu.authenticated.threads = List my threads
 
 # master.menu.user-account ####################################################
 
