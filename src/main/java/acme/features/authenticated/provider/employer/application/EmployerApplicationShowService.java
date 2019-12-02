@@ -1,20 +1,20 @@
 
-package acme.features.authenticated.application;
+package acme.features.authenticated.provider.employer.application;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.applications.Application;
+import acme.entities.roles.Employer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuthenticatedApplicationShowService implements AbstractShowService<Authenticated, Application> {
+public class EmployerApplicationShowService implements AbstractShowService<Employer, Application> {
 
 	@Autowired
-	AuthenticatedApplicationRepository repository;
+	EmployerApplicationRepository repository;
 
 
 	@Override
@@ -31,7 +31,7 @@ public class AuthenticatedApplicationShowService implements AbstractShowService<
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "referenceNumber", "moment", "status", "statement", "skills", "qualifications", "worker", "job");
+		request.unbind(entity, model, "referenceNumber", "moment", "status", "statement", "skills", "qualifications", "worker");
 	}
 
 	@Override

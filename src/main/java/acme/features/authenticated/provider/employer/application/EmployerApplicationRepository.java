@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.authenticated.application;
+package acme.features.authenticated.provider.employer.application;
 
 import java.util.Collection;
 
@@ -21,7 +21,7 @@ import acme.entities.applications.Application;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AuthenticatedApplicationRepository extends AbstractRepository {
+public interface EmployerApplicationRepository extends AbstractRepository {
 
 	@Query("select a from Application a")
 	Collection<Application> findAllApplications();
