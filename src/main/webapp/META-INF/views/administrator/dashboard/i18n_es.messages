@@ -11,3 +11,5 @@ administrator.maxRewardActiveOffer = Máximo de recompensas de ofertas activas
 administrator.avgRewardActiveOffer = Promedio de recompensas de ofertas activas
 administrator.desvRewardActiveOffer = Desviación estandar de recompensas de ofertas activas
 administrator.avgNumberJobByEmployer = Promedio de trabajos por empleado
+administrator.avgNumberApplEmployer = Promedio de aplicaciones por empleado
+administrator.avgNumberApplWorker = Promedio de aplicaciones por trabajador

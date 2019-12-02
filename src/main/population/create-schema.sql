@@ -45,7 +45,7 @@
         `responsability_statement` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
-  
+
     create table `authenticated` (
        `id` integer not null,
         `version` integer not null,
@@ -399,12 +399,27 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
-    alter table `worker` 
-       add constraint FK_l5q1f33vs2drypmbdhpdgwfv3 
-       foreign key (`user_account_id`) 
-       references `user_account` (`id`);
-
     alter table `thread_authenticated` 
        add constraint `FK1e718rov5gxl1f3tgjtl6vhtg` 
        foreign key (`authenticateds_id`) 
        references `authenticated` (`id`);
+
+    alter table `thread_authenticated` 
+       add constraint `FKjsja3s5mr66x5nxm9dd8kut3r` 
+       foreign key (`thread_id`) 
+       references `thread` (`id`);
+
+    alter table `thread_message` 
+       add constraint `FKrjegm8cujrxgbce9n1b78xuyo` 
+       foreign key (`messages_id`) 
+       references `message` (`id`);
+
+    alter table `thread_message` 
+       add constraint `FKgjodhp3io8v829t92y1tdtb7u` 
+       foreign key (`thread_id`) 
+       references `thread` (`id`);
+
+    alter table `worker` 
+       add constraint FK_l5q1f33vs2drypmbdhpdgwfv3 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);

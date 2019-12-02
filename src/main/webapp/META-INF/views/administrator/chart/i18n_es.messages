@@ -2,3 +2,4 @@ administrator.chart = Chart
 administrator.chart.totalNumberCompanySector = Número total de compañías por sector
 administrator.chart.totalNumberInvestorSector =  Número total de inversores por sector
 administrator.chart.totalNumberJobStatus = Número total de trabajos por estatus
+administrator.chart.totalNumberApplicationStatus = Número total de aplicaciones por estatus

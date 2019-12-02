@@ -47,10 +47,6 @@
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
 
-    alter table `worker` 
-       drop 
-       foreign key FK_l5q1f33vs2drypmbdhpdgwfv3;
-
     alter table `thread_authenticated` 
        drop 
        foreign key `FK1e718rov5gxl1f3tgjtl6vhtg`;
@@ -66,6 +62,10 @@
     alter table `thread_message` 
        drop 
        foreign key `FKgjodhp3io8v829t92y1tdtb7u`;
+
+    alter table `worker` 
+       drop 
+       foreign key FK_l5q1f33vs2drypmbdhpdgwfv3;
 
     drop table if exists `administrator`;
 
