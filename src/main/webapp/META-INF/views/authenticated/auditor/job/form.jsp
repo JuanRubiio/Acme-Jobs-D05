@@ -16,15 +16,15 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form readonly="true">
-	<acme:form-textbox code="auditor.job.form.label.title" path="title" />
-	<acme:form-textbox code="auditor.job.form.label.reference" path="reference" />
-	<acme:form-textbox code="auditor.job.form.label.status" path="status" />
-	<acme:form-money code="auditor.job.form.label.salary" path="salary" />
-	<acme:form-moment code="auditor.job.form.label.deadline" path="deadline" />
+	<acme:form-textbox code="authenticated.auditor.job.form.label.title" path="title" />
+	<acme:form-textbox code="authenticated.auditor.job.form.label.reference" path="reference" />
+	<acme:form-textbox code="authenticated.auditor.job.form.label.status" path="status" />
+	<acme:form-money code="authenticated.auditor.job.form.label.salary" path="salary" />
+	<acme:form-moment code="authenticated.auditor.job.form.label.deadline" path="deadline" />
 
 	
-	<acme:form-textbox code="auditor.job.form.label.description" path="description" />
+	<acme:form-textbox code="authenticated.auditor.job.form.label.description" path="description" />
 	
 	<acme:menu-suboption code="master.menu.anonymous.listAuditRecords" action="/auditor/audit-record/list-mine?id=${param.id}" />
-	<acme:form-return code="auditor.job.form.button.return" />
+	<acme:form-return code="authenticated.auditor.job.form.button.return" />
 </acme:form>

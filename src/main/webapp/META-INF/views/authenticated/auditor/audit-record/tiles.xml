@@ -17,10 +17,10 @@
 	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
-		<definition name="authenticated/auditor/audit-record/list" extends="master">
+		<definition name="auditor/audit-record/list" extends="master">
 		<put-attribute name="body" type="template" value="../authenticated/auditor/audit-record/list.jsp" />
 	</definition>
-	<definition name="authenticated/auditor/audit-record/form" extends="master">
+	<definition name="auditor/audit-record/form" extends="master">
 		<put-attribute name="body" type="template" value="../authenticated/auditor/audit-record/form.jsp" />
 	</definition>
 

@@ -72,9 +72,9 @@ master.menu.administrator.chart = Chart
 
 # master.menu.auditor #########################################################
 
-master.menu.auditor = Auditor
-master.menu.auditor.listMineJobs = Listar trabajos por los que he escrito
-master.menu.auditor.listOthers = Listar el resto
+master.menu.authenticated.auditor = Auditor
+master.menu.authenticated.auditor.listMineJobs = Listar trabajos por los que he escrito
+master.menu.authenticated.auditor.listOthers = Listar el resto
 
 # master.menu.provider ########################################################
 
