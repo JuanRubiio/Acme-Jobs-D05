@@ -1,12 +1,10 @@
 
 package acme.entities.threads;
 
-import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
@@ -14,9 +12,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
-import acme.entities.message.Message;
-import acme.framework.entities.Authenticated;
 import acme.framework.entities.DomainEntity;
+import acme.framework.entities.UserAccount;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -38,15 +35,16 @@ public class Thread extends DomainEntity {
 	@Past
 	private Date				moment;
 
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	UserAccount					sender;
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	UserAccount					recipient;
+
 	// Relationships -----------------------------------------------------------
 
-	@NotNull
-	@Valid
-	@OneToMany
-	Collection<Message>			messages;
-
-	@NotNull
-	@Valid
-	@ManyToMany
-	Collection<Authenticated>	authenticateds;
 }

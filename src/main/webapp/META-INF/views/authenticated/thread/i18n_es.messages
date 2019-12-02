@@ -22,3 +22,7 @@ authenticated.threads.form.button.return = Volver
 
 authenticated.threads.list.label.title = Título
 authenticated.threads.list.label.moment = Momento
+authenticated.threads.form.label.sender = Emisor
+authenticated.threads.form.label.recipient = Receptor
+authenticated.threads.form.label.message.sender = Mensajes Enviados
+authenticated.threads.form.label.message.recipient = Mensajes Recibidos 

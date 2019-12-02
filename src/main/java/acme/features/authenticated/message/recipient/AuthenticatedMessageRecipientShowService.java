@@ -1,33 +1,32 @@
 
-package acme.features.authenticated.message;
-
-import java.util.List;
+package acme.features.authenticated.message.recipient;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.message.Message;
-import acme.entities.threads.Thread;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
 import acme.framework.entities.Principal;
+import acme.framework.entities.UserAccount;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuthenticatedMessageShowService implements AbstractShowService<Authenticated, Message> {
+public class AuthenticatedMessageRecipientShowService implements AbstractShowService<Authenticated, Message> {
 
 	@Autowired
-	AuthenticatedMessageRepository repository;
+	AuthenticatedMessageRecipientRepository repository;
 
 
 	@Override
 	public boolean authorise(final Request<Message> request) {
 		assert request != null;
-		Thread thread = this.repository.findThreadByMessageId(request.getModel().getInteger("id"));
-		List<Authenticated> authenticateds = (List<Authenticated>) thread.getAuthenticateds();
+		Message message = this.repository.findOneById(request.getModel().getInteger("id"));
 		Principal principal = request.getPrincipal();
-		boolean result = authenticateds.stream().filter(x -> x.getUserAccount().getId() == principal.getAccountId()).count() > 0;
+		UserAccount sender = message.getSender();
+		UserAccount recipient = message.getRecipient();
+		boolean result = sender.getId() == principal.getAccountId() || recipient.getId() == principal.getAccountId();
 		return result;
 	}
 
@@ -38,7 +37,8 @@ public class AuthenticatedMessageShowService implements AbstractShowService<Auth
 		assert model != null;
 
 		request.unbind(entity, model, "title", "moment", "tags", "body");
-		model.setAttribute("author", entity.getAuthenticated().getUserAccount().getUsername());
+		model.setAttribute("recipient", entity.getRecipient().getUsername());
+		model.setAttribute("sender", entity.getSender().getUsername());
 
 	}
 

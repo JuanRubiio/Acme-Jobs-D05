@@ -715,7 +715,9 @@
 		<property name="moment" value="2018/01/12 07:00"/>
 		<property name="tags" value="Tag1,Tag2"/>
 		<property name="body" value="Message 1"/>
-		<property name="authenticated" ref="employerAuthenticated"/>
+		<property name="thread" ref="thread1"/>
+		<property name="sender" ref="employerUserAccount"/>
+		<property name="recipient" ref="auditorUserAccount"/>
 	</bean>
 	
 	<bean id="message2" class="acme.entities.message.Message">
@@ -723,7 +725,9 @@
 		<property name="moment" value="2019/01/12 00:00"/>
 		<property name="tags" value="Tag1,Tag2"/>
 		<property name="body" value="Message 2"/>
-		<property name="authenticated" ref="employerAuthenticated"/>
+		<property name="thread" ref="thread1"/>
+		<property name="sender" ref="auditorUserAccount"/>
+		<property name="recipient" ref="employerUserAccount"/>
 	</bean>
 	
 	<bean id="message3" class="acme.entities.message.Message">
@@ -731,7 +735,9 @@
 		<property name="moment" value="2018/05/01 00:00"/>
 		<property name="tags" value="Tag1,Tag2"/>
 		<property name="body" value="Message 3"/>
-		<property name="authenticated" ref="employerAuthenticated"/>
+		<property name="thread" ref="thread1"/>
+		<property name="sender" ref="employerUserAccount"/>
+		<property name="recipient" ref="auditorUserAccount"/>
 	</bean>
 	
 	<bean id="message4" class="acme.entities.message.Message">
@@ -739,7 +745,9 @@
 		<property name="moment" value="2018/05/01 01:00"/>
 		<property name="tags" value="Tag1,Tag2"/>
 		<property name="body" value="Message 4"/>
-		<property name="authenticated" ref="employerAuthenticated"/>
+		<property name="thread" ref="thread3"/>
+	    <property name="sender" ref="employerUserAccount"/>
+		<property name="recipient" ref="workerUserAccount"/>
 	</bean>
 	
 	<bean id="message5" class="acme.entities.message.Message">
@@ -747,7 +755,9 @@
 		<property name="moment" value="2018/05/01 00:00"/>
 		<property name="tags" value="Tag1,Tag2"/>
 		<property name="body" value="Message 5"/>
-		<property name="authenticated" ref="auditorAuthenticated"/>
+		<property name="thread" ref="thread3"/>
+		<property name="sender" ref="workerUserAccount"/>
+		<property name="recipient" ref="employerUserAccount"/>
 	</bean>
 	
 	<bean id="message6" class="acme.entities.message.Message">
@@ -755,61 +765,99 @@
 		<property name="moment" value="2018/05/01 03:00"/>
 		<property name="tags" value="Tag1,Tag2"/>
 		<property name="body" value="Message 6"/>
-		<property name="authenticated" ref="employerAuthenticated"/>
+		<property name="thread" ref="thread3"/>
+		<property name="sender" ref="employerUserAccount"/>
+		<property name="recipient" ref="workerUserAccount"/>
+	</bean>
+	<bean id="message7" class="acme.entities.message.Message">
+		<property name="title" value="Message 1"/>
+		<property name="moment" value="2018/01/12 07:00"/>
+		<property name="tags" value="Tag1,Tag2"/>
+		<property name="body" value="Message 1"/>
+		<property name="thread" ref="thread2"/>
+		<property name="sender" ref="employerUserAccount"/>
+		<property name="recipient" ref="auditorUserAccount"/>
 	</bean>
 	
+	<bean id="message8" class="acme.entities.message.Message">
+		<property name="title" value="Message 2"/>
+		<property name="moment" value="2019/01/12 00:00"/>
+		<property name="tags" value="Tag1,Tag2"/>
+		<property name="body" value="Message 2"/>
+		<property name="thread" ref="thread2"/>
+		<property name="sender" ref="auditorUserAccount"/>
+		<property name="recipient" ref="employerUserAccount"/>
+	</bean>
+	
+	<bean id="message9" class="acme.entities.message.Message">
+		<property name="title" value="Message 3"/>
+		<property name="moment" value="2018/05/01 00:00"/>
+		<property name="tags" value="Tag1,Tag2"/>
+		<property name="body" value="Message 3"/>
+		<property name="thread" ref="thread2"/>
+		<property name="sender" ref="employerUserAccount"/>
+		<property name="recipient" ref="auditorUserAccount"/>
+	</bean>
+	
+		<bean id="message10" class="acme.entities.message.Message">
+		<property name="title" value="Message 4"/>
+		<property name="moment" value="2018/05/01 01:00"/>
+		<property name="tags" value="Tag1,Tag2"/>
+		<property name="body" value="Message 4"/>
+		<property name="thread" ref="thread4"/>
+	    <property name="sender" ref="employerUserAccount"/>
+		<property name="recipient" ref="workerUserAccount"/>
+	</bean>
+	
+	<bean id="message11" class="acme.entities.message.Message">
+		<property name="title" value="Message 5"/>
+		<property name="moment" value="2018/05/01 00:00"/>
+		<property name="tags" value="Tag1,Tag2"/>
+		<property name="body" value="Message 5"/>
+		<property name="thread" ref="thread4"/>
+		<property name="sender" ref="workerUserAccount"/>
+		<property name="recipient" ref="employerUserAccount"/>
+	</bean>
+	
+	<bean id="message12" class="acme.entities.message.Message">
+		<property name="title" value="Message 6"/>
+		<property name="moment" value="2018/05/01 03:00"/>
+		<property name="tags" value="Tag1,Tag2"/>
+		<property name="body" value="Message 6"/>
+		<property name="thread" ref="thread4"/>
+		<property name="sender" ref="employerUserAccount"/>
+		<property name="recipient" ref="workerUserAccount"/>
+	</bean>
 	<!--  Thread -->
 	
 	<bean id="thread1" class="acme.entities.threads.Thread">
 		<property name="title" value="Thread 1"/>
 		<property name="moment" value="2017/11/02 07:00"/>
-		<property name="messages">
-			<list>
-				<ref bean="message1" />
-			</list>
-		</property>
-		<property name="authenticateds">
-			<list>
-				<ref bean="employerAuthenticated" />
-			</list>
-		</property>
+		<property name="sender" ref="employerUserAccount"/>
+		<property name="recipient" ref="auditorUserAccount"/>
 	</bean>
 	
+
 	<bean id="thread2" class="acme.entities.threads.Thread">
 		<property name="title" value="Thread 2"/>
-		<property name="moment" value="2019/01/10 07:00"/>
-		<property name="messages">
-			<list>
-				<ref bean="message2" />
-				<ref bean="message3" />
-				<ref bean="message4" />
-				<ref bean="message5" />
-			</list>
-		</property>
-		<property name="authenticateds">
-			<list>
-				<ref bean="employerAuthenticated" />
-				<ref bean="auditorAuthenticated" /> 
-			</list>
-		</property>
+		<property name="moment" value="2013/08/30 06:00"/>
+		<property name="sender" ref="auditorUserAccount"/>
+		<property name="recipient" ref="employerUserAccount"/>
 	</bean>
-	
+
 	<bean id="thread3" class="acme.entities.threads.Thread">
 		<property name="title" value="Thread 3"/>
-		<property name="moment" value="2013/08/30 06:00"/>
-		<property name="messages">
-			<list>
-				<ref bean="message6" />
-			</list>
-		</property>
-		<property name="authenticateds">
-			<list>
-				<ref bean="employerAuthenticated" />
-			</list>
-		</property>
+		<property name="moment" value="2017/11/02 07:00"/>
+		<property name="sender" ref="employerUserAccount"/>
+		<property name="recipient" ref="workerUserAccount"/>
 	</bean>
 
-
+	<bean id="thread4" class="acme.entities.threads.Thread">
+		<property name="title" value="Thread 4"/>
+		<property name="moment" value="2017/11/02 07:00"/>
+		<property name="sender" ref="workerUserAccount"/>
+		<property name="recipient" ref="employerUserAccount"/>
+	</bean>
 
 
 </beans>
