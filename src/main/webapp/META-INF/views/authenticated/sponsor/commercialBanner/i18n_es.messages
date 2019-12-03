@@ -1,0 +1,14 @@
+sponsor.commercialBanner.form.label.picture = Imagen:
+sponsor.commercialBanner.form.label.slogan = Eslogan:
+sponsor.commercialBanner.form.label.target = URL:
+sponsor.commercialBanner.form.label.creditCard = Tarjeta de Crédito:
+sponsor.commercialBanner.form.label.monthExpired = Mes Expiración:
+sponsor.commercialBanner.form.label.yearExpired = Año Expiración:
+sponsor.commercialBanner.form.label.CVV = CVV:
+sponsor.commercialBanner.form.button.return = Volver
+
+
+sponsor.commercialBanner.list.label.slogan = Eslogan
+sponsor.commercialBanner.list.label.creditCard = Tarjeta de Crédito
+sponsor.commercialBanner.list.label.monthExpired = Mes Expiración
+sponsor.commercialBanner.list.label.yearExpired = Ano Expiración

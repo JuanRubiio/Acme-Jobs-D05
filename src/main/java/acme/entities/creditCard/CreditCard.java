@@ -1,7 +1,9 @@
 
-package acme.entities.banners;
+package acme.entities.creditCard;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
+import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -9,15 +11,20 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.CreditCardNumber;
 import org.hibernate.validator.constraints.Range;
 
+import acme.entities.roles.Sponsor;
+import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class CommercialBanner extends Banner {
+public class CreditCard extends DomainEntity {
 
-	private static final long	serialVersionUID	= -7826252710121239089L;
+	/**
+	 *
+	 */
+	private static final long	serialVersionUID	= 2121137363081925360L;
 
 	@NotBlank
 	@CreditCardNumber
@@ -34,5 +41,10 @@ public class CommercialBanner extends Banner {
 	@NotNull
 	@Range(min = 100, max = 999)
 	private int					CVV;
+
+	@NotNull
+	@Valid
+	@OneToOne(optional = false)
+	private Sponsor				sponsor;
 
 }

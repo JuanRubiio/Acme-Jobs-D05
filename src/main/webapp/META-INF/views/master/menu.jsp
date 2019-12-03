@@ -81,6 +81,11 @@
 			<acme:menu-suboption code="master.menu.employer.provider.list" action="/employer/job/list-mine"/>
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.sponsor" access="hasRole('Sponsor')"> 
+			<acme:menu-suboption code="master.menu.sponsor.noncommercialBanner.list" action="/sponsor/non-commercial-banner/list"/>
+			<acme:menu-suboption code="master.menu.sponsor.commercialBanner.list" action="/sponsor/commercial-banner/list"/>
+		</acme:menu-option>
+		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.authenticated.announcement.list" action="/authenticated/announcement/list" access="!hasRole('Administrator')"/>
 			<acme:menu-suboption code="master.menu.authenticated.investorrecord.list" action="/authenticated/investor-record/list" access="!hasRole('Administrator')"/>
