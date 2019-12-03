@@ -68,6 +68,12 @@ master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.customisationparameters = Customisation Parameters
 master.menu.administrator.chart = Chart
 
+# master.menu.auditor #########################################################
+
+master.menu.authenticated.auditor = Auditor
+master.menu.authenticated.auditor.listMineJobs = Jobs I have audited
+master.menu.authenticated.auditor.listOthers = Jobs I have not audited
+
 # master.menu.provider ########################################################
 
 master.menu.provider = Provider

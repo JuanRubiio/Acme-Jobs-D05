@@ -37,6 +37,18 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `audit_record` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `moment` datetime(6),
+        `status` integer,
+        `title` varchar(255),
+        `auditor_id` integer not null,
+        `job_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `auditor` (
        `id` integer not null,
         `version` integer not null,
@@ -374,6 +386,16 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
        add constraint `FKmbjdoxi3o93agxosoate4sxbt` 
        foreign key (`worker_id`) 
        references `worker` (`id`);
+
+    alter table `audit_record` 
+       add constraint `FKdcrrgv6rkfw2ruvdja56un4ji` 
+       foreign key (`auditor_id`) 
+       references `auditor` (`id`);
+
+    alter table `audit_record` 
+       add constraint `FKlbvbyimxf6pxvbhkdd4vfhlnd` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
 
     alter table `auditor` 
        add constraint FK_clqcq9lyspxdxcp6o4f3vkelj 

@@ -582,6 +582,55 @@
 		<property name="active"><null/></property>
 		<property name="employer" ref="employerEmployer2"/>
 	</bean> 
+	
+	<bean id="auditRecord01" class="acme.entities.auditRecord.AuditRecord">
+		<property name="title" value="example auditRecord01"/>
+		<property name="moment" value="2018/11/23 10:00"/>
+		<property name="status" value="DRAFT"/>
+		<property name="body" value="example body 01"/>
+		<property name="auditor" ref="auditorAuditor"/>
+		<property name="job" ref="job1"/>
+	</bean>
+		<bean id="auditRecord02" class="acme.entities.auditRecord.AuditRecord">
+		<property name="title" value="example auditRecord02"/>
+		<property name="moment" value="2017/11/23 10:00"/>
+		<property name="status" value="PUBLISHED"/>
+		<property name="body" value="example body 02"/>
+		<property name="auditor" ref="auditorAuditor"/>
+		<property name="job" ref="job2"/>
+	</bean>
+		<bean id="auditRecord03" class="acme.entities.auditRecord.AuditRecord">
+		<property name="title" value="example auditRecord03"/>
+		<property name="moment" value="2017/10/21 10:00"/>
+		<property name="status" value="DRAFT"/>
+		<property name="body" value="example body 03"/>
+		<property name="auditor" ref="auditorAuditor"/>
+		<property name="job" ref="job2"/>
+	</bean>	
+		<bean id="auditRecord04" class="acme.entities.auditRecord.AuditRecord">
+		<property name="title" value="example auditRecord04"/>
+		<property name="moment" value="2019/10/21 00:00"/>
+		<property name="status" value="PUBLISHED"/>
+		<property name="body" value="example body 04"/>
+		<property name="auditor" ref="auditorAuditor"/>
+		<property name="job" ref="job3"/>
+	</bean>	
+		<bean id="auditRecord05" class="acme.entities.auditRecord.AuditRecord">
+		<property name="title" value="example auditRecord05"/>
+		<property name="moment" value="2017/10/20 11:00"/>
+		<property name="status" value="DRAFT"/>
+		<property name="body" value="example body 05"/>
+		<property name="auditor" ref="auditorAuditor"/>
+		<property name="job" ref="job3"/>
+	</bean>		
+		<bean id="auditRecord06" class="acme.entities.auditRecord.AuditRecord">
+		<property name="title" value="example auditRecord06"/>
+		<property name="moment" value="2017/01/20 11:00"/>
+		<property name="status" value="PUBLISHED"/>
+		<property name="body" value="example body 06"/>
+		<property name="auditor" ref="auditorAuditor"/>
+		<property name="job" ref="job4"/>
+	</bean>		
 
 	<bean id="duty1" class="acme.entities.duty.Duty">
 		<property name="title" value="titulo de duty1"/>
