@@ -634,6 +634,35 @@
 		<property name="userAccount" ref="workerUserAccount" />
 	</bean>
 
+<bean name="workerUserAccount2" class="acme.framework.entities.UserAccount">
+			<property name="username" value="worker" />
+			<property name="password" value="worker" />
+			<property name="enabled" value="true" />
+			<property name="identity">
+				<bean class="acme.datatypes.UserIdentity">
+					<property name="name" value="Tomas" />
+					<property name="surname" value="Lopez" />
+					<property name="email" value="tm@acme.com" />
+				</bean>
+			</property>
+			<property name="roles">
+				<list>
+					<ref bean="workerWorker2" />
+					<ref bean="workerAuthenticated2" />
+				</list>
+			</property>
+		</bean>
+
+	<bean name="workerWorker2" class="acme.entities.roles.Worker">
+		<property name="qualificationsRecord" value="acme" />
+		<property name="skillsRecord" value="acme" />	
+		<property name="userAccount" ref="workerUserAccount2" />
+		
+	</bean>
+	
+	<bean name="workerAuthenticated2" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="workerUserAccount2" />
+	</bean>
 
 	 <bean id="application1" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="qwerty12"/>
@@ -676,6 +705,17 @@
 		<property name="skills" value="2"/>
 		<property name="qualifications" value="6.5"/>
 		<property name="worker" ref="workerWorker"/>
+		<property name="job" ref="job1"/>
+	</bean>
+
+	 <bean id="application5" class="acme.entities.applications.Application">
+		<property name="referenceNumber" value="EEEE:J981"/>
+		<property name="moment" value="2018/10/20 09:50"/>
+		<property name="status" value="rejected"/>
+		<property name="statement" value="hello"/>
+		<property name="skills" value="2"/>
+		<property name="qualifications" value="7"/>
+		<property name="worker" ref="workerWorker2"/>
 		<property name="job" ref="job1"/>
 	</bean>
 
