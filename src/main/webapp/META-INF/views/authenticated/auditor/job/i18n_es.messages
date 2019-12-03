@@ -24,4 +24,4 @@ authenticated.auditor.job.list.label.title = Título
 authenticated.auditor.job.list.label.salary = Salario
 authenticated.auditor.job.list.label.deadline = Fecha límite
 
-master.menu.anonymous.listAuditRecords = link para el registro de auditorias del trabajo
+master.menu.anonymous.listAuditRecords = Registro de auditorias

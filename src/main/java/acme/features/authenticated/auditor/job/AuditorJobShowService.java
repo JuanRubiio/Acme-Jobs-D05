@@ -30,7 +30,7 @@ public class AuditorJobShowService implements AbstractShowService<Auditor, Job> 
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "salary", "deadline", "reference", "status", "description");
+		request.unbind(entity, model, "title", "deadline", "reference", "status", "salary", "link", "description", "active");
 
 	}
 

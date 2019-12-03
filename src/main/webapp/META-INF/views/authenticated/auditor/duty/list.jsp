@@ -18,9 +18,10 @@
 
 <acme:list>
 	<acme:list-column code="authenticated.auditor.audit-record.list.label.title" path="title" width="40%"/>
-	<acme:list-column code="authenticated.auditor.audit-record.list.label.moment" path="moment" width="20%"/>
-	<acme:list-column code="authenticated.auditor.audit-record.list.label.status" path="status" width="40%"/>
-	<acme:form-return code="authenticated.auditor.audit-record.form.button.return"/>
+	<acme:list-column code="authenticated.auditor.audit-record.list.label.moment" path="percentage" width="20%"/>
+	<acme:list-column code="authenticated.auditor.audit-record.list.label.status" path="description" width="40%"/>
 </acme:list>
+	<acme:form-return code="authenticated.auditor.audit-record.form.button.return"/>
+
 
 

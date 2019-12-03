@@ -33,7 +33,7 @@ public class AuditorJobListNoMineService implements AbstractListService<Auditor,
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "salary", "deadline");
+		request.unbind(entity, model, "title", "deadline", "reference", "description");
 	}
 
 	@Override
