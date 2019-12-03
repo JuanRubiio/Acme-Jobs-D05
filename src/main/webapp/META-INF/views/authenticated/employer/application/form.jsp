@@ -13,8 +13,9 @@
 	<acme:form-textbox code="authenticated.employer.application.form.label.statement" path="statement"/>
 	<acme:form-textbox code="authenticated.employer.application.form.label.skills" path="skills"/>
 	<acme:form-textbox code="authenticated.employer.application.form.label.qualifications" path="qualifications"/>	
+	<acme:form-hidden path="id"/>
 	
 	<acme:form-return code="authenticated.employer.application.form.button.return"/>
-	
+	<acme:form-submit code="authenticated.employer.application.form.label.worker" action="/employer/worker/list?id=${id}" method="get"/>
 </acme:form>
 

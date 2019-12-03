@@ -1,0 +1,14 @@
+authenticated.employer.worker.form.label.fullName = Nombre Completo
+authenticated.employer.worker.form.label.userName = Nombre Usuario
+authenticated.employer.worker.form.label.email = Correo
+authenticated.employer.worker.form.label.qualificationsRecord = Registro de Calificaciones
+authenticated.employer.worker.form.label.skillsRecord = Registro de habilidades
+authenticated.employer.worker.form.button.return = Volver
+
+authenticated.employer.worker.list.label.fullName = Nombre Completo
+authenticated.employer.worker.list.label.userName = Nombre Usuario
+authenticated.employer.worker.list.label.email = Correo
+
+authenticated.employer.worker.list.button.return = Volver
+
+
