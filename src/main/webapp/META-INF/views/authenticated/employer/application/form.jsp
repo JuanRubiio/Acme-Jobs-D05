@@ -3,7 +3,7 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags" %>
 
 <acme:form readonly="true">
-	<acme:form-textbox code="authenticated.employer.application.form.label.referenceNumber" path="referenceNumber"/>
+	<acme:form-textbox code="authenticated.employer.application.form.label.referenceNumber" path="referenceNumber" placeholder="EEEE-JJJJ:WWWW"/>
 	<acme:form-moment code="authenticated.employer.application.form.label.moment" path="moment"/>
 	<acme:form-select code="authenticated.employer.application.form.label.status" path="status">
 		<acme:form-option code="Pending" value="pending"/>

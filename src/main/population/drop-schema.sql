@@ -79,6 +79,10 @@
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
 
+    alter table `sponsor` 
+       drop 
+       foreign key FK_20xk0ev32hlg96kqynl6laie2;
+
     alter table `thread` 
        drop 
        foreign key `FKidas5c273n1msrfutgci7np3j`;
@@ -86,10 +90,6 @@
     alter table `thread` 
        drop 
        foreign key `FK7l9cby7ycfrtiaueqtiayiumr`;
-
-    alter table `sponsor` 
-       drop 
-       foreign key FK_20xk0ev32hlg96kqynl6laie2;
 
     alter table `worker` 
        drop 
@@ -147,9 +147,9 @@
 
     drop table if exists `rivero_bulletin`;
 
-    drop table if exists `thread`;
-
     drop table if exists `sponsor`;
+
+    drop table if exists `thread`;
 
     drop table if exists `user_account`;
 
