@@ -1,0 +1,27 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+
+authenticated.auditor.job.form.label.title = Título:
+authenticated.auditor.job.form.label.salary = Salario:
+authenticated.auditor.job.form.label.deadline = Fecha límite:
+authenticated.auditor.job.form.label.reference = Referencia:
+authenticated.auditor.job.form.label.status = Estado:
+
+authenticated.auditor.job.form.label.description = Descripción
+
+authenticated.auditor.job.form.button.return = Volver
+
+authenticated.auditor.job.list.label.title = Título
+authenticated.auditor.job.list.label.salary = Salario
+authenticated.auditor.job.list.label.deadline = Fecha límite
+
+master.menu.anonymous.listAuditRecords = link para el registro de auditorias del trabajo

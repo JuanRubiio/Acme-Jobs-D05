@@ -68,6 +68,12 @@ master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.customisationparameters = Customisation Parameters
 master.menu.administrator.chart = Chart
 
+# master.menu.auditor #########################################################
+
+master.menu.authenticated.auditor = Auditor
+master.menu.authenticated.auditor.listMineJobs = Jobs I have audited
+master.menu.authenticated.auditor.listOthers = Jobs I have not audited
+
 # master.menu.provider ########################################################
 
 master.menu.provider = Provider
@@ -108,6 +114,7 @@ master.menu.authenticated.challenge.list =  Active Challenge List
 master.menu.authenticated.investorrecord.list = Investor Record List
 master.menu.authenticated.companyrecord.list = Company Record List
 master.menu.authenticated.job.list.active = Active Jobs
+master.menu.authenticated.threads = List my threads
 
 # master.menu.user-account ####################################################
 

@@ -24,6 +24,13 @@
  <div >
 	<canvas id="canvas3" style="height: 370px; width: 100%;"></canvas>
 </div> 
+<h3>
+	 <acme:message code="administrator.chart.totalNumberApplicationStatus"/>
+</h3>
+</br>
+ <div >
+	<canvas id="canvas4" style="height: 370px; width: 100%;"></canvas>
+</div> 
 <acme:form-return code="administrator.announcement.form.button.return"/>
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -169,6 +176,56 @@
 			
 			
 			}); 
+
+
+$(document).ready(function(){
+			
+			var data = {
+					labels : [	
+						<jstl:forEach var="t" items="${totalAppStatus}">
+						"${t}",
+						</jstl:forEach>
+						],
+					datasets : [
+						{
+							data: [
+								<jstl:forEach var="t" items="${totalNumberAppStatus}">
+								"${t}",
+								</jstl:forEach>
+							]
+						}
+					]
+			};
+			var options = {
+					scales : {
+						yAxes : [
+							{
+								ticks : {
+									suggestedMin : 0,
+									suggestedMax : 20
+								}
+							}
+						]
+					},
+					legend : {
+						display : false
+					}
+					
+					
+			};
+			var canvas, context;
+			
+			canvas = document.getElementById("canvas4");
+			context = canvas.getContext("2d");
+			new Chart(context, {
+				type:"bar",
+				data: data,
+				options: options
+			});
+			
+			
+			}); 
+		
 		
 
 </script>

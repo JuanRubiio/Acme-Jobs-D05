@@ -29,4 +29,9 @@ public interface AdministratorChartRepository extends AbstractRepository {
 	@Query("Select ua.status from Job ua group by ua.status order by ua.status")
 	List<String> getTotalJobStatus();
 
+	@Query("Select Count(ua) from Application ua group by ua.status order by ua.status")
+	List<Integer> getTotalNumberAppStatus();
+
+	@Query("Select ua.status from Application ua group by ua.status order by ua.status")
+	List<String> getTotalAppStatus();
 }

@@ -15,6 +15,18 @@
        drop 
        foreign key `FKmbjdoxi3o93agxosoate4sxbt`;
 
+    alter table `audit_record` 
+       drop 
+       foreign key `FKdcrrgv6rkfw2ruvdja56un4ji`;
+
+    alter table `audit_record` 
+       drop 
+       foreign key `FKlbvbyimxf6pxvbhkdd4vfhlnd`;
+
+    alter table `auditor` 
+       drop 
+       foreign key FK_clqcq9lyspxdxcp6o4f3vkelj;
+
     alter table `authenticated` 
        drop 
        foreign key FK_h52w0f3wjoi68b63wv9vwon57;
@@ -47,6 +59,18 @@
        drop 
        foreign key `FK3rxjf8uh6fh2u990pe8i2at0e`;
 
+    alter table `message` 
+       drop 
+       foreign key `FKia3p9sxpmnofkfldrd7vcsh7l`;
+
+    alter table `message` 
+       drop 
+       foreign key `FKkajds58b00e2wf9dge5biqf3p`;
+
+    alter table `message` 
+       drop 
+       foreign key `FK28hjkn063wrsjuiyyf8sm3s2v`;
+
     alter table `non_commercial_banner` 
        drop 
        foreign key FK_2l8gpcwh19e7jj513or4r9dvb;
@@ -54,6 +78,14 @@
     alter table `provider` 
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
+
+    alter table `thread` 
+       drop 
+       foreign key `FKidas5c273n1msrfutgci7np3j`;
+
+    alter table `thread` 
+       drop 
+       foreign key `FK7l9cby7ycfrtiaueqtiayiumr`;
 
     alter table `sponsor` 
        drop 
@@ -70,6 +102,10 @@
     drop table if exists `anonymous`;
 
     drop table if exists `application`;
+
+    drop table if exists `audit_record`;
+
+    drop table if exists `auditor`;
 
     drop table if exists `authenticated`;
 
@@ -99,6 +135,8 @@
 
     drop table if exists `job`;
 
+    drop table if exists `message`;
+
     drop table if exists `non_commercial_banner`;
 
     drop table if exists `offer`;
@@ -108,6 +146,8 @@
     drop table if exists `request`;
 
     drop table if exists `rivero_bulletin`;
+
+    drop table if exists `thread`;
 
     drop table if exists `sponsor`;
 

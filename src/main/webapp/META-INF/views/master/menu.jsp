@@ -94,9 +94,13 @@
 			<acme:menu-suboption code="master.menu.consumer.offer.list" action="/authenticated/offer/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.challenge.list" action="/authenticated/challenge/list" access="!hasRole('Administrator')"/>
 			<acme:menu-suboption code="master.menu.authenticated.job.list.active" action="/authenticated/job/list-active"/>
-			
+			<acme:menu-suboption code="master.menu.authenticated.threads" action="/authenticated/thread/list-mine" />
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.authenticated.auditor" access="hasRole('Auditor')">
+			<acme:menu-suboption code="master.menu.authenticated.auditor.listMineJobs" action="/auditor/job/list-mine" />
+			<acme:menu-suboption code="master.menu.authenticated.auditor.listOthers" action="/auditor/job/list-others" />
+		</acme:menu-option>
 			
 			
 	</acme:menu-left>

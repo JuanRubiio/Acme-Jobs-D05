@@ -37,6 +37,27 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `audit_record` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `moment` datetime(6),
+        `status` integer,
+        `title` varchar(255),
+        `auditor_id` integer not null,
+        `job_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `auditor` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `firm` varchar(255),
+        `responsability_statement` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `authenticated` (
        `id` integer not null,
         `version` integer not null,
@@ -199,6 +220,19 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `message` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `moment` datetime(6),
+        `tags` varchar(255),
+        `title` varchar(255),
+        `recipient_id` integer not null,
+        `sender_id` integer not null,
+        `thread_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `non_commercial_banner` (
        `id` integer not null,
         `version` integer not null,
@@ -260,6 +294,16 @@
         `nif` varchar(255),
         `surname` varchar(255),
         `type` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `thread` (
+       `id` integer not null,
+        `version` integer not null,
+        `moment` datetime(6),
+        `title` varchar(255),
+        `recipient_id` integer not null,
+        `sender_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -343,6 +387,21 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
        foreign key (`worker_id`) 
        references `worker` (`id`);
 
+    alter table `audit_record` 
+       add constraint `FKdcrrgv6rkfw2ruvdja56un4ji` 
+       foreign key (`auditor_id`) 
+       references `auditor` (`id`);
+
+    alter table `audit_record` 
+       add constraint `FKlbvbyimxf6pxvbhkdd4vfhlnd` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
+
+    alter table `auditor` 
+       add constraint FK_clqcq9lyspxdxcp6o4f3vkelj 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
     alter table `authenticated` 
        add constraint FK_h52w0f3wjoi68b63wv9vwon57 
        foreign key (`user_account_id`) 
@@ -383,6 +442,21 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
        foreign key (`employer_id`) 
        references `employer` (`id`);
 
+    alter table `message` 
+       add constraint `FKia3p9sxpmnofkfldrd7vcsh7l` 
+       foreign key (`recipient_id`) 
+       references `user_account` (`id`);
+
+    alter table `message` 
+       add constraint `FKkajds58b00e2wf9dge5biqf3p` 
+       foreign key (`sender_id`) 
+       references `user_account` (`id`);
+
+    alter table `message` 
+       add constraint `FK28hjkn063wrsjuiyyf8sm3s2v` 
+       foreign key (`thread_id`) 
+       references `thread` (`id`);
+
     alter table `non_commercial_banner` 
        add constraint FK_2l8gpcwh19e7jj513or4r9dvb 
        foreign key (`sponsor_id`) 
@@ -391,6 +465,16 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
        foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
+    alter table `thread` 
+       add constraint `FKidas5c273n1msrfutgci7np3j` 
+       foreign key (`recipient_id`) 
+       references `user_account` (`id`);
+
+    alter table `thread` 
+       add constraint `FK7l9cby7ycfrtiaueqtiayiumr` 
+       foreign key (`sender_id`) 
        references `user_account` (`id`);
 
     alter table `sponsor` 

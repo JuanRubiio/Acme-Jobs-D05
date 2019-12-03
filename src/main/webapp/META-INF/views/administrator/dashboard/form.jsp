@@ -15,6 +15,9 @@
 	<acme:form-textbox code="administrator.avgRewardActiveOffer" path="avgRewardActiveOffer"/>
 	<acme:form-textbox code="administrator.desvRewardActiveOffer" path="desvRewardActiveOffer"/>
 	<acme:form-textbox code="administrator.avgNumberJobByEmployer" path="avgNumberJobOEmployer"/>
+	<acme:form-textbox code="administrator.avgNumberApplEmployer" path="avgNumberApplEmployer"/>
+	<acme:form-textbox code="administrator.avgNumberApplWorker" path="avgNumberApplWorker"/>
+	
 
 	<acme:form-return code="administrator.announcement.form.button.return"/>
 </acme:form>
