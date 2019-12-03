@@ -98,6 +98,8 @@ master.menu.worker.application.list = My Applications List
 
 master.menu.employer = Employer
 master.menu.employer.provider.list = Mine Jobs List
+ master.menu.employer.worker.list = Workers
+master.menu.employer.application.list  = Mine Application List
 
 # master.menu.sponsor ##########################################################
 
