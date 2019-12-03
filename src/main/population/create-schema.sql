@@ -297,6 +297,14 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `sponsor` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `organisation_name` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `thread` (
        `id` integer not null,
         `version` integer not null,
@@ -304,14 +312,6 @@
         `title` varchar(255),
         `recipient_id` integer not null,
         `sender_id` integer not null,
-        primary key (`id`)
-    ) engine=InnoDB;
-
-    create table `sponsor` (
-       `id` integer not null,
-        `version` integer not null,
-        `user_account_id` integer,
-        `organisation_name` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -467,6 +467,11 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
+    alter table `sponsor` 
+       add constraint FK_20xk0ev32hlg96kqynl6laie2 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
     alter table `thread` 
        add constraint `FKidas5c273n1msrfutgci7np3j` 
        foreign key (`recipient_id`) 
@@ -475,11 +480,6 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
     alter table `thread` 
        add constraint `FK7l9cby7ycfrtiaueqtiayiumr` 
        foreign key (`sender_id`) 
-       references `user_account` (`id`);
-
-    alter table `sponsor` 
-       add constraint FK_20xk0ev32hlg96kqynl6laie2 
-       foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
     alter table `worker` 
