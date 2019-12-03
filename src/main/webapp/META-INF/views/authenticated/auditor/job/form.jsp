@@ -16,15 +16,25 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form readonly="true">
-	<acme:form-textbox code="authenticated.auditor.job.form.label.title" path="title" />
-	<acme:form-textbox code="authenticated.auditor.job.form.label.reference" path="reference" />
-	<acme:form-textbox code="authenticated.auditor.job.form.label.status" path="status" />
-	<acme:form-money code="authenticated.auditor.job.form.label.salary" path="salary" />
-	<acme:form-moment code="authenticated.auditor.job.form.label.deadline" path="deadline" />
-
+	<acme:form-textbox code="authenticated.employer.job.form.label.reference" path="reference" placeholder="EEEE-JJJJ"/>
+	<acme:form-textbox code="authenticated.employer.job.form.label.title" path="title"/>
+<%-- 	<acme:form-select code="authenticated.employer.job.form.label.status" path="status">
+		<acme:form-option code="Draft" value="Draft"/>
+		<acme:form-option code="Published" value="Published" />
+	</acme:form-select> --%>
+	<acme:form-textbox code="authenticated.employer.job.form.label.status" path="status"/>
+	<acme:form-moment code="authenticated.employer.job.form.label.deadline" path="deadline"/>
 	
-	<acme:form-textbox code="authenticated.auditor.job.form.label.description" path="description" />
+	<acme:form-url code="authenticated.employer.job.form.label.link" path="link"/>
+	<acme:form-money code="authenticated.employer.job.form.label.salary" path="salary"/>
+	<acme:form-textarea code="authenticated.employer.job.form.label.description" path="description"/>
 	
-	<acme:menu-suboption code="master.menu.anonymous.listAuditRecords" action="/auditor/audit-record/list-mine?id=${param.id}" />
+	<acme:form-checkbox code="authenticated.employer.job.form.label.active" path="active"/>
+	<acme:form-hidden path="id"/>
+	
 	<acme:form-return code="authenticated.auditor.job.form.button.return" />
+	<acme:form-submit code="authenticated.employer.job.form.label.active.duty" action="/auditor/duty/list?id=${id}" method="get"/>
+	
+	<acme:form-submit code="master.menu.anonymous.listAuditRecords" action="/auditor/audit-record/list-mine?id=${id}" method="get" />
+	
 </acme:form>

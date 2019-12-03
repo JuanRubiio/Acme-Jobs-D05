@@ -42,7 +42,7 @@
         `version` integer not null,
         `body` varchar(255),
         `moment` datetime(6),
-        `status` integer,
+        `status` varchar(255),
         `title` varchar(255),
         `auditor_id` integer not null,
         `job_id` integer not null,

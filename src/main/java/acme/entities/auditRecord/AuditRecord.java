@@ -12,7 +12,6 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
-import acme.datatypes.Status;
 import acme.entities.job.Job;
 import acme.entities.roles.Auditor;
 import acme.framework.entities.DomainEntity;
@@ -33,8 +32,8 @@ public class AuditRecord extends DomainEntity {
 	@Past
 	private Date				moment;
 
-	@NotNull
-	private Status				status;
+	@NotBlank
+	private String				status;
 
 	@NotBlank
 	private String				body;
