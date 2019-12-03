@@ -361,35 +361,7 @@
 		<property name="spamWordsEs" value="sexo, duro, viagra, cialis, ha ganado, millón de dolares"/>
   
 	</bean>
-	
-
-
-	<!-- Banners -->
-
-	<bean id="banner01" class="acme.entities.banners.Banner">
-		<property name="picture" value="Titulo1"/>
-		<property name="slogan" value="la gallina que entra por la que sale"/>
-		<property name="target" value="https://www.imagen1.com"/>
-	</bean> 
-
-	<bean id="banner02" class="acme.entities.banners.CommercialBanner">
-		<property name="picture" value="Titulo2"/>
-		<property name="slogan" value="Paga el banner"/>
-		<property name="target" value="https://www.imagen2.com"/>
-		<property name="creditCard" value="379354508162306"/>
-		<property name="monthExpired" value="02"/>
-		<property name="yearExpired" value="2020"/>
-		<property name="CVV" value="456"/>
-	</bean> 
-	
-	<bean id="banner03" class="acme.entities.banners.NonCommercialBanner">
-		<property name="picture" value="Titulo3"/>
-		<property name="slogan" value="Slogan no comercial"/>
-		<property name="target" value="https://www.imagen3.com"/>
-		<property name="jingle" value="Jingle Bells, jingle bells, Jingle all the way!"/>
-	</bean> 
-	
-	
+		
 		
 	<bean name="consumerUserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="consumer" />
@@ -718,6 +690,98 @@
 		<property name="worker" ref="workerWorker2"/>
 		<property name="job" ref="job1"/>
 	</bean>
+	
+	<bean name="sponsorUserAccount" class="acme.framework.entities.UserAccount">
+			<property name="username" value="sponsor" />
+			<property name="password" value="sponsor" />
+			<property name="enabled" value="true" />
+			<property name="identity">
+				<bean class="acme.datatypes.UserIdentity">
+					<property name="name" value="Casto" />
+					<property name="surname" value="Guerrero" />
+					<property name="email" value="guerrero@acme.com" />
+				</bean>
+			</property>
+			<property name="roles">
+				<list>
+					<ref bean="sponsorSponsor" />
+					<ref bean="sponsorAuthenticated" />
+				</list>
+			</property>
+		</bean>
+
+	<bean name="sponsorSponsor" class="acme.entities.roles.Sponsor">
+		<property name="organisationName" value="LooneyTunes" />
+		<property name="userAccount" ref="sponsorUserAccount" />
+	</bean>
+	
+	<bean name="sponsorAuthenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="sponsorUserAccount" />
+	</bean>
+	
+	<bean name="sponsorUserAccount2" class="acme.framework.entities.UserAccount">
+		<property name="username" value="sponsor2" />
+		<property name="password" value="sponsor2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Ale" />
+				<property name="surname" value="Martin" />
+				<property name="email" value="ale@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="sponsorSponsor2" />
+				<ref bean="sponsorAuthenticated2" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="sponsorSponsor2" class="acme.entities.roles.Sponsor">
+		<property name="organisationName" value="acme" />
+		<property name="userAccount" ref="sponsorUserAccount2" />
+		
+	</bean>
+	
+	<bean name="sponsorAuthenticated2" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="sponsorUserAccount2" />
+	</bean>
+	
+	<bean id="creditCard1" class="acme.entities.creditCard.CreditCard">
+		<property name="creditCard" value="379354508162306"/>
+		<property name="monthExpired" value="02"/>
+		<property name="yearExpired" value="2020"/>
+		<property name="CVV" value="456"/>
+		<property name="sponsor" ref="sponsorSponsor"/>
+	</bean>
+	
+	<bean id="banner01" class="acme.entities.banners.CommercialBanner">
+		<property name="picture" value="Titulo"/>
+		<property name="slogan" value="Paga el banner"/>
+		<property name="target" value="https://www.imagen.com"/>
+		<property name="sponsor" ref="sponsorSponsor"/>
+		<property name="creditCard" value="379354508162306"/>
+		<property name="monthExpired" value="02"/>
+		<property name="yearExpired" value="2020"/>
+		<property name="CVV" value="456"/>
+	</bean> 
+	
+	<bean id="banner02" class="acme.entities.banners.NonCommercialBanner">
+		<property name="picture" value="Titulo2"/>
+		<property name="slogan" value="Slogan no comercial"/>
+		<property name="target" value="https://www.imagen2.com"/>
+		<property name="sponsor" ref="sponsorSponsor"/>
+		<property name="jingle" value="Jingle Bells, jingle bells, Jingle all the way!"/>
+	</bean> 
+	
+	<bean id="banner03" class="acme.entities.banners.NonCommercialBanner">
+		<property name="picture" value="Titulo3"/>
+		<property name="slogan" value="Slogan no comercial"/>
+		<property name="target" value="https://www.imagen.com"/>
+		<property name="sponsor" ref="sponsorSponsor2"/>
+		<property name="jingle" value="Ho Ho Ho!"/>
+	</bean> 
 
 </beans>
 

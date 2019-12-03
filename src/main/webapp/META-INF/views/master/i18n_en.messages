@@ -93,6 +93,13 @@ master.menu.worker.application.list = My Applications List
 master.menu.employer = Employer
 master.menu.employer.provider.list = Mine Jobs List
 
+# master.menu.sponsor ##########################################################
+
+master.menu.sponsor = Sponsor
+master.menu.sponsor.noncommercialBanner.list = My NonCommercialBanner List
+master.menu.sponsor.commercialBanner.list = My CommercialBanner List
+
+
 # master.menu.authenticated ##########################################################
 
 master.menu.authenticated = Authenticated
