@@ -20,3 +20,6 @@ authenticated.message.list.label.title = Título
 authenticated.message.list.label.tags = Etiquetas
 authenticated.message.list.label.body = Cuerpo
 authenticated.message.list.button.return = Volver
+
+authenticated.message.form.label.sender = Emisor
+authenticated.message.form.label.recipient = Receptor

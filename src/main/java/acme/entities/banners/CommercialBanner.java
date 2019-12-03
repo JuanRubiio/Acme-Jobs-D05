@@ -23,8 +23,6 @@ public class CommercialBanner extends Banner {
 	@CreditCardNumber
 	private String				creditCard;
 
-	//Metemos CVV, Mes y Año de caducidad
-
 	@NotNull
 	@Range(min = 1, max = 12)
 	private int					monthExpired;
@@ -34,7 +32,7 @@ public class CommercialBanner extends Banner {
 	private int					yearExpired;
 
 	@NotNull
-	@Range(min = 0, max = 999)
+	@Range(min = 100, max = 999)
 	private int					CVV;
 
 }

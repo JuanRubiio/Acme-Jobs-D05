@@ -32,7 +32,7 @@ public class AdministratorChartShowService implements AbstractShowService<Admini
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "totalNumberCompanySector", "totalCompanySector", "totalNumberInvestorSector", "totalInvestorSector", "totalNumberJobStatus", "totalJobStatus");
+		request.unbind(entity, model, "totalNumberCompanySector", "totalCompanySector", "totalNumberInvestorSector", "totalInvestorSector", "totalNumberJobStatus", "totalJobStatus", "totalNumberAppStatus", "totalAppStatus");
 
 	}
 
@@ -42,10 +42,12 @@ public class AdministratorChartShowService implements AbstractShowService<Admini
 		List<Integer> totalNumberCompanySector = this.repository.getTotalNumberCompaniesSector();
 		List<Integer> totalNumberInvestorSector = this.repository.getTotalNumberInvestorSector();
 		List<Integer> totalNumberJobStatus = this.repository.getTotalNumberJobStatus();
+		List<Integer> totalNumberAppStatus = this.repository.getTotalNumberAppStatus();
 
 		List<String> totalJobStatus = this.repository.getTotalJobStatus();
 		List<String> totalCompanySector = this.repository.getTotalCompaniesSector();
 		List<String> totalInvestorSector = this.repository.getTotalInvestorSector();
+		List<String> totalAppStatus = this.repository.getTotalAppStatus();
 
 		res.setTotalCompanySector(totalCompanySector);
 		res.setTotalInvestorSector(totalInvestorSector);
@@ -53,6 +55,8 @@ public class AdministratorChartShowService implements AbstractShowService<Admini
 		res.setTotalNumberInvestorSector(totalNumberInvestorSector);
 		res.setTotalJobStatus(totalJobStatus);
 		res.setTotalNumberJobStatus(totalNumberJobStatus);
+		res.setTotalAppStatus(totalAppStatus);
+		res.setTotalNumberAppStatus(totalNumberAppStatus);
 
 		return res;
 	}

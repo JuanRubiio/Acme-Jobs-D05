@@ -37,4 +37,7 @@ public interface EmployerApplicationRepository extends AbstractRepository {
 
 	@Query("select a from Application a where a.job.id = (select j.id from Job j where j.id= ?1)")
 	Collection<Application> findAllApplicationToThisJob(int id);
+
+	@Query("select a from Application a where a.job.employer.id = ?1")
+	Collection<Application> findAllApplicationToThisEmployer(int id);
 }

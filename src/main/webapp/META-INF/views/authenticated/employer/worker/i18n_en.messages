@@ -1,0 +1,14 @@
+authenticated.employer.worker.form.label.fullName = FullName
+authenticated.employer.worker.form.label.userName = UserName
+authenticated.employer.worker.form.label.email = Email
+authenticated.employer.worker.form.label.qualificationsRecord = QualificationsRecord
+authenticated.employer.worker.form.label.skillsRecord = SkillsRecord
+authenticated.employer.worker.form.button.return = Return
+
+authenticated.employer.worker.list.label.fullName = FullName
+authenticated.employer.worker.list.label.userName = UserName
+authenticated.employer.worker.list.label.email = Email
+
+authenticated.employer.worker.list.button.return = Return
+
+

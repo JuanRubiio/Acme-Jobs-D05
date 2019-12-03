@@ -11,3 +11,5 @@ administrator.maxRewardActiveOffer =  Max reward active offer
 administrator.avgRewardActiveOffer =  Avg reward active offer
 administrator.desvRewardActiveOffer = Standard deviation reward active offer
 administrator.avgNumberJobByEmployer = Avg jobs by employer
+administrator.avgNumberApplEmployer = Avg applications by employer
+administrator.avgNumberApplWorker = Avg applications by workers

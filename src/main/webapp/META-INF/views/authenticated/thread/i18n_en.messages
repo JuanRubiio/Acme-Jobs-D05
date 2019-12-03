@@ -21,3 +21,7 @@ authenticated.threads.form.label.message = Show messages
 
 authenticated.threads.list.label.title = Title
 authenticated.threads.list.label.moment = Moment
+authenticated.threads.form.label.sender = Sender
+authenticated.threads.form.label.recipient = Recipient
+authenticated.threads.form.label.message.sender = Messages Sender
+authenticated.threads.form.label.message.recipient = Messages Recipient

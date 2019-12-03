@@ -68,6 +68,12 @@ master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.customisationparameters = Customisation Parameters
 master.menu.administrator.chart = Chart
 
+# master.menu.auditor #########################################################
+
+master.menu.authenticated.auditor = Auditor
+master.menu.authenticated.auditor.listMineJobs = Jobs I have audited
+master.menu.authenticated.auditor.listOthers = Jobs I have not audited
+
 # master.menu.provider ########################################################
 
 master.menu.provider = Provider
@@ -92,6 +98,15 @@ master.menu.worker.application.list = My Applications List
 
 master.menu.employer = Employer
 master.menu.employer.provider.list = Mine Jobs List
+ master.menu.employer.worker.list = Workers
+master.menu.employer.application.list  = Mine Application List
+
+# master.menu.sponsor ##########################################################
+
+master.menu.sponsor = Sponsor
+master.menu.sponsor.noncommercialBanner.list = My NonCommercialBanner List
+master.menu.sponsor.commercialBanner.list = My CommercialBanner List
+
 
 # master.menu.authenticated ##########################################################
 

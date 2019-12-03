@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.message;
+package acme.features.authenticated.message.recipient;
 
 import javax.annotation.PostConstruct;
 
@@ -13,16 +13,16 @@ import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/authenticated/message/")
-public class AuthenticatedMessageController extends AbstractController<Authenticated, Message> {
+@RequestMapping("/authenticated/message/recipient/")
+public class AuthenticatedMessageRecipientController extends AbstractController<Authenticated, Message> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AuthenticatedMessageShowService	showService;
+	private AuthenticatedMessageRecipientShowService	showService;
 
 	@Autowired
-	private AuthenticatedMessageListService	listService;
+	private AuthenticatedMessageRecipientListService	listService;
 
 
 	// Constructors -----------------------------------------------------------

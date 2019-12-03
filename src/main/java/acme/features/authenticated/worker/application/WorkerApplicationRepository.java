@@ -33,5 +33,5 @@ public interface WorkerApplicationRepository extends AbstractRepository {
 	Integer numberApplications();
 
 	@Query("select a from Application a where a.worker.id = ?1")
-	Collection<Application> findAllApplicationPerWorker(int id);
+	Collection<Application> findAllApplicationToWorker(int id);
 }

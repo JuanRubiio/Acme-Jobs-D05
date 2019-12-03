@@ -44,7 +44,8 @@ public class WorkerApplicationListService implements AbstractListService<Worker,
 		assert request != null;
 
 		Collection<Application> result;
-		result = this.repository.findAllApplications();
+		int id = request.getPrincipal().getActiveRoleId();
+		result = this.repository.findAllApplicationToWorker(id);
 
 		return result;
 	}

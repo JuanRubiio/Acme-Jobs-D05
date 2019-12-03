@@ -1,0 +1,11 @@
+authenticated.employer.job.form.label.reference = Reference
+authenticated.employer.job.form.label.title =  Title
+authenticated.employer.job.form.label.status = Status
+authenticated.employer.job.form.label.deadline = Deadline
+authenticated.employer.job.form.label.description = Description
+authenticated.employer.job.form.label.link = Link
+authenticated.employer.job.form.label.salary = Salary
+authenticated.employer.job.form.label.active = Active
+authenticated.employer.job.form.button.return = Return
+authenticated.employer.job.form.label.active.duty = Duties
+authenticated.employer.job.form.label.active.percentage = Duties

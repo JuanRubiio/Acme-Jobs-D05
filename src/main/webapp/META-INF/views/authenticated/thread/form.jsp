@@ -18,9 +18,16 @@
 <acme:form readonly="true">
 	<acme:form-textbox code="authenticated.threads.form.label.title" path="title" />
 	<acme:form-moment code="authenticated.threads.form.label.moment" path="moment"/>
+	<acme:form-textbox code="authenticated.threads.form.label.sender" path="sender"/>
+	<acme:form-textbox code="authenticated.threads.form.label.recipient" path="recipient"/>
+	
 	<button type="button" onclick="javascript: pushReturnUrl('/authenticated/thread/show?id=${id}');
-	redirect('/authenticated/message/list?id=${id}')" class="btn btn-primary">
-	<acme:message code="authenticated.threads.form.label.message"/>
+	redirect('/authenticated/message/sender/list?id=${id}')" class="btn btn-primary">
+	<acme:message code="authenticated.threads.form.label.message.sender"/>
+	</button>	
+	<button type="button" onclick="javascript: pushReturnUrl('/authenticated/thread/show?id=${id}');
+	redirect('/authenticated/message/recipient/list?id=${id}')" class="btn btn-primary">
+	<acme:message code="authenticated.threads.form.label.message.recipient"/>
 	</button>				
 	<acme:form-return code="authenticated.threads.form.button.return"/>
 </acme:form>

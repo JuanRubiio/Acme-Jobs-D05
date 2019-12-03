@@ -37,6 +37,18 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `audit_record` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `moment` datetime(6),
+        `status` varchar(255),
+        `title` varchar(255),
+        `auditor_id` integer not null,
+        `job_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `auditor` (
        `id` integer not null,
         `version` integer not null,
@@ -45,7 +57,7 @@
         `responsability_statement` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
-  
+
     create table `authenticated` (
        `id` integer not null,
         `version` integer not null,
@@ -59,6 +71,7 @@
         `picture` varchar(255),
         `slogan` varchar(255),
         `target` varchar(255),
+        `sponsor_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -86,6 +99,7 @@
         `picture` varchar(255),
         `slogan` varchar(255),
         `target` varchar(255),
+        `sponsor_id` integer not null,
         `cvv` integer not null,
         `credit_card` varchar(255),
         `month_expired` integer not null,
@@ -114,6 +128,17 @@
         `user_account_id` integer,
         `company` varchar(255),
         `sector` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `credit_card` (
+       `id` integer not null,
+        `version` integer not null,
+        `cvv` integer not null,
+        `credit_card` varchar(255),
+        `month_expired` integer not null,
+        `year_expired` integer not null,
+        `sponsor_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -202,7 +227,9 @@
         `moment` datetime(6),
         `tags` varchar(255),
         `title` varchar(255),
-        `authenticated_id` integer not null,
+        `recipient_id` integer not null,
+        `sender_id` integer not null,
+        `thread_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -212,6 +239,7 @@
         `picture` varchar(255),
         `slogan` varchar(255),
         `target` varchar(255),
+        `sponsor_id` integer not null,
         `jingle` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
@@ -269,22 +297,22 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `sponsor` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `organisation_name` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `thread` (
        `id` integer not null,
         `version` integer not null,
         `moment` datetime(6),
         `title` varchar(255),
+        `recipient_id` integer not null,
+        `sender_id` integer not null,
         primary key (`id`)
-    ) engine=InnoDB;
-
-    create table `thread_authenticated` (
-       `thread_id` integer not null,
-        `authenticateds_id` integer not null
-    ) engine=InnoDB;
-
-    create table `thread_message` (
-       `thread_id` integer not null,
-        `messages_id` integer not null
     ) engine=InnoDB;
 
     create table `user_account` (
@@ -317,6 +345,9 @@
     alter table `application` 
        add constraint UK_rf84q38qr35ymh5nn0dcxfdue unique (`reference_number`);
 create index IDXnr284tes3x8hnd3h716tmb3fr on `challenge` (`deadline`);
+
+    alter table `credit_card` 
+       add constraint UK_4cr95y27s8ti6otoyflmma6oy unique (`sponsor_id`);
 create index IDXfdmpnr8o4phmk81sqsano16r on `job` (`deadline`);
 create index IDX28ur9xm72oo1df9g14xhnh8h3 on `job` (`status`);
 
@@ -332,9 +363,6 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
 
     alter table `request` 
        add constraint UK_9mxq3powq8tqctclj0fbi2nih unique (`ticker`);
-
-    alter table `thread_message` 
-       add constraint UK_3jtjeexb82n6qyr77gcoqr4ck unique (`messages_id`);
 
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);
@@ -359,6 +387,16 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
        foreign key (`worker_id`) 
        references `worker` (`id`);
 
+    alter table `audit_record` 
+       add constraint `FKdcrrgv6rkfw2ruvdja56un4ji` 
+       foreign key (`auditor_id`) 
+       references `auditor` (`id`);
+
+    alter table `audit_record` 
+       add constraint `FKlbvbyimxf6pxvbhkdd4vfhlnd` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
+
     alter table `auditor` 
        add constraint FK_clqcq9lyspxdxcp6o4f3vkelj 
        foreign key (`user_account_id`) 
@@ -369,10 +407,25 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
+    alter table `banner` 
+       add constraint `FKjoxwdnjr54soq3j89kt3fgrtj` 
+       foreign key (`sponsor_id`) 
+       references `sponsor` (`id`);
+
+    alter table `commercial_banner` 
+       add constraint FK_q9id3wc65gg49afc5tlr1c00n 
+       foreign key (`sponsor_id`) 
+       references `sponsor` (`id`);
+
     alter table `consumer` 
        add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `credit_card` 
+       add constraint `FK31l5hvh7p1nx1aw6v649gw3rc` 
+       foreign key (`sponsor_id`) 
+       references `sponsor` (`id`);
 
     alter table `duty` 
        add constraint `FKs2uoxh4i5ya8ptyefae60iao1` 
@@ -390,21 +443,46 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
        references `employer` (`id`);
 
     alter table `message` 
-       add constraint `FK3ny0h1379q528toyokq81noiu` 
-       foreign key (`authenticated_id`) 
-       references `authenticated` (`id`);
+       add constraint `FKia3p9sxpmnofkfldrd7vcsh7l` 
+       foreign key (`recipient_id`) 
+       references `user_account` (`id`);
+
+    alter table `message` 
+       add constraint `FKkajds58b00e2wf9dge5biqf3p` 
+       foreign key (`sender_id`) 
+       references `user_account` (`id`);
+
+    alter table `message` 
+       add constraint `FK28hjkn063wrsjuiyyf8sm3s2v` 
+       foreign key (`thread_id`) 
+       references `thread` (`id`);
+
+    alter table `non_commercial_banner` 
+       add constraint FK_2l8gpcwh19e7jj513or4r9dvb 
+       foreign key (`sponsor_id`) 
+       references `sponsor` (`id`);
 
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
+    alter table `sponsor` 
+       add constraint FK_20xk0ev32hlg96kqynl6laie2 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
+    alter table `thread` 
+       add constraint `FKidas5c273n1msrfutgci7np3j` 
+       foreign key (`recipient_id`) 
+       references `user_account` (`id`);
+
+    alter table `thread` 
+       add constraint `FK7l9cby7ycfrtiaueqtiayiumr` 
+       foreign key (`sender_id`) 
+       references `user_account` (`id`);
+
     alter table `worker` 
        add constraint FK_l5q1f33vs2drypmbdhpdgwfv3 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
-
-    alter table `thread_authenticated` 
-       add constraint `FK1e718rov5gxl1f3tgjtl6vhtg` 
-       foreign key (`authenticateds_id`) 
-       references `authenticated` (`id`);

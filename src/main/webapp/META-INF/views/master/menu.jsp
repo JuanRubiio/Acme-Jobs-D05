@@ -79,6 +79,12 @@
 		
 		<acme:menu-option code="master.menu.employer" access="hasRole('Employer') && hasRole('Provider')"> 
 			<acme:menu-suboption code="master.menu.employer.provider.list" action="/employer/job/list-mine"/>
+			<acme:menu-suboption code="master.menu.employer.application.list" action="/employer/application/list-mine"/>
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.sponsor" access="hasRole('Sponsor')"> 
+			<acme:menu-suboption code="master.menu.sponsor.noncommercialBanner.list" action="/sponsor/non-commercial-banner/list"/>
+			<acme:menu-suboption code="master.menu.sponsor.commercialBanner.list" action="/sponsor/commercial-banner/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
@@ -92,6 +98,10 @@
 			<acme:menu-suboption code="master.menu.authenticated.threads" action="/authenticated/thread/list-mine" />
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.authenticated.auditor" access="hasRole('Auditor')">
+			<acme:menu-suboption code="master.menu.authenticated.auditor.listMineJobs" action="/auditor/job/list-mine" />
+			<acme:menu-suboption code="master.menu.authenticated.auditor.listOthers" action="/auditor/job/list-others" />
+		</acme:menu-option>
 			
 			
 	</acme:menu-left>
