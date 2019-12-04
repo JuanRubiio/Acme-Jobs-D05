@@ -18,7 +18,7 @@ authenticated.message.form.button.return = Volver
 
 authenticated.message.list.label.title = Título
 authenticated.message.list.label.tags = Etiquetas
-authenticated.message.list.label.body = Cuerpo
+authenticated.message.list.label.moment = Fecha
 authenticated.message.list.button.return = Volver
 
 authenticated.message.form.label.sender = Emisor

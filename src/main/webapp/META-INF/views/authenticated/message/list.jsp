@@ -22,7 +22,7 @@
 	<acme:list-column code="authenticated.message.form.label.sender" path="sender"  width="15%"/>
 	<acme:list-column code="authenticated.message.form.label.recipient" path="recipient"  width="15%"/>
 	<acme:list-column code="authenticated.message.list.label.tags" path="tags"  width="15%"/>
-	<acme:list-column code="authenticated.message.list.label.body" path="body"  width="40%"/>
+	<acme:list-column code="authenticated.message.list.label.moment" path="moment"  width="40%"/>
 </acme:list>
 
 <acme:form-return code="authenticated.message.form.button.return"/>
