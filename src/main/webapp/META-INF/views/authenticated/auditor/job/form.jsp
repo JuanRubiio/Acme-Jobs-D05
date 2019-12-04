@@ -35,6 +35,7 @@
 	<acme:form-return code="authenticated.auditor.job.form.button.return" />
 	<acme:form-submit code="authenticated.employer.job.form.label.active.duty" action="/auditor/duty/list?id=${id}" method="get"/>
 	
+	
 	<acme:form-submit code="master.menu.anonymous.listAuditRecords" action="/auditor/audit-record/list-mine?id=${id}" method="get" />
 	
 </acme:form>
