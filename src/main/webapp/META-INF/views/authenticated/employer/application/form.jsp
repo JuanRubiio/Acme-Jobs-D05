@@ -17,6 +17,6 @@
 	<acme:form-hidden path="id"/>
 	
 	<acme:form-return code="authenticated.employer.application.form.button.return"/>
-	<acme:form-submit code="authenticated.employer.application.form.label.worker" action="/employer/worker/list?id=${id}" method="get"/>
+	<acme:form-submit code="authenticated.employer.application.form.label.worker" action="/employer/worker/show?id=${id}" method="get"/>
 </acme:form>
 

@@ -45,8 +45,11 @@ public class EmployerWorkerShowService implements AbstractShowService<Employer, 
 		Worker result;
 		int id;
 
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneById(id);
+		String[] aux = request.getServletRequest().getQueryString().trim().split("=");
+		request.getServletRequest().getQueryString();
+		id = Integer.parseInt(aux[1]);
+
+		result = this.repository.findOneWorkerByApplication(id);
 
 		return result;
 	}

@@ -51,11 +51,12 @@ public class WorkerJobShowService implements AbstractShowService<Worker, Job> {
 	public Job findOne(final Request<Job> request) {
 		assert request != null;
 
-		int jobId;
+		int id;
 		Job job;
-
-		jobId = request.getModel().getInteger("id");
-		job = this.repository.findJobById(jobId);
+		String[] aux = request.getServletRequest().getQueryString().trim().split("=");
+		request.getServletRequest().getQueryString();
+		id = Integer.parseInt(aux[1]);
+		job = this.repository.getOneJobToApplication(id);
 		return job;
 	}
 
