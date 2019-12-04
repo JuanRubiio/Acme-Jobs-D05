@@ -8,6 +8,7 @@ import acme.entities.banners.CommercialBanner;
 import acme.entities.roles.Sponsor;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -19,9 +20,20 @@ public class SponsorCommercialBannerShowService implements AbstractShowService<S
 
 	@Override
 	public boolean authorise(final Request<CommercialBanner> request) {
-		assert request != null;
+		boolean result;
+		int cmbId;
 
-		return true;
+		CommercialBanner cmb;
+		Sponsor sponsor;
+		Principal principal;
+
+		cmbId = request.getModel().getInteger("id");
+		cmb = this.repository.findOneById(cmbId);
+		sponsor = cmb.getSponsor();
+		principal = request.getPrincipal();
+
+		result = sponsor.getUserAccount().getId() == principal.getAccountId();
+		return result;
 	}
 
 	@Override

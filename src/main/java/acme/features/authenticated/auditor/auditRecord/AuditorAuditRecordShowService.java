@@ -8,6 +8,7 @@ import acme.entities.auditRecord.AuditRecord;
 import acme.entities.roles.Auditor;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -19,9 +20,20 @@ public class AuditorAuditRecordShowService implements AbstractShowService<Audito
 
 	@Override
 	public boolean authorise(final Request<AuditRecord> request) {
-		assert request != null;
+		boolean result;
+		int arId;
 
-		return true;
+		AuditRecord ar;
+		Auditor auditor;
+		Principal principal;
+
+		arId = request.getModel().getInteger("id");
+		ar = this.repository.findOneAuditRecordById(arId);
+		auditor = ar.getAuditor();
+		principal = request.getPrincipal();
+
+		result = auditor.getUserAccount().getId() == principal.getAccountId();
+		return result;
 	}
 
 	@Override

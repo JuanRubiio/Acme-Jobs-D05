@@ -523,6 +523,34 @@
 		<property name="userAccount" ref="auditorUserAccount" />
 	</bean>
 	
+	<bean name="auditorUserAccount2" class="acme.framework.entities.UserAccount">
+		<property name="username" value="auditor2" />
+		<property name="password" value="auditor2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Auditor" />
+				<property name="surname" value="Two" />
+				<property name="email" value="auditor.two@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="auditorAuditor2" />
+				<ref bean="auditorAuthenticated2" />
+			</list>
+		</property>
+	</bean>
+	<bean name="auditorAuditor2" class="acme.entities.roles.Auditor">
+		<property name="firm" value="Acme Handyjob" />
+		<property name="responsabilityStatement" value="Testing" />
+		<property name="userAccount" ref="auditorUserAccount2" />
+	</bean>
+	
+	<bean name="auditorAuthenticated2" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="auditorUserAccount2" />
+	</bean>
+	
  
 	<bean id="job1" class="acme.entities.job.Job">
 		<property name="reference" value="EMP1-JOB1"/>
@@ -630,7 +658,15 @@
 		<property name="body" value="example body 06"/>
 		<property name="auditor" ref="auditorAuditor"/>
 		<property name="job" ref="job4"/>
-	</bean>		
+	</bean>	
+	<bean id="auditRecord07" class="acme.entities.auditRecord.AuditRecord">
+		<property name="title" value="Pruebas Autorización"/>
+		<property name="moment" value="2017/01/20 11:00"/>
+		<property name="status" value="Published"/>
+		<property name="body" value="example body 06"/>
+		<property name="auditor" ref="auditorAuditor2"/>
+		<property name="job" ref="job4"/>
+	</bean>	
 
 	<bean id="duty1" class="acme.entities.duty.Duty">
 		<property name="title" value="titulo de duty1"/>
