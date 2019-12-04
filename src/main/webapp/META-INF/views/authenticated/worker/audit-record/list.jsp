@@ -16,15 +16,12 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-
 <acme:list>
-	<acme:list-column code="authenticated.message.list.label.title" path="title" width="15%"/>
-	<acme:list-column code="authenticated.message.form.label.sender" path="sender"  width="15%"/>
-	<acme:list-column code="authenticated.message.form.label.recipient" path="recipient"  width="15%"/>
-	<acme:list-column code="authenticated.message.list.label.tags" path="tags"  width="15%"/>
-	<acme:list-column code="authenticated.message.list.label.moment" path="moment"  width="40%"/>
+	<acme:list-column code="authenticated.auditor.audit-record.list.label.title" path="title" width="40%"/>
+	<acme:list-column code="authenticated.auditor.audit-record.list.label.moment" path="moment" width="20%"/>
+	<acme:list-column code="authenticated.auditor.audit-record.list.label.status" path="status" width="40%"/>
 </acme:list>
+	<acme:form-return code="authenticated.auditor.audit-record.form.button.return"/>
 
-<acme:form-return code="authenticated.message.form.button.return"/>
 
 

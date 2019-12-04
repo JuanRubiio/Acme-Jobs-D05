@@ -18,7 +18,7 @@
 	
 	
 	<acme:form-return code="authenticated.worker.application.form.button.return"/>
-	<acme:form-submit code="authenticated.worker.application.form.label.job" action="/worker/job/list?id=${id}" method="get"/>
+	<acme:form-submit code="authenticated.worker.application.form.label.job" action="/worker/job/show?id=${id}" method="get"/>
 	
 </acme:form>
 

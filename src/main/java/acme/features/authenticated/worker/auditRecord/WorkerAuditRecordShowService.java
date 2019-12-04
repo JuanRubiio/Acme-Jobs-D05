@@ -1,39 +1,27 @@
 
-package acme.features.authenticated.auditor.auditRecord;
+package acme.features.authenticated.worker.auditRecord;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.auditRecord.AuditRecord;
-import acme.entities.roles.Auditor;
+import acme.entities.roles.Worker;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuditorAuditRecordShowService implements AbstractShowService<Auditor, AuditRecord> {
+public class WorkerAuditRecordShowService implements AbstractShowService<Worker, AuditRecord> {
 
 	@Autowired
-	AuditorAuditRecordRepository repository;
+	WorkerAuditRecordRepository repository;
 
 
 	@Override
 	public boolean authorise(final Request<AuditRecord> request) {
-		boolean result;
-		int arId;
+		assert request != null;
 
-		AuditRecord ar;
-		Auditor auditor;
-		Principal principal;
-
-		arId = request.getModel().getInteger("id");
-		ar = this.repository.findOneAuditRecordById(arId);
-		auditor = ar.getAuditor();
-		principal = request.getPrincipal();
-
-		result = auditor.getUserAccount().getId() == principal.getAccountId();
-		return result;
+		return true;
 	}
 
 	@Override

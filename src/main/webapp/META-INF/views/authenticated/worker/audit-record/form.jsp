@@ -1,6 +1,5 @@
-
 <%--
-- list.jsp
+- form.jsp
 -
 - Copyright (c) 2019 Rafael Corchuelo.
 -
@@ -16,15 +15,11 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-
-<acme:list>
-	<acme:list-column code="authenticated.message.list.label.title" path="title" width="15%"/>
-	<acme:list-column code="authenticated.message.form.label.sender" path="sender"  width="15%"/>
-	<acme:list-column code="authenticated.message.form.label.recipient" path="recipient"  width="15%"/>
-	<acme:list-column code="authenticated.message.list.label.tags" path="tags"  width="15%"/>
-	<acme:list-column code="authenticated.message.list.label.moment" path="moment"  width="40%"/>
-</acme:list>
-
-<acme:form-return code="authenticated.message.form.button.return"/>
-
-
+<acme:form readonly="true">
+	<acme:form-textbox code="authenticated.auditor.audit-record.form.label.title" path="title"/>
+	<acme:form-moment code="authenticated.auditor.audit-record.form.label.moment" path="moment"/>
+	<acme:form-textbox code="authenticated.auditor.audit-record.form.label.status" path="status"/>
+	<acme:form-textarea code="authenticated.auditor.audit-record.form.label.body" path="body"/>
+  	
+  	<acme:form-return code="authenticated.auditor.audit-record.form.button.return"/>
+</acme:form>

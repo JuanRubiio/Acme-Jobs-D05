@@ -1,24 +1,22 @@
 
-package acme.features.authenticated.auditor.auditRecord;
+package acme.features.authenticated.worker.auditRecord;
 
 import java.util.Collection;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.auditRecord.AuditRecord;
-import acme.entities.roles.Auditor;
+import acme.entities.roles.Worker;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuditorAuditRecordListMineService implements AbstractListService<Auditor, AuditRecord> {
+public class WorkerAuditRecordListMineService implements AbstractListService<Worker, AuditRecord> {
 
 	@Autowired
-	AuditorAuditRecordRepository repository;
+	WorkerAuditRecordRepository repository;
 
 
 	@Override
@@ -42,15 +40,9 @@ public class AuditorAuditRecordListMineService implements AbstractListService<Au
 
 		assert request != null;
 		int jobId;
-		int idPri;
-		Principal principal;
-
-		principal = request.getPrincipal();
-		idPri = principal.getAccountId();
-		List<AuditRecord> result;
+		Collection<AuditRecord> result;
 		jobId = request.getModel().getInteger("id");
-
-		result = this.repository.findManyByJobId(jobId, idPri);
+		result = this.repository.findManyByJobId(jobId);
 
 		return result;
 	}
