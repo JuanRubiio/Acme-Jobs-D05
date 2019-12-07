@@ -10,29 +10,22 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.authenticated.worker.application;
-
-import java.util.Collection;
+package acme.features.authenticated.sponsor;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import acme.entities.applications.Application;
+import acme.entities.roles.Sponsor;
+import acme.framework.entities.UserAccount;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface WorkerApplicationRepository extends AbstractRepository {
+public interface AuthenticatedSponsorRepository extends AbstractRepository {
 
-	@Query("select a from Application a")
-	Collection<Application> findAllApplications();
+	@Query("select ua from UserAccount ua where ua.id = ?1")
+	UserAccount findOneUserAccountById(int id);
 
-	@Query("select a from Application a where a.id = ?1")
-	Application findOneById(int id);
-
-	@Query("select count(a) from Application a")
-	Integer numberApplications();
-
-	@Query("select a from Application a where a.worker.id = ?1")
-	Collection<Application> findAllApplicationToWorker(int id);
+	@Query("select w from Sponsor w where w.userAccount.id = ?1")
+	Sponsor findOneSponsorByUserAccountId(int id);
 
 }
