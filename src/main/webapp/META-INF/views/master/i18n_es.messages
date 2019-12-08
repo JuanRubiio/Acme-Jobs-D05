@@ -96,6 +96,7 @@ master.menu.worker.application.list = Mis Aplicaciones
 # master.menu.employer ##########################################################
  
  master.menu.employer = Empleado
+ master.menu.employer.create = Crear Trabajo
  master.menu.employer.provider.list = Lista de Trabajos propios
  master.menu.employer.worker.list = Trabajadores
 master.menu.employer.application.list  = Lista de mis solicitudes
