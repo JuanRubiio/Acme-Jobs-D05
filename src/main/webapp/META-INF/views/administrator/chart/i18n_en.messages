@@ -3,3 +3,6 @@ administrator.chart.totalNumberCompanySector = Total number company by sector
 administrator.chart.totalNumberInvestorSector =  Total number investor by sector
 administrator.chart.totalNumberJobStatus = Total number jobs by status
 administrator.chart.totalNumberApplicationStatus = Total number applications by status
+administrator.chart.totalpendingAppFourWeeks = Time series with the number of pending applications per day during the last four weeks
+administrator.chart.totalAcceptedAppFourWeeks = Time series with the number of accepted applications per day during the last four weeks
+administrator.chart.totalRejectedAppFourWeeks = Time series with the number of rejected applications per day during the last four weeks

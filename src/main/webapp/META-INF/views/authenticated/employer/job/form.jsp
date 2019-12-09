@@ -28,6 +28,7 @@
 	<acme:form-submit test="${command == 'update'}" code="administrator.companyrecord.form.button.update" action="/employer/job/update"/>
 	<acme:form-submit test="${command == 'delete'}" code="administrator.companyrecord.form.button.delete" action="/employer/job/delete"/>
 <jstl:if test="${command == 'show'}">
+	<acme:form-submit code="authenticated.employer.job.form.label.create.duty" action="/employer/duty/create?id=${id}" method="get"/>
 	<acme:form-submit code="authenticated.employer.job.form.label.active.duty" action="/employer/duty/list?id=${id}" method="get"/>
 	<acme:form-submit code="authenticated.employer.job.form.label.application" action="/employer/application/list?id=${id}" method="get"/>
 	<acme:form-submit code="master.menu.anonymous.listAuditRecords" action="/employer/audit-record/list-mine?id=${id}" method="get" />

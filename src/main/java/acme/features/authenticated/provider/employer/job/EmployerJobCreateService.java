@@ -2,6 +2,7 @@
 package acme.features.authenticated.provider.employer.job;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
@@ -10,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.customisationParameters.CustomisationParameters;
+import acme.entities.duty.Duty;
 import acme.entities.job.Job;
 import acme.entities.roles.Employer;
 import acme.framework.components.Errors;
@@ -86,7 +88,7 @@ public class EmployerJobCreateService implements AbstractCreateService<Employer,
 
 	@Override
 	public void create(final Request<Job> request, final Job entity) {
-		Date d = new Date();
+		Date date = new Date();
 		CustomisationParameters custom = this.repository.findCustomParameters();
 
 		double contSpam = 0.0;
@@ -113,7 +115,16 @@ public class EmployerJobCreateService implements AbstractCreateService<Employer,
 			}
 		}
 
-		if (entity.getDeadline().after(d) && "Published".equals(entity.getStatus()) && contSpam < custom.getSpamThreshold()) {
+		int idJob = entity.getId();
+		Double total = new Double(0);
+		Collection<Duty> duties = this.repository.findAllDutiesToThisJob(idJob);
+		if (duties != null && !duties.isEmpty()) {
+			for (Duty d : duties) {
+				total = total + d.getPercentage();
+			}
+		}
+
+		if (entity.getDeadline().after(date) && "Published".equals(entity.getStatus()) && contSpam < custom.getSpamThreshold() && total == new Double(100)) {
 			entity.setActive(true);
 		}
 

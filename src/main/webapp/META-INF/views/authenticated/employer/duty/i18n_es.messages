@@ -9,3 +9,4 @@ authenticated.employer.job.form.label.active = Activo
 authenticated.employer.job.form.button.return = Volver
 authenticated.employer.job.form.label.percentage = Percentage
 authenticated.employer.job.form.label.active.duty = Servicios
+employer.duty.percentaje = Los servicios no pueden sumar hasta el 100% de la carga de trabajo semanal

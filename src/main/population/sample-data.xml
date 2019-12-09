@@ -751,7 +751,7 @@
 
 	 <bean id="application1" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="qwerty12"/>
-		<property name="moment" value="2011/01/12 00:00"/>
+		<property name="moment" value="2019/12/08 00:00"/>
 		<property name="status" value="Pending"/>
 		<property name="statement" value="hello"/>
 		<property name="skills" value="ninguna"/>
@@ -762,8 +762,8 @@
 	
 	 <bean id="application2" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="123456"/>
-		<property name="moment" value="2018/05/12 10:00"/>
-		<property name="status" value="Accepted"/>
+		<property name="moment" value="2019/12/08 00:00"/>
+		<property name="status" value="Pending"/>
 		<property name="statement" value="i am good worker"/>
 		<property name="skills" value="secretary"/>
 		<property name="qualifications" value="8.75"/>
@@ -773,8 +773,8 @@
 	
 	 <bean id="application3" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="974hf3da"/>
-		<property name="moment" value="2017/11/20 09:50"/>
-		<property name="status" value="Rejected"/>
+		<property name="moment" value="2019/11/25 09:50"/>
+		<property name="status" value="Pending"/>
 		<property name="statement" value="-_-"/>
 		<property name="skills" value="nothing"/>
 		<property name="qualifications" value="2.5"/>
@@ -784,8 +784,8 @@
 	
 	 <bean id="application4" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="EEEE:JJA1"/>
-		<property name="moment" value="2018/10/20 09:50"/>
-		<property name="status" value="Rejected"/>
+		<property name="moment" value="2019/11/08 09:50"/>
+		<property name="status" value="Pending"/>
 		<property name="statement" value="hello"/>
 		<property name="skills" value="2"/>
 		<property name="qualifications" value="6.5"/>
@@ -795,8 +795,8 @@
 
     
 	 <bean id="application5" class="acme.entities.applications.Application">
-		<property name="referenceNumber" value="EEEE:J981"/>
-		<property name="moment" value="2018/10/20 09:50"/>
+		<property name="referenceNumber" value="EEEE:J911"/>
+		<property name="moment" value="2019/11/20 09:50"/>
 		<property name="status" value="Rejected"/>
 		<property name="statement" value="hello"/>
 		<property name="skills" value="2"/>
@@ -804,6 +804,29 @@
 		<property name="worker" ref="workerWorker2"/>
 		<property name="job" ref="job1"/>
 	</bean>
+	
+	<bean id="application6" class="acme.entities.applications.Application">
+		<property name="referenceNumber" value="EEEE:J481"/>
+		<property name="moment" value="2019/11/26 09:50"/>
+		<property name="status" value="Accepted"/>
+		<property name="statement" value="hello"/>
+		<property name="skills" value="2"/>
+		<property name="qualifications" value="7"/>
+		<property name="worker" ref="workerWorker2"/>
+		<property name="job" ref="job1"/>
+	</bean>
+	
+	<bean id="application7" class="acme.entities.applications.Application">
+		<property name="referenceNumber" value="EEEE:J281"/>
+		<property name="moment" value="2019/12/01 09:50"/>
+		<property name="status" value="Rejected"/>
+		<property name="statement" value="hello"/>
+		<property name="skills" value="2"/>
+		<property name="qualifications" value="7"/>
+		<property name="worker" ref="workerWorker2"/>
+		<property name="job" ref="job1"/>
+	</bean>
+	
 	
 	<bean name="sponsorUserAccount" class="acme.framework.entities.UserAccount">
 			<property name="username" value="sponsor" />
