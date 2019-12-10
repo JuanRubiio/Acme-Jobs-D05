@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.duty.Duty;
+import acme.entities.job.Job;
 import acme.entities.roles.Employer;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
@@ -49,8 +50,13 @@ public class EmployerDutyCreateService implements AbstractCreateService<Employer
 	@Override
 	public Duty instantiate(final Request<Duty> request) {
 		Duty res;
-
 		res = new Duty();
+		String[] aux = request.getServletRequest().getQueryString().trim().split("=");
+		int idJob = Integer.parseInt(aux[1]);
+		Job job = this.repository.findJobById(idJob);
+		if (job != null) {
+			res.setJob(job);
+		}
 
 		return res;
 	}

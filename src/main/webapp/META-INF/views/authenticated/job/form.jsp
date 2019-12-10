@@ -3,7 +3,6 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags" %>
 
 <acme:form readonly="true">
-	<jstl:out value="authenticated  job"></jstl:out>
 	
 
 	<acme:form-textbox code="authenticated.employer.job.form.label.reference" path="reference" placeholder="EEEE-JJJJ"/>

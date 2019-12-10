@@ -17,15 +17,27 @@ import acme.framework.controllers.AbstractController;
 public class EmployerDutyController extends AbstractController<Employer, Duty> {
 
 	@Autowired
-	private EmployerDutyListService	listService;
+	private EmployerDutyListService		listService;
 
 	@Autowired
-	private EmployerDutyShowService	showService;
+	private EmployerDutyCreateService	createService;
+
+	@Autowired
+	private EmployerDutyDeleteService	deleteService;
+
+	@Autowired
+	private EmployerDutyUpdateService	updateService;
+
+	@Autowired
+	private EmployerDutyShowService		showService;
 
 
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 }

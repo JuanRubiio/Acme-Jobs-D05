@@ -1,17 +1,11 @@
 
 package acme.features.authenticated.provider.employer.job;
 
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.Date;
-import java.util.List;
 
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.customisationParameters.CustomisationParameters;
-import acme.entities.duty.Duty;
 import acme.entities.job.Job;
 import acme.entities.roles.Employer;
 import acme.framework.components.Errors;
@@ -60,6 +54,7 @@ public class EmployerJobCreateService implements AbstractCreateService<Employer,
 
 		res = new Job();
 		res.setEmployer(employer);
+		res.setActive(false);
 
 		return res;
 	}
@@ -88,45 +83,36 @@ public class EmployerJobCreateService implements AbstractCreateService<Employer,
 
 	@Override
 	public void create(final Request<Job> request, final Job entity) {
-		Date date = new Date();
-		CustomisationParameters custom = this.repository.findCustomParameters();
-
-		double contSpam = 0.0;
-		if (custom != null && StringUtils.isNotBlank(custom.getSpamWordsEn())) {
-			String engSpam = custom.getSpamWordsEn();
-			String[] arraySpam = engSpam.split(",");
-			List<String> listSpamEn = Arrays.asList(arraySpam);
-			for (String s : listSpamEn) {
-				if (entity.getDescription().contains(s) || entity.getTitle().contains(s)) {
-					contSpam++;
-				}
-
-			}
-		}
-		if (custom != null && StringUtils.isNotBlank(custom.getSpamWordsEs())) {
-			String esSpam = custom.getSpamWordsEs();
-			String[] arraySpam = esSpam.split(",");
-			List<String> listSpamEs = Arrays.asList(arraySpam);
-			for (String s : listSpamEs) {
-				if (entity.getDescription().contains(s) || entity.getTitle().contains(s)) {
-					contSpam++;
-				}
-
-			}
-		}
-
-		int idJob = entity.getId();
-		Double total = new Double(0);
-		Collection<Duty> duties = this.repository.findAllDutiesToThisJob(idJob);
-		if (duties != null && !duties.isEmpty()) {
-			for (Duty d : duties) {
-				total = total + d.getPercentage();
-			}
-		}
-
-		if (entity.getDeadline().after(date) && "Published".equals(entity.getStatus()) && contSpam < custom.getSpamThreshold() && total == new Double(100)) {
-			entity.setActive(true);
-		}
+		//		Date date = new Date();
+		//		CustomisationParameters custom = this.repository.findCustomParameters();
+		//
+		//		double contSpam = 0.0;
+		//		if (custom != null && StringUtils.isNotBlank(custom.getSpamWordsEn())) {
+		//			String engSpam = custom.getSpamWordsEn();
+		//			String[] arraySpam = engSpam.split(",");
+		//			List<String> listSpamEn = Arrays.asList(arraySpam);
+		//			for (String s : listSpamEn) {
+		//				if (entity.getDescription().contains(s) || entity.getTitle().contains(s)) {
+		//					contSpam++;
+		//				}
+		//
+		//			}
+		//		}
+		//		if (custom != null && StringUtils.isNotBlank(custom.getSpamWordsEs())) {
+		//			String esSpam = custom.getSpamWordsEs();
+		//			String[] arraySpam = esSpam.split(",");
+		//			List<String> listSpamEs = Arrays.asList(arraySpam);
+		//			for (String s : listSpamEs) {
+		//				if (entity.getDescription().contains(s) || entity.getTitle().contains(s)) {
+		//					contSpam++;
+		//				}
+		//
+		//			}
+		//		}
+		//
+		//		if (entity.getDeadline().after(date) && "Published".equals(entity.getStatus()) && contSpam < custom.getSpamThreshold()) {
+		//			entity.setActive(true);
+		//		}
 
 		this.repository.save(entity);
 	}
