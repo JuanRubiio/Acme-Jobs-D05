@@ -44,6 +44,7 @@ public class EmployerDutyCreateService implements AbstractCreateService<Employer
 		assert model != null;
 
 		request.unbind(entity, model, "title", "description", "percentage");
+		model.setAttribute("id", entity.getJob().getId());
 
 	}
 
@@ -51,8 +52,7 @@ public class EmployerDutyCreateService implements AbstractCreateService<Employer
 	public Duty instantiate(final Request<Duty> request) {
 		Duty res;
 		res = new Duty();
-		String[] aux = request.getServletRequest().getQueryString().trim().split("=");
-		int idJob = Integer.parseInt(aux[1]);
+		int idJob = request.getModel().getInteger("id");
 		Job job = this.repository.findJobById(idJob);
 		if (job != null) {
 			res.setJob(job);
@@ -67,17 +67,20 @@ public class EmployerDutyCreateService implements AbstractCreateService<Employer
 		assert entity != null;
 		assert errors != null;
 
-		String[] aux = request.getServletRequest().getQueryString().trim().split("=");
-		int idJob = Integer.parseInt(aux[1]);
+		int idJob = entity.getJob().getId();
 		Double total = new Double(0);
 		Collection<Duty> duties = this.repository.findAllByJob(idJob);
 		if (duties != null && !duties.isEmpty()) {
 			for (Duty d : duties) {
 				total = total + d.getPercentage();
 			}
+
 		}
+		total = total + entity.getPercentage();
 		if (total > new Double(100)) {
+			Double sobrante = total - 100;
 			errors.state(request, false, "percentage", "employer.duty.percentaje");
+			errors.state(request, false, "percentage", sobrante.toString() + "%");
 		}
 	}
 

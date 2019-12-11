@@ -85,13 +85,21 @@ public class EmployerDutyUpdateService implements AbstractUpdateService<Employer
 		Collection<Duty> duties = this.repository.findAllByJob(idJob);
 		if (duties != null && !duties.isEmpty()) {
 			for (Duty d : duties) {
+				if (d.getId() == entity.getId()) {
+					d.setPercentage(entity.getPercentage());
+				}
 				total = total + d.getPercentage();
 			}
+
 		}
 		if (total > new Double(100)) {
+			Double sobrante = total - 100;
 			errors.state(request, false, "percentage", "employer.duty.percentaje");
+			errors.state(request, false, "percentage", sobrante.toString() + "%");
 		}
-
+		if (entity.getJob().getActive().equals(true)) {
+			errors.state(request, false, "title", "employer.duty.jobActive");
+		}
 	}
 
 	@Override

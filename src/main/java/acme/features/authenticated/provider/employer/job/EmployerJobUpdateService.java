@@ -52,7 +52,7 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "active");
+		request.bind(entity, errors);
 	}
 
 	@Override
@@ -62,7 +62,7 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "deadline", "reference", "status", "salary", "link", "description");
+		request.unbind(entity, model, "title", "deadline", "reference", "status", "salary", "link", "description", "active");
 
 	}
 
@@ -133,6 +133,7 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 
 		int idJob = entity.getId();
 		Double total = new Double(0);
+		Double cien = new Double(100);
 		Collection<Duty> duties = this.repository.findAllDutiesToThisJob(idJob);
 		if (duties != null && !duties.isEmpty()) {
 			for (Duty d : duties) {
@@ -140,7 +141,7 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 			}
 		}
 
-		if (entity.getDeadline().after(date) && "Published".equals(entity.getStatus()) && contSpam < custom.getSpamThreshold() && total == new Double(100)) {
+		if (entity.getDeadline().after(date) && "Published".equals(entity.getStatus()) && contSpam < custom.getSpamThreshold() && total.equals(cien)) {
 			entity.setActive(true);
 		}
 
