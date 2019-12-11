@@ -285,6 +285,15 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `request_auditor` (
+       `id` integer not null,
+        `version` integer not null,
+        `firm` varchar(255),
+        `responsability_statement` varchar(255),
+        `authenticated_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `rivero_bulletin` (
        `id` integer not null,
         `version` integer not null,
@@ -363,6 +372,9 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
 
     alter table `request` 
        add constraint UK_9mxq3powq8tqctclj0fbi2nih unique (`ticker`);
+
+    alter table `request_auditor` 
+       add constraint UK_ei3fu6x562eyti7w3e0lsu522 unique (`authenticated_id`);
 
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);
@@ -466,6 +478,11 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `request_auditor` 
+       add constraint `FK9giuqpn53mab8yca7a3noeckl` 
+       foreign key (`authenticated_id`) 
+       references `authenticated` (`id`);
 
     alter table `sponsor` 
        add constraint FK_20xk0ev32hlg96kqynl6laie2 

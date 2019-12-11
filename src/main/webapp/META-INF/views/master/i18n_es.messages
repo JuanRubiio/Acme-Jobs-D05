@@ -68,6 +68,8 @@ master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.customisationparameters = Parámetros personalizados
 master.menu.administrator.chart = Chart
 
+master.menu.administrator.request.auditor = Lista de solicitudes de auditor
+
 # master.menu.auditor #########################################################
 
 master.menu.authenticated.auditor = Auditor
@@ -125,6 +127,8 @@ master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
+master.menu.user-account.auditor = Datos de Auditor
+master.menu.user-account.become-auditor = Hazte auditor
 
 ﻿# master.footer ###############################################################
 
