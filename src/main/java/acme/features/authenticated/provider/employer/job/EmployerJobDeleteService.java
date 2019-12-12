@@ -1,12 +1,14 @@
 
 package acme.features.authenticated.provider.employer.job;
 
+import java.util.Collection;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.applications.Application;
+import acme.entities.duty.Duty;
 import acme.entities.job.Job;
 import acme.entities.roles.Employer;
 import acme.framework.components.Errors;
@@ -69,6 +71,12 @@ public class EmployerJobDeleteService implements AbstractDeleteService<Employer,
 		List<Application> apps = this.repository.findAllApplicationToThisJob(entity.getId());
 		if (apps != null && !apps.isEmpty()) {
 			errors.state(request, false, "title", "employer.job.applications");
+
+		}
+		int idJob = entity.getId();
+		Collection<Duty> duties = this.repository.findAllDutiesToThisJob(idJob);
+		if (duties != null && !duties.isEmpty()) {
+			errors.state(request, false, "title", "employer.job.duties.delete");
 
 		}
 
