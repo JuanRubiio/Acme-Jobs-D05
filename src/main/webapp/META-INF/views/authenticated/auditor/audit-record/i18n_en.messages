@@ -16,3 +16,6 @@ authenticated.auditor.audit-record.form.label.moment = Moment
 authenticated.auditor.audit-record.form.label.status = Status
 authenticated.auditor.audit-record.form.label.body = Body
 authenticated.auditor.audit-record.form.button.return = Return
+
+auditor.auditRecord.form.label.status.published = Published
+auditor.auditRecord.form.label.status.draft = Draft

@@ -18,10 +18,10 @@
 <acme:form readonly="true">
 	<acme:form-textbox code="authenticated.employer.job.form.label.reference" path="reference" placeholder="EEEE-JJJJ"/>
 	<acme:form-textbox code="authenticated.employer.job.form.label.title" path="title"/>
-<%-- 	<acme:form-select code="authenticated.employer.job.form.label.status" path="status">
+ 	<acme:form-select code="authenticated.employer.job.form.label.status" path="status">
 		<acme:form-option code="Draft" value="Draft"/>
 		<acme:form-option code="Published" value="Published" />
-	</acme:form-select> --%>
+	</acme:form-select> 
 	<acme:form-textbox code="authenticated.employer.job.form.label.status" path="status"/>
 	<acme:form-moment code="authenticated.employer.job.form.label.deadline" path="deadline"/>
 	
