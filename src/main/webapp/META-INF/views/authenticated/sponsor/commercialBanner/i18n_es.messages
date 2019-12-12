@@ -5,6 +5,11 @@ sponsor.commercialBanner.form.label.creditCard = Tarjeta de Crédito:
 sponsor.commercialBanner.form.label.monthExpired = Mes Expiración:
 sponsor.commercialBanner.form.label.yearExpired = Año Expiración:
 sponsor.commercialBanner.form.label.CVV = CVV:
+sponsor.commercialBanner.sponsor.form.label.organisationName = Nombre de la Organización:
+
+sponsor.commercialBanner.form.button.create = Crear
+sponsor.commercialBanner.form.button.update = Editar
+sponsor.commercialBanner.form.button.delete = Eliminar
 sponsor.commercialBanner.form.button.return = Volver
 
 

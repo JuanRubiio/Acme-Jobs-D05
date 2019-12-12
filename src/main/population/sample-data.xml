@@ -756,6 +756,7 @@
 		<property name="statement" value="hello"/>
 		<property name="skills" value="ninguna"/>
 		<property name="qualifications" value="7.5"/>
+		<property name="messageRejected"><null/></property>
 		<property name="worker" ref="workerWorker"/>
 		<property name="job" ref="job4"/>
 	</bean>
@@ -768,6 +769,7 @@
 		<property name="skills" value="secretary"/>
 		<property name="qualifications" value="8.75"/>
 		<property name="worker" ref="workerWorker"/>
+		<property name="messageRejected"><null/></property>
 		<property name="job" ref="job5"/>
 	</bean>
 	
@@ -778,6 +780,7 @@
 		<property name="statement" value="-_-"/>
 		<property name="skills" value="nothing"/>
 		<property name="qualifications" value="2.5"/>
+		<property name="messageRejected" value="no tienes el perfil que buscamos"/>
 		<property name="worker" ref="workerWorker"/>
 		<property name="job" ref="job3"/>
 	</bean>
@@ -789,6 +792,7 @@
 		<property name="statement" value="hello"/>
 		<property name="skills" value="2"/>
 		<property name="qualifications" value="6.5"/>
+		<property name="messageRejected" value="no tienes el perfil que buscamos"/>
 		<property name="worker" ref="workerWorker"/>
 		<property name="job" ref="job1"/>
 	</bean>
@@ -799,8 +803,9 @@
 		<property name="moment" value="2019/11/20 09:50"/>
 		<property name="status" value="Rejected"/>
 		<property name="statement" value="hello"/>
-		<property name="skills" value="2"/>
+		<property name="skills" value="1"/>
 		<property name="qualifications" value="7"/>
+		<property name="messageRejected"><null/></property>
 		<property name="worker" ref="workerWorker2"/>
 		<property name="job" ref="job1"/>
 	</bean>
@@ -827,6 +832,30 @@
 		<property name="job" ref="job1"/>
 	</bean>
 	
+	
+	<bean id="application8" class="acme.entities.applications.Application">
+		<property name="referenceNumber" value="EEEE:0990"/>
+		<property name="moment" value="2019/3/12 19:50"/>
+		<property name="status" value="Pending"/>
+		<property name="statement" value="prueba"/>
+		<property name="skills" value="5"/>
+		<property name="qualifications" value="8"/>
+		<property name="messageRejected"><null/></property>
+		<property name="worker" ref="workerWorker"/>
+		<property name="job" ref="job1"/>
+	</bean>
+	
+	<bean id="application9" class="acme.entities.applications.Application">
+		<property name="referenceNumber" value="EEEE:YTGB"/>
+		<property name="moment" value="2019/12/12 19:50"/>
+		<property name="status" value="Pending"/>
+		<property name="statement" value="text"/>
+		<property name="skills" value="2"/>
+		<property name="qualifications" value="4"/>
+		<property name="messageRejected"><null/></property>
+		<property name="worker" ref="workerWorker"/>
+		<property name="job" ref="job1"/>
+	</bean>
 	
 	<bean name="sponsorUserAccount" class="acme.framework.entities.UserAccount">
 			<property name="username" value="sponsor" />

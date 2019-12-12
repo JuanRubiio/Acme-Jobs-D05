@@ -1,22 +1,26 @@
 
-package acme.features.administrator.commercialBanner;
+package acme.features.authenticated.sponsor.commercialBanner;
 
+import java.util.Arrays;
+import java.util.List;
+
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.banners.CommercialBanner;
+import acme.entities.customisationParameters.CustomisationParameters;
 import acme.entities.roles.Sponsor;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractCreateService;
 
 @Service
-public class AdministratorCommercialBannerCreateService implements AbstractCreateService<Administrator, CommercialBanner> {
+public class SponsorCommercialBannerCreateService implements AbstractCreateService<Sponsor, CommercialBanner> {
 
 	@Autowired
-	AdministratorCommercialBannerRepository repository;
+	SponsorCommercialBannerRepository repository;
 
 
 	@Override
@@ -63,10 +67,53 @@ public class AdministratorCommercialBannerCreateService implements AbstractCreat
 		assert entity != null;
 		assert errors != null;
 
+		CustomisationParameters custom = this.repository.findCustomParameters();
+
+		double contSpam1 = 0.0;
+		double contSpam2 = 0.0;
+
+		if (custom != null && StringUtils.isNotBlank(custom.getSpamWordsEn())) {
+			String engSpam = custom.getSpamWordsEn();
+			String[] arraySpam = engSpam.split(",");
+			List<String> listSpamEn = Arrays.asList(arraySpam);
+			for (String s : listSpamEn) {
+				if (entity.getPicture().contains(s)) {
+					contSpam1++;
+				}
+				if (entity.getSlogan().contains(s)) {
+					contSpam2++;
+				}
+
+			}
+		}
+		if (custom != null && StringUtils.isNotBlank(custom.getSpamWordsEs())) {
+			String esSpam = custom.getSpamWordsEs();
+			String[] arraySpam = esSpam.split(",");
+			List<String> listSpamEs = Arrays.asList(arraySpam);
+			for (String s : listSpamEs) {
+				if (entity.getPicture().contains(s)) {
+					contSpam1++;
+				}
+				if (entity.getSlogan().contains(s)) {
+					contSpam2++;
+				}
+			}
+		}
+
+		if (contSpam1 > 0.0) {
+			errors.state(request, false, "picture", "There are spams in picture ");
+		}
+
+		if (contSpam2 > 0.0) {
+			errors.state(request, false, "slogan", "There are spams in slogan ");
+		}
+
 	}
 
 	@Override
 	public void create(final Request<CommercialBanner> request, final CommercialBanner entity) {
+		assert request != null;
+		assert entity != null;
 
 		this.repository.save(entity);
 	}

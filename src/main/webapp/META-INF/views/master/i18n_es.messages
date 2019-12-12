@@ -92,6 +92,8 @@ master.menu.consumer.offer.list = Listar Ofertas Activas
 
 master.menu.worker = Trabajador
 master.menu.worker.application.list = Mis Aplicaciones
+master.menu.worker.job.list = Trabajos Activos
+
 
 # master.menu.employer ##########################################################
  
@@ -100,13 +102,16 @@ master.menu.worker.application.list = Mis Aplicaciones
  master.menu.employer.provider.list = Lista de Trabajos propios
  master.menu.employer.worker.list = Trabajadores
 master.menu.employer.application.list  = Lista de mis solicitudes
+master.menu.employer.application.listgroup =  Solicitudes ordenadas por estado
 
  
  # master.menu.sponsor ##########################################################
 
 master.menu.sponsor = Patrocinadores
 master.menu.sponsor.noncommercialBanner.list = Mis Banner No Comerciales
+master.menu.sponsor.noncommercialBanner.create = Crear Banner No Comercial
 master.menu.sponsor.commercialBanner.list = Mis Banner Comerciales
+master.menu.sponsor.commercialBanner.create = Crear Banner Comercial
 
 
 # master.menu.authenticated ##########################################################

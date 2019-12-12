@@ -75,6 +75,7 @@
 		
 		<acme:menu-option code="master.menu.worker" access="hasRole('Worker')"> 
 			<acme:menu-suboption code="master.menu.worker.application.list" action="/worker/application/list" />
+			<acme:menu-suboption code="master.menu.worker.job.list" action="/worker/job/list-active" />
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.employer" access="hasRole('Employer') && !hasRole('Provider')"> 
@@ -86,11 +87,14 @@
 			<acme:menu-suboption code="master.menu.employer.provider.list" action="/employer/job/list-mine"/>
 			<acme:menu-suboption code="master.menu.employer.create" action="/employer/job/create"/>
 			<acme:menu-suboption code="master.menu.employer.application.list" action="/employer/application/list-mine"/>
+			<acme:menu-suboption code="master.menu.employer.application.listgroup" action="/employer/application/list-group"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.sponsor" access="hasRole('Sponsor')"> 
 			<acme:menu-suboption code="master.menu.sponsor.noncommercialBanner.list" action="/sponsor/non-commercial-banner/list"/>
+			<acme:menu-suboption code="master.menu.sponsor.noncommercialBanner.create" action="/sponsor/non-commercial-banner/create"/>
 			<acme:menu-suboption code="master.menu.sponsor.commercialBanner.list" action="/sponsor/commercial-banner/list"/>
+			<acme:menu-suboption code="master.menu.sponsor.commercialBanner.create" action="/sponsor/commercial-banner/create"/>	
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">

@@ -13,6 +13,7 @@
 package acme.features.authenticated.provider.employer.application;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -40,4 +41,7 @@ public interface EmployerApplicationRepository extends AbstractRepository {
 
 	@Query("select a from Application a where a.job.employer.id = ?1")
 	Collection<Application> findAllApplicationToThisEmployer(int id);
+
+	@Query("select a from Application a where a.job.employer.id = ?1 order by a.status asc")
+	List<Application> orderApplicationToThisEmployer(int id);
 }

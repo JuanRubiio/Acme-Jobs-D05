@@ -1,21 +1,21 @@
 
-package acme.features.administrator.noncommercialBanner;
+package acme.features.authenticated.sponsor.noncommercialBanner;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.banners.NonCommercialBanner;
+import acme.entities.roles.Sponsor;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Administrator;
-import acme.framework.services.AbstractUpdateService;
+import acme.framework.services.AbstractDeleteService;
 
 @Service
-public class AdministratorNonCommercialBannerUpdateService implements AbstractUpdateService<Administrator, NonCommercialBanner> {
+public class SponsorNonCommercialBannerDeleteService implements AbstractDeleteService<Sponsor, NonCommercialBanner> {
 
 	@Autowired
-	AdministratorNonCommercialBannerRepository repository;
+	SponsorNonCommercialBannerRepository repository;
 
 
 	@Override
@@ -65,12 +65,12 @@ public class AdministratorNonCommercialBannerUpdateService implements AbstractUp
 	}
 
 	@Override
-	public void update(final Request<NonCommercialBanner> request, final NonCommercialBanner entity) {
+	public void delete(final Request<NonCommercialBanner> request, final NonCommercialBanner entity) {
 
 		assert request != null;
 		assert entity != null;
 
-		this.repository.save(entity);
+		this.repository.delete(entity);
 	}
 
 }

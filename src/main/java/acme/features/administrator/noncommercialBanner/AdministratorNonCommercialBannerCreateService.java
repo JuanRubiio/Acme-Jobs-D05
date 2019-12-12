@@ -41,7 +41,7 @@ public class AdministratorNonCommercialBannerCreateService implements AbstractCr
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "picture", "slogan", "target", "jingle");
+		request.unbind(entity, model, "picture", "slogan", "target", "sponsor", "jingle");
 	}
 
 	@Override
@@ -49,6 +49,7 @@ public class AdministratorNonCommercialBannerCreateService implements AbstractCr
 		NonCommercialBanner result;
 
 		result = new NonCommercialBanner();
+
 		return result;
 	}
 
