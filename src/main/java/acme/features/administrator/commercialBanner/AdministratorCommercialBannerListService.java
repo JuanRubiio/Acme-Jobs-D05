@@ -55,7 +55,7 @@ public class AdministratorCommercialBannerListService implements AbstractListSer
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "picture", "slogan", "target", "creditCard", "monthExpired", "yearExpired", "CVV");
+		request.unbind(entity, model, "picture", "slogan", "target", "sponsor", "creditCard", "monthExpired", "yearExpired", "CVV");
 
 	}
 

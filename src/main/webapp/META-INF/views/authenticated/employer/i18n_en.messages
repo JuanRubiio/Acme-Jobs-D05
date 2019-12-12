@@ -1,0 +1,4 @@
+authenticated.consumer.employer.form.label.company = Company
+authenticated.consumer.employer.form.label.sector = Sector
+authenticated.employer.form.button.create = Crear
+authenticated.employer.form.button.update = Actualizar

@@ -2,10 +2,8 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags" %>
 
-<acme:form readonly="true">
+<acme:form>
 	<acme:form-textbox code="authenticated.worker.application.form.label.referenceNumber" path="referenceNumber" placeholder="EEEE-JJJJ:WWWW"/>
-	<acme:form-moment code="authenticated.worker.application.form.label.moment" path="moment"/>
-	<acme:form-textbox code="authenticated.worker.application.form.label.status" path="status"/>
 <%-- 	<acme:form-select code="authenticated.worker.application.form.label.status" path="status">
 		<acme:form-option code="Pending" value="pending"/>
 		<acme:form-option code="Accepted" value="accepted" />
@@ -18,7 +16,7 @@
 	
 	
 	<acme:form-return code="authenticated.worker.application.form.button.return"/>
-	<acme:form-submit code="authenticated.worker.application.form.label.job" action="/worker/job/show?id=${id}" method="get"/>
+	<acme:form-submit test="${command == 'create'}" code="authenticated.worker.application.form.button.create" action="/worker/application/create"/>
 	
 </acme:form>
 

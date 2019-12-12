@@ -24,4 +24,11 @@ public class Chart implements Serializable {
 	private List<String>		totalJobStatus;
 	private List<Integer>		totalNumberAppStatus;
 	private List<String>		totalAppStatus;
+	private List<Integer>		totalpendingAppFourWeeks;
+	private List<String>		pendingAppFourWeeks;
+	private List<Integer>		totalAcceptedAppFourWeeks;
+	private List<String>		acceptedAppFourWeeks;
+	private List<Integer>		totalRejectedAppFourWeeks;
+	private List<String>		rejectedAppFourWeeks;
+
 }

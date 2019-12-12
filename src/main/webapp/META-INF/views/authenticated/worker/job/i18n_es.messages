@@ -10,3 +10,4 @@ authenticated.employer.job.form.button.return = Volver
 authenticated.employer.job.form.label.percentage = Percentage
 authenticated.employer.job.form.label.active.duty = Servicios
 authenticated.employer.job.form.label.application = Aplicaciones
+authenticated.employer.job.form.label.create = Crear Solicitud para este trabajo

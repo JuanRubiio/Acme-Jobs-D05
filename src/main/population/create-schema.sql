@@ -26,6 +26,7 @@
     create table `application` (
        `id` integer not null,
         `version` integer not null,
+        `message_rejected` varchar(255),
         `moment` datetime(6),
         `qualifications` varchar(255),
         `reference_number` varchar(255),
@@ -350,6 +351,9 @@
     ) engine=InnoDB;
 
     insert into `hibernate_sequence` values ( 1 );
+create index IDXnlv6ege1ixororpblu3lctiev on `application` (`reference_number`);
+create index IDXg54pxa1gngqheaipukeg8jypk on `application` (`moment`);
+create index IDX2q2747fhp099wkn3j2yt05fhs on `application` (`status`);
 
     alter table `application` 
        add constraint UK_rf84q38qr35ymh5nn0dcxfdue unique (`reference_number`);

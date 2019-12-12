@@ -95,20 +95,27 @@ master.menu.consumer.offer.list = Active Offers List
 
 master.menu.worker = Worker
 master.menu.worker.application.list = My Applications List
+master.menu.worker.job.list = Job Actives
+
 
 
 # master.menu.employer ##########################################################
 
 master.menu.employer = Employer
+ master.menu.employer.create = Create Job
 master.menu.employer.provider.list = Mine Jobs List
  master.menu.employer.worker.list = Workers
 master.menu.employer.application.list  = Mine Application List
+master.menu.employer.application.listgroup =  Application order by status
 
 # master.menu.sponsor ##########################################################
 
 master.menu.sponsor = Sponsor
 master.menu.sponsor.noncommercialBanner.list = My NonCommercialBanner List
+master.menu.sponsor.noncommercialBanner.create = NonCommercialBanner Create
 master.menu.sponsor.commercialBanner.list = My CommercialBanner List
+master.menu.sponsor.commercialBanner.create = CommercialBanner Create
+
 
 
 # master.menu.authenticated ##########################################################
@@ -129,6 +136,12 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.worker = Worker data
+master.menu.user-account.become-worker = Become a worker
+master.menu.user-account.sponsor = Sponsor data
+master.menu.user-account.become-sponsor = Become a sponsor
+master.menu.user-account.employer = Employer data
+master.menu.user-account.become-employer = Become a employer
 master.menu.user-account.auditor = Auditor data
 master.menu.user-account.become-auditor = Become a auditor
 
