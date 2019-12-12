@@ -3,3 +3,4 @@ authenticated.worker.form.label.skillsRecord = Registro de habilidades
 authenticated.worker.form.button.create = Crear
 authenticated.worker.form.button.update = Editar
 authenticated.worker.form.button.return = Volver
+authenticated.worker.job.form.label.create = Crear Solicitud

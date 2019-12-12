@@ -2,6 +2,8 @@ administrator.noncommercialBanner.form.label.picture = Picture:
 administrator.noncommercialBanner.form.label.slogan = Slogan:
 administrator.noncommercialBanner.form.label.target = URL:
 administrator.noncommercialBanner.form.label.jingle = jingle:
+administrator.noncommercialBanner.form.label.sponsor = Sponsor:
+
 administrator.noncommercialBanner.form.button.update = Update
 administrator.noncommercialBanner.form.button.delete = Delete
 administrator.noncommercialBanner.form.button.create = Create

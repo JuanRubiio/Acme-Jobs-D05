@@ -31,7 +31,7 @@ public class AdministratorCommercialBannerUpdateService implements AbstractUpdat
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors);
+		request.bind(entity, errors, "sponsor");
 	}
 
 	@Override

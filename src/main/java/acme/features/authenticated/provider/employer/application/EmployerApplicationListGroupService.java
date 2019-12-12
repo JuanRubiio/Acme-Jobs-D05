@@ -2,6 +2,7 @@
 package acme.features.authenticated.provider.employer.application;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,7 @@ import acme.framework.components.Request;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class EmployerApplicationListMineService implements AbstractListService<Employer, Application> {
+public class EmployerApplicationListGroupService implements AbstractListService<Employer, Application> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -32,10 +33,10 @@ public class EmployerApplicationListMineService implements AbstractListService<E
 	public Collection<Application> findMany(final Request<Application> request) {
 		assert request != null;
 
-		Collection<Application> result;
+		List<Application> result;
 
 		int id = request.getPrincipal().getActiveRoleId();
-		result = this.repository.findAllApplicationToThisEmployer(id);
+		result = this.repository.orderApplicationToThisEmployer(id);
 
 		return result;
 	}
