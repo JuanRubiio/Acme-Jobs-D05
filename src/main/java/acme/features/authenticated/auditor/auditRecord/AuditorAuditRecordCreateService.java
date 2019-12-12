@@ -12,7 +12,6 @@ import acme.entities.roles.Auditor;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Principal;
 import acme.framework.services.AbstractCreateService;
 
 @Service
@@ -24,13 +23,11 @@ public class AuditorAuditRecordCreateService implements AbstractCreateService<Au
 
 	@Override
 	public boolean authorise(final Request<AuditRecord> request) {
+
 		assert request != null;
-		Principal principal = request.getPrincipal();
-		int jobId = request.getModel().getInteger("jobId");
-		Job job = this.repository.findJobById(jobId);
-		Date nowDate = new Date(System.currentTimeMillis());
-		boolean result = job.getDeadline().after(nowDate) && job.getStatus().equals("PUBLISHED");
-		return result || this.repository.countMyAuditRecords(jobId, principal.getActiveRoleId()) > 0;
+
+		return true;
+
 	}
 
 	@Override

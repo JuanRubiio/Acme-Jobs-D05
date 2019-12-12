@@ -105,9 +105,6 @@
 			<acme:menu-suboption code="master.menu.authenticated.auditor.listMineJobs" action="/auditor/job/list-mine" />
 			<acme:menu-suboption code="master.menu.authenticated.auditor.listOthers" action="/auditor/job/list-others" />
 			
-			
-			<acme:menu-suboption code="master.menu.authenticated.auditor.audit-record.create" action="/auditor/audit-record/create" />
-		
 		</acme:menu-option>
 			
 			

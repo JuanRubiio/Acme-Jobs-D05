@@ -23,3 +23,4 @@ authenticated.auditor.job.list.label.salary = Salary
 authenticated.auditor.job.list.label.deadline = Deadline
 
 master.menu.anonymous.listAuditRecords = Audit records
+master.menu.anonymous.createAuditRecord = Create Audit record
