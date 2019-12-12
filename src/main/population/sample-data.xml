@@ -817,6 +817,7 @@
 		<property name="statement" value="hello"/>
 		<property name="skills" value="2"/>
 		<property name="qualifications" value="7"/>
+		<property name="messageRejected"><null/></property>
 		<property name="worker" ref="workerWorker2"/>
 		<property name="job" ref="job1"/>
 	</bean>
@@ -828,6 +829,7 @@
 		<property name="statement" value="hello"/>
 		<property name="skills" value="2"/>
 		<property name="qualifications" value="7"/>
+		<property name="messageRejected"><null/></property>
 		<property name="worker" ref="workerWorker2"/>
 		<property name="job" ref="job1"/>
 	</bean>

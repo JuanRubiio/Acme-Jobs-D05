@@ -9,7 +9,7 @@ authenticated.employer.application.form.label.messageRejected = Respuesta:
 
 authenticated.employer.application.form.button.return = Volver
 authenticated.employer.application.form.button.update = Editar
-authenticated.employer.application.form.button.update = Editar
+authenticated.employer.application.form.button.update2 = Editar
 
 
 authenticated.employer.application.list.label.referenceNumber = Referencia Numérica
