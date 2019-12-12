@@ -79,6 +79,10 @@ public class EmployerDutyDeleteService implements AbstractDeleteService<Employer
 		assert entity != null;
 		assert errors != null;
 
+		if (entity.getJob().getActive().equals(true)) {
+			errors.state(request, false, "title", "employer.duty.jobActive");
+		}
+
 	}
 
 	@Override
