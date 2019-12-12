@@ -2,7 +2,11 @@ sponsor.noncommercialBanner.form.label.picture = Picture:
 sponsor.noncommercialBanner.form.label.slogan = Slogan:
 sponsor.noncommercialBanner.form.label.target = URL:
 sponsor.noncommercialBanner.form.label.jingle = jingle:
+sponsor.noncommercialBanner.sponsor.form.label.organisationName = OrganisationName:
 
+sponsor.noncommercialBanner.form.button.create = Create
+sponsor.noncommercialBanner.form.button.update = Update
+sponsor.noncommercialBanner.form.button.delete = Delete
 sponsor.noncommercialBanner.form.button.return = Return
 
 sponsor.noncommercialBanner.list.label.picture = Picture

@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.banners.CommercialBanner;
+import acme.entities.roles.Sponsor;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -47,8 +48,11 @@ public class AdministratorCommercialBannerCreateService implements AbstractCreat
 	@Override
 	public CommercialBanner instantiate(final Request<CommercialBanner> request) {
 		CommercialBanner result;
+		int sponsorId = request.getPrincipal().getAccountId();
+		Sponsor sponsor = this.repository.findSponsorById(sponsorId);
 
 		result = new CommercialBanner();
+		result.setSponsor(sponsor);
 		return result;
 	}
 

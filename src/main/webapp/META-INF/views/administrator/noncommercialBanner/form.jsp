@@ -6,6 +6,14 @@
 	<acme:form-textbox code="administrator.noncommercialBanner.form.label.picture" path="picture"/>
 	<acme:form-textbox code="administrator.noncommercialBanner.form.label.slogan" path="slogan"/>
 	<acme:form-url code="administrator.noncommercialBanner.form.label.target" path="target"/>
+
+<%-- 	<acme:form-select code="sponsor.noncommercialBanner.form.label.sponsor" path="sponsor">
+		<jstl:forEach var="s" items="${sponsor}">
+			System.out.println("sponsors "+sponsor);
+			<acme:form-option code="${sponsor}" value="${sponsor.id}"/>
+		</jstl:forEach>
+	</acme:form-select>
+	--%>
 	<acme:form-textbox code="administrator.noncommercialBanner.form.label.jingle" path="jingle"/>
 	<acme:form-submit test="${command == 'show'}" code="administrator.noncommercialBanner.form.button.update" action="/administrator/non-commercial-banner/update"/>
 	<acme:form-submit test="${command == 'show'}" code="administrator.noncommercialBanner.form.button.delete" action="/administrator/non-commercial-banner/delete"/>

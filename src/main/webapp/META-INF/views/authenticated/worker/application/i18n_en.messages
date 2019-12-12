@@ -7,6 +7,7 @@ authenticated.worker.application.form.label.qualifications = Qualifications
 authenticated.worker.application.form.label.worker = Worker
 authenticated.worker.application.form.button.return = Return
 authenticated.worker.application.form.label.job = Job
+authenticated.worker.application.form.button.create = Create
 
 
 

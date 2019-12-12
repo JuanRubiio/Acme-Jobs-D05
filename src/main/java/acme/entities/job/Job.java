@@ -10,7 +10,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -59,6 +58,7 @@ public class Job extends DomainEntity {
 	@URL
 	private String				link;
 
+	@NotNull
 	private Boolean				active;
 
 	@NotBlank
@@ -69,17 +69,6 @@ public class Job extends DomainEntity {
 	@ManyToOne(optional = false)
 	private Employer			employer;
 
-
 	//Relationships----------------------------
-
-	@Transient
-	public Boolean getActive() {
-		Boolean result = false;
-		Date d = new Date();
-		if (this.deadline.after(d) && "Published".equals(this.status)) {
-			result = true;
-		}
-		return result;
-	}
 
 }

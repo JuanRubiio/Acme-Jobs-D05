@@ -9,3 +9,5 @@ authenticated.employer.job.form.label.active = Active
 authenticated.employer.job.form.button.return = Return
 authenticated.employer.job.form.label.active.duty = Duties
 authenticated.employer.job.form.label.active.percentage = Duties
+employer.duty.percentaje = The duties cant sum up to 100% the weekly workload. The remaining weekly percentage is as follows
+employer.duty.jobActive =  The job of this duty is in final mode

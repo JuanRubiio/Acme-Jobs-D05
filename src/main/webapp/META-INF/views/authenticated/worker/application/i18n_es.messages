@@ -7,6 +7,8 @@ authenticated.worker.application.form.label.qualifications = Calificaciones
 authenticated.worker.application.form.label.worker = Trabajador
 authenticated.worker.application.form.button.return = Volver
 authenticated.worker.application.form.label.job = Trabajo
+authenticated.worker.application.form.button.create = Crear
+
 
 authenticated.worker.application.list.label.referenceNumber = Referencia Numérica
 authenticated.worker.application.list.label.moment = Fecha

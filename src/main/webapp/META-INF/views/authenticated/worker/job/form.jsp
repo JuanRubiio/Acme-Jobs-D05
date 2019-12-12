@@ -22,6 +22,8 @@
 <acme:form-return code="authenticated.worker.job.form.button.return"/>
 <acme:form-submit code="authenticated.employer.job.form.label.active.duty" action="/worker/duty/list?id=${id}" method="get"/>
 <acme:form-submit code="master.menu.anonymous.listAuditRecords" action="/worker/audit-record/list-mine?id=${id}" method="get" />
+<acme:form-submit code="authenticated.employer.job.form.label.create" action="/worker/application/create?id=${id}" method="get"/>
+
 		
 </acme:form>
 

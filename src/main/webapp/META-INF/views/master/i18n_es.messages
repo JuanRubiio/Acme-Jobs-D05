@@ -92,20 +92,26 @@ master.menu.consumer.offer.list = Listar Ofertas Activas
 
 master.menu.worker = Trabajador
 master.menu.worker.application.list = Mis Aplicaciones
+master.menu.worker.job.list = Trabajos Activos
+
 
 # master.menu.employer ##########################################################
  
  master.menu.employer = Empleado
+ master.menu.employer.create = Crear Trabajo
  master.menu.employer.provider.list = Lista de Trabajos propios
  master.menu.employer.worker.list = Trabajadores
 master.menu.employer.application.list  = Lista de mis solicitudes
+master.menu.employer.application.listgroup =  Solicitudes ordenadas por estado
 
  
  # master.menu.sponsor ##########################################################
 
 master.menu.sponsor = Patrocinadores
 master.menu.sponsor.noncommercialBanner.list = Mis Banner No Comerciales
+master.menu.sponsor.noncommercialBanner.create = Crear Banner No Comercial
 master.menu.sponsor.commercialBanner.list = Mis Banner Comerciales
+master.menu.sponsor.commercialBanner.create = Crear Banner Comercial
 
 
 # master.menu.authenticated ##########################################################
@@ -125,7 +131,12 @@ master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
-
+master.menu.user-account.worker = Datos de trabajador
+master.menu.user-account.become-worker = Hazte trabajador
+master.menu.user-account.sponsor = Datos de patrocinador
+master.menu.user-account.become-sponsor = Hazte patrocinador
+master.menu.user-account.employer = Datos de empleador
+master.menu.user-account.become-employer = Hazte empleador
 ﻿# master.footer ###############################################################
 
 master.footer.title.about = Nosotros

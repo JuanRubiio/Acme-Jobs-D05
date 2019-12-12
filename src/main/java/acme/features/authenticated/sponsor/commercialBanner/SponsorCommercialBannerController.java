@@ -17,17 +17,28 @@ import acme.framework.controllers.AbstractController;
 public class SponsorCommercialBannerController extends AbstractController<Sponsor, CommercialBanner> {
 
 	@Autowired
-	private SponsorCommercialBannerListService	mineService;
+	private SponsorCommercialBannerListService		mineService;
 
 	@Autowired
-	private SponsorCommercialBannerShowService	showService;
+	private SponsorCommercialBannerShowService		showService;
+
+	@Autowired
+	private SponsorCommercialBannerCreateService	createService;
+
+	@Autowired
+	private SponsorCommercialBannerUpdateService	updateService;
+
+	@Autowired
+	private SponsorCommercialBannerDeleteService	deleteService;
 
 
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
-
 		super.addBasicCommand(BasicCommand.LIST, this.mineService);
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
 
 	}
 
