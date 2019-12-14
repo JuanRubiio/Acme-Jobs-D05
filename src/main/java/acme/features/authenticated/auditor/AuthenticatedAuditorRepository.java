@@ -21,7 +21,7 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AuthenticatedAuditorRepository extends AbstractRepository {
 
-	@Query("select c from Consumer c where c.userAccount.id = ?1")
+	@Query("select a from Auditor a where a.userAccount.id = ?1")
 	Auditor findOneAuditorByUserAccountId(int id);
 
 }
