@@ -1,0 +1,6 @@
+administrator.auditor.form.label.responsabilityStatement = Responsibility Statement
+administrator.auditor.form.label.firm = Firm
+administrator.auditor.form.label.userName = User Name
+administrator.auditor.form.button.accept = Accept the request
+administrator.auditor.form.button.declined = Declined the request
+administrator.auditor.form.button.return = Return

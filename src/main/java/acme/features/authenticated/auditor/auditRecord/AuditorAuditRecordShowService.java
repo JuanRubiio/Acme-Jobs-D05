@@ -42,6 +42,14 @@ public class AuditorAuditRecordShowService implements AbstractShowService<Audito
 		assert entity != null;
 		assert model != null;
 
+		int auditRecorddId = request.getModel().getInteger("id");
+		AuditRecord aud = this.repository.findOneAuditRecordById(auditRecorddId);
+		int propietarioId = aud.getAuditor().getUserAccount().getId();
+		Principal principal = request.getPrincipal();
+		int myId = principal.getAccountId();
+		boolean hasAccess = propietarioId != myId;
+		model.setAttribute("hasAccess", hasAccess);
+
 		request.unbind(entity, model, "title", "moment", "status", "body");
 
 	}
