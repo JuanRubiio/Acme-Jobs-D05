@@ -25,7 +25,7 @@
 	
 	<acme:form-select code="authenticated.auditor.audit-record.form.label.status" path="status">
 		<jstl:choose>
-			<jstl:when test="${status == 'published' }">
+			<jstl:when test="${status == 'Published' }">
 				<jstl:set var="publishedSelected" value="true" />
 			</jstl:when>
 			<jstl:otherwise>
@@ -33,15 +33,15 @@
 			</jstl:otherwise>
 		</jstl:choose>
 		<jstl:choose>
-			<jstl:when test="${status == 'draft' }">
+			<jstl:when test="${status == 'Draft' }">
 				<jstl:set var="draftSelected" value="true" />
 			</jstl:when>
 			<jstl:otherwise>
 				<jstl:set var="draftSelected" value="false" />
 			</jstl:otherwise>
 		</jstl:choose>
-		<acme:form-option code="authenticated.auditor.audit-record.form.label.status.published" value="published" selected="${publishedSelected}" />
-		<acme:form-option code="authenticated.auditor.audit-record.form.label.status.draft" value="draft" selected="${draftSelected}" />
+		<acme:form-option code="authenticated.auditor.audit-record.form.label.status.draft" value="Draft" selected="${draftSelected}" />
+		<acme:form-option code="authenticated.auditor.audit-record.form.label.status.published" value="Published" selected="${publishedSelected}" />
 	</acme:form-select>
 	
 	

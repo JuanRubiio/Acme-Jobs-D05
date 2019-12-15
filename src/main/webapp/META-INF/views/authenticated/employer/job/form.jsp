@@ -3,12 +3,27 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags" %>
 
 <acme:form>
-
 	<acme:form-textbox code="authenticated.employer.job.form.label.reference" path="reference" placeholder="EEEE-JJJJ"/>
 	<acme:form-textbox code="authenticated.employer.job.form.label.title" path="title"/>
  	<acme:form-select code="authenticated.employer.job.form.label.status" path="status">
-		<acme:form-option code="Draft" value="Draft"/>
-		<acme:form-option code="Published" value="Published" />
+ 		<jstl:choose>
+			<jstl:when test="${status == 'Published' }">
+				<jstl:set var="publishedSelected" value="true" />
+			</jstl:when>
+			<jstl:otherwise>
+				<jstl:set var="publishedSelected" value="false" />
+			</jstl:otherwise>
+		</jstl:choose>
+		<jstl:choose>
+			<jstl:when test="${status == 'Draft' }">
+				<jstl:set var="draftSelected" value="true" />
+			</jstl:when>
+			<jstl:otherwise>
+				<jstl:set var="draftSelected" value="false" />
+			</jstl:otherwise>
+		</jstl:choose>
+		<acme:form-option code="Draft" value="Draft" selected="${draftSelected}"/>
+		<acme:form-option code="Published" value="Published" selected="${publishedSelected}"/>
 	</acme:form-select>
 	<acme:form-moment code="authenticated.employer.job.form.label.deadline" path="deadline"/>
 	<acme:form-url code="authenticated.employer.job.form.label.link" path="link"/>
