@@ -110,7 +110,7 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 		double contSpam = 0.0;
 		double conPalabras = 0.0;
 		String todasPalabras = "";
-		todasPalabras = todasPalabras + " " + entity.getDescription() + " " + entity.getTitle();
+		todasPalabras = entity.getDescription() + " " + entity.getTitle();
 		String[] arrayPalabras = todasPalabras.split(" ");
 		List<String> listPalabras = Arrays.asList(arrayPalabras);
 		if (custom != null && StringUtils.isNotBlank(custom.getSpamWordsEn())) {
@@ -146,7 +146,7 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 				}
 			}
 		}
-		Double porcentajeSpam = contSpam / conPalabras;
+		Double porcentajeSpam = contSpam / conPalabras * 100;
 
 		int idJob = entity.getId();
 		Double total = new Double(0);
