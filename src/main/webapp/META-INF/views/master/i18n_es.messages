@@ -68,6 +68,8 @@ master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.customisationparameters = Parámetros personalizados
 master.menu.administrator.chart = Chart
 
+master.menu.administrator.request.auditor = Lista de solicitudes de auditor
+
 # master.menu.auditor #########################################################
 
 master.menu.authenticated.auditor = Auditor
@@ -97,9 +99,10 @@ master.menu.worker.job.list = Trabajos Activos
 
 # master.menu.employer ##########################################################
  
-master.menu.employer = Empleado
-master.menu.employer.provider.list = Lista de Trabajos propios
-master.menu.employer.worker.list = Trabajadores
+ master.menu.employer = Empleado
+ master.menu.employer.create = Crear Trabajo
+ master.menu.employer.provider.list = Lista de Trabajos propios
+ master.menu.employer.worker.list = Trabajadores
 master.menu.employer.application.list  = Lista de mis solicitudes
 master.menu.employer.application.listgroup =  Solicitudes ordenadas por estado
 
@@ -134,6 +137,10 @@ master.menu.user-account.worker = Datos de trabajador
 master.menu.user-account.become-worker = Hazte trabajador
 master.menu.user-account.sponsor = Datos de patrocinador
 master.menu.user-account.become-sponsor = Hazte patrocinador
+master.menu.user-account.employer = Datos de empleador
+master.menu.user-account.become-employer = Hazte empleador
+master.menu.user-account.auditor = Datos de Auditor
+master.menu.user-account.become-auditor = Hazte auditor
 
 ﻿# master.footer ###############################################################
 

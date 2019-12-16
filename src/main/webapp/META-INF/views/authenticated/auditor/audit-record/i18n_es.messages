@@ -19,3 +19,9 @@ authenticated.auditor.audit-record.form.label.status = Estado
 authenticated.auditor.audit-record.form.label.body = Cuerpo
 authenticated.auditor.audit-record.form.button.return = Volver
 
+authenticated.auditor.audit-record.form.button.update = Actualizar
+authenticated.auditor.audit-record.form.button.create = Crear
+
+authenticated.auditor.audit-record.form.label.status.published = Publicado
+authenticated.auditor.audit-record.form.label.status.draft = Borrador
+
