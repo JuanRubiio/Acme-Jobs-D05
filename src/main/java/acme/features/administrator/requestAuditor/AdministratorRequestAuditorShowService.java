@@ -31,7 +31,6 @@ public class AdministratorRequestAuditorShowService implements AbstractShowServi
 		assert model != null;
 
 		request.unbind(entity, model, "firm", "responsabilityStatement");
-		model.setAttribute("userName", entity.getAuthenticated().getUserAccount().getUsername());
 
 	}
 

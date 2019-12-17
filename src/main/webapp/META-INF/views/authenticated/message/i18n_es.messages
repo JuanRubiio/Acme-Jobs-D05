@@ -13,13 +13,19 @@ authenticated.message.form.label.title = Título
 authenticated.message.form.label.moment = Momento
 authenticated.message.form.label.tags = Etiquetas
 authenticated.message.form.label.body = Cuerpo
-authenticated.message.form.label.user = Autor
 authenticated.message.form.button.return = Volver
+authenticated.message.form.label.thread = Hilo
 
 authenticated.message.list.label.title = Título
+authenticated.message.list.label.sender = Autor
 authenticated.message.list.label.tags = Etiquetas
 authenticated.message.list.label.moment = Fecha
 authenticated.message.list.button.return = Volver
 
-authenticated.message.form.label.sender = Emisor
+authenticated.message.form.label.sender = Autor
 authenticated.message.form.label.recipient = Receptor
+
+authenticated.message.form.checkbox = Debe confirmar la creación
+authenticated.message.error.spam = El mensaje es Spam
+authenticated.message.form.button.post = Enviar un nuevo mensaje
+authenticated.message.form.button.create = Crear message
