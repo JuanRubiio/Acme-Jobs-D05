@@ -327,8 +327,8 @@
        `id` integer not null,
         `version` integer not null,
         `creator_thread` bit,
-        `thread_id` integer,
-        `user_id` integer,
+        `thread_id` integer not null,
+        `user_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 

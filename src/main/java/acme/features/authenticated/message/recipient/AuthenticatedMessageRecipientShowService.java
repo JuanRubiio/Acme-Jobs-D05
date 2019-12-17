@@ -40,6 +40,7 @@ public class AuthenticatedMessageRecipientShowService implements AbstractShowSer
 		request.unbind(entity, model, "title", "moment", "tags", "body");
 		//		model.setAttribute("recipient", entity.getRecipient().getUsername());
 		model.setAttribute("sender", entity.getSender().getUsername());
+		model.setAttribute("thread", entity.getThread().getTitle());
 
 	}
 
