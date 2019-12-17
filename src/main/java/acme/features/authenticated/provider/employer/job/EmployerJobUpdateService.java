@@ -94,17 +94,7 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 			errors.state(request, isFuture, "deadline", "authenticated.consumer.deadlinepast");
 
 		}
-		if (entity.getActive() != null && entity.getActive() == true) {
-			errors.state(request, false, "active", "employer.job.finalmode");
-		}
 
-	}
-
-	@Override
-	public void update(final Request<Job> request, final Job entity) {
-		assert request != null;
-		assert entity != null;
-		Date date = new Date();
 		CustomisationParameters custom = this.repository.findCustomParameters();
 
 		double contSpam = 0.0;
@@ -158,9 +148,26 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 			}
 		}
 
-		if (entity.getDeadline().after(date) && "Published".equals(entity.getStatus()) && porcentajeSpam < custom.getSpamThreshold() && total.equals(cien)) {
-			entity.setActive(true);
+		if (entity.getActive() != null && entity.getActive() == true) {
+
+			if (!"Published".equals(entity.getStatus())) {
+				errors.state(request, false, "active", "employer.job.statusnotpub");
+			}
+			if (porcentajeSpam >= custom.getSpamThreshold()) {
+				errors.state(request, false, "active", "employer.job.porcenspam");
+
+			}
+			if (!total.equals(cien)) {
+				errors.state(request, false, "active", "employer.job.dutiescient");
+
+			}
 		}
+	}
+
+	@Override
+	public void update(final Request<Job> request, final Job entity) {
+		assert request != null;
+		assert entity != null;
 
 		this.repository.save(entity);
 	}

@@ -31,7 +31,7 @@
 	<acme:form-textarea code="authenticated.employer.job.form.label.description" path="description"/>
 	
 	<jstl:if test="${command != 'create'}">
-		<acme:form-checkbox code="authenticated.employer.job.form.label.active" path="active" readonly="true"/>
+		<acme:form-checkbox code="authenticated.employer.job.form.label.active" path="active"/>
 	</jstl:if>
 	<acme:form-hidden path="id"/>
 

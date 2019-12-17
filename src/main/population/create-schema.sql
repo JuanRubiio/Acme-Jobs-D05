@@ -228,7 +228,6 @@
         `moment` datetime(6),
         `tags` varchar(255),
         `title` varchar(255),
-        `recipient_id` integer not null,
         `sender_id` integer not null,
         `thread_id` integer not null,
         primary key (`id`)
@@ -320,8 +319,16 @@
         `version` integer not null,
         `moment` datetime(6),
         `title` varchar(255),
-        `recipient_id` integer not null,
         `sender_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `thread_user` (
+       `id` integer not null,
+        `version` integer not null,
+        `creator_thread` bit,
+        `thread_id` integer not null,
+        `user_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -351,21 +358,31 @@
     ) engine=InnoDB;
 
     insert into `hibernate_sequence` values ( 1 );
+create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
 create index IDXnlv6ege1ixororpblu3lctiev on `application` (`reference_number`);
 create index IDXg54pxa1gngqheaipukeg8jypk on `application` (`moment`);
 create index IDX2q2747fhp099wkn3j2yt05fhs on `application` (`status`);
 
     alter table `application` 
        add constraint UK_rf84q38qr35ymh5nn0dcxfdue unique (`reference_number`);
+create index IDXrc4ws05g8xybytvf60fgv6o5m on `audit_record` (`moment`);
+create index IDXof878cqun8l1ynh0ao94bw3au on `audit_record` (`status`);
 create index IDXnr284tes3x8hnd3h716tmb3fr on `challenge` (`deadline`);
+create index IDX9jc4iq7uvk5yosailsy4darru on `commercial_banner` (`month_expired`);
+create index IDX92jg8cgrmnrvixadn2e7a6a7a on `commercial_banner` (`year_expired`);
+create index IDX9pkce3d1y6w47wadap5s5xptc on `company_record` (`stars`);
+create index IDXkdedh59d4nlotef0ugh1ky8qm on `credit_card` (`month_expired`);
+create index IDX8y5dhdokiy08xsb1smd6k1fgj on `credit_card` (`year_expired`);
 
     alter table `credit_card` 
        add constraint UK_4cr95y27s8ti6otoyflmma6oy unique (`sponsor_id`);
+create index IDXk2t3uthe649ao1jllcuks0gv4 on `investor_record` (`stars`);
 create index IDXfdmpnr8o4phmk81sqsano16r on `job` (`deadline`);
 create index IDX28ur9xm72oo1df9g14xhnh8h3 on `job` (`status`);
 
     alter table `job` 
        add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);
+create index IDXeq5fhm2b5j1q3ex9vhpmvlwg0 on `message` (`moment`);
 create index IDXcp4664f36sgqsd0ihmirt0w0 on `offer` (`ticker`);
 create index IDXq2o9psuqfuqmq59f0sq57x9uf on `offer` (`deadline`);
 
@@ -379,6 +396,7 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
 
     alter table `request_auditor` 
        add constraint UK_ei3fu6x562eyti7w3e0lsu522 unique (`authenticated_id`);
+create index IDX6gmkj2nkoj8vh2sll34p8ogcc on `thread` (`moment`);
 
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);
@@ -459,11 +477,6 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
        references `employer` (`id`);
 
     alter table `message` 
-       add constraint `FKia3p9sxpmnofkfldrd7vcsh7l` 
-       foreign key (`recipient_id`) 
-       references `user_account` (`id`);
-
-    alter table `message` 
        add constraint `FKkajds58b00e2wf9dge5biqf3p` 
        foreign key (`sender_id`) 
        references `user_account` (`id`);
@@ -494,13 +507,18 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
        references `user_account` (`id`);
 
     alter table `thread` 
-       add constraint `FKidas5c273n1msrfutgci7np3j` 
-       foreign key (`recipient_id`) 
-       references `user_account` (`id`);
-
-    alter table `thread` 
        add constraint `FK7l9cby7ycfrtiaueqtiayiumr` 
        foreign key (`sender_id`) 
+       references `user_account` (`id`);
+
+    alter table `thread_user` 
+       add constraint `FKlsfnry2wohx5gt6xja8l3fnq7` 
+       foreign key (`thread_id`) 
+       references `thread` (`id`);
+
+    alter table `thread_user` 
+       add constraint `FK4p3fmvrwrvqu3390ub5c0miq0` 
+       foreign key (`user_id`) 
        references `user_account` (`id`);
 
     alter table `worker` 
