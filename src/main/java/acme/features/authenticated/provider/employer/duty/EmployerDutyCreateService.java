@@ -72,11 +72,15 @@ public class EmployerDutyCreateService implements AbstractCreateService<Employer
 		Collection<Duty> duties = this.repository.findAllByJob(idJob);
 		if (duties != null && !duties.isEmpty()) {
 			for (Duty d : duties) {
-				total = total + d.getPercentage();
+				if (d.getPercentage() != null) {
+					total = total + d.getPercentage();
+				}
 			}
 
 		}
-		total = total + entity.getPercentage();
+		if (entity.getPercentage() != null) {
+			total = total + entity.getPercentage();
+		}
 		if (total > new Double(100)) {
 			Double sobrante = total - 100;
 			errors.state(request, false, "percentage", "employer.duty.percentaje");
