@@ -31,17 +31,13 @@
 	redirect('/authenticated/message/sender/list?id=${id}')" class="btn btn-primary">
 	<acme:message code="authenticated.threads.form.label.message.sender"/>
 	</button>
-	
-	
-	<jstl:if test="${hasAccess}">
 		
-		
-		<button type="button" onclick="javascript: pushReturnUrl('/authenticated/thread/show?id=${id}');
+	<button type="button" onclick="javascript: pushReturnUrl('/authenticated/thread/show?id=${id}');
 	redirect('/authenticated/thread-user/list?id=${id}')" class="btn btn-primary">
 	<acme:message code="authenticated.threads.form.label.users"/>
 	</button>
 	
-	</jstl:if>
+
 	
 	</jstl:if>
 	
