@@ -1,6 +1,8 @@
 
 package acme.features.authenticated.thread;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,9 +28,10 @@ public class AuthenticatedThreadShowService implements AbstractShowService<Authe
 		int idThread = request.getModel().getInteger("id");
 		Thread t = this.repository.findOneById(idThread);
 		Principal principal = request.getPrincipal();
+		int meId = principal.getAccountId();
+		List<Thread> res = this.repository.findThreadsWhereIAmInvolved(meId);
 
-		UserAccount sender = t.getSender();
-		boolean result = sender.getId() == principal.getAccountId();
+		boolean result = res.contains(t);
 
 		return result;
 	}
@@ -39,10 +42,10 @@ public class AuthenticatedThreadShowService implements AbstractShowService<Authe
 		assert entity != null;
 		assert model != null;
 
-		int idThread = request.getModel().getInteger("id");
+		int threadId = request.getModel().getInteger("id");
 		Principal principal = request.getPrincipal();
 		int userId = principal.getAccountId();
-		ThreadUser threadUser = this.repository.findOneByThreadIdAndUserId(idThread, userId);
+		ThreadUser threadUser = this.repository.findOneByThreadIdAndUserId(threadId, userId);
 		Boolean hasAccess = threadUser.getCreatorThread();
 		model.setAttribute("hasAccess", hasAccess);
 
@@ -68,7 +71,8 @@ public class AuthenticatedThreadShowService implements AbstractShowService<Authe
 
 		UserAccount user = entity.getSender();
 		model.setAttribute("sender", user.getUsername());
-
+		model.setAttribute("send", "true");
+		model.setAttribute("threadId", threadId);
 	}
 
 	@Override

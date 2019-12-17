@@ -23,7 +23,7 @@
 	</definition>
 	
 	<definition name="authenticated/thread-user/form" extends="master">
-		<put-attribute name="body" type="template" value="../thread/thread-user/form.jsp" />
+		<put-attribute name="body" type="template" value="../authenticated/thread-user/form.jsp" />
 	</definition>
 
 </tiles-definitions>

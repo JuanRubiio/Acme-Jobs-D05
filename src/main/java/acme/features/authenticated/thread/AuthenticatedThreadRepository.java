@@ -29,9 +29,11 @@ public interface AuthenticatedThreadRepository extends AbstractRepository {
 	//	Collection<Thread> findThreadsWhereIAmInvolved(int id);
 	// TODO CORREGIR
 
-	@Query("select t from Thread t " + "inner join ThreadUser tu on tu.thread.id = t.id " + "where tu.user.id = ?1")
-	//	@Query("select t from Thread t where t.sender.id = ?1")
-	Collection<Thread> findThreadsWhereIAmInvolved(int id);
+	@Query("select t from Thread t " + "inner join ThreadUser tu on tu.thread.id = t.id " + "where tu.user.id = ?1 and tu.creatorThread = false")
+	List<Thread> findThreadsWhereIAmInvolvedAndIAmNotCreator(int id);
+
+	@Query("select t from Thread t " + "inner join ThreadUser tu on tu.thread.id = t.id " + "where tu.user.id = ?1 ")
+	List<Thread> findThreadsWhereIAmInvolved(int id);
 
 	@Query("select u from UserAccount u where u.id = ?1")
 	UserAccount findUserAccountById(int id);

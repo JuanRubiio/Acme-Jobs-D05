@@ -37,7 +37,7 @@ public class AuthenticatedThreadListInvolvedService implements AbstractListServi
 	@Override
 	public Collection<Thread> findMany(final Request<Thread> request) {
 		assert request != null;
-		return this.repository.findThreadsWhereIAmInvolved(request.getPrincipal().getAccountId());
+		return this.repository.findThreadsWhereIAmInvolvedAndIAmNotCreator(request.getPrincipal().getAccountId());
 	}
 
 }

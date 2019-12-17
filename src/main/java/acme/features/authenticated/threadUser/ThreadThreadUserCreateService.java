@@ -72,6 +72,8 @@ public class ThreadThreadUserCreateService implements AbstractCreateService<Auth
 	@Override
 	public void validate(final Request<ThreadUser> request, final ThreadUser entity, final Errors errors) {
 		assert request != null;
+		assert entity != null;
+		assert errors != null;
 
 	}
 

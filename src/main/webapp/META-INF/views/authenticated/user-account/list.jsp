@@ -34,7 +34,10 @@
 	redirect('/authenticated/user-thread/create?threadId=${param.threadId}')" class="btn btn-primary">
 	<acme:message code="authenticated.userThread.list.button.createIncludedUsers"/>
 	</button>    -->  
+	
+	
 	<acme:form-submit code="authenticated.thread-user.list.button.createIncludedUsers" action="/authenticated/thread-user/create?threadId=${param.threadId}"/>
+	
 	<acme:form-return code="authenticated.user-account.list.button.return"/>
 	
 </acme:form>

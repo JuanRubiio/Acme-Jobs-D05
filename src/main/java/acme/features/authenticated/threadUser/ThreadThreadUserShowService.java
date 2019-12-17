@@ -8,6 +8,7 @@ import acme.entities.threads.ThreadUser;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
+import acme.framework.entities.UserAccount;
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -24,7 +25,7 @@ public class ThreadThreadUserShowService implements AbstractShowService<Authenti
 		int userThreadId = request.getModel().getInteger("id");
 		ThreadUser userThread = this.repository.findOneThreadUserAccountById(userThreadId);
 		int threadId = userThread.getThread().getId();
-		int meId = request.getPrincipal().getActiveRoleId();
+		int meId = request.getPrincipal().getAccountId();
 		ThreadUser userThread2 = this.repository.findOneByThreadIdAndUserId(threadId, meId);
 		Boolean res = userThread2.getCreatorThread();
 
@@ -37,7 +38,9 @@ public class ThreadThreadUserShowService implements AbstractShowService<Authenti
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "user.username");
+		UserAccount user = entity.getUser();
+		request.unbind(entity, model);
+		model.setAttribute("username", user.getUsername());
 	}
 
 	@Override

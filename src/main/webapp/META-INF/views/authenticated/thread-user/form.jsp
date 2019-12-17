@@ -15,10 +15,10 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 <acme:form readonly="true">
-	<acme:form-textbox code="authenticated.threaduser.form.label.username" path="user.username" />
+	<acme:form-textbox code="authenticated.threaduser.form.label.username" path="username" />
 	<input type="hidden" name="threadId" id="threadId" value="${param.id}"/>
 		
-	<acme:form-submit code="authenticated.threaduser.button.delete" action="/authenticated/thread/thread-user/delete"/>
+	<acme:form-submit code="authenticated.threaduser.button.delete" action="/authenticated/thread-user/delete"/>
 
 	<acme:form-return code="authenticated.threads.form.button.return" />
 </acme:form>

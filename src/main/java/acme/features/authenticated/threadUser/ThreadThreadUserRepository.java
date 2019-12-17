@@ -32,4 +32,7 @@ public interface ThreadThreadUserRepository extends AbstractRepository {
 	@Query("select tua from ThreadUser tua where tua.thread.id=?1 and tua.user.id =?2")
 	ThreadUser findOneByThreadIdAndUserId(int threadId, int userAccountId);
 
+	@Query("select tua from ThreadUser tua where tua.thread.id = ?1 and tua.creatorThread = 1")
+	ThreadUser findSenderInThread(int threadId);
+
 }

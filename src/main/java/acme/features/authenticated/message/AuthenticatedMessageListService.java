@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.message.sender;
+package acme.features.authenticated.message;
 
 import java.util.Collection;
 import java.util.List;
@@ -14,10 +14,10 @@ import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedMessageSenderListService implements AbstractListService<Authenticated, Message> {
+public class AuthenticatedMessageListService implements AbstractListService<Authenticated, Message> {
 
 	@Autowired
-	AuthenticatedMessageSenderRepository repository;
+	AuthenticatedMessageRepository repository;
 
 
 	@Override
@@ -36,6 +36,7 @@ public class AuthenticatedMessageSenderListService implements AbstractListServic
 		request.unbind(entity, model, "title", "tags", "moment");
 		model.setAttribute("sender", entity.getSender().getUsername());
 		model.setAttribute("thread", entity.getThread().getTitle());
+		model.setAttribute("send", "false");
 
 	}
 
@@ -45,9 +46,9 @@ public class AuthenticatedMessageSenderListService implements AbstractListServic
 		assert request != null;
 
 		Collection<Message> result;
-		int idThread = request.getModel().getInteger("id");
-		List<Message> messages = this.repository.findMessageIAmSenderByIdThread(request.getPrincipal().getAccountId(), idThread);
-
+		List<Message> messages = this.repository.findMessageByThreadId(request.getModel().getInteger("id"));
+		
+		
 		result = messages;
 		return result;
 	}
