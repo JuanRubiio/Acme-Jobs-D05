@@ -69,43 +69,49 @@ public class SponsorCommercialBannerCreateService implements AbstractCreateServi
 
 		CustomisationParameters custom = this.repository.findCustomParameters();
 
-		double contSpam1 = 0.0;
-		double contSpam2 = 0.0;
-
+		double contSpam = 0.0;
+		double conPalabras = 0.0;
+		String todasPalabras = "";
+		todasPalabras = entity.getPicture() + " " + entity.getSlogan();
+		String[] arrayPalabras = todasPalabras.split(" ");
+		List<String> listPalabras = Arrays.asList(arrayPalabras);
 		if (custom != null && StringUtils.isNotBlank(custom.getSpamWordsEn())) {
 			String engSpam = custom.getSpamWordsEn();
 			String[] arraySpam = engSpam.split(",");
 			List<String> listSpamEn = Arrays.asList(arraySpam);
-			for (String s : listSpamEn) {
-				if (entity.getPicture().contains(s)) {
-					contSpam1++;
-				}
-				if (entity.getSlogan().contains(s)) {
-					contSpam2++;
-				}
+			for (String l : listPalabras) {
+				if (StringUtils.isNotBlank(l)) {
+					conPalabras++;
+					for (String s : listSpamEn) {
+						if (l.trim().equals(s.trim())) {
+							contSpam++;
+						}
 
+					}
+				}
 			}
 		}
 		if (custom != null && StringUtils.isNotBlank(custom.getSpamWordsEs())) {
-			String esSpam = custom.getSpamWordsEs();
-			String[] arraySpam = esSpam.split(",");
+			String engSpam = custom.getSpamWordsEs();
+			String[] arraySpam = engSpam.split(",");
 			List<String> listSpamEs = Arrays.asList(arraySpam);
-			for (String s : listSpamEs) {
-				if (entity.getPicture().contains(s)) {
-					contSpam1++;
-				}
-				if (entity.getSlogan().contains(s)) {
-					contSpam2++;
+			for (String l : listPalabras) {
+				if (StringUtils.isNotBlank(l)) {
+					for (String s : listSpamEs) {
+						if (l.trim().equals(s.trim())) {
+							if (StringUtils.isNotBlank(custom.getSpamWordsEn()) && !custom.getSpamWordsEn().contains(s.trim())) {
+								contSpam++;
+							}
+						}
+
+					}
 				}
 			}
 		}
+		Double porcentajeSpam = contSpam / conPalabras * 100;
 
-		if (contSpam1 > 0.0) {
-			errors.state(request, false, "picture", "There are spams in picture ");
-		}
-
-		if (contSpam2 > 0.0) {
-			errors.state(request, false, "slogan", "There are spams in slogan ");
+		if (porcentajeSpam > custom.getSpamThreshold()) {
+			errors.state(request, false, "picture", "There are spam in this form");
 		}
 
 	}
