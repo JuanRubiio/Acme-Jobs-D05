@@ -124,6 +124,9 @@ master.menu.authenticated.challenge.list = Listar Desafíos
 master.menu.authenticated.investorrecord.list = Listar Investores Records
 master.menu.authenticated.job.list.active = Trabajos Activos
 master.menu.authenticated.threads = Listar mis hilos
+master.menu.authenticated.threadsInvolved = Listas hilos en los que participo
+master.menu.authenticated.thread.create = Crear hilo
+
 master.menu.authenticated.companyrecord.list = Listar Compañías Records
 # master.menu.user-account ####################################################
 
