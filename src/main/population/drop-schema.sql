@@ -61,10 +61,6 @@
 
     alter table `message` 
        drop 
-       foreign key `FKia3p9sxpmnofkfldrd7vcsh7l`;
-
-    alter table `message` 
-       drop 
        foreign key `FKkajds58b00e2wf9dge5biqf3p`;
 
     alter table `message` 
@@ -89,11 +85,15 @@
 
     alter table `thread` 
        drop 
-       foreign key `FKidas5c273n1msrfutgci7np3j`;
-
-    alter table `thread` 
-       drop 
        foreign key `FK7l9cby7ycfrtiaueqtiayiumr`;
+
+    alter table `thread_user` 
+       drop 
+       foreign key `FKlsfnry2wohx5gt6xja8l3fnq7`;
+
+    alter table `thread_user` 
+       drop 
+       foreign key `FK4p3fmvrwrvqu3390ub5c0miq0`;
 
     alter table `worker` 
        drop 
@@ -156,6 +156,8 @@
     drop table if exists `sponsor`;
 
     drop table if exists `thread`;
+
+    drop table if exists `thread_user`;
 
     drop table if exists `user_account`;
 
