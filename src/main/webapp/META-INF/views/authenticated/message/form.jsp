@@ -20,15 +20,15 @@
 <input id ="threadId" name="threadId" type="hidden" value="${param.threadId}"/>
 
 	<acme:form-textbox code="authenticated.message.form.label.title" path="title" />
-	<acme:list-column code="authenticated.message.form.label.thread" path="thread"  width="15%"/>
-	<acme:form-textbox code="authenticated.message.form.label.tags" path="tags" />
-	<acme:form-textarea code="authenticated.message.form.label.body" path="body" />
-	
-	<jstl:if test="${command == 'show' }">
-		<acme:form-textarea  code="authenticated.message.form.label.sender" path="sender" />
-		<acme:form-moment code="authenticated.message.form.label.moment" path="moment" />
 
+	<acme:form-textbox code="authenticated.message.form.label.tags" path="tags" />
+
+	<jstl:if test="${command == 'show' }">
+		<acme:form-textbox  code="authenticated.message.form.label.thread" path="thread" />
+		<acme:form-textbox  code="authenticated.message.form.label.sender" path="sender" />
+		<acme:form-moment code="authenticated.message.form.label.moment" path="moment" />
 	</jstl:if>
+		<acme:form-textarea code="authenticated.message.form.label.body" path="body" />
 	
 	<jstl:if test="${command == 'create' }">
 		<acme:form-checkbox code="authenticated.message.form.checkbox" path="confirm"/>
@@ -36,7 +36,7 @@
 
 <acme:form-submit
 		test = "${command == 'create' }"
-			code = "authenticated.Message.form.button.create"
+			code = "authenticated.message.form.button.create"
 			action = "/authenticated/message/sender/create" />
 			
 			

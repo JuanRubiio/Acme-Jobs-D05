@@ -31,6 +31,7 @@ public class AuthenticatedThreadListInvolvedService implements AbstractListServi
 		assert entity != null;
 		assert model != null;
 		request.unbind(entity, model, "title", "moment");
+		model.setAttribute("sender", entity.getSender().getUsername());
 	}
 
 	@Override
