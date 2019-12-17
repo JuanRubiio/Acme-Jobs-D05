@@ -1,0 +1,23 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+  
+authenticated.threaduser.form.label.username = Username:
+authenticated.threaduser.button.delete = Remove from thread
+authenticated.threads.form.button.return = Return
+
+authenticated.threaduser.delete.creatorThread = You can´t delete yourself
+
+authenticated.threaduser.list.button.return = Return
+authenticated.threaduser.list.label.username = Username
+authenticated.threaduser.list.button.NonIncludedUsers = Non included users
+
+authenticated.threads.button.create =  Create Thread

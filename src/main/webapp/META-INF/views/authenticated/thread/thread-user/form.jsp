@@ -1,6 +1,5 @@
-
 <%--
-- list.jsp
+- form.jsp
 -
 - Copyright (c) 2019 Rafael Corchuelo.
 -
@@ -15,19 +14,11 @@
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
-
-<acme:list>
-	<acme:list-column code="authenticated.threaduser.list.label.username" path="username" />
-</acme:list>
-
-
-	<jstl:if test="${hasAccess}">
+<acme:form readonly="true">
+	<acme:form-textbox code="authenticated.threaduser.form.label.username" path="user.username" />
+	<input type="hidden" name="threadId" id="threadId" value="${param.id}"/>
 		
-	<button type="button" onclick="javascript: pushReturnUrl('/authenticated/thread/thread-user/list?id=${param.id}');
-		redirect('/authenticated/authenticated/list-non-included?threadId=${param.id}')" class="btn btn-primary">
-		<acme:message code="authenticated.threaduser.list.button.NonIncludedUsers"/>
-	</button>
-	</jstl:if>
-<acme:form-return code="authenticated.threaduser.list.button.return" />
+	<acme:form-submit code="authenticated.threaduser.button.delete" action="/authenticated/thread/thread-user/delete"/>
 
-
+	<acme:form-return code="authenticated.threads.form.button.return" />
+</acme:form>

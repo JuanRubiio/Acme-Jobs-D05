@@ -38,6 +38,7 @@ public class AuthenticatedThreadListService implements AbstractListService<Authe
 		Principal principal;
 		principal = request.getPrincipal();
 		result = this.repository.findManyByAuthenticatedId(principal.getAccountId());
+
 		return result;
 	}
 
@@ -48,10 +49,10 @@ public class AuthenticatedThreadListService implements AbstractListService<Authe
 		assert model != null;
 
 		UserAccount sender = entity.getSender();
-		UserAccount recipient = entity.getRecipient();
+		//		UserAccount recipient = entity.getRecipient();
 
 		request.unbind(entity, model, "title", "moment");
-		model.setAttribute("recipient", recipient.getUsername());
+		//		model.setAttribute("recipient", recipient.getUsername());
 		model.setAttribute("sender", sender.getUsername());
 
 	}

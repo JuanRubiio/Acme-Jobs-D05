@@ -40,10 +40,10 @@ public class Thread extends DomainEntity {
 	@ManyToOne(optional = false)
 	UserAccount					sender;
 
-	@NotNull
-	@Valid
-	@ManyToOne(optional = false)
-	UserAccount					recipient;
+	//	@NotNull
+	//	@Valid
+	//	@ManyToOne(optional = false)
+	//	UserAccount					recipient;
 
 	// Relationships -----------------------------------------------------------
 

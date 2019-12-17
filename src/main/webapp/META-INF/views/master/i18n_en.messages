@@ -127,6 +127,9 @@ master.menu.authenticated.investorrecord.list = Investor Record List
 master.menu.authenticated.companyrecord.list = Company Record List
 master.menu.authenticated.job.list.active = Active Jobs
 master.menu.authenticated.threads = List my threads
+master.menu.authenticated.threadsInvolved = List threads i am involved
+
+master.menu.authenticated.thread.create = Create Thread
 
 # master.menu.user-account ####################################################
 

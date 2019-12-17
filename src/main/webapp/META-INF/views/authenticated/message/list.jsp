@@ -19,12 +19,18 @@
 
 <acme:list>
 	<acme:list-column code="authenticated.message.list.label.title" path="title" width="15%"/>
-	<acme:list-column code="authenticated.message.form.label.sender" path="sender"  width="15%"/>
-	<acme:list-column code="authenticated.message.form.label.recipient" path="recipient"  width="15%"/>
+	<acme:list-column code="authenticated.message.list.label.sender" path="sender"  width="15%"/>
+	<acme:list-column code="authenticated.message.form.label.thread" path="thread"  width="15%"/>
 	<acme:list-column code="authenticated.message.list.label.tags" path="tags"  width="15%"/>
 	<acme:list-column code="authenticated.message.list.label.moment" path="moment"  width="40%"/>
 </acme:list>
 
+<jstl:if test="${send == 'true'}">
+	<button type="button" onclick="javascript: pushReturnUrl('/authenticated/message/sender/list?id=${param.id}'); redirect('/authenticated/message/sender/create?threadId=${param.id}')" class="btn btn-primary">
+			<acme:message code="authenticated.message.form.button.post" />
+		</button>
+</jstl:if>
+		
 <acme:form-return code="authenticated.message.form.button.return"/>
 
 
