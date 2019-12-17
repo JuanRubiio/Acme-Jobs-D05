@@ -5,12 +5,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.applications.Application;
+import acme.entities.job.Job;
 import acme.entities.roles.Employer;
 import acme.framework.components.Errors;
 import acme.framework.components.HttpMethod;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.components.Response;
+import acme.framework.entities.Principal;
 import acme.framework.helpers.PrincipalHelper;
 import acme.framework.services.AbstractUpdateService;
 
@@ -23,9 +25,21 @@ public class EmployerApplicationUpdateService implements AbstractUpdateService<E
 
 	@Override
 	public boolean authorise(final Request<Application> request) {
-		assert request != null;
+		boolean result;
+		int appId;
+		Application app;
+		Job job;
+		Employer employer;
+		Principal principal;
 
-		return true;
+		appId = request.getModel().getInteger("id");
+		app = this.repository.findOneById(appId);
+		job = app.getJob();
+		employer = job.getEmployer();
+		principal = request.getPrincipal();
+
+		result = employer.getUserAccount().getId() == principal.getAccountId();
+		return result;
 	}
 
 	@Override
