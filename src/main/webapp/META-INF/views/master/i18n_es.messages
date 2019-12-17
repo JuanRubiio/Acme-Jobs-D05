@@ -94,7 +94,7 @@ master.menu.consumer.offer.list = Listar Ofertas Activas
 
 master.menu.worker = Trabajador
 master.menu.worker.application.list = Mis Aplicaciones
-master.menu.worker.job.list = Trabajos Activos
+master.menu.worker.job.list = Trabajos en Modo Final
 
 
 # master.menu.employer ##########################################################
@@ -122,7 +122,7 @@ master.menu.authenticated = Autenticado
 master.menu.authenticated.announcement.list = Listar anuncios
 master.menu.authenticated.challenge.list = Listar Desafíos
 master.menu.authenticated.investorrecord.list = Listar Investores Records
-master.menu.authenticated.job.list.active = Trabajos Activos
+master.menu.authenticated.job.list.active = Trabajos en Modo Final
 master.menu.authenticated.threads = Listar mis hilos
 master.menu.authenticated.threadsInvolved = Listas hilos en los que participo
 master.menu.authenticated.thread.create = Crear hilo
