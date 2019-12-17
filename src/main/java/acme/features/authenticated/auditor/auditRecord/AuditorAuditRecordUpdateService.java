@@ -23,12 +23,20 @@ public class AuditorAuditRecordUpdateService implements AbstractUpdateService<Au
 
 	@Override
 	public boolean authorise(final Request<AuditRecord> request) {
-		assert request != null;
-		Principal principal = request.getPrincipal();
-		int id = request.getModel().getInteger("id");
-		AuditRecord a = this.repository.findOneAuditRecordById(id);
-		boolean res = a.getAuditor().getId() == principal.getActiveRoleId();
-		return res;
+		boolean result;
+		int arId;
+
+		AuditRecord ar;
+		Auditor auditor;
+		Principal principal;
+
+		arId = request.getModel().getInteger("id");
+		ar = this.repository.findOneAuditRecordById(arId);
+		auditor = ar.getAuditor();
+		principal = request.getPrincipal();
+
+		result = auditor.getUserAccount().getId() == principal.getAccountId();
+		return result;
 	}
 
 	@Override

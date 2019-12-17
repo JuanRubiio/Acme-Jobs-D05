@@ -554,13 +554,13 @@
  
 	<bean id="job1" class="acme.entities.job.Job">
 		<property name="reference" value="EMP1-JOB1"/>
-		<property name="status" value="Draft"/>
+		<property name="status" value="Published"/>
 		<property name="title" value="titulo de job1"/>
 		<property name="deadline" value="2021/04/17 00:00" />
 		<property name="salary" value="100.25 €"/>	
 		<property name="link" value="https://www.everis.com/global/en"/>
 		<property name="description" value="Esta es la descripcion del job1"/>
-		<property name="active" value="false"/>
+		<property name="active" value="true"/>
 		<property name="employer" ref="employerEmployer"/>	
 	</bean> 
 
@@ -572,7 +572,7 @@
 		<property name="salary" value="200.25 €"/>		
 		<property name="link" value="https://www.everis.com/global/en"/>
 		<property name="description" value="Esta es la descripcion del job2"/>
-		<property name="active" value="true"/>
+		<property name="active" value="false"/>
 		<property name="employer" ref="employerEmployer"/>
 	</bean> 
 	<bean id="job3" class="acme.entities.job.Job">
@@ -595,7 +595,7 @@
 		<property name="salary" value="400.25 €"/>		
 		<property name="link" value="https://www.everis.com/global/en"/>
 		<property name="description" value="Esta es la descripcion del job4"/>
-		<property name="active" value="true"/>
+		<property name="active" value="false"/>
 		<property name="employer" ref="employerEmployer2"/>
 	</bean> 
 
@@ -670,7 +670,7 @@
 
 	<bean id="duty1" class="acme.entities.duty.Duty">
 		<property name="title" value="titulo de duty1"/>
-		<property name="percentage" value="23.25"/>		
+		<property name="percentage" value="100.00"/>		
 		<property name="description" value="Esta es la descripcion del duty1"/>
 		<property name="job" ref="job1"/>
 	</bean> 
@@ -682,7 +682,7 @@
 	</bean> 
 	<bean id="duty3" class="acme.entities.duty.Duty">
 		<property name="title" value="titulo de duty3"/>
-		<property name="percentage" value="50.25"/>		
+		<property name="percentage" value="100.00"/>		
 		<property name="description" value="Esta es la descripcion del duty3"/>
 		<property name="job" ref="job3"/>
 	</bean> 
