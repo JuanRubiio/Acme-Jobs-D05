@@ -34,8 +34,9 @@ public class AuthenticatedMessageRecipientListService implements AbstractListSer
 		assert model != null;
 
 		request.unbind(entity, model, "title", "tags", "moment");
-		model.setAttribute("recipient", entity.getRecipient().getUsername());
 		model.setAttribute("sender", entity.getSender().getUsername());
+		model.setAttribute("thread", entity.getThread().getTitle());
+		model.setAttribute("send", "false");
 
 	}
 

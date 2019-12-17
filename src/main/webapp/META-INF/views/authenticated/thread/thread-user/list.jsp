@@ -21,13 +21,12 @@
 </acme:list>
 
 
-	<jstl:if test="${hasAccess}">
-		
-	<button type="button" onclick="javascript: pushReturnUrl('/authenticated/thread/thread-user/list?id=${param.id}');
-		redirect('/authenticated/authenticated/list-non-included?threadId=${param.id}')" class="btn btn-primary">
-		<acme:message code="authenticated.threaduser.list.button.NonIncludedUsers"/>
+
+<button type="button" onclick="javascript: pushReturnUrl('/authenticated/thread/thread-user/list?id=${param.id}');
+	redirect('/authenticated/authenticated/list-non-included?threadId=${param.id}')" class="btn btn-primary">
+	<acme:message code="authenticated.threaduser.list.button.NonIncludedUsers"/>
 	</button>
-	</jstl:if>
+
 <acme:form-return code="authenticated.threaduser.list.button.return" />
 
 
