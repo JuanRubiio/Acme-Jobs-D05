@@ -108,28 +108,45 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 		CustomisationParameters custom = this.repository.findCustomParameters();
 
 		double contSpam = 0.0;
+		double conPalabras = 0.0;
+		String todasPalabras = "";
+		todasPalabras = entity.getDescription() + " " + entity.getTitle();
+		String[] arrayPalabras = todasPalabras.split(" ");
+		List<String> listPalabras = Arrays.asList(arrayPalabras);
 		if (custom != null && StringUtils.isNotBlank(custom.getSpamWordsEn())) {
 			String engSpam = custom.getSpamWordsEn();
 			String[] arraySpam = engSpam.split(",");
 			List<String> listSpamEn = Arrays.asList(arraySpam);
-			for (String s : listSpamEn) {
-				if (entity.getDescription().contains(s) || entity.getTitle().contains(s)) {
-					contSpam++;
-				}
+			for (String l : listPalabras) {
+				if (StringUtils.isNotBlank(l)) {
+					conPalabras++;
+					for (String s : listSpamEn) {
+						if (l.trim().equals(s.trim())) {
+							contSpam++;
+						}
 
+					}
+				}
 			}
 		}
 		if (custom != null && StringUtils.isNotBlank(custom.getSpamWordsEs())) {
-			String esSpam = custom.getSpamWordsEs();
-			String[] arraySpam = esSpam.split(",");
+			String engSpam = custom.getSpamWordsEs();
+			String[] arraySpam = engSpam.split(",");
 			List<String> listSpamEs = Arrays.asList(arraySpam);
-			for (String s : listSpamEs) {
-				if (entity.getDescription().contains(s) || entity.getTitle().contains(s)) {
-					contSpam++;
-				}
+			for (String l : listPalabras) {
+				if (StringUtils.isNotBlank(l)) {
+					for (String s : listSpamEs) {
+						if (l.trim().equals(s.trim())) {
+							if (StringUtils.isNotBlank(custom.getSpamWordsEn()) && !custom.getSpamWordsEn().contains(s.trim())) {
+								contSpam++;
+							}
+						}
 
+					}
+				}
 			}
 		}
+		Double porcentajeSpam = contSpam / conPalabras * 100;
 
 		int idJob = entity.getId();
 		Double total = new Double(0);
@@ -141,7 +158,7 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 			}
 		}
 
-		if (entity.getDeadline().after(date) && "Published".equals(entity.getStatus()) && contSpam < custom.getSpamThreshold() && total.equals(cien)) {
+		if (entity.getDeadline().after(date) && "Published".equals(entity.getStatus()) && porcentajeSpam < custom.getSpamThreshold() && total.equals(cien)) {
 			entity.setActive(true);
 		}
 
