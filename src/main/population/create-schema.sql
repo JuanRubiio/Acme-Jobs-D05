@@ -228,7 +228,6 @@
         `moment` datetime(6),
         `tags` varchar(255),
         `title` varchar(255),
-        `recipient_id` integer not null,
         `sender_id` integer not null,
         `thread_id` integer not null,
         primary key (`id`)
@@ -320,8 +319,16 @@
         `version` integer not null,
         `moment` datetime(6),
         `title` varchar(255),
-        `recipient_id` integer not null,
         `sender_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `thread_user` (
+       `id` integer not null,
+        `version` integer not null,
+        `creator_thread` bit,
+        `thread_id` integer,
+        `user_id` integer,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -459,11 +466,6 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
        references `employer` (`id`);
 
     alter table `message` 
-       add constraint `FKia3p9sxpmnofkfldrd7vcsh7l` 
-       foreign key (`recipient_id`) 
-       references `user_account` (`id`);
-
-    alter table `message` 
        add constraint `FKkajds58b00e2wf9dge5biqf3p` 
        foreign key (`sender_id`) 
        references `user_account` (`id`);
@@ -494,13 +496,18 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
        references `user_account` (`id`);
 
     alter table `thread` 
-       add constraint `FKidas5c273n1msrfutgci7np3j` 
-       foreign key (`recipient_id`) 
-       references `user_account` (`id`);
-
-    alter table `thread` 
        add constraint `FK7l9cby7ycfrtiaueqtiayiumr` 
        foreign key (`sender_id`) 
+       references `user_account` (`id`);
+
+    alter table `thread_user` 
+       add constraint `FKlsfnry2wohx5gt6xja8l3fnq7` 
+       foreign key (`thread_id`) 
+       references `thread` (`id`);
+
+    alter table `thread_user` 
+       add constraint `FK4p3fmvrwrvqu3390ub5c0miq0` 
+       foreign key (`user_id`) 
        references `user_account` (`id`);
 
     alter table `worker` 

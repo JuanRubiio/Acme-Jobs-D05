@@ -3,27 +3,12 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags" %>
 
 <acme:form>
+
 	<acme:form-textbox code="authenticated.employer.job.form.label.reference" path="reference" placeholder="EEEE-JJJJ"/>
 	<acme:form-textbox code="authenticated.employer.job.form.label.title" path="title"/>
  	<acme:form-select code="authenticated.employer.job.form.label.status" path="status">
- 		<jstl:choose>
-			<jstl:when test="${status == 'Published' }">
-				<jstl:set var="publishedSelected" value="true" />
-			</jstl:when>
-			<jstl:otherwise>
-				<jstl:set var="publishedSelected" value="false" />
-			</jstl:otherwise>
-		</jstl:choose>
-		<jstl:choose>
-			<jstl:when test="${status == 'Draft' }">
-				<jstl:set var="draftSelected" value="true" />
-			</jstl:when>
-			<jstl:otherwise>
-				<jstl:set var="draftSelected" value="false" />
-			</jstl:otherwise>
-		</jstl:choose>
-		<acme:form-option code="Draft" value="Draft" selected="${draftSelected}"/>
-		<acme:form-option code="Published" value="Published" selected="${publishedSelected}"/>
+		<acme:form-option code="Draft" value="Draft"/>
+		<acme:form-option code="Published" value="Published" />
 	</acme:form-select>
 	<acme:form-moment code="authenticated.employer.job.form.label.deadline" path="deadline"/>
 	<acme:form-url code="authenticated.employer.job.form.label.link" path="link"/>
@@ -36,18 +21,13 @@
 	<acme:form-hidden path="id"/>
 
 <acme:form-return code="authenticated.employer.job.form.button.return"/>
-	<jstl:if test="${!active}">
 	<acme:form-submit test="${command == 'show'}" code="administrator.companyrecord.form.button.update" action="/employer/job/update"/>
 	<acme:form-submit test="${command == 'show'}" code="administrator.companyrecord.form.button.delete" action="/employer/job/delete"/>
 	<acme:form-submit test="${command == 'create'}" code="administrator.companyrecord.form.button.create" action="/employer/job/create"/>
 	<acme:form-submit test="${command == 'update'}" code="administrator.companyrecord.form.button.update" action="/employer/job/update"/>
 	<acme:form-submit test="${command == 'delete'}" code="administrator.companyrecord.form.button.delete" action="/employer/job/delete"/>
-	</jstl:if>	
-
-	<jstl:if test="${command == 'show'}">
-	<jstl:if test="${!active}">
-	<acme:form-submit code="authenticated.employer.job.form.label.create.duty" action="/employer/duty/create?id=${id}" method="get" />
-	</jstl:if>	
+<jstl:if test="${command == 'show'}">
+	<acme:form-submit code="authenticated.employer.job.form.label.create.duty" action="/employer/duty/create?id=${id}" method="get"/>
 	<acme:form-submit code="authenticated.employer.job.form.label.active.duty" action="/employer/duty/list?id=${id}" method="get"/>
 	<acme:form-submit code="authenticated.employer.job.form.label.application" action="/employer/application/list?id=${id}" method="get"/>
 	<acme:form-submit code="master.menu.anonymous.listAuditRecords" action="/employer/audit-record/list-mine?id=${id}" method="get" />
