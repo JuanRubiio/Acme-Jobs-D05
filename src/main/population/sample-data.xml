@@ -962,7 +962,7 @@
 		<property name="body" value="Message 1"/>
 		<property name="thread" ref="thread1"/>
 		<property name="sender" ref="employerUserAccount"/>
-		<property name="recipient" ref="auditorUserAccount"/>
+<!-- 		<property name="recipient" ref="auditorUserAccount"/> -->
 	</bean>
 	
 	<bean id="message2" class="acme.entities.message.Message">
@@ -972,7 +972,7 @@
 		<property name="body" value="Message 2"/>
 		<property name="thread" ref="thread1"/>
 		<property name="sender" ref="auditorUserAccount"/>
-		<property name="recipient" ref="employerUserAccount"/>
+<!-- 		<property name="recipient" ref="employerUserAccount"/> -->
 	</bean>
 	
 	<bean id="message3" class="acme.entities.message.Message">
@@ -982,7 +982,7 @@
 		<property name="body" value="Message 3"/>
 		<property name="thread" ref="thread1"/>
 		<property name="sender" ref="employerUserAccount"/>
-		<property name="recipient" ref="auditorUserAccount"/>
+<!-- 		<property name="recipient" ref="auditorUserAccount"/> -->
 	</bean>
 	
 	<bean id="message4" class="acme.entities.message.Message">
@@ -992,7 +992,7 @@
 		<property name="body" value="Message 4"/>
 		<property name="thread" ref="thread3"/>
 	    <property name="sender" ref="employerUserAccount"/>
-		<property name="recipient" ref="workerUserAccount"/>
+<!-- 		<property name="recipient" ref="workerUserAccount"/> -->
 	</bean>
 	
 	<bean id="message5" class="acme.entities.message.Message">
@@ -1002,7 +1002,7 @@
 		<property name="body" value="Message 5"/>
 		<property name="thread" ref="thread3"/>
 		<property name="sender" ref="workerUserAccount"/>
-		<property name="recipient" ref="employerUserAccount"/>
+<!-- 		<property name="recipient" ref="employerUserAccount"/> -->
 	</bean>
 	
 	<bean id="message6" class="acme.entities.message.Message">
@@ -1012,7 +1012,7 @@
 		<property name="body" value="Message 6"/>
 		<property name="thread" ref="thread3"/>
 		<property name="sender" ref="employerUserAccount"/>
-		<property name="recipient" ref="workerUserAccount"/>
+<!-- 		<property name="recipient" ref="workerUserAccount"/> -->
 	</bean>
 	<bean id="message7" class="acme.entities.message.Message">
 		<property name="title" value="Message 1"/>
@@ -1021,7 +1021,7 @@
 		<property name="body" value="Message 1"/>
 		<property name="thread" ref="thread2"/>
 		<property name="sender" ref="employerUserAccount"/>
-		<property name="recipient" ref="auditorUserAccount"/>
+<!-- 		<property name="recipient" ref="auditorUserAccount"/> -->
 	</bean>
 	
 	<bean id="message8" class="acme.entities.message.Message">
@@ -1031,7 +1031,7 @@
 		<property name="body" value="Message 2"/>
 		<property name="thread" ref="thread2"/>
 		<property name="sender" ref="auditorUserAccount"/>
-		<property name="recipient" ref="employerUserAccount"/>
+<!-- 		<property name="recipient" ref="employerUserAccount"/> -->
 	</bean>
 	
 	<bean id="message9" class="acme.entities.message.Message">
@@ -1041,7 +1041,7 @@
 		<property name="body" value="Message 3"/>
 		<property name="thread" ref="thread2"/>
 		<property name="sender" ref="employerUserAccount"/>
-		<property name="recipient" ref="auditorUserAccount"/>
+<!-- 		<property name="recipient" ref="auditorUserAccount"/> -->
 	</bean>
 	
 		<bean id="message10" class="acme.entities.message.Message">
@@ -1051,7 +1051,7 @@
 		<property name="body" value="Message 4"/>
 		<property name="thread" ref="thread4"/>
 	    <property name="sender" ref="employerUserAccount"/>
-		<property name="recipient" ref="workerUserAccount"/>
+<!-- 		<property name="recipient" ref="workerUserAccount"/> -->
 	</bean>
 	
 	<bean id="message11" class="acme.entities.message.Message">
@@ -1061,7 +1061,7 @@
 		<property name="body" value="Message 5"/>
 		<property name="thread" ref="thread4"/>
 		<property name="sender" ref="workerUserAccount"/>
-		<property name="recipient" ref="employerUserAccount"/>
+<!-- 		<property name="recipient" ref="employerUserAccount"/> -->
 	</bean>
 	
 	<bean id="message12" class="acme.entities.message.Message">
@@ -1071,37 +1071,112 @@
 		<property name="body" value="Message 6"/>
 		<property name="thread" ref="thread4"/>
 		<property name="sender" ref="employerUserAccount"/>
-		<property name="recipient" ref="workerUserAccount"/>
 	</bean>
 	<!--  Thread -->
 	
 	<bean id="thread1" class="acme.entities.threads.Thread">
 		<property name="title" value="Thread 1"/>
 		<property name="moment" value="2017/11/02 07:00"/>
-		<property name="sender" ref="employerUserAccount"/>
-		<property name="recipient" ref="auditorUserAccount"/>
+		<property name="sender" ref="auditorUserAccount"/>
+<!-- 		<property name="users"> -->
+<!-- 			<list> -->
+<!-- 				<ref bean="employerUserAccount"/> -->
+<!-- 				<ref bean="workerUserAccount"/> -->
+<!-- 				<ref bean="auditorUserAccount"/> -->
+<!-- 			</list> -->
+<!-- 		</property> -->
 	</bean>
 	
+	<bean id="threadUser01" class="acme.entities.threads.ThreadUser">
+		<property name="thread" ref="thread1"/>
+		<property name="user" ref="auditorUserAccount"/>
+		<property name="creatorThread" value = "true"/>
+	</bean>
+	
+	<bean id="threadUser02" class="acme.entities.threads.ThreadUser">
+		<property name="thread" ref="thread1"/>
+		<property name="user" ref="employerUserAccount"/>
+		<property name="creatorThread" value = "false"/>
+	</bean>
+	
+	<bean id="threadUser03" class="acme.entities.threads.ThreadUser">
+		<property name="thread" ref="thread1"/>
+		<property name="user" ref="workerUserAccount"/>
+		<property name="creatorThread" value = "false"/>
+	</bean>
+	
+
 
 	<bean id="thread2" class="acme.entities.threads.Thread">
 		<property name="title" value="Thread 2"/>
 		<property name="moment" value="2013/08/30 06:00"/>
 		<property name="sender" ref="auditorUserAccount"/>
-		<property name="recipient" ref="employerUserAccount"/>
+<!-- 	<property name="users"> -->
+<!-- 			<list> -->
+<!-- 				<ref bean="employerUserAccount"/> -->
+<!-- 				<ref bean="workerUserAccount"/> -->
+<!-- 				<ref bean="auditorUserAccount"/> -->
+<!-- 			</list> -->
+<!-- 		</property> -->
+	</bean>
+	
+	<bean id="threadUser04" class="acme.entities.threads.ThreadUser">
+		<property name="thread" ref="thread2"/>
+		<property name="user" ref="auditorUserAccount"/>
+		<property name="creatorThread" value = "true"/>
+	</bean>
+	
+	<bean id="threadUser05" class="acme.entities.threads.ThreadUser">
+		<property name="thread" ref="thread2"/>
+		<property name="user" ref="workerUserAccount"/>
+		<property name="creatorThread" value = "false"/>
+	</bean>
+	
+	<bean id="threadUser06" class="acme.entities.threads.ThreadUser">
+		<property name="thread" ref="thread2"/>
+		<property name="user" ref="employerUserAccount"/>
+		<property name="creatorThread" value = "false"/>
 	</bean>
 
 	<bean id="thread3" class="acme.entities.threads.Thread">
 		<property name="title" value="Thread 3"/>
 		<property name="moment" value="2017/11/02 07:00"/>
 		<property name="sender" ref="employerUserAccount"/>
-		<property name="recipient" ref="workerUserAccount"/>
+<!-- 	<property name="users"> -->
+<!-- 			<list> -->
+<!-- 				<ref bean="employerUserAccount"/> -->
+<!-- 				<ref bean="workerUserAccount"/> -->
+<!-- 			</list> -->
+<!-- 		</property> -->
+	</bean>
+	
+	<bean id="threadUser07" class="acme.entities.threads.ThreadUser">
+		<property name="thread" ref="thread3"/>
+		<property name="user" ref="employerUserAccount"/>
+		<property name="creatorThread" value = "true"/>
+	</bean>
+	
+	<bean id="threadUser08" class="acme.entities.threads.ThreadUser">
+		<property name="thread" ref="thread4"/>
+		<property name="user" ref="auditorUserAccount"/>
+		<property name="creatorThread" value = "false"/>
 	</bean>
 
 	<bean id="thread4" class="acme.entities.threads.Thread">
 		<property name="title" value="Thread 4"/>
 		<property name="moment" value="2017/11/02 07:00"/>
 		<property name="sender" ref="workerUserAccount"/>
-		<property name="recipient" ref="employerUserAccount"/>
+<!-- 	<property name="users"> -->
+<!-- 			<list> -->
+<!-- 				<ref bean="employerUserAccount"/> -->
+<!-- 			</list> -->
+<!-- 		</property> -->
+	</bean>
+	
+	<bean id="threadUser09" class="acme.entities.threads.ThreadUser">
+		<property name="thread" ref="thread4"/>
+		<property name="user" ref="workerUserAccount"/>
+		<property name="creatorThread" value = "true"/>
 	</bean>
 
 

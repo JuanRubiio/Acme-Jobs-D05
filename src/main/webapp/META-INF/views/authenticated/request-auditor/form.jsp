@@ -5,7 +5,7 @@
 
 <acme:form>
 
-	<acme:form-textbox code="authenticated.auditor.form.label.firm" path="firm"/>
+	<acme:form-textarea code="authenticated.auditor.form.label.firm" path="firm"/>
 	<acme:form-textarea code="authenticated.auditor.form.label.responsabilityStatement" path="responsabilityStatement"/>
 	
 	<acme:form-submit test="${command == 'create'}" code="authenticated.auditor.form.button.create" action="/authenticated/request-auditor/create"/>

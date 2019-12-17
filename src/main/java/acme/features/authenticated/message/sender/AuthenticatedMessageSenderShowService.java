@@ -25,9 +25,9 @@ public class AuthenticatedMessageSenderShowService implements AbstractShowServic
 		Message message = this.repository.findOneById(request.getModel().getInteger("id"));
 		Principal principal = request.getPrincipal();
 		UserAccount sender = message.getSender();
-		UserAccount recipient = message.getRecipient();
-		boolean result = sender.getId() == principal.getAccountId() || recipient.getId() == principal.getAccountId();
-		return result;
+		//		UserAccount recipient = message.getRecipient();
+		//		boolean result = sender.getId() == principal.getAccountId() || recipient.getId() == principal.getAccountId();
+		return true;
 	}
 
 	@Override
@@ -37,8 +37,9 @@ public class AuthenticatedMessageSenderShowService implements AbstractShowServic
 		assert model != null;
 
 		request.unbind(entity, model, "title", "moment", "tags", "body");
-		model.setAttribute("recipient", entity.getRecipient().getUsername());
+		//		model.setAttribute("recipient", entity.getRecipient().getUsername());
 		model.setAttribute("sender", entity.getSender().getUsername());
+		model.setAttribute("thread", entity.getThread().getTitle());
 
 	}
 
