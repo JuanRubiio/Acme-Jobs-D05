@@ -21,3 +21,9 @@ authenticated.user-account.form.button.update = Actualizar
 authenticated.user-account.form.button.return = Volver
 
 authenticated.user-account.form.error.confirmation-no-match = La confirmación de la contraseña no cuadra
+
+
+authenticated.thread-user.list.button.createIncludedUsers = Añadir usuario
+authenticated.user-account.list.label.username = Nombre de usuario
+authenticated.user-account.form.select = Usuarios
+authenticated.user-account.list.button.return = Volver

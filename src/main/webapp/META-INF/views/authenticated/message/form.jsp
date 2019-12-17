@@ -15,12 +15,30 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:form readonly="true">
+<%-- <acme:form readonly="true"> --%>
+<acme:form >
+<input id ="threadId" name="threadId" type="hidden" value="${param.threadId}"/>
+
 	<acme:form-textbox code="authenticated.message.form.label.title" path="title" />
-	<acme:form-textbox code="authenticated.message.form.label.sender" path="sender" />
-	<acme:form-textbox code="authenticated.message.form.label.recipient" path="recipient" />
-	<acme:form-moment code="authenticated.message.form.label.moment" path="moment" />
+	<acme:list-column code="authenticated.message.form.label.thread" path="thread"  width="15%"/>
 	<acme:form-textbox code="authenticated.message.form.label.tags" path="tags" />
 	<acme:form-textarea code="authenticated.message.form.label.body" path="body" />
+	
+	<jstl:if test="${command == 'show' }">
+		<acme:form-textarea  code="authenticated.message.form.label.sender" path="sender" />
+		<acme:form-moment code="authenticated.message.form.label.moment" path="moment" />
+
+	</jstl:if>
+	
+	<jstl:if test="${command == 'create' }">
+		<acme:form-checkbox code="authenticated.message.form.checkbox" path="confirm"/>
+</jstl:if>
+
+<acme:form-submit
+		test = "${command == 'create' }"
+			code = "authenticated.Message.form.button.create"
+			action = "/authenticated/message/sender/create" />
+			
+			
 	<acme:form-return code="authenticated.message.form.button.return"/>
 </acme:form>

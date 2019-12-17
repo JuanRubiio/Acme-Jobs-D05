@@ -1,6 +1,5 @@
-
 <%--
-- list.jsp
+- form.jsp
 -
 - Copyright (c) 2019 Rafael Corchuelo.
 -
@@ -15,12 +14,11 @@
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
+<acme:form readonly="true">
+	<acme:form-textbox code="authenticated.threaduser.form.label.username" path="user.username" />
+	<input type="hidden" name="threadId" id="threadId" value="${param.id}"/>
+		
+	<acme:form-submit code="authenticated.threaduser.button.delete" action="/authenticated/thread/thread-user/delete"/>
 
-<acme:list>
-	<acme:list-column code="authenticated.threads.list.label.title" path="title" />
-	<acme:list-column code="authenticated.threads.list.label.moment" path="moment" />
-	<acme:list-column code="authenticated.threads.form.label.sender" path="sender" />
-
-</acme:list>
-
-
+	<acme:form-return code="authenticated.threads.form.button.return" />
+</acme:form>

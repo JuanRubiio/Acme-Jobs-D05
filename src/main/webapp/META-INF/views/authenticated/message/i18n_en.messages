@@ -12,12 +12,19 @@ authenticated.message.form.label.title = Title
 authenticated.message.form.label.moment = Moment
 authenticated.message.form.label.tags = Tags
 authenticated.message.form.label.body = Body
-authenticated.message.form.label.user = Author
 authenticated.message.form.button.return = Return
 
 authenticated.message.list.label.title = Title
+authenticated.message.list.label.sender = Author
 authenticated.message.list.label.tags = Tags
 authenticated.message.list.label.moment = Moment
 authenticated.message.list.button.return = Return
-authenticated.message.form.label.sender = Sender
+authenticated.message.form.label.thread = Thread
+
+authenticated.message.form.label.sender = Author
 authenticated.message.form.label.recipient = Recipient
+
+authenticated.message.form.checkbox = Must confirm create
+authenticated.message.error.spam = The message is Spam
+authenticated.message.form.button.post = Post a new message
+authenticated.message.form.button.create = Create message
