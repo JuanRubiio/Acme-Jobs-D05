@@ -17,10 +17,17 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="authenticated.threads.list.label.title" path="title" />
-	<acme:list-column code="authenticated.threads.list.label.moment" path="moment" />
-	<acme:list-column code="authenticated.threads.form.label.sender" path="sender" />
-
+	<acme:list-column code="authenticated.threaduser.list.label.username" path="username" />
 </acme:list>
+
+
+	<jstl:if test="${hasAccess}">
+		
+	<button type="button" onclick="javascript: pushReturnUrl('/authenticated/thread/thread-user/list?id=${param.id}');
+		redirect('/authenticated/authenticated/list-non-included?threadId=${param.id}')" class="btn btn-primary">
+		<acme:message code="authenticated.threaduser.list.button.NonIncludedUsers"/>
+	</button>
+	</jstl:if>
+<acme:form-return code="authenticated.threaduser.list.button.return" />
 
 

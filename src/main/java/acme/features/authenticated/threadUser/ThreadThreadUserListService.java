@@ -43,6 +43,9 @@ public class ThreadThreadUserListService implements AbstractListService<Authenti
 
 		request.unbind(entity, model); //DUDA
 		model.setAttribute("username", user.getUsername());
+		ThreadUser threadUser = this.repository.findOneByThreadIdAndUserId(entity.getThread().getId(), entity.getUser().getId());
+		Boolean hasAccess = threadUser.getCreatorThread();
+		model.setAttribute("hasAccess", hasAccess);
 
 	}
 

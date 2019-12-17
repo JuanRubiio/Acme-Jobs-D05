@@ -23,14 +23,14 @@ public class AuthenticatedThreadShowService implements AbstractShowService<Authe
 	@Override
 	public boolean authorise(final Request<Thread> request) {
 		assert request != null;
+
 		int idThread = request.getModel().getInteger("id");
-		Thread t = this.repository.findOneById(idThread);
 		Principal principal = request.getPrincipal();
+		int userId = principal.getAccountId();
+		UserAccount user = this.repository.findUserAccountById(userId);
+		ThreadUser tu = this.repository.findOneByThreadIdAndUserId(idThread, userId);
 
-		UserAccount sender = t.getSender();
-		boolean result = sender.getId() == principal.getAccountId();
-
-		return result;
+		return tu.getUser().equals(user);
 	}
 
 	@Override

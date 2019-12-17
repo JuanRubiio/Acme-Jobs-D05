@@ -40,7 +40,7 @@ public class AuthenticatedMessageSenderCreateService implements AbstractCreateSe
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "moment", "authenticated.userAccount.username");
+		request.bind(entity, errors, "moment", "authenticated.userAccount.username", "thread");
 
 	}
 
@@ -84,7 +84,7 @@ public class AuthenticatedMessageSenderCreateService implements AbstractCreateSe
 		double contSpam = 0.0;
 		double conPalabras = 0.0;
 		String todasPalabras = "";
-		todasPalabras = entity.getBody() + " " + entity.getTitle();
+		todasPalabras = entity.getBody() + " " + entity.getTitle() + " " + entity.getTags();
 		String[] arrayPalabras = todasPalabras.split(" ");
 		List<String> listPalabras = Arrays.asList(arrayPalabras);
 		if (custom != null && StringUtils.isNotBlank(custom.getSpamWordsEn())) {
