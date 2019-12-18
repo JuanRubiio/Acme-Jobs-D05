@@ -9,6 +9,7 @@ import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
+import acme.framework.entities.UserAccount;
 import acme.framework.services.AbstractDeleteService;
 
 @Service
@@ -46,7 +47,9 @@ public class ThreadThreadUserDeleteService implements AbstractDeleteService<Auth
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "user.username");
+		UserAccount user = entity.getUser();
+		request.unbind(entity, model);
+		model.setAttribute("username", user.getUsername());
 	}
 
 	@Override
@@ -68,9 +71,9 @@ public class ThreadThreadUserDeleteService implements AbstractDeleteService<Auth
 		assert entity != null;
 		assert errors != null;
 
-		//		int threadId = request.getModel().getInteger("id");
-		//		ThreadUser threadUser = this.repository.findOneThreadUserAccountById(threadId);
-		//		int userAccountId = threadUser.getUser().getId();
+		int threadId = request.getModel().getInteger("id");
+		ThreadUser threadUser = this.repository.findOneThreadUserAccountById(threadId);
+		int userAccountId = threadUser.getUser().getId();
 		//		int id = request.getPrincipal().getAccountId();
 		//		boolean sameUser = id == userAccountId;
 		//		errors.state(request, !sameUser, "username", "threadUser.delete.creatorThread");
@@ -80,7 +83,7 @@ public class ThreadThreadUserDeleteService implements AbstractDeleteService<Auth
 		int idSender = usuarioSender.getUser().getId();
 		int idMe = request.getPrincipal().getAccountId();
 
-		isSender = idSender == idMe;
+		isSender = idSender == userAccountId && idSender == idMe;
 
 		//		errors.state(request, isSender, "confirm", "authenticated.message.form.checkbox");
 
