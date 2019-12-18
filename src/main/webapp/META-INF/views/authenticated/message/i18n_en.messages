@@ -22,7 +22,7 @@ authenticated.message.list.button.return = Return
 authenticated.message.form.label.thread = Thread
 
 authenticated.message.form.label.sender = Author
-authenticated.message.form.label.recipient = Recipient
+authenticated.message.form.label.messageThread = Messages thread
 
 authenticated.message.form.checkbox = Must confirm create
 authenticated.message.error.spam = The message is Spam

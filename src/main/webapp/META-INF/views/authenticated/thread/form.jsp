@@ -16,28 +16,39 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
+<input type="hidden" name="threadId" id="threadId" value="${param.id}"/>
 	<acme:form-textbox code="authenticated.threads.form.label.title" path="title" />
 	<jstl:if test="${command == 'show' }">
 	
-		<acme:form-moment code="authenticated.threads.form.label.moment" path="moment"/>
-		<acme:form-textbox code="authenticated.threads.form.label.sender" path="sender"/>
+			<acme:form-moment code="authenticated.threads.form.label.moment" path="moment"/>
+			<acme:form-textbox code="authenticated.threads.form.label.sender" path="sender"/>
+			
+			<button type="button" onclick="javascript: pushReturnUrl('/authenticated/thread/show?id=${id}');
+		redirect('/authenticated/message/list?id=${id}')" class="btn btn-primary">
+		<acme:message code="authenticated.threads.form.label.message.messageThread"/>
+		</button>
 		
-		<button type="button" onclick="javascript: pushReturnUrl('/authenticated/thread/show?id=${id}');
-	redirect('/authenticated/message/recipient/list?id=${id}')" class="btn btn-primary">
-	<acme:message code="authenticated.threads.form.label.message.recipient"/>
-	</button>
+			<button type="button" onclick="javascript: pushReturnUrl('/authenticated/thread/show?id=${id}');
+		redirect('/authenticated/message/sender/list?id=${id}')" class="btn btn-primary">
+		<acme:message code="authenticated.threads.form.label.message.sender"/>
+		</button>
 	
-		<button type="button" onclick="javascript: pushReturnUrl('/authenticated/thread/show?id=${id}');
-	redirect('/authenticated/message/sender/list?id=${id}')" class="btn btn-primary">
-	<acme:message code="authenticated.threads.form.label.message.sender"/>
-	</button>
+		<jstl:if test="${send == 'true'}">
+				<button type="button" onclick="javascript: pushReturnUrl('/authenticated/message/sender/list?id=${param.id}'); redirect('/authenticated/message/sender/create?threadId=${param.id}')" class="btn btn-primary">
+						<acme:message code="authenticated.message.form.button.post" />
+					</button>
+		</jstl:if>
+	
+	
+		<jstl:if test="${hasAccess}">
+			
+			
+			<button type="button" onclick="javascript: pushReturnUrl('/authenticated/thread/show?id=${id}');
+		redirect('/authenticated/thread-user/list?id=${id}')" class="btn btn-primary">
+		<acme:message code="authenticated.threads.form.label.users"/>
+		</button>
 		
-	<button type="button" onclick="javascript: pushReturnUrl('/authenticated/thread/show?id=${id}');
-	redirect('/authenticated/thread-user/list?id=${id}')" class="btn btn-primary">
-	<acme:message code="authenticated.threads.form.label.users"/>
-	</button>
-	
-
+		</jstl:if>
 	
 	</jstl:if>
 	

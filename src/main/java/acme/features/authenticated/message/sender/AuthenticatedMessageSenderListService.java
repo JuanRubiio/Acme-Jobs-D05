@@ -36,7 +36,6 @@ public class AuthenticatedMessageSenderListService implements AbstractListServic
 		request.unbind(entity, model, "title", "tags", "moment");
 		model.setAttribute("sender", entity.getSender().getUsername());
 		model.setAttribute("thread", entity.getThread().getTitle());
-		model.setAttribute("send", "true");
 
 	}
 
@@ -46,7 +45,8 @@ public class AuthenticatedMessageSenderListService implements AbstractListServic
 		assert request != null;
 
 		Collection<Message> result;
-		List<Message> messages = this.repository.findMessageByThreadId(request.getModel().getInteger("id"));
+		int idThread = request.getModel().getInteger("id");
+		List<Message> messages = this.repository.findMessageIAmSenderByIdThread(request.getPrincipal().getAccountId(), idThread);
 
 		result = messages;
 		return result;

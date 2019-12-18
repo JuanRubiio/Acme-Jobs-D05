@@ -14,7 +14,7 @@ import acme.framework.entities.UserAccount;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedUserAccountListNonIncludeService implements AbstractListService<Authenticated, UserAccount> {
+public class AuthenticatedUserAccountListDeleteUserService implements AbstractListService<Authenticated, UserAccount> {
 
 	@Autowired
 	private AuthenticatedUserAccountRepository repository;
@@ -23,14 +23,13 @@ public class AuthenticatedUserAccountListNonIncludeService implements AbstractLi
 	@Override
 	public boolean authorise(final Request<UserAccount> request) {
 		assert request != null;
-		// Solo puedo listar los usuarios de un hilo si soy el dueño de ese hilo
+		// Solo puedo listar los usuarios, para borrarlos, de un hilo si soy el dueño de ese hilo
 		int threadId = request.getModel().getInteger("threadId");
 		int meId = request.getPrincipal().getAccountId();
 		ThreadUser threadUser = this.repository.findOneByThreadIdAndUserId(threadId, meId);
 		Boolean res = threadUser.getCreatorThread();
 
 		return res;
-
 	}
 
 	@Override
@@ -39,7 +38,9 @@ public class AuthenticatedUserAccountListNonIncludeService implements AbstractLi
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model);
+		//		UserAccount user = entity.getUsername();
+
+		request.unbind(entity, model); //DUDA
 		model.setAttribute("username", entity.getUsername());
 
 	}
@@ -53,10 +54,8 @@ public class AuthenticatedUserAccountListNonIncludeService implements AbstractLi
 
 		result = this.repository.findThreadUserNotInThread(threadId);
 
-		UserAccount anonymous = this.repository.findThreadUserAnonymous();
-
-		result.remove(anonymous);
 		return result;
 
 	}
+
 }
