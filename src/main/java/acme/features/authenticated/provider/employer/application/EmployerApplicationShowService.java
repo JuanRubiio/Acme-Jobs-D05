@@ -21,6 +21,7 @@ public class EmployerApplicationShowService implements AbstractShowService<Emplo
 
 	@Override
 	public boolean authorise(final Request<Application> request) {
+		assert request != null;
 		boolean result;
 		int appId;
 		Application app;
