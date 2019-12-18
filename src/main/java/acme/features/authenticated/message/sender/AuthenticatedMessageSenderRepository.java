@@ -32,4 +32,7 @@ public interface AuthenticatedMessageSenderRepository extends AbstractRepository
 
 	@Query("select ua from CustomisationParameters ua")
 	CustomisationParameters findCustomParameters();
+
+	@Query("select t from Message t where t.sender.id = ?1 and t.thread.id = ?2 order by t.moment desc")
+	List<Message> findMessageIAmSenderByIdThread(int id, int idThread);
 }

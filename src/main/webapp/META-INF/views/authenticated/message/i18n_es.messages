@@ -23,7 +23,7 @@ authenticated.message.list.label.moment = Fecha
 authenticated.message.list.button.return = Volver
 
 authenticated.message.form.label.sender = Autor
-authenticated.message.form.label.recipient = Receptor
+authenticated.message.form.label.messageThread = Mensajes del hilo
 
 authenticated.message.form.checkbox = Debe confirmar la creación
 authenticated.message.error.spam = El mensaje es Spam

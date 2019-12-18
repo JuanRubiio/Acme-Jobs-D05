@@ -23,6 +23,8 @@ authenticated.user-account.form.button.return = Return
 authenticated.user-account.form.error.confirmation-no-match = Password confirmation doesn't match 
 
 authenticated.thread-user.list.button.createIncludedUsers = Add user
+authenticated.thread-user.list.button.createDeleteUsers = Delete user
+
 authenticated.user-account.list.label.username = Username
 authenticated.user-account.form.select = Users
 authenticated.user-account.list.button.return = Return

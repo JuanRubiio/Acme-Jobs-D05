@@ -554,13 +554,13 @@
  
 	<bean id="job1" class="acme.entities.job.Job">
 		<property name="reference" value="EMP1-JOB1"/>
-		<property name="status" value="Draft"/>
+		<property name="status" value="Published"/>
 		<property name="title" value="titulo de job1"/>
 		<property name="deadline" value="2021/04/17 00:00" />
 		<property name="salary" value="100.25 €"/>	
 		<property name="link" value="https://www.everis.com/global/en"/>
 		<property name="description" value="Esta es la descripcion del job1"/>
-		<property name="active" value="false"/>
+		<property name="active" value="true"/>
 		<property name="employer" ref="employerEmployer"/>	
 	</bean> 
 
@@ -572,7 +572,7 @@
 		<property name="salary" value="200.25 €"/>		
 		<property name="link" value="https://www.everis.com/global/en"/>
 		<property name="description" value="Esta es la descripcion del job2"/>
-		<property name="active" value="true"/>
+		<property name="active" value="false"/>
 		<property name="employer" ref="employerEmployer"/>
 	</bean> 
 	<bean id="job3" class="acme.entities.job.Job">
@@ -595,7 +595,7 @@
 		<property name="salary" value="400.25 €"/>		
 		<property name="link" value="https://www.everis.com/global/en"/>
 		<property name="description" value="Esta es la descripcion del job4"/>
-		<property name="active" value="true"/>
+		<property name="active" value="false"/>
 		<property name="employer" ref="employerEmployer2"/>
 	</bean> 
 
@@ -670,7 +670,7 @@
 
 	<bean id="duty1" class="acme.entities.duty.Duty">
 		<property name="title" value="titulo de duty1"/>
-		<property name="percentage" value="23.25"/>		
+		<property name="percentage" value="100.00"/>		
 		<property name="description" value="Esta es la descripcion del duty1"/>
 		<property name="job" ref="job1"/>
 	</bean> 
@@ -682,7 +682,7 @@
 	</bean> 
 	<bean id="duty3" class="acme.entities.duty.Duty">
 		<property name="title" value="titulo de duty3"/>
-		<property name="percentage" value="50.25"/>		
+		<property name="percentage" value="100.00"/>		
 		<property name="description" value="Esta es la descripcion del duty3"/>
 		<property name="job" ref="job3"/>
 	</bean> 
@@ -752,6 +752,7 @@
 	 <bean id="application1" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="qwerty12"/>
 		<property name="moment" value="2019/12/08 00:00"/>
+		<property name="lastUpdate" value="2019/12/08 00:00"/>
 		<property name="status" value="Pending"/>
 		<property name="statement" value="hello"/>
 		<property name="skills" value="ninguna"/>
@@ -764,6 +765,7 @@
 	 <bean id="application2" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="123456"/>
 		<property name="moment" value="2019/12/08 00:00"/>
+		<property name="lastUpdate" value="2019/12/08 00:00"/>
 		<property name="status" value="Pending"/>
 		<property name="statement" value="i am good worker"/>
 		<property name="skills" value="secretary"/>
@@ -776,6 +778,7 @@
 	 <bean id="application3" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="974hf3da"/>
 		<property name="moment" value="2019/11/25 09:50"/>
+		<property name="lastUpdate" value="2019/11/25 09:50"/>
 		<property name="status" value="Pending"/>
 		<property name="statement" value="-_-"/>
 		<property name="skills" value="nothing"/>
@@ -788,6 +791,7 @@
 	 <bean id="application4" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="EEEE:JJA1"/>
 		<property name="moment" value="2019/11/08 09:50"/>
+		<property name="lastUpdate" value="2019/11/08 09:50"/>
 		<property name="status" value="Pending"/>
 		<property name="statement" value="hello"/>
 		<property name="skills" value="2"/>
@@ -801,11 +805,12 @@
 	 <bean id="application5" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="EEEE:J911"/>
 		<property name="moment" value="2019/11/20 09:50"/>
+		<property name="lastUpdate" value="2019/11/20 09:50"/>
 		<property name="status" value="Rejected"/>
 		<property name="statement" value="hello"/>
 		<property name="skills" value="1"/>
 		<property name="qualifications" value="7"/>
-		<property name="messageRejected"><null/></property>
+		<property name="messageRejected" value="sin motivo aparente"/>
 		<property name="worker" ref="workerWorker2"/>
 		<property name="job" ref="job1"/>
 	</bean>
@@ -813,6 +818,7 @@
 	<bean id="application6" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="EEEE:J481"/>
 		<property name="moment" value="2019/11/26 09:50"/>
+		<property name="lastUpdate" value="2019/11/26 09:50"/>
 		<property name="status" value="Accepted"/>
 		<property name="statement" value="hello"/>
 		<property name="skills" value="2"/>
@@ -825,11 +831,12 @@
 	<bean id="application7" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="EEEE:J281"/>
 		<property name="moment" value="2019/12/01 09:50"/>
+		<property name="lastUpdate" value="2019/12/01 09:50"/>
 		<property name="status" value="Rejected"/>
 		<property name="statement" value="hello"/>
 		<property name="skills" value="2"/>
 		<property name="qualifications" value="7"/>
-		<property name="messageRejected"><null/></property>
+		<property name="messageRejected" value="sin motivo aparente"/>
 		<property name="worker" ref="workerWorker2"/>
 		<property name="job" ref="job1"/>
 	</bean>
@@ -838,6 +845,7 @@
 	<bean id="application8" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="EEEE:0990"/>
 		<property name="moment" value="2019/3/12 19:50"/>
+		<property name="lastUpdate" value="2019/3/12 19:50"/>
 		<property name="status" value="Pending"/>
 		<property name="statement" value="prueba"/>
 		<property name="skills" value="5"/>
@@ -850,6 +858,7 @@
 	<bean id="application9" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="EEEE:YTGB"/>
 		<property name="moment" value="2019/12/12 19:50"/>
+		<property name="lastUpdate" value="2019/12/12 19:50"/>
 		<property name="status" value="Pending"/>
 		<property name="statement" value="text"/>
 		<property name="skills" value="2"/>

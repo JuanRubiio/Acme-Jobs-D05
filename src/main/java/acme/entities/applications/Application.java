@@ -57,6 +57,9 @@ public class Application extends DomainEntity {
 
 	private String				messageRejected;
 
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				lastUpdate;
+
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)

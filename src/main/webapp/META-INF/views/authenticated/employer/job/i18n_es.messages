@@ -15,3 +15,6 @@ employer.job.finalmode = Trabajo en modo final
 employer.job.applications =  Se puede eliminar un trabajo siempre que ningún trabajador lo haya solicitado
 authenticated.employer.job.form.label.create.duty = Crear servicios
 employer.job.duties.delete = Se puede eliminar un trabajo siempre que no tenga servicio asociado
+employer.job.statusnotpub = No puedes guardar un trabajo en modo final si no está publicado
+employer.job.porcenspam = No puedes guardar un trabajo en modo final si contiene palabras de spam
+employer.job.dutiescient = No puedes guardar un trabajo en modo final si los servicios no suman el 100% de la carga de trabajo semanal

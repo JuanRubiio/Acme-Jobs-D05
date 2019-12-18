@@ -24,6 +24,8 @@ authenticated.user-account.form.error.confirmation-no-match = La confirmación d
 
 
 authenticated.thread-user.list.button.createIncludedUsers = Añadir usuario
+authenticated.thread-user.list.button.createDeleteUsers = Eliminar usuario
+
 authenticated.user-account.list.label.username = Nombre de usuario
 authenticated.user-account.form.select = Usuarios
 authenticated.user-account.list.button.return = Volver
