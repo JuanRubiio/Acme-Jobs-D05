@@ -106,7 +106,6 @@ master.menu.employer = Employer
 master.menu.employer.provider.list = Mine Jobs List
  master.menu.employer.worker.list = Workers
 master.menu.employer.application.list  = Mine Application List
-master.menu.employer.application.listgroup =  Application order by status
 
 # master.menu.sponsor ##########################################################
 

@@ -104,7 +104,6 @@ master.menu.worker.job.list = Trabajos en Modo Final
  master.menu.employer.provider.list = Lista de Trabajos propios
  master.menu.employer.worker.list = Trabajadores
 master.menu.employer.application.list  = Lista de mis solicitudes
-master.menu.employer.application.listgroup =  Solicitudes ordenadas por estado
 
  
  # master.menu.sponsor ##########################################################

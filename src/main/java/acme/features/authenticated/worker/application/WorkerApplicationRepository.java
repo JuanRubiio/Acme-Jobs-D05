@@ -13,6 +13,7 @@
 package acme.features.authenticated.worker.application;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -46,5 +47,8 @@ public interface WorkerApplicationRepository extends AbstractRepository {
 
 	@Query("select a.worker from Application a where a.worker.userAccount.id = ?1")
 	Worker findWorker(int id);
+
+	@Query("select a.job.id from Application a where a.job.deadline > now() and a.job.status = 'published'")
+	List<Integer> findIdJobsActive();
 
 }

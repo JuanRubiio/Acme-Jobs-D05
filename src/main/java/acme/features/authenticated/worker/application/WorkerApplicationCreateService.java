@@ -2,6 +2,7 @@
 package acme.features.authenticated.worker.application;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,7 +26,19 @@ public class WorkerApplicationCreateService implements AbstractCreateService<Wor
 	public boolean authorise(final Request<Application> request) {
 		assert request != null;
 
-		return true;
+		boolean result;
+		int Idnuevo;
+		List<Integer> idAppFM;
+
+		Idnuevo = request.getModel().getInteger("id");
+		idAppFM = this.repository.findIdJobsActive();
+		if (idAppFM.contains(Idnuevo)) {
+			result = true;
+		} else {
+			result = false;
+		}
+
+		return result;
 	}
 
 	@Override
