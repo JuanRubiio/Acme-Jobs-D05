@@ -19,5 +19,8 @@ authenticated.threaduser.delete.creatorThread = You can´t delete yourself
 authenticated.threaduser.list.button.return = Return
 authenticated.threaduser.list.label.username = Username
 authenticated.threaduser.list.button.NonIncludedUsers = Non included users
+authenticated.threaduser.list.button.DeleteUsers = Delete participants users
 
 authenticated.threads.button.create =  Create Thread
+
+authenticated.message.error.deletecreator = Can not delete creator

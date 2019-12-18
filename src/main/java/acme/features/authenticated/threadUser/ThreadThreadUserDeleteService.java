@@ -25,7 +25,7 @@ public class ThreadThreadUserDeleteService implements AbstractDeleteService<Auth
 		int threadUserId = request.getModel().getInteger("id");
 		ThreadUser threadUser = this.repository.findOneThreadUserAccountById(threadUserId);
 		int threadId = threadUser.getThread().getId();
-		int id = request.getPrincipal().getActiveRoleId();
+		int id = request.getPrincipal().getAccountId();
 		ThreadUser threadUser2 = this.repository.findOneByThreadIdAndUserId(threadId, id);
 		boolean res = threadUser2.getCreatorThread();
 		return res;
@@ -68,12 +68,23 @@ public class ThreadThreadUserDeleteService implements AbstractDeleteService<Auth
 		assert entity != null;
 		assert errors != null;
 
-		int threadId = request.getModel().getInteger("id");
-		ThreadUser threadUser = this.repository.findOneThreadUserAccountById(threadId);
-		int userAccountId = threadUser.getUser().getId();
-		int id = request.getPrincipal().getAccountId();
-		boolean sameUser = id == userAccountId;
-		errors.state(request, !sameUser, "user.username", "threadUser.delete.creatorThread");
+		//		int threadId = request.getModel().getInteger("id");
+		//		ThreadUser threadUser = this.repository.findOneThreadUserAccountById(threadId);
+		//		int userAccountId = threadUser.getUser().getId();
+		//		int id = request.getPrincipal().getAccountId();
+		//		boolean sameUser = id == userAccountId;
+		//		errors.state(request, !sameUser, "username", "threadUser.delete.creatorThread");
+
+		Boolean isSender = false;
+		ThreadUser usuarioSender = this.repository.findSenderInThread(entity.getThread().getId());
+		int idSender = usuarioSender.getUser().getId();
+		int idMe = request.getPrincipal().getAccountId();
+
+		isSender = idSender == idMe;
+
+		//		errors.state(request, isSender, "confirm", "authenticated.message.form.checkbox");
+
+		errors.state(request, !isSender, "username", "authenticated.message.error.deletecreator");
 
 	}
 
