@@ -36,21 +36,21 @@ public interface AdministratorChartRepository extends AbstractRepository {
 	@Query("Select ua.status from Application ua group by ua.status order by ua.status")
 	List<String> getTotalAppStatus();
 
-	@Query("Select Count(ua) from Application ua where ua.status = 'Pending' and datediff(curdate(), ua.moment) <=28 group by date_format(ua.moment, '%Y-%m-%d') order by date_format(ua.moment, '%Y-%m-%d')")
+	@Query("Select Count(ua) from Application ua where ua.status = 'Pending' and datediff(curdate(), ua.lastUpdate) <=28 group by date_format(ua.lastUpdate, '%Y-%m-%d') order by date_format(ua.lastUpdate, '%Y-%m-%d')")
 	List<Integer> getTotalpendingAppFourWeeks();
 
-	@Query("Select ua.moment from Application ua where ua.status = 'Pending' and datediff(curdate(), ua.moment) <=28 group by date_format(ua.moment, '%Y-%m-%d') order by date_format(ua.moment, '%Y-%m-%d')")
+	@Query("Select ua.lastUpdate from Application ua where ua.status = 'Pending' and datediff(curdate(), ua.lastUpdate) <=28 group by date_format(ua.lastUpdate, '%Y-%m-%d') order by date_format(ua.lastUpdate, '%Y-%m-%d')")
 	List<Date> getPendingAppFourWeeks();
 
-	@Query("Select Count(ua) from Application ua where ua.status = 'Accepted' and datediff(curdate(), ua.moment) <=28 group by date_format(ua.moment, '%Y-%m-%d') order by date_format(ua.moment, '%Y-%m-%d')")
+	@Query("Select Count(ua) from Application ua where ua.status = 'Accepted' and datediff(curdate(), ua.lastUpdate) <=28 group by date_format(ua.lastUpdate, '%Y-%m-%d') order by date_format(ua.lastUpdate, '%Y-%m-%d')")
 	List<Integer> getTotalAcceptedAppFourWeeks();
 
-	@Query("Select ua.moment from Application ua where ua.status = 'Accepted' and datediff(curdate(), ua.moment) <=28 group by date_format(ua.moment, '%Y-%m-%d') order by date_format(ua.moment, '%Y-%m-%d')")
+	@Query("Select ua.lastUpdate from Application ua where ua.status = 'Accepted' and datediff(curdate(), ua.lastUpdate) <=28 group by date_format(ua.lastUpdate, '%Y-%m-%d') order by date_format(ua.lastUpdate, '%Y-%m-%d')")
 	List<Date> getAcceptedAppFourWeeks();
 
-	@Query("Select Count(ua) from Application ua where ua.status = 'Rejected' and datediff(curdate(), ua.moment) <=28 group by date_format(ua.moment, '%Y-%m-%d') order by date_format(ua.moment, '%Y-%m-%d')")
+	@Query("Select Count(ua) from Application ua where ua.status = 'Rejected' and datediff(curdate(), ua.lastUpdate) <=28 group by date_format(ua.lastUpdate, '%Y-%m-%d') order by date_format(ua.lastUpdate, '%Y-%m-%d')")
 	List<Integer> getTotalRejectedAppFourWeeks();
 
-	@Query("Select ua.moment from Application ua where ua.status = 'Rejected' and datediff(curdate(), ua.moment) <=28 group by date_format(ua.moment, '%Y-%m-%d') order by date_format(ua.moment, '%Y-%m-%d')")
+	@Query("Select ua.lastUpdate from Application ua where ua.status = 'Rejected' and datediff(curdate(), ua.lastUpdate) <=28 group by date_format(ua.lastUpdate, '%Y-%m-%d') order by date_format(ua.lastUpdate, '%Y-%m-%d')")
 	List<Date> getRejectedAppFourWeeks();
 }

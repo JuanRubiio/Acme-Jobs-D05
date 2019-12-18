@@ -26,6 +26,7 @@
     create table `application` (
        `id` integer not null,
         `version` integer not null,
+        `last_update` datetime(6),
         `message_rejected` varchar(255),
         `moment` datetime(6),
         `qualifications` varchar(255),

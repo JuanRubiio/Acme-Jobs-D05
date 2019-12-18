@@ -1065,6 +1065,7 @@ style=wordwrap</panel_attributes>
 --
 + referenceNumber: String {Unique,NotBlank,Length(min=5,max=15)}
 + moment: Date {TemporalType.TIMESTAMP}
++ lastUpdate: Date {TemporalType.TIMESTAMP}
 + status: String {NotBlank}
 + statement: String {NotBlank}
 + skills: String {NotBlank}

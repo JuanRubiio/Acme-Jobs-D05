@@ -1,6 +1,8 @@
 
 package acme.features.authenticated.provider.employer.application;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,7 +27,7 @@ public class EmployerApplicationUpdateService implements AbstractUpdateService<E
 
 	@Override
 	public boolean authorise(final Request<Application> request) {
-	assert request != null;
+		assert request != null;
 
 		boolean result;
 		int appId;
@@ -43,7 +45,6 @@ public class EmployerApplicationUpdateService implements AbstractUpdateService<E
 		result = employer.getUserAccount().getId() == principal.getAccountId();
 		return result;
 	}
-
 
 	@Override
 	public void bind(final Request<Application> request, final Application entity, final Errors errors) {
@@ -97,6 +98,9 @@ public class EmployerApplicationUpdateService implements AbstractUpdateService<E
 
 		assert request != null;
 		assert entity != null;
+		Date moment;
+		moment = new Date(System.currentTimeMillis() - 1);
+		entity.setLastUpdate(moment);
 
 		this.repository.save(entity);
 	}
