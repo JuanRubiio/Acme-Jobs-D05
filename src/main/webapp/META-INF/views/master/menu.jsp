@@ -90,7 +90,6 @@
 			<acme:menu-suboption code="master.menu.employer.provider.list" action="/employer/job/list-mine"/>
 			<acme:menu-suboption code="master.menu.employer.create" action="/employer/job/create"/>
 			<acme:menu-suboption code="master.menu.employer.application.list" action="/employer/application/list-mine"/>
-			<acme:menu-suboption code="master.menu.employer.application.listgroup" action="/employer/application/list-group"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.sponsor" access="hasRole('Sponsor')"> 
