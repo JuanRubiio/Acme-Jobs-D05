@@ -25,6 +25,8 @@ public class EmployerApplicationUpdateService implements AbstractUpdateService<E
 
 	@Override
 	public boolean authorise(final Request<Application> request) {
+	assert request != null;
+
 		boolean result;
 		int appId;
 		Application app;
@@ -41,6 +43,7 @@ public class EmployerApplicationUpdateService implements AbstractUpdateService<E
 		result = employer.getUserAccount().getId() == principal.getAccountId();
 		return result;
 	}
+
 
 	@Override
 	public void bind(final Request<Application> request, final Application entity, final Errors errors) {

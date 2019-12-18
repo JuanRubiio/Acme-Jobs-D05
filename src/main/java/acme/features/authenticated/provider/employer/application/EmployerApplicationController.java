@@ -37,9 +37,6 @@ public class EmployerApplicationController extends AbstractController<Employer, 
 	private EmployerApplicationListMineService	listmineService;
 
 	@Autowired
-	private EmployerApplicationListGroupService	listgroupService;
-
-	@Autowired
 	private EmployerApplicationShowService		showService;
 
 	@Autowired
@@ -52,7 +49,6 @@ public class EmployerApplicationController extends AbstractController<Employer, 
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listmineService);
-		super.addCustomCommand(CustomCommand.LIST_GROUP, BasicCommand.LIST, this.listgroupService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
 	}
