@@ -95,7 +95,7 @@ public class AuthenticatedMessageSenderCreateService implements AbstractCreateSe
 				if (StringUtils.isNotBlank(l)) {
 					conPalabras++;
 					for (String s : listSpamEn) {
-						if (l.trim().equals(s.trim())) {
+						if (l.trim().toLowerCase().equals(s.trim().toLowerCase())) {
 							contSpam++;
 						}
 
@@ -110,7 +110,7 @@ public class AuthenticatedMessageSenderCreateService implements AbstractCreateSe
 			for (String l : listPalabras) {
 				if (StringUtils.isNotBlank(l)) {
 					for (String s : listSpamEs) {
-						if (l.trim().equals(s.trim())) {
+						if (l.trim().toLowerCase().equals(s.trim().toLowerCase())) {
 							if (StringUtils.isNotBlank(custom.getSpamWordsEn()) && !custom.getSpamWordsEn().contains(s.trim())) {
 								contSpam++;
 							}
