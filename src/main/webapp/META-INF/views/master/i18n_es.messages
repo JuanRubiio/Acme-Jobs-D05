@@ -94,7 +94,7 @@ master.menu.consumer.offer.list = Listar Ofertas Activas
 
 master.menu.worker = Trabajador
 master.menu.worker.application.list = Mis Aplicaciones
-master.menu.worker.job.list = Trabajos en Modo Final
+master.menu.worker.job.list = Trabajos activos
 
 
 # master.menu.employer ##########################################################
