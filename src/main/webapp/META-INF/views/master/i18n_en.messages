@@ -95,7 +95,7 @@ master.menu.consumer.offer.list = Active Offers List
 
 master.menu.worker = Worker
 master.menu.worker.application.list = My Applications List
-master.menu.worker.job.list =  Final Mode Jobs
+master.menu.worker.job.list =  Active Jobs
 
 
 
