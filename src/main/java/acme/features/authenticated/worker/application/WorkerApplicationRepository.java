@@ -48,7 +48,6 @@ public interface WorkerApplicationRepository extends AbstractRepository {
 	@Query("select a.worker from Application a where a.worker.userAccount.id = ?1")
 	Worker findWorker(int id);
 
-	@Query("select a.job.id from Application a where a.job.deadline > now() and a.job.status = 'published'")
+	@Query("select a.id from Job a where a.deadline > now() and a.status = 'published'")
 	List<Integer> findIdJobsActive();
-
 }
